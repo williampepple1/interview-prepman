@@ -61,7 +61,7 @@ const AssessmentDashboard: React.FC = () => {
                   Multiple Choice
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-300 transition-colors duration-200">
-                  Randomized answer options
+                  Multiple Choice Questions
                 </p>
               </div>
             </div>

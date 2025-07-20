@@ -3,6 +3,7 @@ import { reactAssessmentQuestions } from '../data/assessments/react';
 import { nodejsAssessmentQuestions } from '../data/assessments/nodejs';
 import { cleanCodeAssessmentQuestions } from '../data/assessments/clean-code';
 import { pythonAssessmentQuestions } from '../data/assessments/python';
+import { databaseAssessmentQuestions } from '../data/assessments/databases';
 
 export const ASSESSMENT_TOPICS: AssessmentTopic[] = [
   {
@@ -42,6 +43,16 @@ export const ASSESSMENT_TOPICS: AssessmentTopic[] = [
     icon: '🐍',
     route: '/assessments/python',
     questions: pythonAssessmentQuestions,
+    timeLimit: 20, // 20 minutes
+    questionCount: 30
+  },
+  {
+    id: 'databases',
+    title: 'Database Assessment',
+    description: 'Test your knowledge of SQL, NoSQL, database design, ACID properties, and performance optimization',
+    icon: '🗄️',
+    route: '/assessments/databases',
+    questions: databaseAssessmentQuestions,
     timeLimit: 20, // 20 minutes
     questionCount: 30
   }
