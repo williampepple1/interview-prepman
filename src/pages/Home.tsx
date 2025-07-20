@@ -23,6 +23,14 @@ const Home: React.FC = () => {
     {
       ...DASHBOARD_CONFIGS.algorithms,
       questions: [] // Algorithm explanations don't use the same question structure
+    },
+    {
+      id: 'assessments',
+      title: 'Assessment Center',
+      description: 'Test your knowledge with timed assessments on various topics',
+      icon: '📝',
+      route: '/assessments',
+      questions: [] // Assessments have their own structure
     }
   ];
 
@@ -58,7 +66,7 @@ const Home: React.FC = () => {
           </div>
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {dashboards.map((dashboard) => (
             <DashboardCard
               key={dashboard.id}

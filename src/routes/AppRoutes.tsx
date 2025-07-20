@@ -5,6 +5,8 @@ import Home from '../pages/Home';
 import Dashboard from '../pages/Dashboard';
 import QuestionDetail from '../pages/QuestionDetail';
 import AlgorithmExplanations from '../pages/AlgorithmExplanations';
+import AssessmentDashboard from '../pages/AssessmentDashboard';
+import Assessment from '../pages/Assessment';
 import { dsaQuestions, reactQuestions, dataEngineeringQuestions } from '../data/questions';
 
 const AppRoutes: React.FC = () => {
@@ -90,6 +92,24 @@ const AppRoutes: React.FC = () => {
         element={
           <ProtectedRoute>
             <AlgorithmExplanations />
+          </ProtectedRoute>
+        } 
+      />
+
+      {/* Assessment Routes */}
+      <Route 
+        path="/assessments" 
+        element={
+          <ProtectedRoute>
+            <AssessmentDashboard />
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/assessments/:topicId" 
+        element={
+          <ProtectedRoute>
+            <Assessment />
           </ProtectedRoute>
         } 
       />

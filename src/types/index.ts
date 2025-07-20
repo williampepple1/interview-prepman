@@ -8,12 +8,12 @@ export interface User {
 export interface Question {
   id: string;
   title: string;
+  description: string;
   difficulty: 'Easy' | 'Medium' | 'Hard';
   category: string;
-  description: string;
+  tags: string[];
   solution?: string;
   explanation?: string;
-  tags: string[];
 }
 
 export interface Dashboard {
@@ -34,4 +34,45 @@ export interface Algorithm {
   codeExample: string;
   timeComplexity: string;
   spaceComplexity: string;
+}
+
+// Assessment Types
+export interface AssessmentQuestion {
+  id: string;
+  question: string;
+  options: string[];
+  correctAnswer: string; // This will always be the first option in JSON
+  explanation?: string;
+  category: string;
+  difficulty: 'Easy' | 'Medium' | 'Hard';
+}
+
+export interface AssessmentTopic {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  route: string;
+  questions: AssessmentQuestion[];
+  timeLimit: number; // in minutes
+  questionCount: number;
+}
+
+export interface QuizState {
+  currentQuestionIndex: number;
+  answers: Record<string, string>;
+  timeRemaining: number;
+  isCompleted: boolean;
+  score: number;
+  totalQuestions: number;
+}
+
+export interface QuizResult {
+  score: number;
+  totalQuestions: number;
+  correctAnswers: number;
+  incorrectAnswers: number;
+  timeTaken: number;
+  questions: AssessmentQuestion[];
+  userAnswers: Record<string, string>;
 } 
