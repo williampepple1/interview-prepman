@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Search, Filter } from 'lucide-react';
+import { ArrowLeft, Search } from 'lucide-react';
 import { reactTopics } from '../data/react-topics';
 import ReactTopicCard from '../components/ReactTopicCard';
 

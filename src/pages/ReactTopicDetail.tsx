@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { ArrowLeft, Clock, BookOpen, Target, Code, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Clock, BookOpen, Code, CheckCircle } from 'lucide-react';
 import { reactTopics } from '../data/react-topics';
 
 const ReactTopicDetail: React.FC = () => {
