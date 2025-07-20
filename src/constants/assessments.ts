@@ -1,6 +1,7 @@
 import { AssessmentTopic } from '../types';
 import { reactAssessmentQuestions } from '../data/assessments/react';
 import { nodejsAssessmentQuestions } from '../data/assessments/nodejs';
+import { cleanCodeAssessmentQuestions } from '../data/assessments/clean-code';
 
 export const ASSESSMENT_TOPICS: AssessmentTopic[] = [
   {
@@ -20,6 +21,16 @@ export const ASSESSMENT_TOPICS: AssessmentTopic[] = [
     icon: '🟢',
     route: '/assessments/nodejs',
     questions: nodejsAssessmentQuestions,
+    timeLimit: 20, // 20 minutes
+    questionCount: 30
+  },
+  {
+    id: 'clean-code',
+    title: 'Clean Code & Software Engineering',
+    description: 'Test your knowledge of clean code principles, SOLID principles, design patterns, and software engineering best practices',
+    icon: '🧹',
+    route: '/assessments/clean-code',
+    questions: cleanCodeAssessmentQuestions,
     timeLimit: 20, // 20 minutes
     questionCount: 30
   }

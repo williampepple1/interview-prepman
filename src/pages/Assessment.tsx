@@ -189,6 +189,16 @@ const Assessment: React.FC = () => {
                               <span className="text-green-600 dark:text-green-400">{question.correctAnswer}</span>
                             </p>
                           )}
+                          {question.explanation && (
+                            <div className="mt-2 p-2 bg-blue-50 dark:bg-blue-900/20 rounded border border-blue-200 dark:border-blue-700">
+                              <p className="text-xs font-medium text-blue-900 dark:text-blue-100 mb-1">
+                                Explanation:
+                              </p>
+                              <p className="text-xs text-blue-800 dark:text-blue-200">
+                                {question.explanation}
+                              </p>
+                            </div>
+                          )}
                         </div>
                       </div>
                     </div>
