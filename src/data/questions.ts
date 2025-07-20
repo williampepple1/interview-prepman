@@ -3,7 +3,7 @@ import { Question } from '../types';
 export const dsaQuestions: Question[] = [
   {
     id: '1',
-    title: 'Two Sum',
+    title: 'Two Sum (LeetCode #1)',
     difficulty: 'Easy',
     category: 'Arrays',
     description: 'Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice.',
@@ -50,11 +50,13 @@ The optimal solution uses a hash map to store previously seen numbers and their 
 
 This approach ensures we only need to traverse the array once, making it much more efficient than the brute force approach.
     `,
-    tags: ['array', 'hash-table']
+    tags: ['array', 'hash-table'],
+    companies: ['Google', 'Amazon', 'Microsoft', 'Apple', 'Facebook'],
+    studyPlans: ['Top 75', 'Blind 75', 'Top 150', 'Grind 75']
   },
   {
     id: '2',
-    title: 'Valid Parentheses',
+    title: 'Valid Parentheses (LeetCode #20)',
     difficulty: 'Easy',
     category: 'Stack',
     description: 'Given a string s containing just the characters "(", ")", "{", "}", "[" and "]", determine if the input string is valid. An input string is valid if: Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order.',
@@ -91,11 +93,13 @@ We use a stack to keep track of opening brackets. For each character:
 
 This approach ensures proper bracket matching and order.
     `,
-    tags: ['stack', 'string']
+    tags: ['stack', 'string'],
+    companies: ['Google', 'Amazon', 'Microsoft', 'Bloomberg', 'Uber'],
+    studyPlans: ['Top 75', 'Blind 75']
   },
   {
     id: '3',
-    title: 'Merge Two Sorted Lists',
+    title: 'Merge Two Sorted Lists (LeetCode #21)',
     difficulty: 'Easy',
     category: 'Linked List',
     description: 'Merge two sorted linked lists and return it as a sorted list. The list should be made by splicing together the nodes of the first two lists.',
@@ -142,7 +146,216 @@ We use a dummy node to simplify the merging process:
 
 This approach maintains the sorted order and handles edge cases elegantly.
     `,
-    tags: ['linked-list', 'recursion']
+    tags: ['linked-list', 'recursion'],
+    companies: ['Amazon', 'Microsoft', 'Apple', 'Adobe'],
+    studyPlans: ['Top 75', 'Top 150']
+  },
+  {
+    id: '4',
+    title: 'Longest Substring Without Repeating Characters (LeetCode #3)',
+    difficulty: 'Medium',
+    category: 'Strings',
+    description: 'Given a string s, find the length of the longest substring without repeating characters.',
+    solution: `
+## Solution
+
+### Approach: Sliding Window with Hash Set
+\`\`\`python
+def lengthOfLongestSubstring(s):
+    char_set = set()
+    left = 0
+    max_length = 0
+    
+    for right in range(len(s)):
+        while s[right] in char_set:
+            char_set.remove(s[left])
+            left += 1
+        char_set.add(s[right])
+        max_length = max(max_length, right - left + 1)
+    
+    return max_length
+\`\`\`
+
+**Time Complexity**: O(n)
+**Space Complexity**: O(min(m, n)) where m is the size of the charset
+    `,
+    explanation: `
+## Explanation
+
+We use a sliding window approach with a hash set:
+
+1. Use two pointers (left and right) to maintain a window
+2. Use a set to track characters in the current window
+3. If we encounter a repeating character, move the left pointer until the window is valid
+4. Update the maximum length whenever we expand the window
+5. Continue until we process the entire string
+
+This approach ensures we find the longest substring without repeating characters efficiently.
+    `,
+    tags: ['string', 'sliding-window', 'hash-set'],
+    companies: ['Amazon', 'Microsoft', 'Google', 'Bloomberg', 'Adobe'],
+    studyPlans: ['Grind 75']
+  },
+  {
+    id: '5',
+    title: 'Longest Palindromic Substring (LeetCode #5)',
+    difficulty: 'Medium',
+    category: 'Strings',
+    description: 'Given a string s, return the longest palindromic substring in s.',
+    solution: `
+## Solution
+
+### Approach: Expand Around Center
+\`\`\`python
+def longestPalindrome(s):
+    def expandAroundCenter(left, right):
+        while left >= 0 and right < len(s) and s[left] == s[right]:
+            left -= 1
+            right += 1
+        return right - left - 1
+    
+    start = 0
+    max_length = 0
+    
+    for i in range(len(s)):
+        # Check odd length palindromes
+        len1 = expandAroundCenter(i, i)
+        # Check even length palindromes
+        len2 = expandAroundCenter(i, i + 1)
+        
+        curr_max = max(len1, len2)
+        if curr_max > max_length:
+            max_length = curr_max
+            start = i - (curr_max - 1) // 2
+    
+    return s[start:start + max_length]
+\`\`\`
+
+**Time Complexity**: O(n²)
+**Space Complexity**: O(1)
+    `,
+    explanation: `
+## Explanation
+
+We use the "expand around center" approach:
+
+1. For each character, treat it as the center of a palindrome
+2. Expand outward in both directions as long as characters match
+3. Handle both odd-length (single character center) and even-length (two character center) palindromes
+4. Keep track of the longest palindrome found
+5. Return the substring with the maximum length
+
+This approach is more efficient than checking all possible substrings.
+    `,
+    tags: ['string', 'dynamic-programming', 'palindrome'],
+    companies: ['Amazon', 'Microsoft', 'Google', 'Facebook', 'Uber'],
+    studyPlans: ['Grind 75']
+  },
+  {
+    id: '6',
+    title: 'Clone Graph (LeetCode #133)',
+    difficulty: 'Medium',
+    category: 'Graph',
+    description: 'Given a reference of a node in a connected undirected graph, return a deep copy (clone) of the graph.',
+    solution: `
+## Solution
+
+### Approach: DFS with Hash Map
+\`\`\`python
+class Node:
+    def __init__(self, val = 0, neighbors = None):
+        self.val = val
+        self.neighbors = neighbors if neighbors is not None else []
+
+def cloneGraph(node):
+    if not node:
+        return None
+    
+    visited = {}
+    
+    def dfs(original_node):
+        if original_node in visited:
+            return visited[original_node]
+        
+        # Create new node
+        cloned_node = Node(original_node.val)
+        visited[original_node] = cloned_node
+        
+        # Clone neighbors
+        for neighbor in original_node.neighbors:
+            cloned_neighbor = dfs(neighbor)
+            cloned_node.neighbors.append(cloned_neighbor)
+        
+        return cloned_node
+    
+    return dfs(node)
+\`\`\`
+
+**Time Complexity**: O(V + E) where V is vertices and E is edges
+**Space Complexity**: O(V)
+    `,
+    explanation: `
+## Explanation
+
+We use a depth-first search approach with a hash map to track visited nodes:
+
+1. Use a hash map to store original node -> cloned node mapping
+2. For each node, check if it's already been cloned
+3. If not, create a new node and add it to the hash map
+4. Recursively clone all neighbors
+5. Return the cloned graph
+
+This approach ensures we don't create duplicate nodes and handles cycles in the graph.
+    `,
+    tags: ['graph', 'dfs', 'hash-table', 'recursion'],
+    companies: ['Amazon', 'Microsoft', 'Google', 'Facebook', 'Uber'],
+    studyPlans: ['Grind 75']
+  },
+  {
+    id: '7',
+    title: 'Ransom Note (LeetCode #383)',
+    difficulty: 'Easy',
+    category: 'Strings',
+    description: 'Given two strings ransomNote and magazine, return true if ransomNote can be constructed by using the letters from magazine and false otherwise. Each letter in magazine can only be used once in ransomNote.',
+    solution: `
+## Solution
+
+### Approach: Character Frequency Count
+\`\`\`python
+def canConstruct(ransomNote, magazine):
+    # Count characters in magazine
+    char_count = {}
+    for char in magazine:
+        char_count[char] = char_count.get(char, 0) + 1
+    
+    # Check if ransomNote can be constructed
+    for char in ransomNote:
+        if char not in char_count or char_count[char] == 0:
+            return False
+        char_count[char] -= 1
+    
+    return True
+\`\`\`
+
+**Time Complexity**: O(m + n) where m and n are lengths of magazine and ransomNote
+**Space Complexity**: O(1) since we use a fixed-size character set
+    `,
+    explanation: `
+## Explanation
+
+We use a character frequency counting approach:
+
+1. Count the frequency of each character in the magazine
+2. For each character in the ransom note, check if it's available in the magazine
+3. Decrease the count when we use a character
+4. If any character is not available or we run out, return False
+5. If we can construct the entire ransom note, return True
+
+This approach efficiently handles the character frequency requirements.
+    `,
+    tags: ['string', 'hash-table', 'counting'],
+    companies: ['Amazon', 'Microsoft', 'Google', 'Apple', 'Spotify'],
+    studyPlans: ['Grind 75']
   }
 ];
 

@@ -13,14 +13,20 @@ const Dashboard: React.FC<DashboardProps> = ({ questions, title, description }) 
   const [searchTerm, setSearchTerm] = useState('');
   const [difficultyFilter, setDifficultyFilter] = useState<string>('all');
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
+  const [companyFilter, setCompanyFilter] = useState<string>('all');
+  const [studyPlanFilter, setStudyPlanFilter] = useState<string>('all');
 
   const filteredQuestions = questions.filter(question => {
     const matchesSearch = question.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          question.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesDifficulty = difficultyFilter === 'all' || question.difficulty === difficultyFilter;
     const matchesCategory = categoryFilter === 'all' || question.category === categoryFilter;
+    const matchesCompany = companyFilter === 'all' || 
+                          (question.companies && question.companies.includes(companyFilter));
+    const matchesStudyPlan = studyPlanFilter === 'all' || 
+                             (question.studyPlans && question.studyPlans.includes(studyPlanFilter));
     
-    return matchesSearch && matchesDifficulty && matchesCategory;
+    return matchesSearch && matchesDifficulty && matchesCategory && matchesCompany && matchesStudyPlan;
   });
 
   const getDifficultyColor = (difficulty: string) => {
@@ -61,7 +67,7 @@ const Dashboard: React.FC<DashboardProps> = ({ questions, title, description }) 
               />
             </div>
             
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2">
               <select
                 value={difficultyFilter}
                 onChange={(e) => setDifficultyFilter(e.target.value)}
@@ -81,6 +87,28 @@ const Dashboard: React.FC<DashboardProps> = ({ questions, title, description }) 
                 <option value="all">All Categories</option>
                 {Array.from(new Set(questions.map(q => q.category))).map(category => (
                   <option key={category} value={category}>{category}</option>
+                ))}
+              </select>
+
+              <select
+                value={companyFilter}
+                onChange={(e) => setCompanyFilter(e.target.value)}
+                className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200"
+              >
+                <option value="all">All Companies</option>
+                {Array.from(new Set(questions.flatMap(q => q.companies || []))).map(company => (
+                  <option key={company} value={company}>{company}</option>
+                ))}
+              </select>
+
+              <select
+                value={studyPlanFilter}
+                onChange={(e) => setStudyPlanFilter(e.target.value)}
+                className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200"
+              >
+                <option value="all">All Study Plans</option>
+                {Array.from(new Set(questions.flatMap(q => q.studyPlans || []))).map(plan => (
+                  <option key={plan} value={plan}>{plan}</option>
                 ))}
               </select>
             </div>
@@ -118,6 +146,23 @@ const Dashboard: React.FC<DashboardProps> = ({ questions, title, description }) 
                   View Details →
                 </Link>
               </div>
+
+              {(question.companies && question.companies.length > 0) || (question.studyPlans && question.studyPlans.length > 0) ? (
+                <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-700">
+                  <div className="flex flex-wrap gap-2">
+                    {question.companies && question.companies.map((company, index) => (
+                      <span key={index} className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-xs rounded transition-colors duration-200">
+                        🏢 {company}
+                      </span>
+                    ))}
+                    {question.studyPlans && question.studyPlans.map((plan, index) => (
+                      <span key={index} className="px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 text-xs rounded transition-colors duration-200">
+                        📚 {plan}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
             </div>
           ))}
         </div>

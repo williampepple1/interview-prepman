@@ -12,6 +12,8 @@ export interface Question {
   difficulty: 'Easy' | 'Medium' | 'Hard';
   category: string;
   tags: string[];
+  companies?: string[];
+  studyPlans?: string[];
   solution?: string;
   explanation?: string;
 }
