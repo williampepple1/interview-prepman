@@ -2,6 +2,7 @@ import { AssessmentTopic } from '../types';
 import { reactAssessmentQuestions } from '../data/assessments/react';
 import { nodejsAssessmentQuestions } from '../data/assessments/nodejs';
 import { cleanCodeAssessmentQuestions } from '../data/assessments/clean-code';
+import { pythonAssessmentQuestions } from '../data/assessments/python';
 
 export const ASSESSMENT_TOPICS: AssessmentTopic[] = [
   {
@@ -31,6 +32,16 @@ export const ASSESSMENT_TOPICS: AssessmentTopic[] = [
     icon: '🧹',
     route: '/assessments/clean-code',
     questions: cleanCodeAssessmentQuestions,
+    timeLimit: 20, // 20 minutes
+    questionCount: 30
+  },
+  {
+    id: 'python',
+    title: 'Python Assessment',
+    description: 'Test your knowledge of Python syntax, data structures, built-in functions, and programming fundamentals',
+    icon: '🐍',
+    route: '/assessments/python',
+    questions: pythonAssessmentQuestions,
     timeLimit: 20, // 20 minutes
     questionCount: 30
   }
