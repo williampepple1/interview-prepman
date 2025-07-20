@@ -35,5 +35,5 @@ firestore-debug.log
 *.swo
 
 # OS
-Thumbs.db 
-.vercel/
+Thumbs.db   
+.vercel/*
