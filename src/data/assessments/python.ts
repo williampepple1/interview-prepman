@@ -700,5 +700,705 @@ export const pythonAssessmentQuestions: AssessmentQuestion[] = [
     explanation: 'Generator expressions use parentheses () and create an iterator that yields values on demand.',
     category: 'Python Generators',
     difficulty: 'Hard'
+  },
+  {
+    id: 'python-51',
+    question: 'What is the output of: print("hello".replace("l", "x"))?',
+    options: [
+      'hexxo',
+      'hello',
+      'hexo',
+      'Error'
+    ],
+    correctAnswer: 'hexxo',
+    explanation: 'The replace() method replaces all occurrences of the first argument with the second argument.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-52',
+    question: 'What is the correct way to create a virtual environment in Python?',
+    options: [
+      'python -m venv myenv',
+      'python create venv myenv',
+      'python virtual myenv',
+      'python env myenv'
+    ],
+    correctAnswer: 'python -m venv myenv',
+    explanation: 'The venv module is used to create virtual environments. The -m flag runs the module as a script.',
+    category: 'Python Environment',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-53',
+    question: 'What is the output of: print([1, 2, 3] * 2)?',
+    options: [
+      '[1, 2, 3, 1, 2, 3]',
+      '[2, 4, 6]',
+      '[1, 2, 3][1, 2, 3]',
+      'Error'
+    ],
+    correctAnswer: '[1, 2, 3, 1, 2, 3]',
+    explanation: 'The * operator with lists repeats the list the specified number of times.',
+    category: 'Python Data Structures',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-54',
+    question: 'What is the correct way to import a specific function from a module?',
+    options: [
+      'from module_name import function_name',
+      'import function_name from module_name',
+      'include function_name from module_name',
+      'require function_name from module_name'
+    ],
+    correctAnswer: 'from module_name import function_name',
+    explanation: 'The from...import syntax allows you to import specific functions or classes from a module.',
+    category: 'Python Modules',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-55',
+    question: 'What is the output of: print("Python".find("th"))?',
+    options: [
+      '2',
+      '3',
+      '-1',
+      'Error'
+    ],
+    correctAnswer: '2',
+    explanation: 'The find() method returns the index of the first occurrence of the substring. "th" starts at index 2.',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-56',
+    question: 'What is the correct way to check if a variable is None?',
+    options: [
+      'if variable is None:',
+      'if variable == None:',
+      'if variable is null:',
+      'if variable == null:'
+    ],
+    correctAnswer: 'if variable is None:',
+    explanation: 'In Python, use "is None" to check for None, as it checks for identity rather than equality.',
+    category: 'Python Comparison',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-57',
+    question: 'What is the output of: print(divmod(10, 3))?',
+    options: [
+      '(3, 1)',
+      '(3.333..., 1)',
+      '(3, 0)',
+      'Error'
+    ],
+    correctAnswer: '(3, 1)',
+    explanation: 'divmod() returns a tuple containing the quotient and remainder of division. 10 ÷ 3 = 3 remainder 1.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-58',
+    question: 'What is the correct way to create a dictionary comprehension?',
+    options: [
+      '{key: value for key, value in items}',
+      'dict(key: value for key, value in items)',
+      '[key: value for key, value in items]',
+      '(key: value for key, value in items)'
+    ],
+    correctAnswer: '{key: value for key, value in items}',
+    explanation: 'Dictionary comprehensions use curly braces {} and create key-value pairs.',
+    category: 'Python Comprehensions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-59',
+    question: 'What is the output of: print("hello".split())?',
+    options: [
+      '[\'hello\']',
+      '[\'h\', \'e\', \'l\', \'l\', \'o\']',
+      'hello',
+      'Error'
+    ],
+    correctAnswer: '[\'hello\']',
+    explanation: 'split() without arguments splits on whitespace. Since "hello" has no spaces, it returns a list with one element.',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-60',
+    question: 'What is the correct way to get the current date and time?',
+    options: [
+      'from datetime import datetime; datetime.now()',
+      'import time; time.now()',
+      'import date; date.now()',
+      'import calendar; calendar.now()'
+    ],
+    correctAnswer: 'from datetime import datetime; datetime.now()',
+    explanation: 'The datetime module provides classes for manipulating dates and times.',
+    category: 'Python Libraries',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-61',
+    question: 'What is the output of: print(enumerate(["a", "b", "c"]))?',
+    options: [
+      '<enumerate object>',
+      '[(0, \'a\'), (1, \'b\'), (2, \'c\')]',
+      '[0, 1, 2]',
+      'Error'
+    ],
+    correctAnswer: '<enumerate object>',
+    explanation: 'enumerate() returns an enumerate object. To see the values, you need to convert it to a list.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-62',
+    question: 'What is the correct way to read a file in Python?',
+    options: [
+      'with open("file.txt", "r") as f: content = f.read()',
+      'file.read("file.txt")',
+      'read_file("file.txt")',
+      'open("file.txt").read()'
+    ],
+    correctAnswer: 'with open("file.txt", "r") as f: content = f.read()',
+    explanation: 'The with statement ensures the file is properly closed after reading.',
+    category: 'Python File Operations',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-63',
+    question: 'What is the output of: print(filter(lambda x: x > 0, [-1, 0, 1, 2]))?',
+    options: [
+      '<filter object>',
+      '[1, 2]',
+      '[-1, 0, 1, 2]',
+      'Error'
+    ],
+    correctAnswer: '<filter object>',
+    explanation: 'filter() returns a filter object. To see the filtered values, convert it to a list.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-64',
+    question: 'What is the correct way to create a set comprehension?',
+    options: [
+      '{x for x in range(5)}',
+      'set(x for x in range(5))',
+      '[x for x in range(5)]',
+      '(x for x in range(5))'
+    ],
+    correctAnswer: '{x for x in range(5)}',
+    explanation: 'Set comprehensions use curly braces {} and create sets with unique elements.',
+    category: 'Python Comprehensions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-65',
+    question: 'What is the output of: print("hello".count("l"))?',
+    options: [
+      '2',
+      '1',
+      '3',
+      'Error'
+    ],
+    correctAnswer: '2',
+    explanation: 'The count() method returns the number of occurrences of a substring. "l" appears twice in "hello".',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-66',
+    question: 'What is the correct way to check if a string ends with a specific suffix?',
+    options: [
+      'my_string.endswith(suffix)',
+      'my_string.ends_with(suffix)',
+      'my_string.ends(suffix)',
+      'my_string.has_suffix(suffix)'
+    ],
+    correctAnswer: 'my_string.endswith(suffix)',
+    explanation: 'The endswith() method checks if a string ends with the specified suffix.',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-67',
+    question: 'What is the output of: print(map(str, [1, 2, 3]))?',
+    options: [
+      '<map object>',
+      '[\'1\', \'2\', \'3\']',
+      '[1, 2, 3]',
+      'Error'
+    ],
+    correctAnswer: '<map object>',
+    explanation: 'map() returns a map object. To see the mapped values, convert it to a list.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-68',
+    question: 'What is the correct way to get a random number in Python?',
+    options: [
+      'import random; random.randint(1, 10)',
+      'import math; math.random()',
+      'import random; random.random()',
+      'import random; random.number(1, 10)'
+    ],
+    correctAnswer: 'import random; random.randint(1, 10)',
+    explanation: 'random.randint(a, b) returns a random integer N such that a <= N <= b.',
+    category: 'Python Libraries',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-69',
+    question: 'What is the output of: print("hello".upper().lower())?',
+    options: [
+      'hello',
+      'HELLO',
+      'Hello',
+      'Error'
+    ],
+    correctAnswer: 'hello',
+    explanation: 'upper() converts to uppercase, then lower() converts back to lowercase.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-70',
+    question: 'What is the correct way to create a tuple with one element?',
+    options: [
+      'my_tuple = (1,)',
+      'my_tuple = (1)',
+      'my_tuple = 1,',
+      'my_tuple = tuple(1)'
+    ],
+    correctAnswer: 'my_tuple = (1,)',
+    explanation: 'A single-element tuple needs a trailing comma to distinguish it from a parenthesized expression.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-71',
+    question: 'What is the output of: print(zip([1, 2], [\'a\', \'b\']))?',
+    options: [
+      '<zip object>',
+      '[(1, \'a\'), (2, \'b\')]',
+      '[1, 2, \'a\', \'b\']',
+      'Error'
+    ],
+    correctAnswer: '<zip object>',
+    explanation: 'zip() returns a zip object. To see the zipped values, convert it to a list.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-72',
+    question: 'What is the correct way to write to a file in Python?',
+    options: [
+      'with open("file.txt", "w") as f: f.write("content")',
+      'write_file("file.txt", "content")',
+      'file.write("file.txt", "content")',
+      'open("file.txt", "w").write("content")'
+    ],
+    correctAnswer: 'with open("file.txt", "w") as f: f.write("content")',
+    explanation: 'The with statement ensures the file is properly closed after writing.',
+    category: 'Python File Operations',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-73',
+    question: 'What is the output of: print("hello".strip())?',
+    options: [
+      'hello',
+      ' hello ',
+      'h',
+      'Error'
+    ],
+    correctAnswer: 'hello',
+    explanation: 'strip() removes leading and trailing whitespace. Since "hello" has no extra spaces, it returns the same string.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-74',
+    question: 'What is the correct way to get the length of a string?',
+    options: [
+      'len(my_string)',
+      'my_string.length()',
+      'my_string.size()',
+      'my_string.count()'
+    ],
+    correctAnswer: 'len(my_string)',
+    explanation: 'The len() function returns the number of characters in a string.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-75',
+    question: 'What is the output of: print(reversed([1, 2, 3]))?',
+    options: [
+      '<list_reverseiterator object>',
+      '[3, 2, 1]',
+      '[1, 2, 3]',
+      'Error'
+    ],
+    correctAnswer: '<list_reverseiterator object>',
+    explanation: 'reversed() returns a reverse iterator. To see the reversed values, convert it to a list.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-76',
+    question: 'What is the correct way to check if a list is empty?',
+    options: [
+      'if not my_list:',
+      'if my_list.empty():',
+      'if my_list.is_empty():',
+      'if len(my_list) == 0:'
+    ],
+    correctAnswer: 'if not my_list:',
+    explanation: 'In Python, empty lists are falsy, so "not my_list" is True when the list is empty.',
+    category: 'Python Data Structures',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-77',
+    question: 'What is the output of: print("hello".join(["a", "b", "c"]))?',
+    options: [
+      'ahellobhelloc',
+      'a b c',
+      'abc',
+      'Error'
+    ],
+    correctAnswer: 'ahellobhelloc',
+    explanation: 'join() concatenates the elements of the iterable with the string as the separator.',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-78',
+    question: 'What is the correct way to get the current timestamp?',
+    options: [
+      'import time; time.time()',
+      'import datetime; datetime.now()',
+      'import time; time.now()',
+      'import timestamp; timestamp.now()'
+    ],
+    correctAnswer: 'import time; time.time()',
+    explanation: 'time.time() returns the current time as a floating point number expressed in seconds since the epoch.',
+    category: 'Python Libraries',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-79',
+    question: 'What is the output of: print("hello".partition("l"))?',
+    options: [
+      '(\'he\', \'l\', \'lo\')',
+      '[\'he\', \'l\', \'lo\']',
+      'he l lo',
+      'Error'
+    ],
+    correctAnswer: '(\'he\', \'l\', \'lo\')',
+    explanation: 'partition() splits the string at the first occurrence of the separator and returns a tuple of three parts.',
+    category: 'Python Strings',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-80',
+    question: 'What is the correct way to create a deep copy of a list?',
+    options: [
+      'import copy; copy.deepcopy(my_list)',
+      'my_list.copy()',
+      'my_list[:]',
+      'list(my_list)'
+    ],
+    correctAnswer: 'import copy; copy.deepcopy(my_list)',
+    explanation: 'deepcopy() creates a completely independent copy, including nested objects.',
+    category: 'Python Data Structures',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-81',
+    question: 'What is the output of: print("hello".center(10))?',
+    options: [
+      '  hello   ',
+      'hello',
+      'hello     ',
+      'Error'
+    ],
+    correctAnswer: '  hello   ',
+    explanation: 'center() centers the string in a field of the specified width, padding with spaces.',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-82',
+    question: 'What is the correct way to get command line arguments?',
+    options: [
+      'import sys; sys.argv',
+      'import os; os.argv',
+      'import argparse; argparse.args',
+      'import cli; cli.args'
+    ],
+    correctAnswer: 'import sys; sys.argv',
+    explanation: 'sys.argv is a list containing the command line arguments passed to the script.',
+    category: 'Python System',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-83',
+    question: 'What is the output of: print("hello".ljust(10))?',
+    options: [
+      'hello     ',
+      '  hello   ',
+      '     hello',
+      'Error'
+    ],
+    correctAnswer: 'hello     ',
+    explanation: 'ljust() left-justifies the string in a field of the specified width, padding with spaces.',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-84',
+    question: 'What is the correct way to check if a file is a directory?',
+    options: [
+      'import os; os.path.isdir(path)',
+      'import path; path.isdir(path)',
+      'import file; file.isdir(path)',
+      'import system; system.isdir(path)'
+    ],
+    correctAnswer: 'import os; os.path.isdir(path)',
+    explanation: 'os.path.isdir() returns True if the path is an existing directory.',
+    category: 'Python File Operations',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-85',
+    question: 'What is the output of: print("hello".rjust(10))?',
+    options: [
+      '     hello',
+      'hello     ',
+      '  hello   ',
+      'Error'
+    ],
+    correctAnswer: '     hello',
+    explanation: 'rjust() right-justifies the string in a field of the specified width, padding with spaces.',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-86',
+    question: 'What is the correct way to get environment variables?',
+    options: [
+      'import os; os.environ.get("VAR_NAME")',
+      'import env; env.get("VAR_NAME")',
+      'import system; system.env("VAR_NAME")',
+      'import environment; environment.get("VAR_NAME")'
+    ],
+    correctAnswer: 'import os; os.environ.get("VAR_NAME")',
+    explanation: 'os.environ is a mapping object representing the environment variables.',
+    category: 'Python System',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-87',
+    question: 'What is the output of: print("hello".expandtabs())?',
+    options: [
+      'hello',
+      'hello    ',
+      'h e l l o',
+      'Error'
+    ],
+    correctAnswer: 'hello',
+    explanation: 'expandtabs() replaces tab characters with spaces. Since "hello" has no tabs, it returns the same string.',
+    category: 'Python Strings',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-88',
+    question: 'What is the correct way to create a JSON string from a Python object?',
+    options: [
+      'import json; json.dumps(obj)',
+      'import json; json.dump(obj)',
+      'import json; json.encode(obj)',
+      'import json; json.stringify(obj)'
+    ],
+    correctAnswer: 'import json; json.dumps(obj)',
+    explanation: 'json.dumps() serializes an object to a JSON formatted string.',
+    category: 'Python Libraries',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-89',
+    question: 'What is the output of: print("hello".isalpha())?',
+    options: [
+      'True',
+      'False',
+      'None',
+      'Error'
+    ],
+    correctAnswer: 'True',
+    explanation: 'isalpha() returns True if all characters in the string are alphabetic.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-90',
+    question: 'What is the correct way to parse a JSON string in Python?',
+    options: [
+      'import json; json.loads(json_string)',
+      'import json; json.load(json_string)',
+      'import json; json.decode(json_string)',
+      'import json; json.parse(json_string)'
+    ],
+    correctAnswer: 'import json; json.loads(json_string)',
+    explanation: 'json.loads() deserializes a JSON formatted string to a Python object.',
+    category: 'Python Libraries',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-91',
+    question: 'What is the output of: print("hello".isalnum())?',
+    options: [
+      'True',
+      'False',
+      'None',
+      'Error'
+    ],
+    correctAnswer: 'True',
+    explanation: 'isalnum() returns True if all characters in the string are alphanumeric.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-92',
+    question: 'What is the correct way to get the current working directory name?',
+    options: [
+      'import os; os.path.basename(os.getcwd())',
+      'import os; os.getcwd().split("/")[-1]',
+      'import path; path.basename(os.getcwd())',
+      'import os; os.cwd_name()'
+    ],
+    correctAnswer: 'import os; os.path.basename(os.getcwd())',
+    explanation: 'os.path.basename() returns the base name of the pathname path.',
+    category: 'Python File Operations',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-93',
+    question: 'What is the output of: print("hello".islower())?',
+    options: [
+      'True',
+      'False',
+      'None',
+      'Error'
+    ],
+    correctAnswer: 'True',
+    explanation: 'islower() returns True if all cased characters in the string are lowercase.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-94',
+    question: 'What is the correct way to get the size of a file?',
+    options: [
+      'import os; os.path.getsize(filename)',
+      'import os; os.size(filename)',
+      'import file; file.size(filename)',
+      'import path; path.size(filename)'
+    ],
+    correctAnswer: 'import os; os.path.getsize(filename)',
+    explanation: 'os.path.getsize() returns the size, in bytes, of the file.',
+    category: 'Python File Operations',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-95',
+    question: 'What is the output of: print("hello".isupper())?',
+    options: [
+      'False',
+      'True',
+      'None',
+      'Error'
+    ],
+    correctAnswer: 'False',
+    explanation: 'isupper() returns True if all cased characters in the string are uppercase. "hello" is lowercase.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-96',
+    question: 'What is the correct way to check if a path is a file?',
+    options: [
+      'import os; os.path.isfile(path)',
+      'import path; path.isfile(path)',
+      'import file; file.isfile(path)',
+      'import system; system.isfile(path)'
+    ],
+    correctAnswer: 'import os; os.path.isfile(path)',
+    explanation: 'os.path.isfile() returns True if the path is an existing regular file.',
+    category: 'Python File Operations',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-97',
+    question: 'What is the output of: print("hello".istitle())?',
+    options: [
+      'False',
+      'True',
+      'None',
+      'Error'
+    ],
+    correctAnswer: 'False',
+    explanation: 'istitle() returns True if the string is a titlecased string. "hello" is not titlecased.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-98',
+    question: 'What is the correct way to get the absolute path of a file?',
+    options: [
+      'import os; os.path.abspath(path)',
+      'import path; path.abspath(path)',
+      'import os; os.abspath(path)',
+      'import file; file.abspath(path)'
+    ],
+    correctAnswer: 'import os; os.path.abspath(path)',
+    explanation: 'os.path.abspath() returns a normalized absolutized version of the pathname path.',
+    category: 'Python File Operations',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-99',
+    question: 'What is the output of: print("hello".isspace())?',
+    options: [
+      'False',
+      'True',
+      'None',
+      'Error'
+    ],
+    correctAnswer: 'False',
+    explanation: 'isspace() returns True if there are only whitespace characters in the string. "hello" contains letters.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-100',
+    question: 'What is the correct way to get the directory name of a path?',
+    options: [
+      'import os; os.path.dirname(path)',
+      'import path; path.dirname(path)',
+      'import os; os.dirname(path)',
+      'import file; file.dirname(path)'
+    ],
+    correctAnswer: 'import os; os.path.dirname(path)',
+    explanation: 'os.path.dirname() returns the directory name of pathname path.',
+    category: 'Python File Operations',
+    difficulty: 'Medium'
   }
 ]; 
