@@ -78,57 +78,200 @@ def binary_search(arr, target):
       spaceComplexity: 'O(1)'
     },
     {
-      id: 'quick-sort',
-      name: 'Quick Sort',
+      id: 'merge-sort',
+      name: 'Merge Sort',
       category: 'Sorting',
-      description: 'A highly efficient, comparison-based sorting algorithm',
+      description: 'A stable, divide-and-conquer sorting algorithm',
       explanation: `
-# Quick Sort Algorithm
+# Merge Sort Algorithm
 
-Quick sort is a divide-and-conquer sorting algorithm that works by selecting a 'pivot' element and partitioning the array around it.
+Merge sort is a stable sorting algorithm that uses the divide-and-conquer strategy to sort an array by repeatedly dividing it into smaller subarrays.
 
 ## How it Works
 
-1. **Choose Pivot**: Select a pivot element (usually last element)
-2. **Partition**: Rearrange elements so that all elements smaller than pivot are on the left
-3. **Recurse**: Recursively sort the left and right subarrays
+1. **Divide**: Split the array into two halves
+2. **Sort**: Recursively sort both halves
+3. **Merge**: Combine the sorted halves
 
 ## Implementation
 
 \`\`\`python
-def quick_sort(arr):
+def merge_sort(arr):
     if len(arr) <= 1:
         return arr
     
-    pivot = arr[-1]
-    left = [x for x in arr[:-1] if x <= pivot]
-    right = [x for x in arr[:-1] if x > pivot]
+    mid = len(arr) // 2
+    left = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
     
-    return quick_sort(left) + [pivot] + quick_sort(right)
+    return merge(left, right)
+
+def merge(left, right):
+    result = []
+    i = j = 0
+    
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+    
+    result.extend(left[i:])
+    result.extend(right[j:])
+    return result
 \`\`\`
 
 ## Time Complexity
 
-- **Best Case**: O(n log n) - Balanced partitions
-- **Average Case**: O(n log n) - Random data
-- **Worst Case**: O(n²) - Already sorted or reverse sorted
+- **Best Case**: O(n log n)
+- **Average Case**: O(n log n)
+- **Worst Case**: O(n log n)
 
 ## Space Complexity
 
-- **Average**: O(log n) - Call stack space
-- **Worst**: O(n) - Unbalanced partitions
+- O(n) - Requires additional space for merging
+
+## When to Use
+
+- Need stable sorting
+- Have O(n) extra space available
+- Want guaranteed O(n log n) performance
       `,
-      codeExample: `def quick_sort(arr):
+      codeExample: `def merge_sort(arr):
     if len(arr) <= 1:
         return arr
     
-    pivot = arr[-1]
-    left = [x for x in arr[:-1] if x <= pivot]
-    right = [x for x in arr[:-1] if x > pivot]
+    mid = len(arr) // 2
+    left = merge_sort(arr[:mid])
+    right = merge_sort(arr[mid:])
     
-    return quick_sort(left) + [pivot] + quick_sort(right)`,
+    return merge(left, right)`,
       timeComplexity: 'O(n log n)',
-      spaceComplexity: 'O(log n)'
+      spaceComplexity: 'O(n)'
+    },
+    {
+      id: 'depth-first-search',
+      name: 'Depth-First Search',
+      category: 'Graph',
+      description: 'A graph traversal algorithm that explores as far as possible along each branch',
+      explanation: `
+# Depth-First Search (DFS) Algorithm
+
+DFS is a graph traversal algorithm that explores a graph by going as deep as possible along each branch before backtracking.
+
+## How it Works
+
+1. **Start**: Begin at a chosen vertex
+2. **Explore**: Visit an adjacent unvisited vertex
+3. **Recurse**: Repeat step 2 for the new vertex
+4. **Backtrack**: When no unvisited adjacent vertices exist
+
+## Implementation
+
+\`\`\`python
+def dfs(graph, start, visited=None):
+    if visited is None:
+        visited = set()
+    
+    visited.add(start)
+    print(start)  # Process current node
+    
+    for neighbor in graph[start]:
+        if neighbor not in visited:
+            dfs(graph, neighbor, visited)
+\`\`\`
+
+## Time Complexity
+
+- O(V + E) where V is vertices and E is edges
+
+## Space Complexity
+
+- O(V) for the visited set and recursion stack
+
+## When to Use
+
+- Finding paths in a graph
+- Detecting cycles
+- Topological sorting
+- Solving puzzles with only one solution
+      `,
+      codeExample: `def dfs(graph, start, visited=None):
+    if visited is None:
+        visited = set()
+    visited.add(start)
+    
+    for neighbor in graph[start]:
+        if neighbor not in visited:
+            dfs(graph, neighbor, visited)`,
+      timeComplexity: 'O(V + E)',
+      spaceComplexity: 'O(V)'
+    },
+    {
+      id: 'breadth-first-search',
+      name: 'Breadth-First Search',
+      category: 'Graph',
+      description: 'A graph traversal algorithm that explores all vertices at the present depth before moving to vertices at the next depth level',
+      explanation: `
+# Breadth-First Search (BFS) Algorithm
+
+BFS is a graph traversal algorithm that explores a graph level by level, visiting all neighbors of a vertex before moving to the next level.
+
+## How it Works
+
+1. **Start**: Begin at a chosen vertex
+2. **Explore**: Visit all adjacent vertices
+3. **Queue**: Add unvisited neighbors to a queue
+4. **Repeat**: Process queue until empty
+
+## Implementation
+
+\`\`\`python
+from collections import deque
+
+def bfs(graph, start):
+    visited = set([start])
+    queue = deque([start])
+    
+    while queue:
+        vertex = queue.popleft()
+        print(vertex)  # Process current node
+        
+        for neighbor in graph[vertex]:
+            if neighbor not in visited:
+                visited.add(neighbor)
+                queue.append(neighbor)
+\`\`\`
+
+## Time Complexity
+
+- O(V + E) where V is vertices and E is edges
+
+## Space Complexity
+
+- O(V) for the queue and visited set
+
+## When to Use
+
+- Finding shortest paths
+- Level-order traversal
+- Finding all vertices within one distance
+- Social networking features
+      `,
+      codeExample: `def bfs(graph, start):
+    visited = set([start])
+    queue = deque([start])
+    
+    while queue:
+        vertex = queue.popleft()
+        for neighbor in graph[vertex]:
+            if neighbor not in visited:
+                visited.add(neighbor)
+                queue.append(neighbor)`,
+      timeComplexity: 'O(V + E)',
+      spaceComplexity: 'O(V)'
     }
   ];
 
@@ -222,4 +365,4 @@ def quick_sort(arr):
   );
 };
 
-export default AlgorithmExplanations; 
+export default AlgorithmExplanations;
