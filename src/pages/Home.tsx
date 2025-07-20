@@ -8,6 +8,15 @@ const Home: React.FC = () => {
   const { user, signInWithGoogle } = useAuth();
 
   const dashboards = [
+    
+    {
+      id: 'assessments',
+      title: 'Assessment Center',
+      description: 'Test your knowledge with timed assessments on various topics',
+      icon: '📝',
+      route: '/assessments',
+      questions: [] // Assessments have their own structure
+    },
     {
       ...DASHBOARD_CONFIGS.dsa,
       questions: dsaQuestions
@@ -23,14 +32,6 @@ const Home: React.FC = () => {
     {
       ...DASHBOARD_CONFIGS.algorithms,
       questions: [] // Algorithm explanations don't use the same question structure
-    },
-    {
-      id: 'assessments',
-      title: 'Assessment Center',
-      description: 'Test your knowledge with timed assessments on various topics',
-      icon: '📝',
-      route: '/assessments',
-      questions: [] // Assessments have their own structure
     }
   ];
 

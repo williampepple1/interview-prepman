@@ -24,7 +24,7 @@ const DashboardCard: React.FC<DashboardCardProps> = ({ dashboard, isAuthenticate
       
       <div className="flex items-center justify-between">
         <div className="text-sm text-gray-500 dark:text-gray-400 transition-colors duration-200">
-          {dashboard.questions.length} questions available
+          {dashboard.questions.length > 0 && `${dashboard.questions.length} questions available`}
         </div>
         {!isAuthenticated && (
           <div className="text-xs text-red-500 dark:text-red-400 font-medium transition-colors duration-200">
