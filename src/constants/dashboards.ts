@@ -10,10 +10,10 @@ export const DASHBOARD_CONFIGS: Record<string, Omit<Dashboard, 'questions'>> = {
   },
   react: {
     id: 'react',
-    title: 'React Questions',
-    description: 'Prepare for React-specific technical interviews',
+    title: 'React Learning Path',
+    description: 'Master React fundamentals and advanced concepts with comprehensive learning modules',
     icon: '⚛️',
-    route: '/dashboard/react'
+    route: '/react'
   },
   dataEngineering: {
     id: 'data-engineering',

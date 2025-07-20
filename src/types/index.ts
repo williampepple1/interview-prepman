@@ -18,6 +18,19 @@ export interface Question {
   explanation?: string;
 }
 
+export interface ReactTopic {
+  id: string;
+  title: string;
+  category: string;
+  description: string;
+  content: string;
+  codeExamples: string[];
+  keyPoints: string[];
+  prerequisites?: string[];
+  estimatedTime: string;
+  difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
+}
+
 export interface Dashboard {
   id: string;
   title: string;

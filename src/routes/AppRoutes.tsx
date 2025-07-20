@@ -7,7 +7,9 @@ import QuestionDetail from '../pages/QuestionDetail';
 import AlgorithmExplanations from '../pages/AlgorithmExplanations';
 import AssessmentDashboard from '../pages/AssessmentDashboard';
 import Assessment from '../pages/Assessment';
-import { dsaQuestions, reactQuestions, dataEngineeringQuestions } from '../data/questions';
+import ReactDashboard from '../pages/ReactDashboard';
+import ReactTopicDetail from '../pages/ReactTopicDetail';
+import { dsaQuestions, dataEngineeringQuestions } from '../data/questions';
 
 const AppRoutes: React.FC = () => {
   return (
@@ -38,26 +40,20 @@ const AppRoutes: React.FC = () => {
         } 
       />
       
-      {/* React Questions Routes */}
+      {/* React Learning Routes */}
       <Route 
-        path="/dashboard/react" 
+        path="/react" 
         element={
           <ProtectedRoute>
-            <Dashboard 
-              questions={reactQuestions}
-              title="React Questions"
-              description="Prepare for React-specific technical interviews"
-            />
+            <ReactDashboard />
           </ProtectedRoute>
         } 
       />
       <Route 
-        path="/dashboard/react/:questionId" 
+        path="/react/:topicId" 
         element={
           <ProtectedRoute>
-            <QuestionDetail 
-              questions={reactQuestions}
-            />
+            <ReactTopicDetail />
           </ProtectedRoute>
         } 
       />
