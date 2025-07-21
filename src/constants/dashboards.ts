@@ -42,5 +42,12 @@ export const DASHBOARD_CONFIGS: Record<string, Omit<Dashboard, 'questions'>> = {
     description: 'Master behavioral interview techniques, STAR method, and common scenarios',
     icon: '💼',
     route: '/behavioral-interview'
+  },
+  python: {
+    id: 'python',
+    title: 'Python Mastery Course',
+    description: 'Learn Python from beginner to advanced with hands-on modules and examples',
+    icon: '🐍',
+    route: '/python'
   }
 }; 

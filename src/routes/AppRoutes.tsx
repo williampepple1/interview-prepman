@@ -8,12 +8,15 @@ import AlgorithmExplanations from '../pages/AlgorithmExplanations';
 import AssessmentDashboard from '../pages/AssessmentDashboard';
 import Assessment from '../pages/Assessment';
 import ReactDashboard from '../pages/ReactDashboard';
+import PythonDashboard from '../pages/PythonDashboard';
 
 import ReactTopicLayout from '../components/ReactTopicLayout';
 import SystemDesignDashboard from '../pages/SystemDesignDashboard';
 import SystemDesignLayout from '../components/SystemDesignLayout';
 import BehavioralInterviewDashboard from '../pages/BehavioralInterviewDashboard';
 import BehavioralInterviewLayout from '../components/BehavioralInterviewLayout';
+import PythonTopicLayout from '../components/PythonTopicLayout';
+import PythonModuleLayout from '../components/PythonModuleLayout';
 import { dsaQuestions, dataEngineeringQuestions } from '../data/questions';
 
 const AppRoutes: React.FC = () => {
@@ -123,6 +126,39 @@ const AppRoutes: React.FC = () => {
         } 
       />
 
+      {/* Python Learning Path Routes */}
+      <Route 
+        path="/python" 
+        element={
+          <ProtectedRoute>
+            <PythonDashboard />
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/python/module/1" 
+        element={
+          <ProtectedRoute>
+            <PythonModuleLayout />
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/python/module/1/topic/:topicId" 
+        element={
+          <ProtectedRoute>
+            <PythonTopicLayout />
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/python/module/1/topic/:topicId/:subtopicId" 
+        element={
+          <ProtectedRoute>
+            <PythonTopicLayout />
+          </ProtectedRoute>
+        } 
+      />
       
       {/* Data Engineering Routes */}
       <Route 

@@ -16,7 +16,7 @@ export const reactTopics: ReactTopic[] = [
         description: 'Learn what React Hooks are and why they were introduced.',
         estimatedTime: '10 minutes',
         difficulty: 'Beginner',
-        content: `
+    content: `
 # Introduction to React Hooks
 
 React Hooks were introduced in React 16.8 to allow functional components to use state and other React features without writing class components. This revolutionized how we write React applications.
@@ -242,7 +242,7 @@ useEffect can return a cleanup function that runs before the component unmounts 
 function Timer() {
   const [count, setCount] = useState(0);
   
-  useEffect(() => {
+useEffect(() => {
     const timer = setInterval(() => {
       setCount(c => c + 1);
     }, 1000);
@@ -272,7 +272,7 @@ useEffect(() => {
 }, [userId]);
 
 // Effect with cleanup
-useEffect(() => {
+  useEffect(() => {
   const subscription = subscribe();
   return () => subscription.unsubscribe();
 }, []);`
@@ -369,7 +369,7 @@ function ExampleComponent({ id }) {
     };
   }, []); // Empty dependency array = run once
   
-  useEffect(() => {
+useEffect(() => {
     // componentDidUpdate equivalent
     if (id) {
       fetchData();
@@ -393,15 +393,15 @@ useEffect(() => {
 }, [someValue]);
 
 // Cleanup on unmount
-useEffect(() => {
-  const timer = setInterval(() => {
+  useEffect(() => {
+    const timer = setInterval(() => {
     // Do something
-  }, 1000);
-  
-  return () => clearInterval(timer);
+    }, 1000);
+    
+    return () => clearInterval(timer);
 }, []);`
-        ],
-        keyPoints: [
+    ],
+    keyPoints: [
           'Components go through mounting, updating, and unmounting phases',
           'Class components use lifecycle methods like componentDidMount',
           'Functional components use useEffect to handle lifecycle events',
@@ -414,8 +414,8 @@ useEffect(() => {
         title: 'Lifecycle Methods',
         description: 'Deep dive into specific lifecycle methods and their use cases.',
         estimatedTime: '20 minutes',
-        difficulty: 'Intermediate',
-        content: `
+    difficulty: 'Intermediate',
+    content: `
 # Lifecycle Methods Deep Dive
 
 ## componentDidMount
@@ -492,15 +492,15 @@ class UserProfile extends React.Component {
         `,
         codeExamples: [
           `// componentDidMount equivalent with hooks
-useEffect(() => {
+  useEffect(() => {
   fetchUserData();
   const websocket = new WebSocket('ws://example.com');
   
-  return () => {
+    return () => {
     websocket.close();
-  };
-}, []);
-
+    };
+  }, []);
+  
 // componentDidUpdate equivalent with hooks
 useEffect(() => {
   if (userId) {
@@ -767,14 +767,14 @@ export function UserProvider({ children }) {
             headers: { Authorization: \`Bearer \${token}\` }
           });
           if (response.ok) {
-            const userData = await response.json();
-            setUser(userData);
-          }
+        const userData = await response.json();
+          setUser(userData);
+        }
         }
       } catch (error) {
         console.error('Auth check failed:', error);
       } finally {
-        setLoading(false);
+          setLoading(false);
       }
     };
     
@@ -968,8 +968,8 @@ function Counter() {
   );
 }
 \`\`\`
-        `,
-        codeExamples: [
+    `,
+    codeExamples: [
           `// Redux Toolkit slice
 const slice = createSlice({
   name: 'feature',
@@ -986,8 +986,8 @@ const useStore = create((set) => ({
   state: initialValue,
   actions: () => set((state) => ({ /* new state */ }))
 }));`
-        ],
-        keyPoints: [
+    ],
+    keyPoints: [
           'Redux Toolkit is the official Redux solution',
           'Zustand is lightweight and easy to use',
           'Choose libraries based on your app complexity',
