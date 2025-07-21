@@ -136,7 +136,7 @@ const AppRoutes: React.FC = () => {
         } 
       />
       <Route 
-        path="/python/module/1" 
+        path="/python/module/:moduleId" 
         element={
           <ProtectedRoute>
             <PythonModuleLayout />
@@ -144,7 +144,7 @@ const AppRoutes: React.FC = () => {
         } 
       />
       <Route 
-        path="/python/module/1/topic/:topicId" 
+        path="/python/module/:moduleId/topic/:topicId" 
         element={
           <ProtectedRoute>
             <PythonTopicLayout />
@@ -152,7 +152,7 @@ const AppRoutes: React.FC = () => {
         } 
       />
       <Route 
-        path="/python/module/1/topic/:topicId/:subtopicId" 
+        path="/python/module/:moduleId/topic/:topicId/:subtopicId" 
         element={
           <ProtectedRoute>
             <PythonTopicLayout />

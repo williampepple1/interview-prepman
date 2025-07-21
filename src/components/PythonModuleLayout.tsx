@@ -1,11 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { BookOpen } from 'lucide-react';
 import { pythonModule1Topics } from '../data/python/module1';
+import { pythonModule2Topics } from '../data/python/module2';
 
 const PythonModuleLayout: React.FC = () => {
-  // For now, only module 1 is supported
-  const topics = pythonModule1Topics;
+  const { moduleId } = useParams<{ moduleId?: string }>();
+  const safeModuleId = moduleId || '1';
+  let topics = pythonModule1Topics;
+  let moduleTitle = 'Module 1: Introduction to Python & Programming Basics';
+  let moduleDesc = 'Explore all topics in this module. Click a topic to view its details and subtopics.';
+
+  if (safeModuleId === '2') {
+    topics = pythonModule2Topics;
+    moduleTitle = 'Module 2: Control Flow & Data Structures';
+    moduleDesc = 'Master control flow, loops, lists, dictionaries, comprehensions, and more.';
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
@@ -18,17 +28,17 @@ const PythonModuleLayout: React.FC = () => {
             ← Back to Python Modules
           </Link>
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2 transition-colors duration-200">
-            Module 1: Introduction to Python & Programming Basics
+            {moduleTitle}
           </h1>
           <p className="text-gray-600 dark:text-gray-300 transition-colors duration-200">
-            Explore all topics in this module. Click a topic to view its details and subtopics.
+            {moduleDesc}
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {topics.map((topic) => (
             <Link
               key={topic.id}
-              to={`/python/module/1/topic/${topic.id}`}
+              to={`/python/module/${safeModuleId}/topic/${topic.id}`}
               className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 hover:shadow-md transition-all duration-200 flex flex-col items-start"
             >
               <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mb-3">

@@ -2,17 +2,20 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Clock } from 'lucide-react';
 import { pythonModule1Topics } from '../data/python/module1';
+import { pythonModule2Topics } from '../data/python/module2';
 import { Topic, Subtopic } from '../types';
 import MarkdownRenderer from './MarkdownRenderer';
 
 const PythonTopicLayout: React.FC = () => {
-  const { topicId, subtopicId } = useParams<{ topicId: string; subtopicId?: string }>();
+  const { moduleId, topicId, subtopicId } = useParams<{ moduleId?: string; topicId: string; subtopicId?: string }>();
+  const safeModuleId = moduleId || '1';
+  const topics = safeModuleId === '2' ? pythonModule2Topics : pythonModule1Topics;
   const [currentTopic, setCurrentTopic] = useState<Topic | null>(null);
   const [currentSubtopic, setCurrentSubtopic] = useState<Subtopic | null>(null);
 
   useEffect(() => {
     if (topicId) {
-      const topic = pythonModule1Topics.find(t => t.id === topicId);
+      const topic = topics.find(t => t.id === topicId);
       setCurrentTopic(topic || null);
       if (subtopicId && topic) {
         const subtopic = topic.subtopics?.find(s => s.id === subtopicId);
@@ -21,7 +24,7 @@ const PythonTopicLayout: React.FC = () => {
         setCurrentSubtopic(null);
       }
     }
-  }, [topicId, subtopicId]);
+  }, [topicId, subtopicId, topics]);
 
   if (!currentTopic) {
     return (
@@ -30,10 +33,10 @@ const PythonTopicLayout: React.FC = () => {
           <div className="text-center">
             <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Topic not found</h1>
             <Link
-              to="/python/module/1"
+              to={`/python/module/${safeModuleId}`}
               className="text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300"
             >
-              Back to Module 1
+              Back to Module {safeModuleId}
             </Link>
           </div>
         </div>
@@ -47,7 +50,7 @@ const PythonTopicLayout: React.FC = () => {
         <div>
           <div className="mb-6">
             <Link
-              to={`/python/module/1/topic/${topicId}`}
+              to={`/python/module/${safeModuleId}/topic/${topicId}`}
               className="inline-flex items-center text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 mb-4 transition-colors duration-200"
             >
               <ArrowLeft className="h-4 w-4 mr-2" />
@@ -86,11 +89,11 @@ const PythonTopicLayout: React.FC = () => {
       <div>
         <div className="mb-6">
           <Link
-            to="/python/module/1"
+            to={`/python/module/${safeModuleId}`}
             className="inline-flex items-center text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 mb-4 transition-colors duration-200"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Module 1
+            Back to Module {safeModuleId}
           </Link>
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2 transition-colors duration-200">
             {currentTopic.title}
@@ -117,7 +120,7 @@ const PythonTopicLayout: React.FC = () => {
               {currentTopic.subtopics.map((subtopic) => (
                 <Link
                   key={subtopic.id}
-                  to={`/python/module/1/topic/${topicId}/${subtopic.id}`}
+                  to={`/python/module/${safeModuleId}/topic/${topicId}/${subtopic.id}`}
                   className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition-all duration-200"
                 >
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 transition-colors duration-200">
@@ -161,13 +164,13 @@ const PythonTopicLayout: React.FC = () => {
           <div className="lg:w-64 flex-shrink-0">
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 sticky top-8">
               <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 transition-colors duration-200">
-                Module 1 Topics
+                Module {safeModuleId} Topics
               </h2>
               <nav className="space-y-2">
-                {pythonModule1Topics.map((topic) => (
+                {topics.map((topic) => (
                   <div key={topic.id}>
                     <Link
-                      to={`/python/module/1/topic/${topic.id}`}
+                      to={`/python/module/${safeModuleId}/topic/${topic.id}`}
                       className={`block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                         topicId === topic.id
                           ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300'
@@ -181,7 +184,7 @@ const PythonTopicLayout: React.FC = () => {
                         {topic.subtopics.map((subtopic) => (
                           <Link
                             key={subtopic.id}
-                            to={`/python/module/1/topic/${topic.id}/${subtopic.id}`}
+                            to={`/python/module/${safeModuleId}/topic/${topic.id}/${subtopic.id}`}
                             className={`block px-3 py-1 rounded-md text-sm transition-colors duration-200 ${
                               subtopicId === subtopic.id
                                 ? 'bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400'
