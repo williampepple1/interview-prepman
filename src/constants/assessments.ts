@@ -4,6 +4,7 @@ import { nodejsAssessmentQuestions } from '../data/assessments/nodejs';
 import { cleanCodeAssessmentQuestions } from '../data/assessments/clean-code';
 import { pythonAssessmentQuestions } from '../data/assessments/python';
 import { databaseAssessmentQuestions } from '../data/assessments/databases';
+import { containerizationQuestions } from '../data/assessments/containerization';
 
 export const ASSESSMENT_TOPICS: AssessmentTopic[] = [
   {
@@ -53,6 +54,16 @@ export const ASSESSMENT_TOPICS: AssessmentTopic[] = [
     icon: '🗄️',
     route: '/assessments/databases',
     questions: databaseAssessmentQuestions,
+    timeLimit: 20, // 20 minutes
+    questionCount: 30
+  },
+  {
+    id: 'containerization',
+    title: 'Containerization Assessment',
+    description: 'Test your knowledge of Docker, Kubernetes, containers, orchestration, and cloud-native technologies',
+    icon: '🐳',
+    route: '/assessments/containerization',
+    questions: containerizationQuestions,
     timeLimit: 20, // 20 minutes
     questionCount: 30
   }
