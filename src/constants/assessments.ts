@@ -5,6 +5,8 @@ import { cleanCodeAssessmentQuestions } from '../data/assessments/clean-code';
 import { pythonAssessmentQuestions } from '../data/assessments/python';
 import { databaseAssessmentQuestions } from '../data/assessments/databases';
 import { containerizationQuestions } from '../data/assessments/containerization';
+import { frontendFundamentalsQuestions } from '../data/assessments/frontend-fundamentals';
+import { backendFundamentalsQuestions } from '../data/assessments/backend-fundamentals';
 
 export const ASSESSMENT_TOPICS: AssessmentTopic[] = [
   {
@@ -64,6 +66,26 @@ export const ASSESSMENT_TOPICS: AssessmentTopic[] = [
     icon: '🐳',
     route: '/assessments/containerization',
     questions: containerizationQuestions,
+    timeLimit: 20, // 20 minutes
+    questionCount: 30
+  },
+  {
+    id: 'frontend-fundamentals',
+    title: 'Frontend Fundamentals Assessment',
+    description: 'Test your knowledge of HTML, CSS, JavaScript, and web development basics',
+    icon: '🌐',
+    route: '/assessments/frontend-fundamentals',
+    questions: frontendFundamentalsQuestions,
+    timeLimit: 20, // 20 minutes
+    questionCount: 30
+  },
+  {
+    id: 'backend-fundamentals',
+    title: 'Backend Fundamentals Assessment',
+    description: 'Test your knowledge of server-side development, APIs, databases, authentication, and backend technologies',
+    icon: '⚙️',
+    route: '/assessments/backend-fundamentals',
+    questions: backendFundamentalsQuestions,
     timeLimit: 20, // 20 minutes
     questionCount: 30
   }
