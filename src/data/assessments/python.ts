@@ -1750,5 +1750,355 @@ export const pythonAssessmentQuestions: AssessmentQuestion[] = [
     explanation: 'isdecimal() returns True if all characters in the string are decimal characters. "hello" contains letters.',
     category: 'Python Strings',
     difficulty: 'Easy'
+  },
+  {
+    id: 'python-126',
+    question: 'What is the output of: print("hello".isnumeric())?',
+    options: [
+      'False',
+      'True',
+      'None',
+      'Error'
+    ],
+    correctAnswer: 'False',
+    explanation: 'isnumeric() returns True if all characters in the string are numeric. "hello" contains letters.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-127',
+    question: 'What is the correct way to create a custom exception?',
+    options: [
+      'class CustomException(Exception): pass',
+      'def CustomException(): pass',
+      'exception CustomException: pass',
+      'import exception; @exception'
+    ],
+    correctAnswer: 'class CustomException(Exception): pass',
+    explanation: 'Custom exceptions are created by inheriting from the Exception class or its subclasses.',
+    category: 'Python Exception Handling',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-128',
+    question: 'What is the output of: print("hello".capitalize())?',
+    options: [
+      'Hello',
+      'hello',
+      'HELLO',
+      'Error'
+    ],
+    correctAnswer: 'Hello',
+    explanation: 'capitalize() returns a copy of the string with its first character capitalized.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-129',
+    question: 'What is the correct way to create a thread in Python?',
+    options: [
+      'import threading; thread = threading.Thread(target=function)',
+      'import thread; thread.start(function)',
+      'import multiprocessing; thread = multiprocessing.Thread(function)',
+      'import concurrent; thread = concurrent.Thread(function)'
+    ],
+    correctAnswer: 'import threading; thread = threading.Thread(target=function)',
+    explanation: 'The threading module provides a high-level interface for working with threads.',
+    category: 'Python Concurrency',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-130',
+    question: 'What is the output of: print("hello".title())?',
+    options: [
+      'Hello',
+      'hello',
+      'HELLO',
+      'Error'
+    ],
+    correctAnswer: 'Hello',
+    explanation: 'title() returns a titlecased version of the string where words start with uppercase characters.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-131',
+    question: 'What is the correct way to create a process in Python?',
+    options: [
+      'import multiprocessing; process = multiprocessing.Process(target=function)',
+      'import threading; process = threading.Process(function)',
+      'import os; process = os.fork()',
+      'import subprocess; process = subprocess.Process(function)'
+    ],
+    correctAnswer: 'import multiprocessing; process = multiprocessing.Process(target=function)',
+    explanation: 'The multiprocessing module provides a high-level interface for working with processes.',
+    category: 'Python Concurrency',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-132',
+    question: 'What is the output of: print("hello".splitlines())?',
+    options: [
+      "['hello']",
+      "['h', 'e', 'l', 'l', 'o']",
+      'hello',
+      'Error'
+    ],
+    correctAnswer: "['hello']",
+    explanation: 'splitlines() splits the string at line boundaries and returns a list of lines.',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-133',
+    question: 'What is the correct way to create a pool of workers?',
+    options: [
+      'import multiprocessing; pool = multiprocessing.Pool()',
+      'import threading; pool = threading.Pool()',
+      'import concurrent; pool = concurrent.Pool()',
+      'import asyncio; pool = asyncio.Pool()'
+    ],
+    correctAnswer: 'import multiprocessing; pool = multiprocessing.Pool()',
+    explanation: 'multiprocessing.Pool provides a pool of worker processes for parallel execution.',
+    category: 'Python Concurrency',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-134',
+    question: 'What is the output of: print("hello".rsplit())?',
+    options: [
+      "['hello']",
+      "['h', 'e', 'l', 'l', 'o']",
+      'hello',
+      'Error'
+    ],
+    correctAnswer: "['hello']",
+    explanation: 'rsplit() splits the string from the right side, similar to split() but from the end.',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-135',
+    question: 'What is the correct way to create an async function?',
+    options: [
+      'async def my_function(): ...',
+      'def async my_function(): ...',
+      'async function my_function(): ...',
+      'import asyncio; @asyncio.async def my_function(): ...'
+    ],
+    correctAnswer: 'async def my_function(): ...',
+    explanation: 'async def defines an asynchronous function that can use await.',
+    category: 'Python Async',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-136',
+    question: 'What is the output of: print("hello".rpartition("l"))?',
+    options: [
+      "('he', 'l', 'lo')",
+      "('hel', 'l', 'o')",
+      "['he', 'l', 'lo']",
+      'Error'
+    ],
+    correctAnswer: "('hel', 'l', 'o')",
+    explanation: 'rpartition() splits the string at the last occurrence of the separator.',
+    category: 'Python Strings',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-137',
+    question: 'What is the correct way to run an async function?',
+    options: [
+      'import asyncio; asyncio.run(my_function())',
+      'my_function()',
+      'await my_function()',
+      'import async; async.run(my_function())'
+    ],
+    correctAnswer: 'import asyncio; asyncio.run(my_function())',
+    explanation: 'asyncio.run() runs the coroutine and returns the result.',
+    category: 'Python Async',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-138',
+    question: 'What is the output of: print("hello".lstrip())?',
+    options: [
+      'hello',
+      'hello ',
+      ' hello',
+      'Error'
+    ],
+    correctAnswer: 'hello',
+    explanation: 'lstrip() removes leading whitespace from the string.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-139',
+    question: 'What is the correct way to create a task in asyncio?',
+    options: [
+      'import asyncio; task = asyncio.create_task(coroutine)',
+      'import asyncio; task = asyncio.Task(coroutine)',
+      'import asyncio; task = asyncio.run(coroutine)',
+      'import asyncio; task = asyncio.start(coroutine)'
+    ],
+    correctAnswer: 'import asyncio; task = asyncio.create_task(coroutine)',
+    explanation: 'asyncio.create_task() schedules the coroutine to run and returns a Task object.',
+    category: 'Python Async',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-140',
+    question: 'What is the output of: print("hello".rstrip())?',
+    options: [
+      'hello',
+      'hello ',
+      ' hello',
+      'Error'
+    ],
+    correctAnswer: 'hello',
+    explanation: 'rstrip() removes trailing whitespace from the string.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-141',
+    question: 'What is the correct way to wait for multiple coroutines?',
+    options: [
+      'import asyncio; await asyncio.gather(coro1(), coro2())',
+      'import asyncio; asyncio.wait([coro1(), coro2()])',
+      'await coro1(); await coro2()',
+      'import asyncio; asyncio.run_all([coro1(), coro2()])'
+    ],
+    correctAnswer: 'import asyncio; await asyncio.gather(coro1(), coro2())',
+    explanation: 'asyncio.gather() runs multiple coroutines concurrently and waits for all to complete.',
+    category: 'Python Async',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-142',
+    question: 'What is the output of: print("hello".removeprefix("he"))?',
+    options: [
+      'llo',
+      'hello',
+      'he',
+      'Error'
+    ],
+    correctAnswer: 'llo',
+    explanation: 'removeprefix() removes the specified prefix if the string starts with it.',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-143',
+    question: 'What is the correct way to create a semaphore in asyncio?',
+    options: [
+      'import asyncio; semaphore = asyncio.Semaphore(5)',
+      'import asyncio; semaphore = asyncio.Lock()',
+      'import asyncio; semaphore = asyncio.Event()',
+      'import asyncio; semaphore = asyncio.Condition()'
+    ],
+    correctAnswer: 'import asyncio; semaphore = asyncio.Semaphore(5)',
+    explanation: 'asyncio.Semaphore limits the number of coroutines that can access a resource simultaneously.',
+    category: 'Python Async',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-144',
+    question: 'What is the output of: print("hello".removesuffix("lo"))?',
+    options: [
+      'hel',
+      'hello',
+      'lo',
+      'Error'
+    ],
+    correctAnswer: 'hel',
+    explanation: 'removesuffix() removes the specified suffix if the string ends with it.',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-145',
+    question: 'What is the correct way to create a lock in asyncio?',
+    options: [
+      'import asyncio; lock = asyncio.Lock()',
+      'import asyncio; lock = asyncio.Semaphore(1)',
+      'import asyncio; lock = asyncio.Event()',
+      'import asyncio; lock = asyncio.Condition()'
+    ],
+    correctAnswer: 'import asyncio; lock = asyncio.Lock()',
+    explanation: 'asyncio.Lock provides mutual exclusion for coroutines.',
+    category: 'Python Async',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-146',
+    question: 'What is the output of: print("hello".isascii())?',
+    options: [
+      'True',
+      'False',
+      'None',
+      'Error'
+    ],
+    correctAnswer: 'True',
+    explanation: 'isascii() returns True if all characters in the string are ASCII.',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-147',
+    question: 'What is the correct way to create an event in asyncio?',
+    options: [
+      'import asyncio; event = asyncio.Event()',
+      'import asyncio; event = asyncio.Lock()',
+      'import asyncio; event = asyncio.Semaphore(1)',
+      'import asyncio; event = asyncio.Condition()'
+    ],
+    correctAnswer: 'import asyncio; event = asyncio.Event()',
+    explanation: 'asyncio.Event allows coroutines to wait for a signal from another coroutine.',
+    category: 'Python Async',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-148',
+    question: 'What is the output of: print("hello".isprintable())?',
+    options: [
+      'True',
+      'False',
+      'None',
+      'Error'
+    ],
+    correctAnswer: 'True',
+    explanation: 'isprintable() returns True if all characters in the string are printable.',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-149',
+    question: 'What is the correct way to create a condition in asyncio?',
+    options: [
+      'import asyncio; condition = asyncio.Condition()',
+      'import asyncio; condition = asyncio.Lock()',
+      'import asyncio; condition = asyncio.Event()',
+      'import asyncio; condition = asyncio.Semaphore(1)'
+    ],
+    correctAnswer: 'import asyncio; condition = asyncio.Condition()',
+    explanation: 'asyncio.Condition allows coroutines to wait for a condition to become true.',
+    category: 'Python Async',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-150',
+    question: 'What is the output of: print("hello".isidentifier())?',
+    options: [
+      'True',
+      'False',
+      'None',
+      'Error'
+    ],
+    correctAnswer: 'True',
+    explanation: 'isidentifier() returns True if the string is a valid Python identifier.',
+    category: 'Python Strings',
+    difficulty: 'Medium'
   }
 ]; 
