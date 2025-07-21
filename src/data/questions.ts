@@ -769,7 +769,7 @@ This approach ensures we can only use each character from the magazine once.
     `,
     tags: ['hash-table', 'string', 'counting'],
     companies: ['Google', 'Apple', 'Microsoft'],
-    studyPlans: ['Top 150', 'Hashmap Questions']
+    studyPlans: ['Top 150']
   },
   {
     id: 'isomorphic-strings',
@@ -824,7 +824,7 @@ This ensures that the mapping is one-to-one and consistent throughout the string
     `,
     tags: ['hash-table', 'string'],
     companies: ['Google', 'Microsoft', 'Apple'],
-    studyPlans: ['Top 150', 'Hashmap Questions']
+    studyPlans: ['Top 150']
   },
   {
     id: 'word-pattern',
@@ -880,7 +880,7 @@ This ensures the pattern and string follow the same bijection.
     `,
     tags: ['hash-table', 'string'],
     companies: ['Google', 'Microsoft', 'Apple'],
-    studyPlans: ['Top 150', 'Hashmap Questions']
+    studyPlans: ['Top 150']
   },
   {
     id: 'valid-anagram',
@@ -937,7 +937,7 @@ The hash map approach is more efficient for large strings.
     `,
     tags: ['hash-table', 'string', 'sorting'],
     companies: ['Google', 'Amazon', 'Microsoft', 'Apple'],
-    studyPlans: ['Top 150', 'Hashmap Questions']
+    studyPlans: ['Top 150']
   },
   {
     id: 'group-anagrams',
@@ -1006,7 +1006,7 @@ Both approaches work, but counting is more efficient for longer strings.
     `,
     tags: ['hash-table', 'string', 'sorting'],
     companies: ['Google', 'Amazon', 'Microsoft', 'Apple', 'Facebook'],
-    studyPlans: ['Top 150', 'Hashmap Questions']
+    studyPlans: ['Top 150']
   },
   {
     id: 'happy-number',
@@ -1044,7 +1044,7 @@ The key insight is that if we enter a cycle, we'll never reach 1, so we can dete
     `,
     tags: ['hash-table', 'math', 'two-pointers'],
     companies: ['Google', 'Amazon', 'Microsoft', 'Apple'],
-    studyPlans: ['Top 150', 'Hashmap Questions']
+    studyPlans: ['Top 150']
   },
   {
     id: 'contains-duplicate-ii',
@@ -1082,7 +1082,7 @@ This approach ensures we only need to traverse the array once and maintain a sli
     `,
     tags: ['hash-table', 'array', 'sliding-window'],
     companies: ['Google', 'Amazon', 'Microsoft', 'Apple'],
-    studyPlans: ['Top 150', 'Hashmap Questions']
+    studyPlans: ['Top 150']
   },
   {
     id: 'longest-consecutive-sequence',
@@ -1133,7 +1133,7 @@ The key optimization is only starting from sequence beginnings to avoid redundan
     `,
     tags: ['hash-table', 'array', 'union-find'],
     companies: ['Google', 'Amazon', 'Microsoft', 'Apple', 'Facebook'],
-    studyPlans: ['Top 150', 'Hashmap Questions']
+    studyPlans: ['Top 150']
   }
 ];
 
@@ -1356,7 +1356,7 @@ This approach ensures we can only use each character from the magazine once.
     `,
     tags: ['hash-table', 'string', 'counting'],
     companies: ['Google', 'Apple', 'Microsoft'],
-    studyPlans: ['Top 150', 'Hashmap Questions']
+    studyPlans: ['Top 150']
   },
   {
     id: 'isomorphic-strings',
@@ -1411,7 +1411,7 @@ This ensures that the mapping is one-to-one and consistent throughout the string
     `,
     tags: ['hash-table', 'string'],
     companies: ['Google', 'Microsoft', 'Apple'],
-    studyPlans: ['Top 150', 'Hashmap Questions']
+    studyPlans: ['Top 150']
   },
   {
     id: 'word-pattern',
@@ -1468,7 +1468,7 @@ The key insight is that we need to check both directions to ensure a true biject
     `,
     tags: ['hash-table', 'string'],
     companies: ['Google', 'Microsoft', 'Uber'],
-    studyPlans: ['Top 150', 'Hashmap Questions']
+    studyPlans: ['Top 150']
   },
   {
     id: 'valid-anagram',
@@ -1523,7 +1523,7 @@ Simply sort both strings and compare them. If they're anagrams, the sorted versi
     `,
     tags: ['hash-table', 'string', 'sorting'],
     companies: ['Google', 'Amazon', 'Microsoft', 'Apple'],
-    studyPlans: ['Top 150', 'Hashmap Questions']
+    studyPlans: ['Top 150']
   },
   {
     id: 'group-anagrams',
@@ -1592,7 +1592,7 @@ Both approaches ensure that anagrams are grouped together efficiently.
     `,
     tags: ['hash-table', 'string', 'sorting'],
     companies: ['Google', 'Amazon', 'Microsoft', 'Apple', 'Facebook'],
-    studyPlans: ['Top 150', 'Hashmap Questions']
+    studyPlans: ['Top 150']
   },
   {
     id: 'happy-number',
@@ -1653,7 +1653,7 @@ The key insight is that unhappy numbers will eventually enter a cycle.
     `,
     tags: ['hash-table', 'math', 'two-pointers'],
     companies: ['Google', 'Microsoft', 'Apple'],
-    studyPlans: ['Top 150', 'Hashmap Questions']
+    studyPlans: ['Top 150']
   },
   {
     id: 'contains-duplicate-ii',
@@ -1692,7 +1692,7 @@ The key insight is that we only need to keep track of the most recent occurrence
     `,
     tags: ['hash-table', 'array', 'sliding-window'],
     companies: ['Google', 'Amazon', 'Microsoft'],
-    studyPlans: ['Top 150', 'Hashmap Questions']
+    studyPlans: ['Top 150']
   },
   {
     id: 'longest-consecutive-sequence',
@@ -1743,7 +1743,7 @@ The key optimization is only starting from sequence beginnings to avoid redundan
     `,
     tags: ['hash-table', 'array', 'union-find'],
     companies: ['Google', 'Amazon', 'Microsoft', 'Apple', 'Facebook'],
-    studyPlans: ['Top 150', 'Hashmap Questions']
+    studyPlans: ['Top 150']
   }
 ];
 
