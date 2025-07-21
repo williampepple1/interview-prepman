@@ -13,6 +13,7 @@ import { pythonModule9Topics } from '../data/python/module9';
 import { pythonModule10Topics } from '../data/python/module10';
 import { pythonModule11Topics } from '../data/python/module11';
 import { pythonModule12Topics } from '../data/python/module12';
+import { pythonModule13Topics } from '../data/python/module13';
 
 const PythonModuleLayout: React.FC = () => {
   const { moduleId } = useParams<{ moduleId?: string }>();
@@ -65,6 +66,10 @@ const PythonModuleLayout: React.FC = () => {
     topics = pythonModule12Topics;
     moduleTitle = 'Module 12: Networking & APIs';
     moduleDesc = 'Learn requests, REST APIs, consuming and creating APIs, and WebSockets in Python.';
+  } else if (safeModuleId === '13') {
+    topics = pythonModule13Topics;
+    moduleTitle = 'Module 13: Web Development with Python';
+    moduleDesc = 'Learn Flask, Django, FastAPI, Jinja2, authentication, and web development best practices.';
   }
 
   return (

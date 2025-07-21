@@ -9,4 +9,5 @@ export { pythonModule8Topics } from './module8';
 export { pythonModule9Topics } from './module9';
 export { pythonModule10Topics } from './module10';
 export { pythonModule11Topics } from './module11';
-export { pythonModule12Topics } from './module12'; 
+export { pythonModule12Topics } from './module12';
+export { pythonModule13Topics } from './module13'; 

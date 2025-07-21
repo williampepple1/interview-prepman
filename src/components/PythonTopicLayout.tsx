@@ -13,13 +13,14 @@ import { pythonModule9Topics } from '../data/python/module9';
 import { pythonModule10Topics } from '../data/python/module10';
 import { pythonModule11Topics } from '../data/python/module11';
 import { pythonModule12Topics } from '../data/python/module12';
+import { pythonModule13Topics } from '../data/python/module13';
 import { Topic, Subtopic } from '../types';
 import MarkdownRenderer from './MarkdownRenderer';
 
 const PythonTopicLayout: React.FC = () => {
   const { moduleId, topicId, subtopicId } = useParams<{ moduleId?: string; topicId: string; subtopicId?: string }>();
   const safeModuleId = moduleId || '1';
-  const topics = safeModuleId === '12' ? pythonModule12Topics : safeModuleId === '11' ? pythonModule11Topics : safeModuleId === '10' ? pythonModule10Topics : safeModuleId === '9' ? pythonModule9Topics : safeModuleId === '8' ? pythonModule8Topics : safeModuleId === '7' ? pythonModule7Topics : safeModuleId === '6' ? pythonModule6Topics : safeModuleId === '5' ? pythonModule5Topics : safeModuleId === '4' ? pythonModule4Topics : safeModuleId === '3' ? pythonModule3Topics : safeModuleId === '2' ? pythonModule2Topics : pythonModule1Topics;
+  const topics = safeModuleId === '13' ? pythonModule13Topics : safeModuleId === '12' ? pythonModule12Topics : safeModuleId === '11' ? pythonModule11Topics : safeModuleId === '10' ? pythonModule10Topics : safeModuleId === '9' ? pythonModule9Topics : safeModuleId === '8' ? pythonModule8Topics : safeModuleId === '7' ? pythonModule7Topics : safeModuleId === '6' ? pythonModule6Topics : safeModuleId === '5' ? pythonModule5Topics : safeModuleId === '4' ? pythonModule4Topics : safeModuleId === '3' ? pythonModule3Topics : safeModuleId === '2' ? pythonModule2Topics : pythonModule1Topics;
   const [currentTopic, setCurrentTopic] = useState<Topic | null>(null);
   const [currentSubtopic, setCurrentSubtopic] = useState<Subtopic | null>(null);
 
