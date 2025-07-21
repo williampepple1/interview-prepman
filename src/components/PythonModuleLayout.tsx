@@ -4,6 +4,7 @@ import { BookOpen } from 'lucide-react';
 import { pythonModule1Topics } from '../data/python/module1';
 import { pythonModule2Topics } from '../data/python/module2';
 import { pythonModule3Topics } from '../data/python/module3';
+import { pythonModule4Topics } from '../data/python/module4';
 
 const PythonModuleLayout: React.FC = () => {
   const { moduleId } = useParams<{ moduleId?: string }>();
@@ -20,6 +21,10 @@ const PythonModuleLayout: React.FC = () => {
     topics = pythonModule3Topics;
     moduleTitle = 'Module 3: Functions & Functional Programming';
     moduleDesc = 'Learn about functions, functional programming, comprehensions, recursion, and more.';
+  } else if (safeModuleId === '4') {
+    topics = pythonModule4Topics;
+    moduleTitle = 'Module 4: Strings & Regular Expressions';
+    moduleDesc = 'Work with strings, formatting, Unicode, regex, and text parsing in Python.';
   }
 
   return (
