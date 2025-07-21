@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { BookOpen } from 'lucide-react';
 import { pythonModule1Topics } from '../data/python/module1';
 import { pythonModule2Topics } from '../data/python/module2';
+import { pythonModule3Topics } from '../data/python/module3';
 
 const PythonModuleLayout: React.FC = () => {
   const { moduleId } = useParams<{ moduleId?: string }>();
@@ -15,6 +16,10 @@ const PythonModuleLayout: React.FC = () => {
     topics = pythonModule2Topics;
     moduleTitle = 'Module 2: Control Flow & Data Structures';
     moduleDesc = 'Master control flow, loops, lists, dictionaries, comprehensions, and more.';
+  } else if (safeModuleId === '3') {
+    topics = pythonModule3Topics;
+    moduleTitle = 'Module 3: Functions & Functional Programming';
+    moduleDesc = 'Learn about functions, functional programming, comprehensions, recursion, and more.';
   }
 
   return (
