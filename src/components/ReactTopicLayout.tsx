@@ -190,8 +190,9 @@ const ReactTopicLayout: React.FC = () => {
 
                 {/* Content */}
                 <div className="p-6">
-                  <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-200 prose-strong:text-gray-900 dark:prose-strong:text-white prose-code:text-gray-800 dark:prose-code:text-gray-200 prose-pre:bg-gray-50 dark:prose-pre:bg-gray-700 prose-pre:text-gray-800 dark:prose-pre:text-gray-200 prose-li:text-gray-700 dark:prose-li:text-gray-200 prose-ul:text-gray-700 dark:prose-ul:text-gray-200 prose-ol:text-gray-700 dark:prose-ol:text-gray-200">
+                  <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-white prose-strong:text-gray-900 dark:prose-strong:text-white prose-code:text-gray-800 dark:prose-code:text-white prose-pre:bg-gray-50 dark:prose-pre:bg-gray-700 prose-pre:text-gray-800 dark:prose-pre:text-white prose-li:text-gray-700 dark:prose-li:text-white prose-ul:text-gray-700 dark:prose-ul:text-white prose-ol:text-gray-700 dark:prose-ol:text-white">
                                       <div 
+                    className="text-gray-700 dark:text-white"
                     dangerouslySetInnerHTML={{ 
                       __html: currentSubtopic.content
                         .replace(/^# (.*$)/gm, '<h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">$1</h1>')
