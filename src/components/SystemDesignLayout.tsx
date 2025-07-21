@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Lock, CheckCircle, Clock, Code } from 'lucide-react';
-import { reactTopics } from '../data/react-topics';
+import { systemDesignTopics } from '../data/system-design-topics';
 
-const ReactTopicLayout: React.FC = () => {
+const SystemDesignLayout: React.FC = () => {
   const { topicId, subtopicId } = useParams<{ topicId: string; subtopicId?: string }>();
   const navigate = useNavigate();
   
-  const topic = reactTopics.find(t => t.id === topicId);
+  const topic = systemDesignTopics.find(t => t.id === topicId);
   
   if (!topic) {
     return (
@@ -15,10 +15,10 @@ const ReactTopicLayout: React.FC = () => {
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Topic not found</h1>
           <Link 
-            to="/react" 
+            to="/system-design" 
             className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300"
           >
-            Back to React Dashboard
+            Back to System Design Dashboard
           </Link>
         </div>
       </div>
@@ -31,7 +31,7 @@ const ReactTopicLayout: React.FC = () => {
   const currentSubtopic = topic.subtopics.find(s => s.id === currentSubtopicId) || defaultSubtopic;
 
   const handleSubtopicClick = (subtopicId: string) => {
-    navigate(`/react/topic/${topicId}/${subtopicId}`);
+    navigate(`/system-design/topic/${topicId}/${subtopicId}`);
   };
 
   const getDifficultyColor = (difficulty: string) => {
@@ -51,7 +51,7 @@ const ReactTopicLayout: React.FC = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <Link 
-                to="/react" 
+                to="/system-design" 
                 className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200"
               >
                 <ArrowLeft className="h-4 w-4 mr-2" />
@@ -70,7 +70,7 @@ const ReactTopicLayout: React.FC = () => {
               <span className={`px-3 py-1 rounded-full text-sm font-medium ${getDifficultyColor(topic.difficulty)} transition-colors duration-200`}>
                 {topic.difficulty}
               </span>
-              <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
+              <div className="flex items-center text-sm text-gray-500 dark:text-gray-300">
                 <Clock className="h-4 w-4 mr-1" />
                 <span>{topic.estimatedTime}</span>
               </div>
@@ -251,4 +251,4 @@ const ReactTopicLayout: React.FC = () => {
   );
 };
 
-export default ReactTopicLayout; 
+export default SystemDesignLayout; 

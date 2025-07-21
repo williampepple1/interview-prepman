@@ -28,5 +28,12 @@ export const DASHBOARD_CONFIGS: Record<string, Omit<Dashboard, 'questions'>> = {
     description: 'Detailed explanations of common algorithms',
     icon: '🧮',
     route: '/dashboard/algorithms'
+  },
+  systemDesign: {
+    id: 'system-design',
+    title: 'System Design & Architecture',
+    description: 'Master scalable system design principles and architectural patterns',
+    icon: '🏗️',
+    route: '/system-design'
   }
 }; 

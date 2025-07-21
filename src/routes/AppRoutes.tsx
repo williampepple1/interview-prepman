@@ -10,6 +10,8 @@ import Assessment from '../pages/Assessment';
 import ReactDashboard from '../pages/ReactDashboard';
 
 import ReactTopicLayout from '../components/ReactTopicLayout';
+import SystemDesignDashboard from '../pages/SystemDesignDashboard';
+import SystemDesignLayout from '../components/SystemDesignLayout';
 import { dsaQuestions, dataEngineeringQuestions } from '../data/questions';
 
 const AppRoutes: React.FC = () => {
@@ -63,6 +65,32 @@ const AppRoutes: React.FC = () => {
         element={
           <ProtectedRoute>
             <ReactTopicLayout />
+          </ProtectedRoute>
+        } 
+      />
+
+      {/* System Design Routes */}
+      <Route 
+        path="/system-design" 
+        element={
+          <ProtectedRoute>
+            <SystemDesignDashboard />
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/system-design/topic/:topicId" 
+        element={
+          <ProtectedRoute>
+            <SystemDesignLayout />
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/system-design/topic/:topicId/:subtopicId" 
+        element={
+          <ProtectedRoute>
+            <SystemDesignLayout />
           </ProtectedRoute>
         } 
       />

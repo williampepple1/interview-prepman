@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Clock, BookOpen, Target, Code } from 'lucide-react';
-import { ReactTopic } from '../types';
+import { SystemDesignTopic } from '../types';
 
-interface ReactTopicCardProps {
-  topic: ReactTopic;
+interface SystemDesignTopicCardProps {
+  topic: SystemDesignTopic;
 }
 
-const ReactTopicCard: React.FC<ReactTopicCardProps> = ({ topic }) => {
+const SystemDesignTopicCard: React.FC<SystemDesignTopicCardProps> = ({ topic }) => {
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'Beginner': return 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300';
@@ -79,7 +79,7 @@ const ReactTopicCard: React.FC<ReactTopicCardProps> = ({ topic }) => {
       </div>
       
       <Link 
-        to={`/react/topic/${topic.id}`}
+        to={`/system-design/topic/${topic.id}`}
         className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium text-sm transition-colors duration-200"
       >
         Start Learning →
@@ -88,4 +88,4 @@ const ReactTopicCard: React.FC<ReactTopicCardProps> = ({ topic }) => {
   );
 };
 
-export default ReactTopicCard; 
+export default SystemDesignTopicCard; 

@@ -42,6 +42,30 @@ export interface ReactTopic {
   subtopics: ReactSubtopic[];
 }
 
+export interface SystemDesignSubtopic {
+  id: string;
+  title: string;
+  description: string;
+  content: string;
+  codeExamples: string[];
+  keyPoints: string[];
+  estimatedTime: string;
+  difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
+  isLocked?: boolean;
+  isCompleted?: boolean;
+}
+
+export interface SystemDesignTopic {
+  id: string;
+  title: string;
+  category: string;
+  description: string;
+  prerequisites?: string[];
+  estimatedTime: string;
+  difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
+  subtopics: SystemDesignSubtopic[];
+}
+
 export interface Dashboard {
   id: string;
   title: string;

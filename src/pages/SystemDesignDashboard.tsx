@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Search } from 'lucide-react';
-import { reactTopics } from '../data/react-topics';
-import ReactTopicCard from '../components/ReactTopicCard';
+import { systemDesignTopics } from '../data/system-design-topics';
+import SystemDesignTopicCard from '../components/SystemDesignTopicCard';
 
-const ReactDashboard: React.FC = () => {
+const SystemDesignDashboard: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
   const [difficultyFilter, setDifficultyFilter] = useState<string>('all');
 
-  const filteredTopics = reactTopics.filter(topic => {
+  const filteredTopics = systemDesignTopics.filter(topic => {
     const matchesSearch = topic.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          topic.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = categoryFilter === 'all' || topic.category === categoryFilter;
@@ -18,8 +18,8 @@ const ReactDashboard: React.FC = () => {
     return matchesSearch && matchesCategory && matchesDifficulty;
   });
 
-  const categories = Array.from(new Set(reactTopics.map(topic => topic.category)));
-  const difficulties = Array.from(new Set(reactTopics.map(topic => topic.difficulty)));
+  const categories = Array.from(new Set(systemDesignTopics.map(topic => topic.category)));
+  const difficulties = Array.from(new Set(systemDesignTopics.map(topic => topic.difficulty)));
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
@@ -35,30 +35,30 @@ const ReactDashboard: React.FC = () => {
           
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-200">
-              React Learning Path
+              System Design & Architecture
             </h1>
             <p className="text-xl text-gray-600 dark:text-white max-w-3xl mx-auto transition-colors duration-200">
-              Master React fundamentals and advanced concepts with our comprehensive learning modules. 
-              Each topic includes detailed explanations, code examples, and practical exercises.
+              Master the principles of designing scalable, high-performance systems that can handle millions of users. 
+              Learn about microservices, caching, database scaling, and more.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 text-center">
               <div className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-                {reactTopics.length}
+                {systemDesignTopics.length}
               </div>
               <div className="text-blue-800 dark:text-blue-300">Learning Topics</div>
             </div>
             <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 text-center">
               <div className="text-2xl font-bold text-green-600 dark:text-green-400 mb-2">
-                {reactTopics.reduce((total, topic) => total + topic.subtopics.length, 0)}
+                {systemDesignTopics.reduce((total, topic) => total + topic.subtopics.length, 0)}
               </div>
               <div className="text-green-800 dark:text-green-300">Subtopics</div>
             </div>
             <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 text-center">
               <div className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-2">
-                {Math.round(reactTopics.reduce((total, topic) => {
+                {Math.round(systemDesignTopics.reduce((total, topic) => {
                   const time = parseInt(topic.estimatedTime);
                   return total + (isNaN(time) ? 0 : time);
                 }, 0) / 60 * 10) / 10}
@@ -109,7 +109,7 @@ const ReactDashboard: React.FC = () => {
 
         <div className="grid gap-6">
           {filteredTopics.map((topic) => (
-            <ReactTopicCard key={topic.id} topic={topic} />
+            <SystemDesignTopicCard key={topic.id} topic={topic} />
           ))}
         </div>
 
@@ -128,4 +128,4 @@ const ReactDashboard: React.FC = () => {
   );
 };
 
-export default ReactDashboard; 
+export default SystemDesignDashboard; 

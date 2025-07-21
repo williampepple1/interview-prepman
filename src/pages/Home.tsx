@@ -32,6 +32,10 @@ const Home: React.FC = () => {
     {
       ...DASHBOARD_CONFIGS.algorithms,
       questions: [] // Algorithm explanations don't use the same question structure
+    },
+    {
+      ...DASHBOARD_CONFIGS.systemDesign,
+      questions: [] // System Design uses topics instead of questions
     }
   ];
 
