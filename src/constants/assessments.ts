@@ -7,6 +7,8 @@ import { databaseAssessmentQuestions } from '../data/assessments/databases';
 import { containerizationQuestions } from '../data/assessments/containerization';
 import { frontendFundamentalsQuestions } from '../data/assessments/frontend-fundamentals';
 import { backendFundamentalsQuestions } from '../data/assessments/backend-fundamentals';
+import { dockerAssessmentQuestions } from '../data/assessments/docker';
+import { kubernetesAssessmentQuestions } from '../data/assessments/kubernetes';
 
 export const ASSESSMENT_TOPICS: AssessmentTopic[] = [
   {
@@ -60,10 +62,30 @@ export const ASSESSMENT_TOPICS: AssessmentTopic[] = [
     questionCount: 30
   },
   {
+    id: 'docker',
+    title: 'Docker Assessment',
+    description: 'Test your knowledge of Docker containers, images, Dockerfiles, networking, and container orchestration',
+    icon: '🐳',
+    route: '/assessments/docker',
+    questions: dockerAssessmentQuestions,
+    timeLimit: 20, // 20 minutes for 30 questions
+    questionCount: 30
+  },
+  {
+    id: 'kubernetes',
+    title: 'Kubernetes Assessment',
+    description: 'Test your knowledge of Kubernetes orchestration, pods, services, deployments, and cluster management',
+    icon: '☸️',
+    route: '/assessments/kubernetes',
+    questions: kubernetesAssessmentQuestions,
+    timeLimit: 20, // 20 minutes for 30 questions
+    questionCount: 30
+  },
+  {
     id: 'containerization',
     title: 'Containerization Assessment',
     description: 'Test your knowledge of Docker, Kubernetes, containers, orchestration, and cloud-native technologies',
-    icon: '🐳',
+    icon: '📦',
     route: '/assessments/containerization',
     questions: containerizationQuestions,
     timeLimit: 20, // 20 minutes
