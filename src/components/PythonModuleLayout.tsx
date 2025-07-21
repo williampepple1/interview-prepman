@@ -5,6 +5,7 @@ import { pythonModule1Topics } from '../data/python/module1';
 import { pythonModule2Topics } from '../data/python/module2';
 import { pythonModule3Topics } from '../data/python/module3';
 import { pythonModule4Topics } from '../data/python/module4';
+import { pythonModule5Topics } from '../data/python/module5';
 
 const PythonModuleLayout: React.FC = () => {
   const { moduleId } = useParams<{ moduleId?: string }>();
@@ -25,6 +26,10 @@ const PythonModuleLayout: React.FC = () => {
     topics = pythonModule4Topics;
     moduleTitle = 'Module 4: Strings & Regular Expressions';
     moduleDesc = 'Work with strings, formatting, Unicode, regex, and text parsing in Python.';
+  } else if (safeModuleId === '5') {
+    topics = pythonModule5Topics;
+    moduleTitle = 'Module 5: Files, Exceptions, and Modules';
+    moduleDesc = 'Work with files, handle exceptions, use logging, and organize code with modules and venv.';
   }
 
   return (
