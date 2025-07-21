@@ -727,6 +727,413 @@ This approach is optimal because:
     tags: ['two-pointers', 'linked-list'],
     companies: ['Amazon', 'Microsoft', 'Google', 'Apple', 'Facebook'],
     studyPlans: ['Top 75', 'Blind 75', 'Grind 75']
+  },
+  {
+    id: 'ransom-note',
+    title: 'Ransom Note (LeetCode #383)',
+    difficulty: 'Easy',
+    category: 'Hashmap',
+    description: 'Given two strings ransomNote and magazine, return true if ransomNote can be constructed by using the letters from magazine and false otherwise. Each letter in magazine can only be used once in ransomNote.',
+    solution: `
+## Solution
+
+### Approach: Hash Map
+\`\`\`python
+def canConstruct(ransomNote, magazine):
+    # Count characters in magazine
+    char_count = {}
+    for char in magazine:
+        char_count[char] = char_count.get(char, 0) + 1
+    
+    # Check if ransomNote can be constructed
+    for char in ransomNote:
+        if char not in char_count or char_count[char] == 0:
+            return False
+        char_count[char] -= 1
+    
+    return True
+\`\`\`
+
+**Time Complexity**: O(m + n) where m is length of magazine and n is length of ransomNote
+**Space Complexity**: O(k) where k is the number of unique characters in magazine
+    `,
+    explanation: `
+## Explanation
+
+1. **Count characters**: First, we count the frequency of each character in the magazine string
+2. **Check availability**: For each character in the ransom note, we check if it's available in our count
+3. **Decrement count**: If a character is used, we decrement its count
+4. **Return result**: If we can use all characters from ransom note, return true; otherwise false
+
+This approach ensures we can only use each character from the magazine once.
+    `,
+    tags: ['hash-table', 'string', 'counting'],
+    companies: ['Google', 'Apple', 'Microsoft'],
+    studyPlans: ['Top 150', 'Hashmap Questions']
+  },
+  {
+    id: 'isomorphic-strings',
+    title: 'Isomorphic Strings (LeetCode #205)',
+    difficulty: 'Easy',
+    category: 'Hashmap',
+    description: 'Given two strings s and t, determine if they are isomorphic. Two strings s and t are isomorphic if the characters in s can be replaced to get t. All occurrences of a character must be replaced with another character while preserving the order of characters.',
+    solution: `
+## Solution
+
+### Approach: Hash Map
+\`\`\`python
+def isIsomorphic(s, t):
+    if len(s) != len(t):
+        return False
+    
+    s_to_t = {}
+    t_to_s = {}
+    
+    for i in range(len(s)):
+        char_s, char_t = s[i], t[i]
+        
+        # Check s to t mapping
+        if char_s in s_to_t:
+            if s_to_t[char_s] != char_t:
+                return False
+        else:
+            s_to_t[char_s] = char_t
+        
+        # Check t to s mapping
+        if char_t in t_to_s:
+            if t_to_s[char_t] != char_s:
+                return False
+        else:
+            t_to_s[char_t] = char_s
+    
+    return True
+\`\`\`
+
+**Time Complexity**: O(n)
+**Space Complexity**: O(k) where k is the number of unique characters
+    `,
+    explanation: `
+## Explanation
+
+We need to check for bidirectional mapping:
+1. **Forward mapping**: Each character in s maps to exactly one character in t
+2. **Reverse mapping**: Each character in t maps to exactly one character in s
+3. **Consistency check**: If a character appears again, it must map to the same character
+
+This ensures that the mapping is one-to-one and consistent throughout the strings.
+    `,
+    tags: ['hash-table', 'string'],
+    companies: ['Google', 'Microsoft', 'Apple'],
+    studyPlans: ['Top 150', 'Hashmap Questions']
+  },
+  {
+    id: 'word-pattern',
+    title: 'Word Pattern (LeetCode #290)',
+    difficulty: 'Easy',
+    category: 'Hashmap',
+    description: 'Given a pattern and a string s, find if s follows the same pattern. Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in s.',
+    solution: `
+## Solution
+
+### Approach: Hash Map
+\`\`\`python
+def wordPattern(pattern, s):
+    words = s.split()
+    if len(pattern) != len(words):
+        return False
+    
+    pattern_to_word = {}
+    word_to_pattern = {}
+    
+    for i in range(len(pattern)):
+        char, word = pattern[i], words[i]
+        
+        # Check pattern to word mapping
+        if char in pattern_to_word:
+            if pattern_to_word[char] != word:
+                return False
+        else:
+            pattern_to_word[char] = word
+        
+        # Check word to pattern mapping
+        if word in word_to_pattern:
+            if word_to_pattern[word] != char:
+                return False
+        else:
+            word_to_pattern[word] = char
+    
+    return True
+\`\`\`
+
+**Time Complexity**: O(n)
+**Space Complexity**: O(k) where k is the number of unique characters/words
+    `,
+    explanation: `
+## Explanation
+
+Similar to isomorphic strings, we need bidirectional mapping:
+1. **Pattern to word**: Each character in pattern maps to exactly one word
+2. **Word to pattern**: Each word maps to exactly one character in pattern
+3. **Consistency check**: If a character/word appears again, it must map to the same word/character
+
+This ensures the pattern and string follow the same bijection.
+    `,
+    tags: ['hash-table', 'string'],
+    companies: ['Google', 'Microsoft', 'Apple'],
+    studyPlans: ['Top 150', 'Hashmap Questions']
+  },
+  {
+    id: 'valid-anagram',
+    title: 'Valid Anagram (LeetCode #242)',
+    difficulty: 'Easy',
+    category: 'Hashmap',
+    description: 'Given two strings s and t, return true if t is an anagram of s, and false otherwise. An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.',
+    solution: `
+## Solution
+
+### Approach 1: Hash Map
+\`\`\`python
+def isAnagram(s, t):
+    if len(s) != len(t):
+        return False
+    
+    char_count = {}
+    
+    # Count characters in s
+    for char in s:
+        char_count[char] = char_count.get(char, 0) + 1
+    
+    # Decrement counts for characters in t
+    for char in t:
+        if char not in char_count or char_count[char] == 0:
+            return False
+        char_count[char] -= 1
+    
+    return True
+\`\`\`
+
+### Approach 2: Sorting
+\`\`\`python
+def isAnagram(s, t):
+    return sorted(s) == sorted(t)
+\`\`\`
+
+**Time Complexity**: O(n) for hash map, O(n log n) for sorting
+**Space Complexity**: O(k) for hash map, O(n) for sorting
+    `,
+    explanation: `
+## Explanation
+
+**Hash Map Approach**:
+1. **Count characters**: Count frequency of each character in string s
+2. **Check against t**: For each character in t, decrement the count
+3. **Validate**: If any character is missing or count goes negative, return false
+
+**Sorting Approach**:
+1. **Sort both strings**: Convert both strings to sorted lists
+2. **Compare**: If they are equal, they are anagrams
+
+The hash map approach is more efficient for large strings.
+    `,
+    tags: ['hash-table', 'string', 'sorting'],
+    companies: ['Google', 'Amazon', 'Microsoft', 'Apple'],
+    studyPlans: ['Top 150', 'Hashmap Questions']
+  },
+  {
+    id: 'group-anagrams',
+    title: 'Group Anagrams (LeetCode #49)',
+    difficulty: 'Medium',
+    category: 'Hashmap',
+    description: 'Given an array of strings strs, group the anagrams together. You can return the answer in any order. An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.',
+    solution: `
+## Solution
+
+### Approach: Hash Map with Sorted Key
+\`\`\`python
+def groupAnagrams(strs):
+    anagram_groups = {}
+    
+    for word in strs:
+        # Create a key by sorting the characters
+        sorted_word = ''.join(sorted(word))
+        
+        if sorted_word in anagram_groups:
+            anagram_groups[sorted_word].append(word)
+        else:
+            anagram_groups[sorted_word] = [word]
+    
+    return list(anagram_groups.values())
+\`\`\`
+
+### Alternative Approach: Hash Map with Character Count
+\`\`\`python
+def groupAnagrams(strs):
+    anagram_groups = {}
+    
+    for word in strs:
+        # Create a key by counting characters
+        char_count = [0] * 26
+        for char in word:
+            char_count[ord(char) - ord('a')] += 1
+        
+        key = tuple(char_count)
+        
+        if key in anagram_groups:
+            anagram_groups[key].append(word)
+        else:
+            anagram_groups[key] = [word]
+    
+    return list(anagram_groups.values())
+\`\`\`
+
+**Time Complexity**: O(n * k log k) for sorting approach, O(n * k) for counting approach
+**Space Complexity**: O(n * k) where n is number of strings and k is max string length
+    `,
+    explanation: `
+## Explanation
+
+**Sorting Approach**:
+1. **Create key**: Sort characters of each word to create a unique key
+2. **Group**: Use the sorted word as key in hash map
+3. **Collect**: Return all groups
+
+**Counting Approach**:
+1. **Count characters**: Create a character count array for each word
+2. **Create key**: Use the count array as a tuple key
+3. **Group**: Group words with same character counts
+
+Both approaches work, but counting is more efficient for longer strings.
+    `,
+    tags: ['hash-table', 'string', 'sorting'],
+    companies: ['Google', 'Amazon', 'Microsoft', 'Apple', 'Facebook'],
+    studyPlans: ['Top 150', 'Hashmap Questions']
+  },
+  {
+    id: 'happy-number',
+    title: 'Happy Number (LeetCode #202)',
+    difficulty: 'Easy',
+    category: 'Hashmap',
+    description: 'Write an algorithm to determine if a number n is happy. A happy number is a number defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.',
+    solution: `
+## Solution
+
+### Approach: Hash Set
+\`\`\`python
+def isHappy(n):
+    seen = set()
+    
+    while n != 1 and n not in seen:
+        seen.add(n)
+        n = sum(int(digit) ** 2 for digit in str(n))
+    
+    return n == 1
+\`\`\`
+
+**Time Complexity**: O(log n)
+**Space Complexity**: O(log n)
+    `,
+    explanation: `
+## Explanation
+
+1. **Track seen numbers**: Use a set to track numbers we've already seen
+2. **Calculate next number**: Sum the squares of digits
+3. **Check for cycle**: If we see a number again, we're in a cycle
+4. **Check for happy**: If we reach 1, the number is happy
+
+The key insight is that if we enter a cycle, we'll never reach 1, so we can detect this by tracking seen numbers.
+    `,
+    tags: ['hash-table', 'math', 'two-pointers'],
+    companies: ['Google', 'Amazon', 'Microsoft', 'Apple'],
+    studyPlans: ['Top 150', 'Hashmap Questions']
+  },
+  {
+    id: 'contains-duplicate-ii',
+    title: 'Contains Duplicate II (LeetCode #219)',
+    difficulty: 'Easy',
+    category: 'Hashmap',
+    description: 'Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) <= k.',
+    solution: `
+## Solution
+
+### Approach: Hash Map
+\`\`\`python
+def containsNearbyDuplicate(nums, k):
+    seen = {}
+    
+    for i, num in enumerate(nums):
+        if num in seen and i - seen[num] <= k:
+            return True
+        seen[num] = i
+    
+    return False
+\`\`\`
+
+**Time Complexity**: O(n)
+**Space Complexity**: O(min(n, k))
+    `,
+    explanation: `
+## Explanation
+
+1. **Track last position**: Store the last position of each number in a hash map
+2. **Check distance**: When we see a number again, check if the distance is ≤ k
+3. **Update position**: Always update the position to the current index
+
+This approach ensures we only need to traverse the array once and maintain a sliding window of size k.
+    `,
+    tags: ['hash-table', 'array', 'sliding-window'],
+    companies: ['Google', 'Amazon', 'Microsoft', 'Apple'],
+    studyPlans: ['Top 150', 'Hashmap Questions']
+  },
+  {
+    id: 'longest-consecutive-sequence',
+    title: 'Longest Consecutive Sequence (LeetCode #128)',
+    difficulty: 'Medium',
+    category: 'Hashmap',
+    description: 'Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence. You must write an algorithm that runs in O(n) time.',
+    solution: `
+## Solution
+
+### Approach: Hash Set
+\`\`\`python
+def longestConsecutive(nums):
+    if not nums:
+        return 0
+    
+    num_set = set(nums)
+    max_length = 0
+    
+    for num in num_set:
+        # Only start counting from sequence beginnings
+        if num - 1 not in num_set:
+            current_num = num
+            current_length = 1
+            
+            # Count consecutive numbers
+            while current_num + 1 in num_set:
+                current_num += 1
+                current_length += 1
+            
+            max_length = max(max_length, current_length)
+    
+    return max_length
+\`\`\`
+
+**Time Complexity**: O(n)
+**Space Complexity**: O(n)
+    `,
+    explanation: `
+## Explanation
+
+1. **Create set**: Convert array to set for O(1) lookups
+2. **Find sequence starts**: Only start counting from numbers that don't have a predecessor
+3. **Count consecutive**: For each sequence start, count how many consecutive numbers follow
+4. **Track maximum**: Keep track of the longest sequence found
+
+The key optimization is only starting from sequence beginnings to avoid redundant counting.
+    `,
+    tags: ['hash-table', 'array', 'union-find'],
+    companies: ['Google', 'Amazon', 'Microsoft', 'Apple', 'Facebook'],
+    studyPlans: ['Top 150', 'Hashmap Questions']
   }
 ];
 
@@ -907,6 +1314,436 @@ function ExampleComponent({ id }) {
 4. Use custom hooks to share logic between components
     `,
     tags: ['lifecycle', 'components']
+  },
+  {
+    id: 'ransom-note',
+    title: 'Ransom Note (LeetCode #383)',
+    difficulty: 'Easy',
+    category: 'Hashmap',
+    description: 'Given two strings ransomNote and magazine, return true if ransomNote can be constructed by using the letters from magazine and false otherwise. Each letter in magazine can only be used once in ransomNote.',
+    solution: `
+## Solution
+
+### Approach: Hash Map
+\`\`\`python
+def canConstruct(ransomNote, magazine):
+    # Count characters in magazine
+    char_count = {}
+    for char in magazine:
+        char_count[char] = char_count.get(char, 0) + 1
+    
+    # Check if ransomNote can be constructed
+    for char in ransomNote:
+        if char not in char_count or char_count[char] == 0:
+            return False
+        char_count[char] -= 1
+    
+    return True
+\`\`\`
+
+**Time Complexity**: O(m + n) where m is length of magazine and n is length of ransomNote
+**Space Complexity**: O(k) where k is the number of unique characters in magazine
+    `,
+    explanation: `
+## Explanation
+
+1. **Count characters**: First, we count the frequency of each character in the magazine string
+2. **Check availability**: For each character in the ransom note, we check if it's available in our count
+3. **Decrement count**: If a character is used, we decrement its count
+4. **Return result**: If we can use all characters from ransom note, return true; otherwise false
+
+This approach ensures we can only use each character from the magazine once.
+    `,
+    tags: ['hash-table', 'string', 'counting'],
+    companies: ['Google', 'Apple', 'Microsoft'],
+    studyPlans: ['Top 150', 'Hashmap Questions']
+  },
+  {
+    id: 'isomorphic-strings',
+    title: 'Isomorphic Strings (LeetCode #205)',
+    difficulty: 'Easy',
+    category: 'Hashmap',
+    description: 'Given two strings s and t, determine if they are isomorphic. Two strings s and t are isomorphic if the characters in s can be replaced to get t. All occurrences of a character must be replaced with another character while preserving the order of characters.',
+    solution: `
+## Solution
+
+### Approach: Hash Map
+\`\`\`python
+def isIsomorphic(s, t):
+    if len(s) != len(t):
+        return False
+    
+    s_to_t = {}
+    t_to_s = {}
+    
+    for i in range(len(s)):
+        char_s, char_t = s[i], t[i]
+        
+        # Check s to t mapping
+        if char_s in s_to_t:
+            if s_to_t[char_s] != char_t:
+                return False
+        else:
+            s_to_t[char_s] = char_t
+        
+        # Check t to s mapping
+        if char_t in t_to_s:
+            if t_to_s[char_t] != char_s:
+                return False
+        else:
+            t_to_s[char_t] = char_s
+    
+    return True
+\`\`\`
+
+**Time Complexity**: O(n)
+**Space Complexity**: O(k) where k is the number of unique characters
+    `,
+    explanation: `
+## Explanation
+
+We need to check for bidirectional mapping:
+1. **Forward mapping**: Each character in s maps to exactly one character in t
+2. **Reverse mapping**: Each character in t maps to exactly one character in s
+3. **Consistency check**: If a character appears again, it must map to the same character
+
+This ensures that the mapping is one-to-one and consistent throughout the strings.
+    `,
+    tags: ['hash-table', 'string'],
+    companies: ['Google', 'Microsoft', 'Apple'],
+    studyPlans: ['Top 150', 'Hashmap Questions']
+  },
+  {
+    id: 'word-pattern',
+    title: 'Word Pattern (LeetCode #290)',
+    difficulty: 'Easy',
+    category: 'Hashmap',
+    description: 'Given a pattern and a string s, find if s follows the same pattern. Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in s.',
+    solution: `
+## Solution
+
+### Approach: Hash Map
+\`\`\`python
+def wordPattern(pattern, s):
+    words = s.split()
+    
+    if len(pattern) != len(words):
+        return False
+    
+    pattern_to_word = {}
+    word_to_pattern = {}
+    
+    for i in range(len(pattern)):
+        char, word = pattern[i], words[i]
+        
+        # Check pattern to word mapping
+        if char in pattern_to_word:
+            if pattern_to_word[char] != word:
+                return False
+        else:
+            pattern_to_word[char] = word
+        
+        # Check word to pattern mapping
+        if word in word_to_pattern:
+            if word_to_pattern[word] != char:
+                return False
+        else:
+            word_to_pattern[word] = char
+    
+    return True
+\`\`\`
+
+**Time Complexity**: O(n)
+**Space Complexity**: O(k) where k is the number of unique characters/words
+    `,
+    explanation: `
+## Explanation
+
+This is similar to isomorphic strings but with words instead of characters:
+1. **Split string**: Convert the string into a list of words
+2. **Bidirectional mapping**: Ensure each pattern character maps to exactly one word and vice versa
+3. **Consistency check**: Verify that mappings remain consistent throughout the pattern
+
+The key insight is that we need to check both directions to ensure a true bijection.
+    `,
+    tags: ['hash-table', 'string'],
+    companies: ['Google', 'Microsoft', 'Uber'],
+    studyPlans: ['Top 150', 'Hashmap Questions']
+  },
+  {
+    id: 'valid-anagram',
+    title: 'Valid Anagram (LeetCode #242)',
+    difficulty: 'Easy',
+    category: 'Hashmap',
+    description: 'Given two strings s and t, return true if t is an anagram of s, and false otherwise. An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.',
+    solution: `
+## Solution
+
+### Approach 1: Hash Map
+\`\`\`python
+def isAnagram(s, t):
+    if len(s) != len(t):
+        return False
+    
+    char_count = {}
+    
+    # Count characters in s
+    for char in s:
+        char_count[char] = char_count.get(char, 0) + 1
+    
+    # Decrement counts for characters in t
+    for char in t:
+        if char not in char_count or char_count[char] == 0:
+            return False
+        char_count[char] -= 1
+    
+    return True
+\`\`\`
+
+### Approach 2: Sorting
+\`\`\`python
+def isAnagram(s, t):
+    return sorted(s) == sorted(t)
+\`\`\`
+
+**Time Complexity**: O(n) for hash map, O(n log n) for sorting
+**Space Complexity**: O(k) for hash map, O(n) for sorting
+    `,
+    explanation: `
+## Explanation
+
+### Hash Map Approach:
+1. **Length check**: If strings have different lengths, they can't be anagrams
+2. **Count characters**: Count frequency of each character in the first string
+3. **Verify counts**: For each character in the second string, decrement the count
+4. **Check result**: If all counts become zero, the strings are anagrams
+
+### Sorting Approach:
+Simply sort both strings and compare them. If they're anagrams, the sorted versions will be identical.
+    `,
+    tags: ['hash-table', 'string', 'sorting'],
+    companies: ['Google', 'Amazon', 'Microsoft', 'Apple'],
+    studyPlans: ['Top 150', 'Hashmap Questions']
+  },
+  {
+    id: 'group-anagrams',
+    title: 'Group Anagrams (LeetCode #49)',
+    difficulty: 'Medium',
+    category: 'Hashmap',
+    description: 'Given an array of strings strs, group the anagrams together. You can return the answer in any order. An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.',
+    solution: `
+## Solution
+
+### Approach: Hash Map with Sorted Key
+\`\`\`python
+def groupAnagrams(strs):
+    anagram_groups = {}
+    
+    for word in strs:
+        # Create a key by sorting the characters
+        sorted_word = ''.join(sorted(word))
+        
+        if sorted_word in anagram_groups:
+            anagram_groups[sorted_word].append(word)
+        else:
+            anagram_groups[sorted_word] = [word]
+    
+    return list(anagram_groups.values())
+\`\`\`
+
+### Alternative Approach: Hash Map with Character Count
+\`\`\`python
+def groupAnagrams(strs):
+    anagram_groups = {}
+    
+    for word in strs:
+        # Create a key by counting characters
+        char_count = [0] * 26
+        for char in word:
+            char_count[ord(char) - ord('a')] += 1
+        
+        key = tuple(char_count)
+        
+        if key in anagram_groups:
+            anagram_groups[key].append(word)
+        else:
+            anagram_groups[key] = [word]
+    
+    return list(anagram_groups.values())
+\`\`\`
+
+**Time Complexity**: O(n * k log k) for sorting approach, O(n * k) for counting approach
+**Space Complexity**: O(n * k)
+    `,
+    explanation: `
+## Explanation
+
+### Sorting Approach:
+1. **Create key**: Sort each word to create a unique key for anagrams
+2. **Group words**: Use the sorted word as a key in the hash map
+3. **Collect results**: Return all groups of anagrams
+
+### Counting Approach:
+1. **Count characters**: Create a character count array for each word
+2. **Create key**: Use the count array as a tuple key
+3. **Group words**: Group words with the same character counts
+
+Both approaches ensure that anagrams are grouped together efficiently.
+    `,
+    tags: ['hash-table', 'string', 'sorting'],
+    companies: ['Google', 'Amazon', 'Microsoft', 'Apple', 'Facebook'],
+    studyPlans: ['Top 150', 'Hashmap Questions']
+  },
+  {
+    id: 'happy-number',
+    title: 'Happy Number (LeetCode #202)',
+    difficulty: 'Easy',
+    category: 'Hashmap',
+    description: 'Write an algorithm to determine if a number n is happy. A happy number is a number defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.',
+    solution: `
+## Solution
+
+### Approach: Hash Set
+\`\`\`python
+def isHappy(n):
+    seen = set()
+    
+    while n != 1 and n not in seen:
+        seen.add(n)
+        n = sum(int(digit) ** 2 for digit in str(n))
+    
+    return n == 1
+\`\`\`
+
+### Alternative Approach: Floyd's Cycle Detection
+\`\`\`python
+def isHappy(n):
+    def get_next(n):
+        return sum(int(digit) ** 2 for digit in str(n))
+    
+    slow = fast = n
+    while fast != 1:
+        slow = get_next(slow)
+        fast = get_next(get_next(fast))
+        
+        if slow == fast:
+            return False
+    
+    return True
+\`\`\`
+
+**Time Complexity**: O(log n)
+**Space Complexity**: O(log n)
+    `,
+    explanation: `
+## Explanation
+
+### Hash Set Approach:
+1. **Track seen numbers**: Use a set to detect cycles
+2. **Calculate next number**: Sum the squares of digits
+3. **Check for cycle**: If we see a number again, we're in a cycle
+4. **Check for 1**: If we reach 1, the number is happy
+
+### Floyd's Cycle Detection:
+1. **Two pointers**: Use slow and fast pointers
+2. **Detect cycle**: If they meet, we're in a cycle
+3. **Check for 1**: If fast reaches 1, the number is happy
+
+The key insight is that unhappy numbers will eventually enter a cycle.
+    `,
+    tags: ['hash-table', 'math', 'two-pointers'],
+    companies: ['Google', 'Microsoft', 'Apple'],
+    studyPlans: ['Top 150', 'Hashmap Questions']
+  },
+  {
+    id: 'contains-duplicate-ii',
+    title: 'Contains Duplicate II (LeetCode #219)',
+    difficulty: 'Easy',
+    category: 'Hashmap',
+    description: 'Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) <= k.',
+    solution: `
+## Solution
+
+### Approach: Hash Map
+\`\`\`python
+def containsNearbyDuplicate(nums, k):
+    seen = {}
+    
+    for i, num in enumerate(nums):
+        if num in seen and i - seen[num] <= k:
+            return True
+        seen[num] = i
+    
+    return False
+\`\`\`
+
+**Time Complexity**: O(n)
+**Space Complexity**: O(min(n, k))
+    `,
+    explanation: `
+## Explanation
+
+1. **Track indices**: Use a hash map to store the most recent index for each number
+2. **Check distance**: When we see a number again, check if the distance is ≤ k
+3. **Update index**: Always update the index to the current position
+4. **Return result**: Return true if we find a valid pair, false otherwise
+
+The key insight is that we only need to keep track of the most recent occurrence of each number.
+    `,
+    tags: ['hash-table', 'array', 'sliding-window'],
+    companies: ['Google', 'Amazon', 'Microsoft'],
+    studyPlans: ['Top 150', 'Hashmap Questions']
+  },
+  {
+    id: 'longest-consecutive-sequence',
+    title: 'Longest Consecutive Sequence (LeetCode #128)',
+    difficulty: 'Medium',
+    category: 'Hashmap',
+    description: 'Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence. You must write an algorithm that runs in O(n) time.',
+    solution: `
+## Solution
+
+### Approach: Hash Set
+\`\`\`python
+def longestConsecutive(nums):
+    if not nums:
+        return 0
+    
+    num_set = set(nums)
+    max_length = 0
+    
+    for num in num_set:
+        # Only start counting if this is the start of a sequence
+        if num - 1 not in num_set:
+            current_num = num
+            current_length = 1
+            
+            # Count consecutive numbers
+            while current_num + 1 in num_set:
+                current_num += 1
+                current_length += 1
+            
+            max_length = max(max_length, current_length)
+    
+    return max_length
+\`\`\`
+
+**Time Complexity**: O(n)
+**Space Complexity**: O(n)
+    `,
+    explanation: `
+## Explanation
+
+1. **Create set**: Convert array to set for O(1) lookups
+2. **Find sequence starts**: Only start counting from numbers that don't have a predecessor
+3. **Count consecutive**: For each sequence start, count how many consecutive numbers follow
+4. **Track maximum**: Keep track of the longest sequence found
+
+The key optimization is only starting from sequence beginnings to avoid redundant counting.
+    `,
+    tags: ['hash-table', 'array', 'union-find'],
+    companies: ['Google', 'Amazon', 'Microsoft', 'Apple', 'Facebook'],
+    studyPlans: ['Top 150', 'Hashmap Questions']
   }
 ];
 

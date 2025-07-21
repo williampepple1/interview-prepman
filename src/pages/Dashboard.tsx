@@ -16,6 +16,12 @@ const Dashboard: React.FC<DashboardProps> = ({ questions, title, description }) 
   const [companyFilter, setCompanyFilter] = useState<string>('all');
   const [studyPlanFilter, setStudyPlanFilter] = useState<string>('all');
 
+  // Debug: Log the questions array
+  console.log('Questions received:', questions);
+  console.log('Number of questions:', questions?.length);
+  console.log('Questions categories:', questions?.map(q => q.category));
+  console.log('Questions with Hashmap category:', questions?.filter(q => q.category === 'Hashmap'));
+
   const filteredQuestions = questions.filter(question => {
     const matchesSearch = question.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          question.description.toLowerCase().includes(searchTerm.toLowerCase());
@@ -28,6 +34,10 @@ const Dashboard: React.FC<DashboardProps> = ({ questions, title, description }) 
     
     return matchesSearch && matchesDifficulty && matchesCategory && matchesCompany && matchesStudyPlan;
   });
+
+  // Debug: Log filtered questions
+  console.log('Filtered questions count:', filteredQuestions.length);
+  console.log('Current filters:', { searchTerm, difficultyFilter, categoryFilter, companyFilter, studyPlanFilter });
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
@@ -52,6 +62,7 @@ const Dashboard: React.FC<DashboardProps> = ({ questions, title, description }) 
           
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2 transition-colors duration-200">{title}</h1>
           <p className="text-gray-600 dark:text-gray-300 transition-colors duration-200">{description}</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400">Total questions: {questions?.length || 0}</p>
         </div>
 
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 mb-6 transition-colors duration-200">
