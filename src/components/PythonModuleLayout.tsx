@@ -12,6 +12,7 @@ import { pythonModule8Topics } from '../data/python/module8';
 import { pythonModule9Topics } from '../data/python/module9';
 import { pythonModule10Topics } from '../data/python/module10';
 import { pythonModule11Topics } from '../data/python/module11';
+import { pythonModule12Topics } from '../data/python/module12';
 
 const PythonModuleLayout: React.FC = () => {
   const { moduleId } = useParams<{ moduleId?: string }>();
@@ -60,6 +61,10 @@ const PythonModuleLayout: React.FC = () => {
     topics = pythonModule11Topics;
     moduleTitle = 'Module 11: Testing & Best Practices';
     moduleDesc = 'Learn unittest, pytest, mocking, TDD, coverage, CI, linting, and formatting for robust Python code.';
+  } else if (safeModuleId === '12') {
+    topics = pythonModule12Topics;
+    moduleTitle = 'Module 12: Networking & APIs';
+    moduleDesc = 'Learn requests, REST APIs, consuming and creating APIs, and WebSockets in Python.';
   }
 
   return (
