@@ -6,4 +6,5 @@ export { pythonModule5Topics } from './module5';
 export { pythonModule6Topics } from './module6';
 export { pythonModule7Topics } from './module7';
 export { pythonModule8Topics } from './module8';
-export { pythonModule9Topics } from './module9'; 
+export { pythonModule9Topics } from './module9';
+export { pythonModule10Topics } from './module10'; 

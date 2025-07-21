@@ -10,6 +10,7 @@ import { pythonModule6Topics } from '../data/python/module6';
 import { pythonModule7Topics } from '../data/python/module7';
 import { pythonModule8Topics } from '../data/python/module8';
 import { pythonModule9Topics } from '../data/python/module9';
+import { pythonModule10Topics } from '../data/python/module10';
 
 const PythonModuleLayout: React.FC = () => {
   const { moduleId } = useParams<{ moduleId?: string }>();
@@ -50,6 +51,10 @@ const PythonModuleLayout: React.FC = () => {
     topics = pythonModule9Topics;
     moduleTitle = 'Module 9: Concurrency & Parallelism';
     moduleDesc = 'Learn about the GIL, threading, multiprocessing, asyncio, futures, and parallel programming in Python.';
+  } else if (safeModuleId === '10') {
+    topics = pythonModule10Topics;
+    moduleTitle = 'Module 10: Databases & ORM';
+    moduleDesc = 'Learn SQLite, basic SQL, SQLAlchemy ORM, transactions, migrations, and connecting to PostgreSQL/MySQL.';
   }
 
   return (
