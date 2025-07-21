@@ -70,7 +70,7 @@ const SystemDesignLayout: React.FC = () => {
               <span className={`px-3 py-1 rounded-full text-sm font-medium ${getDifficultyColor(topic.difficulty)} transition-colors duration-200`}>
                 {topic.difficulty}
               </span>
-              <div className="flex items-center text-sm text-gray-500 dark:text-gray-300">
+              <div className="flex items-center text-sm text-gray-500 dark:text-white">
                 <Clock className="h-4 w-4 mr-1" />
                 <span>{topic.estimatedTime}</span>
               </div>
@@ -176,7 +176,7 @@ const SystemDesignLayout: React.FC = () => {
                     </span>
                   </div>
                   
-                  <div className="flex items-center space-x-6 text-sm text-gray-500 dark:text-gray-300">
+                  <div className="flex items-center space-x-6 text-sm text-gray-500 dark:text-white">
                     <div className="flex items-center space-x-1">
                       <Clock className="h-4 w-4" />
                       <span>{currentSubtopic.estimatedTime}</span>
@@ -241,7 +241,7 @@ const SystemDesignLayout: React.FC = () => {
               </div>
             ) : (
               <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-8 text-center">
-                <p className="text-gray-500 dark:text-gray-300">No subtopic selected</p>
+                <p className="text-gray-500 dark:text-white">No subtopic selected</p>
               </div>
             )}
           </div>

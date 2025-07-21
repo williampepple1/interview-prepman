@@ -14,7 +14,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
   return (
     <div className={`prose prose-lg max-w-none ${
       isDarkMode 
-        ? 'prose-invert prose-headings:text-white prose-p:text-gray-300 prose-strong:text-white prose-em:text-gray-300 prose-ul:text-gray-300 prose-ol:text-gray-300 prose-li:text-gray-300 prose-blockquote:text-gray-300 prose-code:text-gray-300 prose-pre:bg-gray-800 prose-blockquote:border-gray-600 prose-hr:border-gray-600' 
+        ? 'prose-invert prose-headings:text-white prose-p:text-white prose-strong:text-white prose-em:text-white prose-ul:text-white prose-ol:text-white prose-li:text-white prose-blockquote:text-white prose-code:text-white prose-pre:bg-gray-800 prose-blockquote:border-gray-600 prose-hr:border-gray-600' 
         : 'prose-headings:text-gray-900 prose-p:text-gray-700 prose-strong:text-gray-900 prose-em:text-gray-700 prose-ul:text-gray-700 prose-ol:text-gray-700 prose-li:text-gray-700 prose-blockquote:text-gray-700 prose-code:text-gray-800 prose-pre:bg-gray-50 prose-blockquote:border-gray-300 prose-hr:border-gray-300'
     }`}>
       <ReactMarkdown
@@ -36,7 +36,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
                 {String(children).replace(/\n$/, '')}
               </SyntaxHighlighter>
             ) : (
-              <code className={`${className} ${isDarkMode ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-800'} px-1 py-0.5 rounded text-sm`} {...props}>
+              <code className={`${className} ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-800'} px-1 py-0.5 rounded text-sm`} {...props}>
                 {children}
               </code>
             );
@@ -44,7 +44,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
           // Override paragraph component to ensure proper text color
           p({ children, ...props }) {
             return (
-              <p className={isDarkMode ? 'text-gray-300' : 'text-gray-700'} {...props}>
+              <p className={isDarkMode ? 'text-white' : 'text-gray-700'} {...props}>
                 {children}
               </p>
             );
@@ -95,21 +95,21 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
           // Override list components
           ul({ children, ...props }) {
             return (
-              <ul className={isDarkMode ? 'text-gray-300' : 'text-gray-700'} {...props}>
+              <ul className={isDarkMode ? 'text-white' : 'text-gray-700'} {...props}>
                 {children}
               </ul>
             );
           },
           ol({ children, ...props }) {
             return (
-              <ol className={isDarkMode ? 'text-gray-300' : 'text-gray-700'} {...props}>
+              <ol className={isDarkMode ? 'text-white' : 'text-gray-700'} {...props}>
                 {children}
               </ol>
             );
           },
           li({ children, ...props }) {
             return (
-              <li className={isDarkMode ? 'text-gray-300' : 'text-gray-700'} {...props}>
+              <li className={isDarkMode ? 'text-white' : 'text-gray-700'} {...props}>
                 {children}
               </li>
             );
@@ -117,7 +117,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
           // Override blockquote component
           blockquote({ children, ...props }) {
             return (
-              <blockquote className={`${isDarkMode ? 'text-gray-300 border-gray-600' : 'text-gray-700 border-gray-300'} border-l-4 pl-4 italic`} {...props}>
+              <blockquote className={`${isDarkMode ? 'text-white border-gray-600' : 'text-gray-700 border-gray-300'} border-l-4 pl-4 italic`} {...props}>
                 {children}
               </blockquote>
             );
@@ -132,7 +132,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
           },
           em({ children, ...props }) {
             return (
-              <em className={isDarkMode ? 'text-gray-300' : 'text-gray-700'} {...props}>
+              <em className={isDarkMode ? 'text-white' : 'text-gray-700'} {...props}>
                 {children}
               </em>
             );
