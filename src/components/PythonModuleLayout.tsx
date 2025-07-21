@@ -8,6 +8,7 @@ import { pythonModule4Topics } from '../data/python/module4';
 import { pythonModule5Topics } from '../data/python/module5';
 import { pythonModule6Topics } from '../data/python/module6';
 import { pythonModule7Topics } from '../data/python/module7';
+import { pythonModule8Topics } from '../data/python/module8';
 
 const PythonModuleLayout: React.FC = () => {
   const { moduleId } = useParams<{ moduleId?: string }>();
@@ -40,6 +41,10 @@ const PythonModuleLayout: React.FC = () => {
     topics = pythonModule7Topics;
     moduleTitle = 'Module 7: Advanced Python Concepts';
     moduleDesc = 'Dive into iterators, generators, decorators, context managers, functools, itertools, metaclasses, and more.';
+  } else if (safeModuleId === '8') {
+    topics = pythonModule8Topics;
+    moduleTitle = 'Module 8: Modules, Packages, and Standard Library';
+    moduleDesc = 'Learn about modules, packages, pip, venv, and key standard library modules for real-world Python.';
   }
 
   return (
