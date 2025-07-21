@@ -1400,5 +1400,355 @@ export const pythonAssessmentQuestions: AssessmentQuestion[] = [
     explanation: 'os.path.dirname() returns the directory name of pathname path.',
     category: 'Python File Operations',
     difficulty: 'Medium'
+  },
+  {
+    id: 'python-101',
+    question: 'What is the output of: print("hello".zfill(10))?',
+    options: [
+      '00000hello',
+      'hello00000',
+      '     hello',
+      'Error'
+    ],
+    correctAnswer: '00000hello',
+    explanation: 'zfill() pads the string on the left with zeros to fill the specified width.',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-102',
+    question: 'What is the correct way to create a context manager?',
+    options: [
+      'class MyContextManager: def __enter__(self): ... def __exit__(self, ...): ...',
+      'def context_manager(): ...',
+      'with context_manager(): ...',
+      'import contextlib; @contextlib.contextmanager'
+    ],
+    correctAnswer: 'class MyContextManager: def __enter__(self): ... def __exit__(self, ...): ...',
+    explanation: 'Context managers are created by implementing __enter__ and __exit__ methods in a class.',
+    category: 'Python Advanced',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-103',
+    question: 'What is the output of: print("hello".swapcase())?',
+    options: [
+      'HELLO',
+      'hello',
+      'hELLO',
+      'Error'
+    ],
+    correctAnswer: 'HELLO',
+    explanation: 'swapcase() converts uppercase characters to lowercase and vice versa.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-104',
+    question: 'What is the correct way to create a decorator?',
+    options: [
+      'def decorator(func): def wrapper(*args, **kwargs): ... return wrapper',
+      'def decorator(func): return func',
+      '@decorator def func(): ...',
+      'import decorator; @decorator'
+    ],
+    correctAnswer: 'def decorator(func): def wrapper(*args, **kwargs): ... return wrapper',
+    explanation: 'Decorators are functions that take another function and extend its behavior.',
+    category: 'Python Advanced',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-105',
+    question: 'What is the output of: print("hello".encode())?',
+    options: [
+      "b'hello'",
+      'hello',
+      'h e l l o',
+      'Error'
+    ],
+    correctAnswer: "b'hello'",
+    explanation: 'encode() converts a string to bytes using the default encoding (UTF-8).',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-106',
+    question: 'What is the correct way to create a metaclass?',
+    options: [
+      'class Meta(type): ... class MyClass(metaclass=Meta): ...',
+      'class Meta: ... class MyClass(Meta): ...',
+      'metaclass Meta: ...',
+      'import metaclass; @metaclass'
+    ],
+    correctAnswer: 'class Meta(type): ... class MyClass(metaclass=Meta): ...',
+    explanation: 'Metaclasses are classes for classes. They are created by inheriting from type.',
+    category: 'Python Advanced',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-107',
+    question: 'What is the output of: print(b"hello".decode())?',
+    options: [
+      'hello',
+      "b'hello'",
+      'h e l l o',
+      'Error'
+    ],
+    correctAnswer: 'hello',
+    explanation: 'decode() converts bytes to a string using the default encoding (UTF-8).',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-108',
+    question: 'What is the correct way to create a property?',
+    options: [
+      '@property def my_property(self): ...',
+      'def property(self): ...',
+      'property = property()',
+      'import property; @property'
+    ],
+    correctAnswer: '@property def my_property(self): ...',
+    explanation: 'The @property decorator converts a method into a read-only property.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-109',
+    question: 'What is the output of: print("hello".format())?',
+    options: [
+      'hello',
+      '{}',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'hello',
+    explanation: 'format() with no arguments returns the original string unchanged.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-110',
+    question: 'What is the correct way to create a static method?',
+    options: [
+      '@staticmethod def my_method(): ...',
+      'def static_method(): ...',
+      'static def my_method(): ...',
+      'import static; @static'
+    ],
+    correctAnswer: '@staticmethod def my_method(): ...',
+    explanation: 'The @staticmethod decorator creates a static method that doesn\'t receive self or cls.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-111',
+    question: 'What is the output of: print("hello".format_map({}))?',
+    options: [
+      'hello',
+      '{}',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'hello',
+    explanation: 'format_map() with an empty dictionary returns the original string unchanged.',
+    category: 'Python Strings',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-112',
+    question: 'What is the correct way to create a class method?',
+    options: [
+      '@classmethod def my_method(cls): ...',
+      'def class_method(cls): ...',
+      'class def my_method(): ...',
+      'import classmethod; @classmethod'
+    ],
+    correctAnswer: '@classmethod def my_method(cls): ...',
+    explanation: 'The @classmethod decorator creates a method that receives the class as the first argument.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-113',
+    question: 'What is the output of: print("hello".casefold())?',
+    options: [
+      'hello',
+      'HELLO',
+      'Hello',
+      'Error'
+    ],
+    correctAnswer: 'hello',
+    explanation: 'casefold() converts the string to lowercase, similar to lower() but more aggressive.',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-114',
+    question: 'What is the correct way to create an abstract method?',
+    options: [
+      'from abc import ABC, abstractmethod; @abstractmethod def my_method(self): ...',
+      'def abstract_method(self): ...',
+      'abstract def my_method(): ...',
+      'import abstract; @abstract'
+    ],
+    correctAnswer: 'from abc import ABC, abstractmethod; @abstractmethod def my_method(self): ...',
+    explanation: 'Abstract methods are created using the @abstractmethod decorator from the abc module.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-115',
+    question: 'What is the output of: print("hello".maketrans("h", "H"))?',
+    options: [
+      '{104: 72}',
+      'Hello',
+      'hello',
+      'Error'
+    ],
+    correctAnswer: '{104: 72}',
+    explanation: 'maketrans() creates a translation table mapping characters. 104 is the ASCII code for "h", 72 for "H".',
+    category: 'Python Strings',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-116',
+    question: 'What is the correct way to create a singleton class?',
+    options: [
+      'class Singleton: _instance = None; def __new__(cls): if cls._instance is None: cls._instance = super().__new__(cls); return cls._instance',
+      'class Singleton: def __init__(self): self.instance = None',
+      'singleton class MyClass: ...',
+      'import singleton; @singleton'
+    ],
+    correctAnswer: 'class Singleton: _instance = None; def __new__(cls): if cls._instance is None: cls._instance = super().__new__(cls); return cls._instance',
+    explanation: 'Singleton pattern ensures only one instance of a class exists by overriding __new__.',
+    category: 'Python Design Patterns',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-117',
+    question: 'What is the output of: print("hello".translate({104: 72}))?',
+    options: [
+      'Hello',
+      'hello',
+      'hELLO',
+      'Error'
+    ],
+    correctAnswer: 'Hello',
+    explanation: 'translate() applies the translation table, replacing "h" (ASCII 104) with "H" (ASCII 72).',
+    category: 'Python Strings',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-118',
+    question: 'What is the correct way to create a factory pattern?',
+    options: [
+      'class Factory: @staticmethod def create_object(type): if type == "A": return ClassA(); elif type == "B": return ClassB()',
+      'class Factory: def create(self): return object()',
+      'factory class MyClass: ...',
+      'import factory; @factory'
+    ],
+    correctAnswer: 'class Factory: @staticmethod def create_object(type): if type == "A": return ClassA(); elif type == "B": return ClassB()',
+    explanation: 'Factory pattern creates objects without specifying their exact class.',
+    category: 'Python Design Patterns',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-119',
+    question: 'What is the output of: print("hello".isprintable())?',
+    options: [
+      'True',
+      'False',
+      'None',
+      'Error'
+    ],
+    correctAnswer: 'True',
+    explanation: 'isprintable() returns True if all characters in the string are printable.',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-120',
+    question: 'What is the correct way to create an observer pattern?',
+    options: [
+      'class Subject: def __init__(self): self._observers = []; def attach(self, observer): self._observers.append(observer)',
+      'class Observer: def observe(self): pass',
+      'observer class MyClass: ...',
+      'import observer; @observer'
+    ],
+    correctAnswer: 'class Subject: def __init__(self): self._observers = []; def attach(self, observer): self._observers.append(observer)',
+    explanation: 'Observer pattern allows objects to subscribe to events and be notified when they occur.',
+    category: 'Python Design Patterns',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-121',
+    question: 'What is the output of: print("hello".isidentifier())?',
+    options: [
+      'True',
+      'False',
+      'None',
+      'Error'
+    ],
+    correctAnswer: 'True',
+    explanation: 'isidentifier() returns True if the string is a valid Python identifier.',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-122',
+    question: 'What is the correct way to create a strategy pattern?',
+    options: [
+      'class Context: def __init__(self, strategy): self._strategy = strategy; def execute_strategy(self): return self._strategy.execute()',
+      'class Strategy: def execute(self): pass',
+      'strategy class MyClass: ...',
+      'import strategy; @strategy'
+    ],
+    correctAnswer: 'class Context: def __init__(self, strategy): self._strategy = strategy; def execute_strategy(self): return self._strategy.execute()',
+    explanation: 'Strategy pattern allows selecting an algorithm\'s implementation at runtime.',
+    category: 'Python Design Patterns',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-123',
+    question: 'What is the output of: print("hello".isascii())?',
+    options: [
+      'True',
+      'False',
+      'None',
+      'Error'
+    ],
+    correctAnswer: 'True',
+    explanation: 'isascii() returns True if all characters in the string are ASCII.',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-124',
+    question: 'What is the correct way to create a command pattern?',
+    options: [
+      'class Command: def execute(self): pass; class Invoker: def __init__(self): self._commands = []; def add_command(self, command): self._commands.append(command)',
+      'class Command: def run(self): pass',
+      'command class MyClass: ...',
+      'import command; @command'
+    ],
+    correctAnswer: 'class Command: def execute(self): pass; class Invoker: def __init__(self): self._commands = []; def add_command(self, command): self._commands.append(command)',
+    explanation: 'Command pattern encapsulates a request as an object, allowing parameterization of clients.',
+    category: 'Python Design Patterns',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-125',
+    question: 'What is the output of: print("hello".isdecimal())?',
+    options: [
+      'False',
+      'True',
+      'None',
+      'Error'
+    ],
+    correctAnswer: 'False',
+    explanation: 'isdecimal() returns True if all characters in the string are decimal characters. "hello" contains letters.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
   }
 ]; 
