@@ -9,6 +9,7 @@ import { pythonModule5Topics } from '../data/python/module5';
 import { pythonModule6Topics } from '../data/python/module6';
 import { pythonModule7Topics } from '../data/python/module7';
 import { pythonModule8Topics } from '../data/python/module8';
+import { pythonModule9Topics } from '../data/python/module9';
 
 const PythonModuleLayout: React.FC = () => {
   const { moduleId } = useParams<{ moduleId?: string }>();
@@ -45,6 +46,10 @@ const PythonModuleLayout: React.FC = () => {
     topics = pythonModule8Topics;
     moduleTitle = 'Module 8: Modules, Packages, and Standard Library';
     moduleDesc = 'Learn about modules, packages, pip, venv, and key standard library modules for real-world Python.';
+  } else if (safeModuleId === '9') {
+    topics = pythonModule9Topics;
+    moduleTitle = 'Module 9: Concurrency & Parallelism';
+    moduleDesc = 'Learn about the GIL, threading, multiprocessing, asyncio, futures, and parallel programming in Python.';
   }
 
   return (
