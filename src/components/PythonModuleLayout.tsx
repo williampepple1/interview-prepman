@@ -6,6 +6,7 @@ import { pythonModule2Topics } from '../data/python/module2';
 import { pythonModule3Topics } from '../data/python/module3';
 import { pythonModule4Topics } from '../data/python/module4';
 import { pythonModule5Topics } from '../data/python/module5';
+import { pythonModule6Topics } from '../data/python/module6';
 
 const PythonModuleLayout: React.FC = () => {
   const { moduleId } = useParams<{ moduleId?: string }>();
@@ -30,6 +31,10 @@ const PythonModuleLayout: React.FC = () => {
     topics = pythonModule5Topics;
     moduleTitle = 'Module 5: Files, Exceptions, and Modules';
     moduleDesc = 'Work with files, handle exceptions, use logging, and organize code with modules and venv.';
+  } else if (safeModuleId === '6') {
+    topics = pythonModule6Topics;
+    moduleTitle = 'Module 6: Object-Oriented Programming (OOP)';
+    moduleDesc = 'Master classes, inheritance, special methods, decorators, abstract base classes, and dataclasses.';
   }
 
   return (

@@ -6,13 +6,14 @@ import { pythonModule2Topics } from '../data/python/module2';
 import { pythonModule3Topics } from '../data/python/module3';
 import { pythonModule4Topics } from '../data/python/module4';
 import { pythonModule5Topics } from '../data/python/module5';
+import { pythonModule6Topics } from '../data/python/module6';
 import { Topic, Subtopic } from '../types';
 import MarkdownRenderer from './MarkdownRenderer';
 
 const PythonTopicLayout: React.FC = () => {
   const { moduleId, topicId, subtopicId } = useParams<{ moduleId?: string; topicId: string; subtopicId?: string }>();
   const safeModuleId = moduleId || '1';
-  const topics = safeModuleId === '5' ? pythonModule5Topics : safeModuleId === '4' ? pythonModule4Topics : safeModuleId === '3' ? pythonModule3Topics : safeModuleId === '2' ? pythonModule2Topics : pythonModule1Topics;
+  const topics = safeModuleId === '6' ? pythonModule6Topics : safeModuleId === '5' ? pythonModule5Topics : safeModuleId === '4' ? pythonModule4Topics : safeModuleId === '3' ? pythonModule3Topics : safeModuleId === '2' ? pythonModule2Topics : pythonModule1Topics;
   const [currentTopic, setCurrentTopic] = useState<Topic | null>(null);
   const [currentSubtopic, setCurrentSubtopic] = useState<Subtopic | null>(null);
 
