@@ -7,6 +7,7 @@ import { pythonModule3Topics } from '../data/python/module3';
 import { pythonModule4Topics } from '../data/python/module4';
 import { pythonModule5Topics } from '../data/python/module5';
 import { pythonModule6Topics } from '../data/python/module6';
+import { pythonModule7Topics } from '../data/python/module7';
 
 const PythonModuleLayout: React.FC = () => {
   const { moduleId } = useParams<{ moduleId?: string }>();
@@ -35,6 +36,10 @@ const PythonModuleLayout: React.FC = () => {
     topics = pythonModule6Topics;
     moduleTitle = 'Module 6: Object-Oriented Programming (OOP)';
     moduleDesc = 'Master classes, inheritance, special methods, decorators, abstract base classes, and dataclasses.';
+  } else if (safeModuleId === '7') {
+    topics = pythonModule7Topics;
+    moduleTitle = 'Module 7: Advanced Python Concepts';
+    moduleDesc = 'Dive into iterators, generators, decorators, context managers, functools, itertools, metaclasses, and more.';
   }
 
   return (
