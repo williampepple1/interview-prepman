@@ -356,6 +356,377 @@ This approach efficiently handles the character frequency requirements.
     tags: ['string', 'hash-table', 'counting'],
     companies: ['Amazon', 'Microsoft', 'Google', 'Apple', 'Spotify'],
     studyPlans: ['Grind 75']
+  },
+  {
+    id: '8',
+    title: 'Two Sum II - Input Array Is Sorted (LeetCode #167)',
+    difficulty: 'Medium',
+    category: 'Two Pointers',
+    description: 'Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number. Let these two numbers be numbers[index1] and numbers[index2] where 1 <= index1 < index2 <= numbers.length. Return the indices of the two numbers, index1 and index2, added by one as an integer array [index1, index2].',
+    solution: `
+## Solution
+
+### Approach: Two Pointers
+\`\`\`python
+def twoSum(numbers, target):
+    left, right = 0, len(numbers) - 1
+    
+    while left < right:
+        current_sum = numbers[left] + numbers[right]
+        
+        if current_sum == target:
+            return [left + 1, right + 1]  # 1-indexed
+        elif current_sum < target:
+            left += 1
+        else:
+            right -= 1
+    
+    return []
+\`\`\`
+
+**Time Complexity**: O(n)
+**Space Complexity**: O(1)
+    `,
+    explanation: `
+## Explanation
+
+Since the array is sorted, we can use two pointers approach:
+
+1. Start with left pointer at the beginning and right pointer at the end
+2. Calculate the sum of elements at both pointers
+3. If sum equals target, return the indices (1-indexed)
+4. If sum is less than target, move left pointer right (increase sum)
+5. If sum is greater than target, move right pointer left (decrease sum)
+
+This approach is optimal because:
+- We only need one pass through the array
+- We can eliminate half the remaining elements in each iteration
+- No extra space is needed
+    `,
+    tags: ['two-pointers', 'array', 'binary-search'],
+    companies: ['Amazon', 'Microsoft', 'Google', 'Apple', 'Facebook'],
+    studyPlans: ['Top 75', 'Blind 75', 'Grind 75']
+  },
+  {
+    id: '9',
+    title: 'Remove Duplicates from Sorted Array (LeetCode #26)',
+    difficulty: 'Easy',
+    category: 'Two Pointers',
+    description: 'Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums.',
+    solution: `
+## Solution
+
+### Approach: Two Pointers
+\`\`\`python
+def removeDuplicates(nums):
+    if not nums:
+        return 0
+    
+    # Use two pointers: one for writing, one for reading
+    write_index = 1
+    
+    for read_index in range(1, len(nums)):
+        # If current element is different from previous
+        if nums[read_index] != nums[read_index - 1]:
+            nums[write_index] = nums[read_index]
+            write_index += 1
+    
+    return write_index
+\`\`\`
+
+**Time Complexity**: O(n)
+**Space Complexity**: O(1)
+    `,
+    explanation: `
+## Explanation
+
+We use two pointers technique:
+
+1. **write_index**: Points to the position where we'll write the next unique element
+2. **read_index**: Scans through the array to find unique elements
+
+Algorithm:
+1. Start with write_index = 1 (first element is always unique)
+2. For each element starting from index 1:
+   - If current element is different from previous element, write it at write_index
+   - Increment write_index
+3. Return write_index (number of unique elements)
+
+This approach modifies the array in-place and maintains the relative order of elements.
+    `,
+    tags: ['two-pointers', 'array'],
+    companies: ['Microsoft', 'Google', 'Amazon', 'Apple', 'Adobe'],
+    studyPlans: ['Top 75', 'Blind 75', 'Grind 75']
+  },
+  {
+    id: '10',
+    title: 'Container With Most Water (LeetCode #11)',
+    difficulty: 'Medium',
+    category: 'Two Pointers',
+    description: 'Given n non-negative integers height where each represents a point at coordinate (i, height[i]). Find two lines, which, together with the x-axis forms a container, such that the container contains the maximum amount of water.',
+    solution: `
+## Solution
+
+### Approach: Two Pointers
+\`\`\`python
+def maxArea(height):
+    left, right = 0, len(height) - 1
+    max_area = 0
+    
+    while left < right:
+        # Calculate area with current heights
+        width = right - left
+        h = min(height[left], height[right])
+        area = width * h
+        max_area = max(max_area, area)
+        
+        # Move the pointer with smaller height
+        if height[left] < height[right]:
+            left += 1
+        else:
+            right -= 1
+    
+    return max_area
+\`\`\`
+
+**Time Complexity**: O(n)
+**Space Complexity**: O(1)
+    `,
+    explanation: `
+## Explanation
+
+The key insight is that the area is limited by the shorter of the two heights:
+
+1. Start with two pointers at the ends of the array
+2. Calculate the area: width × min(height[left], height[right])
+3. Update max_area if current area is larger
+4. Move the pointer with the smaller height inward
+
+Why this works:
+- The area is always limited by the shorter height
+- By moving the pointer with smaller height, we might find a larger area
+- We don't need to check combinations with even smaller heights
+- This ensures we don't miss the optimal solution
+
+The greedy approach of always moving the shorter pointer is optimal because:
+- The current area is the maximum possible with the shorter height
+- Moving the taller pointer can only decrease the area
+- Moving the shorter pointer might increase the area
+    `,
+    tags: ['two-pointers', 'array', 'greedy'],
+    companies: ['Amazon', 'Microsoft', 'Google', 'Apple', 'Facebook'],
+    studyPlans: ['Top 75', 'Blind 75', 'Grind 75']
+  },
+  {
+    id: '11',
+    title: '3Sum (LeetCode #15)',
+    difficulty: 'Medium',
+    category: 'Two Pointers',
+    description: 'Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0. Notice that the solution set must not contain duplicate triplets.',
+    solution: `
+## Solution
+
+### Approach: Two Pointers with Sorting
+\`\`\`python
+def threeSum(nums):
+    nums.sort()
+    result = []
+    
+    for i in range(len(nums) - 2):
+        # Skip duplicates for i
+        if i > 0 and nums[i] == nums[i - 1]:
+            continue
+        
+        left, right = i + 1, len(nums) - 1
+        
+        while left < right:
+            total = nums[i] + nums[left] + nums[right]
+            
+            if total == 0:
+                result.append([nums[i], nums[left], nums[right]])
+                
+                # Skip duplicates for left and right
+                while left < right and nums[left] == nums[left + 1]:
+                    left += 1
+                while left < right and nums[right] == nums[right - 1]:
+                    right -= 1
+                
+                left += 1
+                right -= 1
+            elif total < 0:
+                left += 1
+            else:
+                right -= 1
+    
+    return result
+\`\`\`
+
+**Time Complexity**: O(n²)
+**Space Complexity**: O(1) (excluding output space)
+    `,
+    explanation: `
+## Explanation
+
+The solution uses a combination of sorting and two pointers:
+
+1. **Sort the array**: This allows us to use two pointers efficiently
+2. **Fix one element**: For each element nums[i], find two other elements that sum to -nums[i]
+3. **Use two pointers**: For the remaining elements, use left and right pointers
+4. **Skip duplicates**: Avoid duplicate triplets by skipping identical elements
+
+Algorithm:
+1. Sort the array
+2. For each element nums[i] (skip duplicates):
+   - Use two pointers (left, right) to find pairs that sum to -nums[i]
+   - If sum == 0, add triplet to result and skip duplicates
+   - If sum < 0, move left pointer right
+   - If sum > 0, move right pointer left
+
+Key optimizations:
+- Skip duplicates at each level to avoid duplicate triplets
+- Early termination when nums[i] > 0 (since array is sorted)
+- Two pointers approach reduces complexity from O(n³) to O(n²)
+    `,
+    tags: ['two-pointers', 'array', 'sorting'],
+    companies: ['Amazon', 'Microsoft', 'Google', 'Apple', 'Facebook'],
+    studyPlans: ['Top 75', 'Blind 75', 'Grind 75']
+  },
+  {
+    id: '12',
+    title: 'Linked List Cycle (LeetCode #141)',
+    difficulty: 'Easy',
+    category: 'Two Pointers',
+    description: 'Given head, the head of a linked list, determine if the linked list has a cycle in it. There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer.',
+    solution: `
+## Solution
+
+### Approach: Floyd's Cycle Finding Algorithm (Fast and Slow Pointers)
+\`\`\`python
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
+def hasCycle(head):
+    if not head or not head.next:
+        return False
+    
+    slow = head
+    fast = head.next
+    
+    while slow != fast:
+        if not fast or not fast.next:
+            return False
+        slow = slow.next
+        fast = fast.next.next
+    
+    return True
+\`\`\`
+
+**Time Complexity**: O(n)
+**Space Complexity**: O(1)
+    `,
+    explanation: `
+## Explanation
+
+Floyd's Cycle Finding Algorithm (also known as the "tortoise and hare" algorithm):
+
+1. **Two pointers**: Use a slow pointer (moves 1 step) and fast pointer (moves 2 steps)
+2. **Cycle detection**: If there's a cycle, the fast pointer will eventually catch up to the slow pointer
+3. **No cycle**: If there's no cycle, the fast pointer will reach the end (null)
+
+Why this works:
+- If there's no cycle, fast pointer reaches end in O(n/2) = O(n) time
+- If there's a cycle, fast pointer will eventually meet slow pointer
+- The meeting point is not necessarily the start of the cycle
+- The algorithm is guaranteed to terminate
+
+Mathematical proof:
+- Let the cycle length be L
+- Let the distance from head to cycle start be D
+- When slow enters cycle, fast is D steps ahead
+- Fast catches up to slow in L - (D mod L) steps
+- Total time complexity is O(n)
+
+This is the most efficient way to detect cycles in linked lists.
+    `,
+    tags: ['two-pointers', 'linked-list'],
+    companies: ['Amazon', 'Microsoft', 'Google', 'Apple', 'Facebook'],
+    studyPlans: ['Top 75', 'Blind 75', 'Grind 75']
+  },
+  {
+    id: '13',
+    title: 'Remove Nth Node From End of List (LeetCode #19)',
+    difficulty: 'Medium',
+    category: 'Two Pointers',
+    description: 'Given the head of a linked list, remove the nth node from the end of the list and return its head.',
+    solution: `
+## Solution
+
+### Approach: Two Pointers (Fast and Slow)
+\`\`\`python
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def removeNthFromEnd(head, n):
+    # Create a dummy node to handle edge cases
+    dummy = ListNode(0)
+    dummy.next = head
+    
+    # Two pointers
+    first = dummy
+    second = dummy
+    
+    # Move first pointer n+1 steps ahead
+    for _ in range(n + 1):
+        first = first.next
+    
+    # Move both pointers until first reaches end
+    while first:
+        first = first.next
+        second = second.next
+    
+    # Remove the nth node from end
+    second.next = second.next.next
+    
+    return dummy.next
+\`\`\`
+
+**Time Complexity**: O(n)
+**Space Complexity**: O(1)
+    `,
+    explanation: `
+## Explanation
+
+The two pointers approach allows us to find the nth node from the end in one pass:
+
+1. **Dummy node**: Create a dummy node to handle edge cases (like removing the head)
+2. **Two pointers**: Use first and second pointers
+3. **Gap creation**: Move first pointer n+1 steps ahead of second
+4. **Synchronized movement**: Move both pointers until first reaches the end
+5. **Removal**: When first reaches end, second points to the node before the one to remove
+
+Why n+1 steps?
+- We want second to point to the node BEFORE the one we want to remove
+- This allows us to easily remove the target node by updating the next pointer
+
+Example:
+- List: 1 -> 2 -> 3 -> 4 -> 5, n = 2
+- We want to remove node with value 4 (2nd from end)
+- After moving first n+1 steps: first points to 3, second points to dummy
+- After synchronized movement: first points to null, second points to 3
+- Remove: 3.next = 3.next.next (removes 4)
+
+This approach is optimal because:
+- Only one pass through the list
+- Constant extra space
+- Handles all edge cases elegantly
+    `,
+    tags: ['two-pointers', 'linked-list'],
+    companies: ['Amazon', 'Microsoft', 'Google', 'Apple', 'Facebook'],
+    studyPlans: ['Top 75', 'Blind 75', 'Grind 75']
   }
 ];
 

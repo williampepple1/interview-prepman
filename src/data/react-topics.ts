@@ -9,8 +9,15 @@ export const reactTopics: ReactTopic[] = [
     estimatedTime: '45 minutes',
     difficulty: 'Beginner',
     prerequisites: ['Basic JavaScript', 'React Components'],
-    content: `
-# React Hooks Fundamentals
+    subtopics: [
+      {
+        id: 'introduction-to-hooks',
+        title: 'Introduction to Hooks',
+        description: 'Learn what React Hooks are and why they were introduced.',
+        estimatedTime: '10 minutes',
+        difficulty: 'Beginner',
+        content: `
+# Introduction to React Hooks
 
 React Hooks were introduced in React 16.8 to allow functional components to use state and other React features without writing class components. This revolutionized how we write React applications.
 
@@ -24,11 +31,71 @@ Hooks are functions that let you "hook into" React state and lifecycle features 
 2. **Only call hooks from React functions** - Call hooks from React function components or custom hooks
 3. **Hooks are called in the same order every time** - This is why the rules above are important
 
-## useState Hook
+## Why Hooks?
+
+Before hooks, you had to use class components to:
+- Manage state
+- Use lifecycle methods
+- Share logic between components
+
+Hooks solve these problems by allowing you to:
+- Use state in functional components
+- Use lifecycle features without classes
+- Share logic between components more easily
+        `,
+        codeExamples: [
+          `// Before Hooks (Class Component)
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+  }
+  
+  render() {
+    return (
+      <div>
+        <p>Count: {this.state.count}</p>
+        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+          Increment
+        </button>
+      </div>
+    );
+  }
+}`,
+          `// After Hooks (Functional Component)
+function Counter() {
+  const [count, setCount] = useState(0);
+  
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>
+        Increment
+      </button>
+    </div>
+  );
+}`
+        ],
+        keyPoints: [
+          'Hooks were introduced in React 16.8',
+          'Hooks allow functional components to use state and lifecycle features',
+          'Hooks must be called at the top level of your component',
+          'Hooks can only be called from React function components or custom hooks',
+          'Hooks are called in the same order every time'
+        ]
+      },
+      {
+        id: 'useState-hook',
+        title: 'useState Hook',
+        description: 'Learn how to manage state in functional components using the useState hook.',
+        estimatedTime: '15 minutes',
+        difficulty: 'Beginner',
+        content: `
+# useState Hook
 
 The useState hook is the most fundamental hook in React. It allows functional components to manage local state.
 
-### Basic Usage
+## Basic Usage
 
 \`\`\`jsx
 import React, { useState } from 'react';
@@ -47,7 +114,7 @@ function Counter() {
 }
 \`\`\`
 
-### State Updates
+## State Updates
 
 State updates are asynchronous and batched for performance. React may batch multiple setState calls into a single re-render.
 
@@ -69,7 +136,7 @@ function Counter() {
 }
 \`\`\`
 
-### Object State
+## Object State
 
 When managing object state, always spread the previous state to avoid mutations:
 
@@ -96,12 +163,46 @@ function UserProfile() {
   );
 }
 \`\`\`
+        `,
+        codeExamples: [
+          `// Basic useState
+const [count, setCount] = useState(0);
 
-## useEffect Hook
+// Multiple state variables
+const [name, setName] = useState('');
+const [email, setEmail] = useState('');
+const [age, setAge] = useState(0);
 
-The useEffect hook lets you perform side effects in function components. It serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount in class components.
+// Object state
+const [user, setUser] = useState({
+  name: '',
+  email: '',
+  age: 0
+});
 
-### Basic Usage
+// Array state
+const [items, setItems] = useState([]);`
+        ],
+        keyPoints: [
+          'useState returns an array with the current state and a function to update it',
+          'Always use the setter function to update state, never modify state directly',
+          'State updates are asynchronous and may be batched',
+          'Use the functional form of setState when the new state depends on the previous state',
+          'For objects and arrays, always create a new copy to trigger re-renders'
+        ]
+      },
+      {
+        id: 'useEffect-hook',
+        title: 'useEffect Hook',
+        description: 'Learn how to handle side effects in functional components using the useEffect hook.',
+        estimatedTime: '20 minutes',
+        difficulty: 'Beginner',
+        content: `
+# useEffect Hook
+
+The useEffect hook lets you perform side effects in functional components. It serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount in class components.
+
+## Basic Usage
 
 \`\`\`jsx
 import React, { useState, useEffect } from 'react';
@@ -113,7 +214,6 @@ function UserProfile({ userId }) {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        setLoading(true);
         const response = await fetch(\`/api/users/\${userId}\`);
         const userData = await response.json();
         setUser(userData);
@@ -134,76 +234,729 @@ function UserProfile({ userId }) {
 }
 \`\`\`
 
-### Dependency Array
+## Cleanup Function
 
-The dependency array controls when the effect runs:
-
-- **Empty array []**: Effect runs only once after the first render (like componentDidMount)
-- **No array**: Effect runs after every render
-- **Array with dependencies**: Effect runs when dependencies change
+useEffect can return a cleanup function that runs before the component unmounts or before the effect runs again:
 
 \`\`\`jsx
+function Timer() {
+  const [count, setCount] = useState(0);
+  
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCount(c => c + 1);
+    }, 1000);
+    
+    // Cleanup function
+    return () => clearInterval(timer);
+  }, []); // Empty dependency array = run once
+    
+  return <div>Count: {count}</div>;
+}
+\`\`\`
+        `,
+        codeExamples: [
+          `// Effect with no dependencies (runs after every render)
 useEffect(() => {
-  // Runs after every render
   console.log('Component rendered');
 });
 
+// Effect with empty dependency array (runs once after mount)
 useEffect(() => {
-  // Runs only once after first render
   console.log('Component mounted');
 }, []);
 
+// Effect with dependencies (runs when dependencies change)
 useEffect(() => {
-  // Runs when userId changes
-  console.log('UserId changed:', userId);
+  console.log('User ID changed:', userId);
 }, [userId]);
-\`\`\`
 
-### Cleanup Function
+// Effect with cleanup
+useEffect(() => {
+  const subscription = subscribe();
+  return () => subscription.unsubscribe();
+}, []);`
+        ],
+        keyPoints: [
+          'useEffect runs after every render by default',
+          'Use the dependency array to control when the effect runs',
+          'An empty dependency array means the effect runs only once after mount',
+          'Always include dependencies that the effect uses',
+          'Return a cleanup function to clean up subscriptions, timers, etc.'
+        ]
+      }
+    ]
+  },
+  {
+    id: 'component-lifecycle',
+    title: 'Component Lifecycle',
+    category: 'Lifecycle',
+    description: 'Understand the component lifecycle in React and how to use lifecycle methods effectively.',
+    estimatedTime: '30 minutes',
+    difficulty: 'Intermediate',
+    prerequisites: ['React Hooks Fundamentals'],
+    subtopics: [
+      {
+        id: 'lifecycle-overview',
+        title: 'Lifecycle Overview',
+        description: 'Learn about the different phases of a React component\'s lifecycle.',
+        estimatedTime: '10 minutes',
+        difficulty: 'Intermediate',
+        content: `
+# Component Lifecycle Overview
 
-Return a cleanup function to perform cleanup when the component unmounts or before the effect runs again:
+Every React component goes through a lifecycle from creation to destruction. Understanding this lifecycle is crucial for building efficient React applications.
+
+## Lifecycle Phases
+
+### 1. Mounting Phase
+- **constructor()** - Initialize state and bind methods
+- **render()** - Return JSX
+- **componentDidMount()** - Component is mounted to DOM
+
+### 2. Updating Phase
+- **render()** - Re-render with new props/state
+- **componentDidUpdate()** - Component updated
+
+### 3. Unmounting Phase
+- **componentWillUnmount()** - Component is about to be removed
+
+## Class Component Lifecycle
 
 \`\`\`jsx
-function ChatRoom({ roomId }) {
-  const [messages, setMessages] = useState([]);
+class ExampleComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { data: null };
+  }
+  
+  componentDidMount() {
+    // Called after component is mounted to DOM
+    this.fetchData();
+  }
+  
+  componentDidUpdate(prevProps, prevState) {
+    // Called after component updates
+    if (prevProps.id !== this.props.id) {
+      this.fetchData();
+    }
+  }
+  
+  componentWillUnmount() {
+    // Called before component is unmounted
+    this.cleanup();
+  }
+  
+  render() {
+    return <div>{this.state.data}</div>;
+  }
+}
+\`\`\`
+
+## Functional Component with Hooks
+
+\`\`\`jsx
+function ExampleComponent({ id }) {
+  const [data, setData] = useState(null);
   
   useEffect(() => {
-    const connection = createConnection(roomId);
-    connection.connect();
+    // componentDidMount equivalent
+    fetchData();
     
-    // Cleanup function
+    // componentWillUnmount equivalent
     return () => {
-      connection.disconnect();
+      cleanup();
     };
-  }, [roomId]);
+  }, []); // Empty dependency array = run once
   
-  return <div>Chat messages: {messages.length}</div>;
+  useEffect(() => {
+    // componentDidUpdate equivalent
+    if (id) {
+      fetchData();
+    }
+  }, [id]); // Run when id changes
+  
+  return <div>{data}</div>;
+}
+\`\`\`
+        `,
+        codeExamples: [
+          `// Mounting phase
+useEffect(() => {
+  console.log('Component mounted');
+  return () => console.log('Component will unmount');
+}, []);
+
+// Updating phase
+useEffect(() => {
+  console.log('Component updated');
+}, [someValue]);
+
+// Cleanup on unmount
+useEffect(() => {
+  const timer = setInterval(() => {
+    // Do something
+  }, 1000);
+  
+  return () => clearInterval(timer);
+}, []);`
+        ],
+        keyPoints: [
+          'Components go through mounting, updating, and unmounting phases',
+          'Class components use lifecycle methods like componentDidMount',
+          'Functional components use useEffect to handle lifecycle events',
+          'Always clean up subscriptions and timers in useEffect cleanup',
+          'The dependency array controls when useEffect runs'
+        ]
+      },
+      {
+        id: 'lifecycle-methods',
+        title: 'Lifecycle Methods',
+        description: 'Deep dive into specific lifecycle methods and their use cases.',
+        estimatedTime: '20 minutes',
+        difficulty: 'Intermediate',
+        content: `
+# Lifecycle Methods Deep Dive
+
+## componentDidMount
+
+Called immediately after a component is mounted. Perfect for:
+- API calls
+- Setting up subscriptions
+- DOM manipulations
+
+\`\`\`jsx
+class UserProfile extends React.Component {
+  componentDidMount() {
+    // Fetch user data when component mounts
+    this.fetchUserData();
+    
+    // Set up WebSocket connection
+    this.websocket = new WebSocket('ws://example.com');
+    this.websocket.onmessage = this.handleMessage;
+  }
+  
+  fetchUserData = async () => {
+    const response = await fetch(\`/api/users/\${this.props.userId}\`);
+    const userData = await response.json();
+    this.setState({ user: userData });
+  };
 }
 \`\`\`
 
-## Custom Hooks
+## componentDidUpdate
 
-Custom hooks let you extract component logic into reusable functions. They must start with "use" and can call other hooks.
-
-### Creating Custom Hooks
+Called after the component updates. Use for:
+- Responding to prop changes
+- Making API calls based on new data
+- DOM updates
 
 \`\`\`jsx
-// useCounter.js
-import { useState } from 'react';
+class UserProfile extends React.Component {
+  componentDidUpdate(prevProps, prevState) {
+    // Only fetch if userId changed
+    if (prevProps.userId !== this.props.userId) {
+      this.fetchUserData();
+    }
+    
+    // Update document title when user name changes
+    if (prevState.user?.name !== this.state.user?.name) {
+      document.title = \`Profile - \${this.state.user.name}\`;
+    }
+  }
+}
+\`\`\`
 
-export function useCounter(initialValue = 0) {
-  const [count, setCount] = useState(initialValue);
+## componentWillUnmount
+
+Called before the component is unmounted. Use for:
+- Cleaning up subscriptions
+- Canceling API requests
+- Removing event listeners
+
+\`\`\`jsx
+class UserProfile extends React.Component {
+  componentWillUnmount() {
+    // Clean up WebSocket connection
+    if (this.websocket) {
+      this.websocket.close();
+    }
+    
+    // Cancel any pending API requests
+    if (this.controller) {
+      this.controller.abort();
+    }
+  }
+}
+\`\`\`
+        `,
+        codeExamples: [
+          `// componentDidMount equivalent with hooks
+useEffect(() => {
+  fetchUserData();
+  const websocket = new WebSocket('ws://example.com');
   
-  const increment = () => setCount(count + 1);
-  const decrement = () => setCount(count - 1);
-  const reset = () => setCount(initialValue);
+  return () => {
+    websocket.close();
+  };
+}, []);
+
+// componentDidUpdate equivalent with hooks
+useEffect(() => {
+  if (userId) {
+    fetchUserData();
+  }
+}, [userId]);
+
+// componentWillUnmount equivalent with hooks
+useEffect(() => {
+  return () => {
+    // Cleanup code here
+    console.log('Component unmounting');
+  };
+}, []);`
+        ],
+        keyPoints: [
+          'componentDidMount is perfect for initial setup and API calls',
+          'componentDidUpdate should be used carefully to avoid infinite loops',
+          'componentWillUnmount is essential for cleanup to prevent memory leaks',
+          'Hooks provide equivalent functionality with useEffect',
+          'Always compare previous and current values in componentDidUpdate'
+        ]
+      }
+    ]
+  },
+  {
+    id: 'state-management',
+    title: 'State Management',
+    category: 'State',
+    description: 'Learn different approaches to state management in React applications, from local state to global state management.',
+    estimatedTime: '60 minutes',
+    difficulty: 'Intermediate',
+    prerequisites: ['React Hooks Fundamentals'],
+    subtopics: [
+      {
+        id: 'local-state',
+        title: 'Local State Management',
+        description: 'Learn how to manage state within individual components using useState and useReducer.',
+        estimatedTime: '20 minutes',
+        difficulty: 'Intermediate',
+        content: `
+# Local State Management
+
+Local state is the most basic form of state management in React. It's contained within a single component and doesn't affect other components.
+
+## useState for Simple State
+
+For simple state values, useState is the go-to hook:
+
+\`\`\`jsx
+function Counter() {
+  const [count, setCount] = useState(0);
+  const [name, setName] = useState('');
+  const [isVisible, setIsVisible] = useState(true);
   
-  return { count, increment, decrement, reset };
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <input 
+        value={name} 
+        onChange={(e) => setName(e.target.value)} 
+        placeholder="Enter name"
+      />
+      {isVisible && <p>This is visible!</p>}
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+\`\`\`
+
+## useReducer for Complex State
+
+When state logic becomes complex, useReducer provides a more structured approach:
+
+\`\`\`jsx
+const initialState = {
+  count: 0,
+  step: 1,
+  history: []
+};
+
+function reducer(state, action) {
+  switch (action.type) {
+    case 'increment':
+      return {
+        ...state,
+        count: state.count + state.step,
+        history: [...state.history, state.count]
+      };
+    case 'decrement':
+      return {
+        ...state,
+        count: state.count - state.step,
+        history: [...state.history, state.count]
+      };
+    case 'setStep':
+      return {
+        ...state,
+        step: action.payload
+      };
+    case 'reset':
+      return initialState;
+    default:
+      throw new Error();
+  }
 }
 
-// Usage
+function AdvancedCounter() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+  
+  return (
+    <div>
+      <p>Count: {state.count}</p>
+      <p>Step: {state.step}</p>
+      <input 
+        type="number" 
+        value={state.step}
+        onChange={(e) => dispatch({ type: 'setStep', payload: Number(e.target.value) })}
+      />
+      <button onClick={() => dispatch({ type: 'increment' })}>+</button>
+      <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
+      <button onClick={() => dispatch({ type: 'reset' })}>Reset</button>
+      <p>History: {state.history.join(', ')}</p>
+    </div>
+  );
+}
+\`\`\`
+        `,
+        codeExamples: [
+          `// Simple state with useState
+const [value, setValue] = useState(initialValue);
+
+// Complex state with useReducer
+const [state, dispatch] = useReducer(reducer, initialState);
+
+// Object state
+const [user, setUser] = useState({
+  name: '',
+  email: '',
+  age: 0
+});
+
+// Array state
+const [items, setItems] = useState([]);`
+        ],
+        keyPoints: [
+          'useState is perfect for simple state values',
+          'useReducer is better for complex state logic',
+          'Always use functional updates when new state depends on previous state',
+          'Keep state as local as possible',
+          'Avoid deeply nested state objects'
+        ]
+      },
+      {
+        id: 'context-api',
+        title: 'Context API',
+        description: 'Learn how to share state across components using React Context API.',
+        estimatedTime: '25 minutes',
+        difficulty: 'Intermediate',
+        content: `
+# Context API
+
+The Context API allows you to share state across components without prop drilling. It's perfect for global state that doesn't change frequently.
+
+## Creating Context
+
+\`\`\`jsx
+// ThemeContext.js
+import React, { createContext, useContext, useState } from 'react';
+
+const ThemeContext = createContext();
+
+export function ThemeProvider({ children }) {
+  const [theme, setTheme] = useState('light');
+  
+  const toggleTheme = () => {
+    setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
+  };
+  
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+}
+
+export function useTheme() {
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error('useTheme must be used within a ThemeProvider');
+  }
+  return context;
+}
+\`\`\`
+
+## Using Context
+
+\`\`\`jsx
+// App.js
+import { ThemeProvider } from './ThemeContext';
+import Header from './Header';
+import Content from './Content';
+
+function App() {
+  return (
+    <ThemeProvider>
+      <div className="app">
+        <Header />
+        <Content />
+      </div>
+    </ThemeProvider>
+  );
+}
+
+// Header.js
+import { useTheme } from './ThemeContext';
+
+function Header() {
+  const { theme, toggleTheme } = useTheme();
+  
+  return (
+    <header className={\`header \${theme}\`}>
+      <h1>My App</h1>
+      <button onClick={toggleTheme}>
+        Switch to {theme === 'light' ? 'dark' : 'light'} mode
+      </button>
+    </header>
+  );
+}
+
+// Content.js
+import { useTheme } from './ThemeContext';
+
+function Content() {
+  const { theme } = useTheme();
+  
+  return (
+    <main className={\`content \${theme}\`}>
+      <p>Current theme: {theme}</p>
+    </main>
+  );
+}
+\`\`\`
+
+## User Context Example
+
+\`\`\`jsx
+// UserContext.js
+import React, { createContext, useContext, useState, useEffect } from 'react';
+
+const UserContext = createContext();
+
+export function UserProvider({ children }) {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+  
+  useEffect(() => {
+    // Check if user is logged in
+    const checkAuth = async () => {
+      try {
+        const token = localStorage.getItem('token');
+        if (token) {
+          const response = await fetch('/api/me', {
+            headers: { Authorization: \`Bearer \${token}\` }
+          });
+          if (response.ok) {
+            const userData = await response.json();
+            setUser(userData);
+          }
+        }
+      } catch (error) {
+        console.error('Auth check failed:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    checkAuth();
+  }, []);
+  
+  const login = async (credentials) => {
+    const response = await fetch('/api/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(credentials)
+    });
+    
+    if (response.ok) {
+      const { user: userData, token } = await response.json();
+      localStorage.setItem('token', token);
+      setUser(userData);
+      return true;
+    }
+    return false;
+  };
+  
+  const logout = () => {
+    localStorage.removeItem('token');
+    setUser(null);
+  };
+  
+  return (
+    <UserContext.Provider value={{ user, loading, login, logout }}>
+      {children}
+    </UserContext.Provider>
+  );
+}
+
+export function useUser() {
+  const context = useContext(UserContext);
+  if (!context) {
+    throw new Error('useUser must be used within a UserProvider');
+  }
+  return context;
+}
+\`\`\`
+        `,
+        codeExamples: [
+          `// Creating context
+const MyContext = createContext();
+
+// Provider component
+function MyProvider({ children }) {
+  const [value, setValue] = useState(initialValue);
+  return (
+    <MyContext.Provider value={{ value, setValue }}>
+      {children}
+    </MyContext.Provider>
+  );
+}
+
+// Custom hook
+function useMyContext() {
+  const context = useContext(MyContext);
+  if (!context) {
+    throw new Error('useMyContext must be used within MyProvider');
+  }
+  return context;
+}`
+        ],
+        keyPoints: [
+          'Context API is perfect for sharing state across components',
+          'Avoid using Context for frequently changing state',
+          'Always provide a default value or check for context existence',
+          'Create custom hooks for better developer experience',
+          'Context can cause unnecessary re-renders if not optimized'
+        ]
+      },
+      {
+        id: 'external-libraries',
+        title: 'External State Libraries',
+        description: 'Explore popular external state management libraries like Redux Toolkit and Zustand.',
+        estimatedTime: '15 minutes',
+        difficulty: 'Advanced',
+        content: `
+# External State Libraries
+
+For complex applications, external state management libraries provide powerful features and better performance.
+
+## Redux Toolkit
+
+Redux Toolkit is the official, opinionated way to write Redux logic:
+
+\`\`\`jsx
+// store/counterSlice.js
+import { createSlice } from '@reduxjs/toolkit';
+
+const counterSlice = createSlice({
+  name: 'counter',
+  initialState: {
+    value: 0,
+    history: []
+  },
+  reducers: {
+    increment: (state) => {
+      state.value += 1;
+      state.history.push(state.value);
+    },
+    decrement: (state) => {
+      state.value -= 1;
+      state.history.push(state.value);
+    },
+    incrementByAmount: (state, action) => {
+      state.value += action.payload;
+      state.history.push(state.value);
+    }
+  }
+});
+
+export const { increment, decrement, incrementByAmount } = counterSlice.actions;
+export default counterSlice.reducer;
+
+// store/store.js
+import { configureStore } from '@reduxjs/toolkit';
+import counterReducer from './counterSlice';
+
+export const store = configureStore({
+  reducer: {
+    counter: counterReducer
+  }
+});
+
+// App.js
+import { Provider } from 'react-redux';
+import { store } from './store/store';
+import Counter from './Counter';
+
+function App() {
+  return (
+    <Provider store={store}>
+      <Counter />
+    </Provider>
+  );
+}
+
+// Counter.js
+import { useSelector, useDispatch } from 'react-redux';
+import { increment, decrement, incrementByAmount } from './store/counterSlice';
+
 function Counter() {
-  const { count, increment, decrement, reset } = useCounter(0);
+  const count = useSelector((state) => state.counter.value);
+  const history = useSelector((state) => state.counter.history);
+  const dispatch = useDispatch();
+  
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => dispatch(increment())}>+</button>
+      <button onClick={() => dispatch(decrement())}>-</button>
+      <button onClick={() => dispatch(incrementByAmount(5))}>+5</button>
+      <p>History: {history.join(', ')}</p>
+    </div>
+  );
+}
+\`\`\`
+
+## Zustand
+
+Zustand is a lightweight state management library with a simple API:
+
+\`\`\`jsx
+// store/useStore.js
+import create from 'zustand';
+
+const useStore = create((set) => ({
+  count: 0,
+  increment: () => set((state) => ({ count: state.count + 1 })),
+  decrement: () => set((state) => ({ count: state.count - 1 })),
+  reset: () => set({ count: 0 })
+}));
+
+// Counter.js
+import useStore from './store/useStore';
+
+function Counter() {
+  const { count, increment, decrement, reset } = useStore();
   
   return (
     <div>
@@ -215,649 +968,33 @@ function Counter() {
   );
 }
 \`\`\`
-
-### Custom Hook for API Calls
-
-\`\`\`jsx
-// useApi.js
-import { useState, useEffect } from 'react';
-
-export function useApi(url) {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoading(true);
-        setError(null);
-        const response = await fetch(url);
-        const result = await response.json();
-        setData(result);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-    
-    fetchData();
-  }, [url]);
-  
-  return { data, loading, error };
-}
-
-// Usage
-function UserList() {
-  const { data: users, loading, error } = useApi('/api/users');
-  
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
-  
-  return (
-    <ul>
-      {users.map(user => (
-        <li key={user.id}>{user.name}</li>
-      ))}
-    </ul>
-  );
-}
-\`\`\`
-
-## Best Practices
-
-### 1. Use Multiple useState Calls
-
-Instead of one large state object, use multiple useState calls for different concerns:
-
-\`\`\`jsx
-// Good
-const [name, setName] = useState('');
-const [email, setEmail] = useState('');
-const [age, setAge] = useState(0);
-
-// Avoid
-const [user, setUser] = useState({
-  name: '',
-  email: '',
-  age: 0
-});
-\`\`\`
-
-### 2. Use Functional Updates
-
-When the new state depends on the previous state, use functional updates:
-
-\`\`\`jsx
-// Good
-setCount(prevCount => prevCount + 1);
-
-// Avoid
-setCount(count + 1);
-\`\`\`
-
-### 3. Include All Dependencies
-
-Always include all values from the component scope that change over time in the dependency array:
-
-\`\`\`jsx
-// Good
-useEffect(() => {
-  fetchData(userId, token);
-}, [userId, token]);
-
-// Avoid
-useEffect(() => {
-  fetchData(userId, token);
-}, []); // Missing dependencies
-\`\`\`
-
-### 4. Use useCallback for Expensive Operations
-
-Use useCallback to memoize functions that are passed as props:
-
-\`\`\`jsx
-import React, { useCallback } from 'react';
-
-function ParentComponent() {
-  const handleClick = useCallback(() => {
-    console.log('Button clicked');
-  }, []); // Empty dependency array since it doesn't depend on any props/state
-  
-  return <ChildComponent onClick={handleClick} />;
-}
-\`\`\`
-
-## Common Pitfalls
-
-### 1. Infinite Loops
-
-Be careful with useEffect dependencies to avoid infinite loops:
-
-\`\`\`jsx
-// This will cause infinite loops
-useEffect(() => {
-  setCount(count + 1);
-}, [count]); // count changes, effect runs, count changes again...
-
-// Fix: Use functional update
-useEffect(() => {
-  setCount(prevCount => prevCount + 1);
-}, []); // Only run once
-\`\`\`
-
-### 2. Stale Closures
-
-Be aware of stale closures in event handlers and effects:
-
-\`\`\`jsx
-function Counter() {
-  const [count, setCount] = useState(0);
-  
-  // This will always log 0 due to stale closure
-  useEffect(() => {
-    const timer = setInterval(() => {
-      console.log(count); // Always logs 0
-    }, 1000);
-    
-    return () => clearInterval(timer);
-  }, [count]);
-  
-  // Fix: Use functional update or include count in dependencies
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCount(prevCount => {
-        console.log(prevCount); // Logs current count
-        return prevCount + 1;
-      });
-    }, 1000);
-    
-    return () => clearInterval(timer);
-  }, []); // No dependencies needed
-}
-\`\`\`
-
-## Summary
-
-React Hooks provide a powerful and flexible way to manage state and side effects in functional components. By understanding the core principles and best practices, you can write cleaner, more maintainable React code.
-
-Key takeaways:
-- useState for local state management
-- useEffect for side effects and lifecycle management
-- Custom hooks for reusable logic
-- Always follow the Rules of Hooks
-- Use functional updates when new state depends on previous state
-- Include all dependencies in useEffect dependency arrays
-    `,
-    codeExamples: [
-      `// Basic useState example
-const [count, setCount] = useState(0);`,
-      `// useEffect with cleanup
-useEffect(() => {
-  const subscription = subscribe();
-  return () => subscription.unsubscribe();
-}, []);`,
-      `// Custom hook
-function useCounter(initialValue = 0) {
-  const [count, setCount] = useState(initialValue);
-  const increment = () => setCount(prev => prev + 1);
-  return { count, increment };
-}`
-    ],
-    keyPoints: [
-      'Hooks can only be called at the top level of React functions',
-      'useState returns the current state and a function to update it',
-      'useEffect handles side effects and replaces lifecycle methods',
-      'Custom hooks must start with "use" and can call other hooks',
-      'Always include dependencies in useEffect dependency arrays',
-      'Use functional updates when new state depends on previous state'
-    ]
-  },
-  {
-    id: 'component-lifecycle',
-    title: 'Component Lifecycle & Lifecycle Methods',
-    category: 'Lifecycle',
-    description: 'Understand React component lifecycle from mounting to unmounting. Learn about lifecycle methods and their modern hook equivalents.',
-    estimatedTime: '40 minutes',
-    difficulty: 'Intermediate',
-    prerequisites: ['React Hooks Fundamentals', 'Class Components'],
-    content: `
-# Component Lifecycle & Lifecycle Methods
-
-Understanding the React component lifecycle is crucial for building robust applications. This guide covers both class component lifecycle methods and their functional component equivalents using hooks.
-
-## Component Lifecycle Overview
-
-Every React component goes through three main phases:
-
-1. **Mounting**: Component is being created and inserted into the DOM
-2. **Updating**: Component is re-rendering due to props or state changes
-3. **Unmounting**: Component is being removed from the DOM
-
-## Class Component Lifecycle
-
-### Mounting Phase
-
-\`\`\`jsx
-class ExampleComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { data: null };
-    console.log('1. Constructor called');
-  }
-  
-  static getDerivedStateFromProps(props, state) {
-    console.log('2. getDerivedStateFromProps called');
-    return null;
-  }
-  
-  componentDidMount() {
-    console.log('4. ComponentDidMount called');
-    this.fetchData();
-  }
-  
-  render() {
-    console.log('3. Render called');
-    return <div>{this.state.data}</div>;
-  }
-}
-\`\`\`
-
-### Updating Phase
-
-\`\`\`jsx
-class ExampleComponent extends React.Component {
-  componentDidUpdate(prevProps, prevState) {
-    console.log('ComponentDidUpdate called');
-    if (prevProps.id !== this.props.id) {
-      this.fetchData();
+        `,
+        codeExamples: [
+          `// Redux Toolkit slice
+const slice = createSlice({
+  name: 'feature',
+  initialState: {},
+  reducers: {
+    action: (state, action) => {
+      // Update state
     }
   }
-  
-  shouldComponentUpdate(nextProps, nextState) {
-    // Return false to prevent re-render
-    return this.props.id !== nextProps.id;
-  }
-  
-  getSnapshotBeforeUpdate(prevProps, prevState) {
-    // Capture information before DOM updates
-    return { scrollPosition: window.scrollY };
-  }
-}
-\`\`\`
-
-### Unmounting Phase
-
-\`\`\`jsx
-class ExampleComponent extends React.Component {
-  componentWillUnmount() {
-    console.log('ComponentWillUnmount called');
-    // Cleanup subscriptions, timers, etc.
-    this.subscription.unsubscribe();
-    clearInterval(this.timer);
-  }
-}
-\`\`\`
-
-## Functional Component Lifecycle with Hooks
-
-### Mounting Phase
-
-\`\`\`jsx
-function ExampleComponent({ id }) {
-  const [data, setData] = useState(null);
-  
-  // Equivalent to componentDidMount
-  useEffect(() => {
-    console.log('Component mounted');
-    fetchData();
-  }, []); // Empty dependency array = run once
-  
-  // Equivalent to constructor + getDerivedStateFromProps
-  const [derivedState, setDerivedState] = useState(() => {
-    // This runs only once during initialization
-    return computeInitialState();
-  });
-  
-  return <div>{data}</div>;
-}
-\`\`\`
-
-### Updating Phase
-
-\`\`\`jsx
-function ExampleComponent({ id }) {
-  const [data, setData] = useState(null);
-  
-  // Equivalent to componentDidUpdate
-  useEffect(() => {
-    console.log('Component updated');
-    if (id) {
-      fetchData(id);
-    }
-  }, [id]); // Run when id changes
-  
-  // Equivalent to shouldComponentUpdate
-  const memoizedValue = useMemo(() => {
-    return expensiveCalculation(data);
-  }, [data]); // Only recalculate when data changes
-  
-  return <div>{memoizedValue}</div>;
-}
-\`\`\`
-
-### Unmounting Phase
-
-\`\`\`jsx
-function ExampleComponent() {
-  useEffect(() => {
-    const subscription = subscribe();
-    const timer = setInterval(() => {
-      console.log('Timer tick');
-    }, 1000);
-    
-    // Cleanup function (equivalent to componentWillUnmount)
-    return () => {
-      subscription.unsubscribe();
-      clearInterval(timer);
-    };
-  }, []);
-  
-  return <div>Component</div>;
-}
-\`\`\`
-
-## Lifecycle Method Comparison
-
-| Class Component | Functional Component | Purpose |
-|----------------|---------------------|---------|
-| constructor | useState initializer function | Initialize state |
-| componentDidMount | useEffect with empty deps | Side effects after mount |
-| componentDidUpdate | useEffect with dependencies | Side effects after updates |
-| componentWillUnmount | useEffect cleanup function | Cleanup before unmount |
-| shouldComponentUpdate | useMemo, React.memo | Prevent unnecessary re-renders |
-| getDerivedStateFromProps | useState with props | Derive state from props |
-
-## Advanced Lifecycle Patterns
-
-### Conditional Effects
-
-\`\`\`jsx
-function UserProfile({ userId, isVisible }) {
-  const [user, setUser] = useState(null);
-  
-  useEffect(() => {
-    if (isVisible && userId) {
-      fetchUser(userId);
-    }
-  }, [userId, isVisible]);
-  
-  return isVisible ? <div>{user?.name}</div> : null;
-}
-\`\`\`
-
-### Multiple Effects
-
-\`\`\`jsx
-function ChatRoom({ roomId }) {
-  const [messages, setMessages] = useState([]);
-  const [onlineUsers, setOnlineUsers] = useState([]);
-  
-  // Effect for messages
-  useEffect(() => {
-    const messageSubscription = subscribeToMessages(roomId, setMessages);
-    return () => messageSubscription.unsubscribe();
-  }, [roomId]);
-  
-  // Effect for online users
-  useEffect(() => {
-    const userSubscription = subscribeToUsers(roomId, setOnlineUsers);
-    return () => userSubscription.unsubscribe();
-  }, [roomId]);
-  
-  return (
-    <div>
-      <div>Online: {onlineUsers.length}</div>
-      <div>Messages: {messages.length}</div>
-    </div>
-  );
-}
-\`\`\`
-
-### Effect with Cleanup
-
-\`\`\`jsx
-function WindowSize() {
-  const [size, setSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight
-  });
-  
-  useEffect(() => {
-    const handleResize = () => {
-      setSize({
-        width: window.innerWidth,
-        height: window.innerHeight
-      });
-    };
-    
-    window.addEventListener('resize', handleResize);
-    
-    // Cleanup: remove event listener
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []); // Empty deps = only run on mount/unmount
-  
-  return (
-    <div>
-      Window size: {size.width} x {size.height}
-    </div>
-  );
-}
-\`\`\`
-
-## Performance Optimization
-
-### Preventing Unnecessary Re-renders
-
-\`\`\`jsx
-// Using React.memo for functional components
-const ExpensiveComponent = React.memo(({ data }) => {
-  return <div>{expensiveRender(data)}</div>;
 });
 
-// Using useMemo for expensive calculations
-function DataVisualization({ data }) {
-  const processedData = useMemo(() => {
-    return expensiveDataProcessing(data);
-  }, [data]);
-  
-  return <Chart data={processedData} />;
-}
-
-// Using useCallback for stable function references
-function ParentComponent() {
-  const [count, setCount] = useState(0);
-  
-  const handleClick = useCallback(() => {
-    setCount(prev => prev + 1);
-  }, []); // Stable reference
-  
-  return <ChildComponent onClick={handleClick} />;
-}
-\`\`\`
-
-## Common Lifecycle Patterns
-
-### Data Fetching
-
-\`\`\`jsx
-function UserProfile({ userId }) {
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  
-  useEffect(() => {
-    let isMounted = true;
-    
-    const fetchUser = async () => {
-      try {
-        setLoading(true);
-        setError(null);
-        const response = await fetch(\`/api/users/\${userId}\`);
-        const userData = await response.json();
-        
-        if (isMounted) {
-          setUser(userData);
-        }
-      } catch (err) {
-        if (isMounted) {
-          setError(err.message);
-        }
-      } finally {
-        if (isMounted) {
-          setLoading(false);
-        }
+// Zustand store
+const useStore = create((set) => ({
+  state: initialValue,
+  actions: () => set((state) => ({ /* new state */ }))
+}));`
+        ],
+        keyPoints: [
+          'Redux Toolkit is the official Redux solution',
+          'Zustand is lightweight and easy to use',
+          'Choose libraries based on your app complexity',
+          'External libraries provide better performance for large apps',
+          'Consider learning curve and team expertise when choosing'
+        ]
       }
-    };
-    
-    fetchUser();
-    
-    return () => {
-      isMounted = false;
-    };
-  }, [userId]);
-  
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
-  if (!user) return <div>User not found</div>;
-  
-  return <div>{user.name}</div>;
-}
-\`\`\`
-
-### Subscriptions
-
-\`\`\`jsx
-function RealTimeData({ dataSource }) {
-  const [data, setData] = useState(null);
-  
-  useEffect(() => {
-    const subscription = dataSource.subscribe(setData);
-    
-    return () => {
-      subscription.unsubscribe();
-    };
-  }, [dataSource]);
-  
-  return <div>{data}</div>;
-}
-\`\`\`
-
-## Best Practices
-
-### 1. Use Multiple useEffect Calls
-
-Split different concerns into separate useEffect calls:
-
-\`\`\`jsx
-// Good: Separate concerns
-useEffect(() => {
-  // Handle user data
-}, [userId]);
-
-useEffect(() => {
-  // Handle theme changes
-}, [theme]);
-
-// Avoid: Single large effect
-useEffect(() => {
-  // Handle everything
-}, [userId, theme, otherDeps]);
-\`\`\`
-
-### 2. Include All Dependencies
-
-Always include all values from the component scope that change over time:
-
-\`\`\`jsx
-// Good
-useEffect(() => {
-  fetchData(userId, token);
-}, [userId, token]);
-
-// Avoid
-useEffect(() => {
-  fetchData(userId, token);
-}, []); // Missing dependencies
-\`\`\`
-
-### 3. Use Cleanup Functions
-
-Always clean up subscriptions, timers, and event listeners:
-
-\`\`\`jsx
-useEffect(() => {
-  const timer = setInterval(() => {
-    console.log('Tick');
-  }, 1000);
-  
-  return () => clearInterval(timer);
-}, []);
-\`\`\`
-
-### 4. Avoid Infinite Loops
-
-Be careful with dependencies to prevent infinite loops:
-
-\`\`\`jsx
-// This causes infinite loops
-useEffect(() => {
-  setCount(count + 1);
-}, [count]);
-
-// Fix: Use functional update
-useEffect(() => {
-  setCount(prev => prev + 1);
-}, []); // Only run once
-\`\`\`
-
-## Summary
-
-Understanding React component lifecycle is essential for building robust applications. While class components use lifecycle methods, functional components use hooks to achieve the same functionality with more flexibility and better performance.
-
-Key takeaways:
-- Components go through mounting, updating, and unmounting phases
-- useEffect replaces most lifecycle methods in functional components
-- Always clean up subscriptions and timers in useEffect cleanup functions
-- Use multiple useEffect calls to separate different concerns
-- Include all dependencies in useEffect dependency arrays
-- Use React.memo, useMemo, and useCallback for performance optimization
-    `,
-    codeExamples: [
-      `// Class component lifecycle
-componentDidMount() {
-  this.fetchData();
-}`,
-      `// Functional component equivalent
-useEffect(() => {
-  fetchData();
-}, []);`,
-      `// Cleanup function
-useEffect(() => {
-  const subscription = subscribe();
-  return () => subscription.unsubscribe();
-}, []);`
-    ],
-    keyPoints: [
-      'Components go through mounting, updating, and unmounting phases',
-      'useEffect replaces most lifecycle methods in functional components',
-      'Always clean up subscriptions and timers in useEffect cleanup functions',
-      'Use multiple useEffect calls to separate different concerns',
-      'Include all dependencies in useEffect dependency arrays',
-      'React.memo, useMemo, and useCallback help optimize performance'
     ]
   }
 ]; 

@@ -52,9 +52,9 @@ const ReactDashboard: React.FC = () => {
             </div>
             <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 text-center">
               <div className="text-2xl font-bold text-green-600 dark:text-green-400 mb-2">
-                {reactTopics.reduce((total, topic) => total + topic.codeExamples.length, 0)}
+                {reactTopics.reduce((total, topic) => total + topic.subtopics.length, 0)}
               </div>
-              <div className="text-green-800 dark:text-green-300">Code Examples</div>
+              <div className="text-green-800 dark:text-green-300">Subtopics</div>
             </div>
             <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 text-center">
               <div className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-2">

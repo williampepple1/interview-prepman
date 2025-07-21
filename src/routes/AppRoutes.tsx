@@ -8,7 +8,8 @@ import AlgorithmExplanations from '../pages/AlgorithmExplanations';
 import AssessmentDashboard from '../pages/AssessmentDashboard';
 import Assessment from '../pages/Assessment';
 import ReactDashboard from '../pages/ReactDashboard';
-import ReactTopicDetail from '../pages/ReactTopicDetail';
+
+import ReactTopicLayout from '../components/ReactTopicLayout';
 import { dsaQuestions, dataEngineeringQuestions } from '../data/questions';
 
 const AppRoutes: React.FC = () => {
@@ -50,13 +51,22 @@ const AppRoutes: React.FC = () => {
         } 
       />
       <Route 
-        path="/react/:topicId" 
+        path="/react/topic/:topicId" 
         element={
           <ProtectedRoute>
-            <ReactTopicDetail />
+            <ReactTopicLayout />
           </ProtectedRoute>
         } 
       />
+      <Route 
+        path="/react/topic/:topicId/:subtopicId" 
+        element={
+          <ProtectedRoute>
+            <ReactTopicLayout />
+          </ProtectedRoute>
+        } 
+      />
+
       
       {/* Data Engineering Routes */}
       <Route 

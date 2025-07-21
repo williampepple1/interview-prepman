@@ -44,7 +44,7 @@ const ReactTopicCard: React.FC<ReactTopicCardProps> = ({ topic }) => {
         </div>
         <div className="flex items-center space-x-1">
           <Code className="h-4 w-4" />
-          <span>{topic.codeExamples.length} examples</span>
+          <span>{topic.subtopics.length} subtopics</span>
         </div>
       </div>
 
@@ -62,24 +62,24 @@ const ReactTopicCard: React.FC<ReactTopicCardProps> = ({ topic }) => {
       )}
 
       <div className="mb-4">
-        <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Key Points:</h4>
+        <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Subtopics:</h4>
         <ul className="space-y-1">
-          {topic.keyPoints.slice(0, 3).map((point, index) => (
+          {topic.subtopics.slice(0, 3).map((subtopic, index) => (
             <li key={index} className="text-sm text-gray-600 dark:text-gray-400 flex items-start">
               <Target className="h-3 w-3 mr-2 mt-0.5 flex-shrink-0 text-blue-500" />
-              {point}
+              {subtopic.title}
             </li>
           ))}
-          {topic.keyPoints.length > 3 && (
+          {topic.subtopics.length > 3 && (
             <li className="text-sm text-gray-500 dark:text-gray-500">
-              +{topic.keyPoints.length - 3} more key points
+              +{topic.subtopics.length - 3} more subtopics
             </li>
           )}
         </ul>
       </div>
       
       <Link 
-        to={`/react/${topic.id}`}
+        to={`/react/topic/${topic.id}`}
         className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium text-sm transition-colors duration-200"
       >
         Start Learning →

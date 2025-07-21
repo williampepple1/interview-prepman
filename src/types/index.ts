@@ -18,17 +18,28 @@ export interface Question {
   explanation?: string;
 }
 
+export interface ReactSubtopic {
+  id: string;
+  title: string;
+  description: string;
+  content: string;
+  codeExamples: string[];
+  keyPoints: string[];
+  estimatedTime: string;
+  difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
+  isLocked?: boolean;
+  isCompleted?: boolean;
+}
+
 export interface ReactTopic {
   id: string;
   title: string;
   category: string;
   description: string;
-  content: string;
-  codeExamples: string[];
-  keyPoints: string[];
   prerequisites?: string[];
   estimatedTime: string;
   difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
+  subtopics: ReactSubtopic[];
 }
 
 export interface Dashboard {
