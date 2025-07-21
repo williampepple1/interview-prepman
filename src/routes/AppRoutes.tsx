@@ -12,6 +12,8 @@ import ReactDashboard from '../pages/ReactDashboard';
 import ReactTopicLayout from '../components/ReactTopicLayout';
 import SystemDesignDashboard from '../pages/SystemDesignDashboard';
 import SystemDesignLayout from '../components/SystemDesignLayout';
+import BehavioralInterviewDashboard from '../pages/BehavioralInterviewDashboard';
+import BehavioralInterviewLayout from '../components/BehavioralInterviewLayout';
 import { dsaQuestions, dataEngineeringQuestions } from '../data/questions';
 
 const AppRoutes: React.FC = () => {
@@ -91,6 +93,32 @@ const AppRoutes: React.FC = () => {
         element={
           <ProtectedRoute>
             <SystemDesignLayout />
+          </ProtectedRoute>
+        } 
+      />
+
+      {/* Behavioral Interview Routes */}
+      <Route 
+        path="/behavioral-interview" 
+        element={
+          <ProtectedRoute>
+            <BehavioralInterviewDashboard />
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/behavioral-interview/topic/:topicId" 
+        element={
+          <ProtectedRoute>
+            <BehavioralInterviewLayout />
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/behavioral-interview/topic/:topicId/:subtopicId" 
+        element={
+          <ProtectedRoute>
+            <BehavioralInterviewLayout />
           </ProtectedRoute>
         } 
       />

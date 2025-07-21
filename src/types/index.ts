@@ -125,4 +125,23 @@ export interface QuizResult {
   timeTaken: number;
   questions: AssessmentQuestion[];
   userAnswers: Record<string, string>;
+}
+
+// Behavioral Interview Types
+export interface Subtopic {
+  id: string;
+  title: string;
+  content: string;
+  keyPoints?: string[];
+  estimatedTime: string;
+}
+
+export interface Topic {
+  id: string;
+  title: string;
+  description: string;
+  difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
+  estimatedTime: string;
+  content: string;
+  subtopics?: Subtopic[];
 } 

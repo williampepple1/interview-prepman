@@ -36,6 +36,10 @@ const Home: React.FC = () => {
     {
       ...DASHBOARD_CONFIGS.systemDesign,
       questions: [] // System Design uses topics instead of questions
+    },
+    {
+      ...DASHBOARD_CONFIGS.behavioralInterview,
+      questions: [] // Behavioral Interview uses topics instead of questions
     }
   ];
 

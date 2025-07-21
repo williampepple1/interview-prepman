@@ -35,5 +35,12 @@ export const DASHBOARD_CONFIGS: Record<string, Omit<Dashboard, 'questions'>> = {
     description: 'Master scalable system design principles and architectural patterns',
     icon: '🏗️',
     route: '/system-design'
+  },
+  behavioralInterview: {
+    id: 'behavioral-interview',
+    title: 'Behavioral Interview Preparation',
+    description: 'Master behavioral interview techniques, STAR method, and common scenarios',
+    icon: '💼',
+    route: '/behavioral-interview'
   }
 }; 
