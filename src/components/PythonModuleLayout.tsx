@@ -11,6 +11,7 @@ import { pythonModule7Topics } from '../data/python/module7';
 import { pythonModule8Topics } from '../data/python/module8';
 import { pythonModule9Topics } from '../data/python/module9';
 import { pythonModule10Topics } from '../data/python/module10';
+import { pythonModule11Topics } from '../data/python/module11';
 
 const PythonModuleLayout: React.FC = () => {
   const { moduleId } = useParams<{ moduleId?: string }>();
@@ -55,6 +56,10 @@ const PythonModuleLayout: React.FC = () => {
     topics = pythonModule10Topics;
     moduleTitle = 'Module 10: Databases & ORM';
     moduleDesc = 'Learn SQLite, basic SQL, SQLAlchemy ORM, transactions, migrations, and connecting to PostgreSQL/MySQL.';
+  } else if (safeModuleId === '11') {
+    topics = pythonModule11Topics;
+    moduleTitle = 'Module 11: Testing & Best Practices';
+    moduleDesc = 'Learn unittest, pytest, mocking, TDD, coverage, CI, linting, and formatting for robust Python code.';
   }
 
   return (
