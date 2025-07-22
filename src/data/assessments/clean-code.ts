@@ -1400,6 +1400,356 @@ export const cleanCodeAssessmentQuestions: AssessmentQuestion[] = [
     explanation: 'Code reviews are a collaborative process that improves both code and team knowledge.',
     category: 'Code Quality',
     difficulty: 'Easy'
+  },
+  {
+    id: 'clean-code-101',
+    question: 'What is a code smell?',
+    options: [
+      'A symptom in the code that may indicate a deeper problem',
+      'A bug in the code',
+      'A feature request',
+      'A performance optimization'
+    ],
+    correctAnswer: 'A symptom in the code that may indicate a deeper problem',
+    explanation: 'A code smell is a surface indication that usually corresponds to a deeper problem in the system.',
+    category: 'Code Quality',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-102',
+    question: 'What is the purpose of the YAGNI principle?',
+    options: [
+      'To avoid implementing features until they are actually needed',
+      'To always implement all possible features',
+      'To optimize code for performance',
+      'To write code as quickly as possible'
+    ],
+    correctAnswer: 'To avoid implementing features until they are actually needed',
+    explanation: 'YAGNI stands for "You Aren’t Gonna Need It" and helps prevent overengineering.',
+    category: 'Clean Code Basics',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-103',
+    question: 'What is the purpose of the KISS principle?',
+    options: [
+      'To keep code as simple as possible',
+      'To write code quickly',
+      'To use as few lines as possible',
+      'To avoid using comments'
+    ],
+    correctAnswer: 'To keep code as simple as possible',
+    explanation: 'KISS stands for "Keep It Simple, Stupid" and encourages simplicity in design and implementation.',
+    category: 'Clean Code Basics',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'clean-code-104',
+    question: 'What is the purpose of the principle of least astonishment?',
+    options: [
+      'To ensure code behaves in a way users expect',
+      'To surprise users with new features',
+      'To make code unpredictable',
+      'To avoid documentation'
+    ],
+    correctAnswer: 'To ensure code behaves in a way users expect',
+    explanation: 'The principle of least astonishment means code should behave in a way that least surprises users and developers.',
+    category: 'Clean Code Basics',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-105',
+    question: 'What is a long method code smell?',
+    options: [
+      'A method that is too long and does too much',
+      'A method that is too short',
+      'A method with too many parameters',
+      'A method that is never called'
+    ],
+    correctAnswer: 'A method that is too long and does too much',
+    explanation: 'Long methods are hard to read, test, and maintain. They should be broken into smaller methods.',
+    category: 'Code Smells',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-106',
+    question: 'What is a god object code smell?',
+    options: [
+      'An object that knows too much or does too much',
+      'An object that is never used',
+      'An object with a short name',
+      'An object that is immutable'
+    ],
+    correctAnswer: 'An object that knows too much or does too much',
+    explanation: 'God objects violate the single responsibility principle and make code harder to maintain.',
+    category: 'Code Smells',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'clean-code-107',
+    question: 'What is a feature envy code smell?',
+    options: [
+      'A method that seems more interested in another class than the one it is in',
+      'A method that is too long',
+      'A method that is never called',
+      'A method that has too many parameters'
+    ],
+    correctAnswer: 'A method that seems more interested in another class than the one it is in',
+    explanation: 'Feature envy occurs when a method accesses the data of another object more than its own.',
+    category: 'Code Smells',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'clean-code-108',
+    question: 'What is a data clump code smell?',
+    options: [
+      'A group of variables that are always used together',
+      'A variable that is never used',
+      'A class with too many methods',
+      'A function with no parameters'
+    ],
+    correctAnswer: 'A group of variables that are always used together',
+    explanation: 'Data clumps should be replaced with objects or data structures.',
+    category: 'Code Smells',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-109',
+    question: 'What is a primitive obsession code smell?',
+    options: [
+      'Using primitive types instead of small objects for simple tasks',
+      'Using too many objects',
+      'Using primitive types for performance',
+      'Using objects for everything'
+    ],
+    correctAnswer: 'Using primitive types instead of small objects for simple tasks',
+    explanation: 'Primitive obsession can make code less expressive and harder to maintain.',
+    category: 'Code Smells',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-110',
+    question: 'What is a switch statement code smell?',
+    options: [
+      'Using switch statements instead of polymorphism',
+      'Using too many switch statements',
+      'Using switch statements for performance',
+      'Using switch statements in loops'
+    ],
+    correctAnswer: 'Using switch statements instead of polymorphism',
+    explanation: 'Switch statements can often be replaced with polymorphism for better extensibility.',
+    category: 'Code Smells',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-111',
+    question: 'What is a shotgun surgery code smell?',
+    options: [
+      'Making many small changes to different classes when a single change is made',
+      'Making a single change in one class',
+      'Making changes to unrelated classes',
+      'Making changes to test code only'
+    ],
+    correctAnswer: 'Making many small changes to different classes when a single change is made',
+    explanation: 'Shotgun surgery makes code harder to maintain and increases the risk of bugs.',
+    category: 'Code Smells',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'clean-code-112',
+    question: 'What is a parallel inheritance hierarchy code smell?',
+    options: [
+      'When every time you create a subclass of one class, you also create a subclass of another',
+      'When you have multiple inheritance',
+      'When you have deep inheritance',
+      'When you have no inheritance'
+    ],
+    correctAnswer: 'When every time you create a subclass of one class, you also create a subclass of another',
+    explanation: 'Parallel inheritance hierarchies make code harder to maintain and extend.',
+    category: 'Code Smells',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'clean-code-113',
+    question: 'What is a speculative generality code smell?',
+    options: [
+      'Adding code for future use that is not currently needed',
+      'Generalizing code for reuse',
+      'Using generic types',
+      'Using general-purpose libraries'
+    ],
+    correctAnswer: 'Adding code for future use that is not currently needed',
+    explanation: 'Speculative generality leads to unnecessary complexity and maintenance burden.',
+    category: 'Code Smells',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-114',
+    question: 'What is the purpose of code documentation?',
+    options: [
+      'To explain the intent, usage, and limitations of code',
+      'To document every line of code',
+      'To satisfy company requirements',
+      'To make code longer'
+    ],
+    correctAnswer: 'To explain the intent, usage, and limitations of code',
+    explanation: 'Good documentation helps others understand and use your code correctly.',
+    category: 'Documentation',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'clean-code-115',
+    question: 'What is the purpose of API documentation?',
+    options: [
+      'To describe how to use the public interface of a library or service',
+      'To document internal implementation details',
+      'To provide code samples only',
+      'To satisfy legal requirements'
+    ],
+    correctAnswer: 'To describe how to use the public interface of a library or service',
+    explanation: 'API documentation helps users understand how to interact with your code.',
+    category: 'Documentation',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'clean-code-116',
+    question: 'What is the purpose of inline comments?',
+    options: [
+      'To explain complex or non-obvious code',
+      'To document every line',
+      'To add jokes to code',
+      'To increase code length'
+    ],
+    correctAnswer: 'To explain complex or non-obvious code',
+    explanation: 'Inline comments should clarify code that is not immediately clear.',
+    category: 'Documentation',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'clean-code-117',
+    question: 'What is the purpose of docstrings in Python?',
+    options: [
+      'To provide documentation for modules, classes, methods, and functions',
+      'To add comments to code',
+      'To document variables',
+      'To satisfy linters'
+    ],
+    correctAnswer: 'To provide documentation for modules, classes, methods, and functions',
+    explanation: 'Docstrings are used to document Python code and can be accessed via the help() function.',
+    category: 'Documentation',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'clean-code-118',
+    question: 'What is the purpose of external documentation?',
+    options: [
+      'To provide guides, tutorials, and reference material outside the codebase',
+      'To document internal code',
+      'To provide code samples',
+      'To satisfy legal requirements'
+    ],
+    correctAnswer: 'To provide guides, tutorials, and reference material outside the codebase',
+    explanation: 'External documentation helps users and developers understand and use the software.',
+    category: 'Documentation',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-119',
+    question: 'What is the purpose of refactoring code smells?',
+    options: [
+      'To improve code quality and maintainability',
+      'To add new features',
+      'To fix bugs',
+      'To optimize performance'
+    ],
+    correctAnswer: 'To improve code quality and maintainability',
+    explanation: 'Refactoring code smells helps keep the codebase healthy and maintainable.',
+    category: 'Refactoring',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-120',
+    question: 'What is the purpose of automated code formatting tools?',
+    options: [
+      'To enforce consistent code style automatically',
+      'To write code for you',
+      'To optimize code',
+      'To add comments'
+    ],
+    correctAnswer: 'To enforce consistent code style automatically',
+    explanation: 'Automated formatting tools like Prettier and Black help maintain a consistent code style.',
+    category: 'Code Quality',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'clean-code-121',
+    question: 'What is the purpose of static code analysis?',
+    options: [
+      'To analyze code for potential errors and code smells without executing it',
+      'To run code tests',
+      'To optimize code',
+      'To generate documentation'
+    ],
+    correctAnswer: 'To analyze code for potential errors and code smells without executing it',
+    explanation: 'Static analysis tools help catch bugs and maintain code quality before runtime.',
+    category: 'Code Quality',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-122',
+    question: 'What is the purpose of code linters?',
+    options: [
+      'To check code for style and programming errors',
+      'To run code tests',
+      'To optimize code',
+      'To generate documentation'
+    ],
+    correctAnswer: 'To check code for style and programming errors',
+    explanation: 'Linters help enforce coding standards and catch common mistakes.',
+    category: 'Code Quality',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'clean-code-123',
+    question: 'What is the purpose of code metrics?',
+    options: [
+      'To measure code complexity, maintainability, and quality',
+      'To measure code length',
+      'To measure code speed',
+      'To measure code size'
+    ],
+    correctAnswer: 'To measure code complexity, maintainability, and quality',
+    explanation: 'Code metrics provide quantitative measures to help assess code health.',
+    category: 'Code Quality',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-124',
+    question: 'What is the purpose of code ownership?',
+    options: [
+      'To ensure someone is responsible for maintaining and improving code',
+      'To assign code to a team',
+      'To track code changes',
+      'To enforce code reviews'
+    ],
+    correctAnswer: 'To ensure someone is responsible for maintaining and improving code',
+    explanation: 'Code ownership helps ensure code is maintained and improved over time.',
+    category: 'Code Quality',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-125',
+    question: 'What is the purpose of pair programming?',
+    options: [
+      'To improve code quality and share knowledge by having two developers work together',
+      'To write code faster',
+      'To reduce bugs',
+      'To follow agile practices'
+    ],
+    correctAnswer: 'To improve code quality and share knowledge by having two developers work together',
+    explanation: 'Pair programming helps catch mistakes early and facilitates knowledge sharing.',
+    category: 'Code Quality',
+    difficulty: 'Medium'
   }
 ];
   
