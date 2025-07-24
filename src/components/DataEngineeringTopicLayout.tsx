@@ -8,13 +8,15 @@ import { dataEngineeringModule4Topics } from '../data/data-engineering/module4';
 import { dataEngineeringModule5Topics } from '../data/data-engineering/module5';
 import { dataEngineeringModule6Topics } from '../data/data-engineering/module6';
 import { dataEngineeringModule7Topics } from '../data/data-engineering/module7';
+import { dataEngineeringModule8Topics } from '../data/data-engineering/module8';
+import { dataEngineeringModule9Topics } from '../data/data-engineering/module9';
 import { Topic, Subtopic } from '../types';
 import MarkdownRenderer from './MarkdownRenderer';
 
 const DataEngineeringTopicLayout: React.FC = () => {
   const { moduleId, topicId, subtopicId } = useParams<{ moduleId?: string; topicId: string; subtopicId?: string }>();
   const safeModuleId = moduleId || '1';
-  const topics = safeModuleId === '7' ? dataEngineeringModule7Topics : safeModuleId === '6' ? dataEngineeringModule6Topics : safeModuleId === '5' ? dataEngineeringModule5Topics : safeModuleId === '4' ? dataEngineeringModule4Topics : safeModuleId === '3' ? dataEngineeringModule3Topics : safeModuleId === '2' ? dataEngineeringModule2Topics : dataEngineeringModule1Topics;
+  const topics = safeModuleId === '9' ? dataEngineeringModule9Topics : safeModuleId === '8' ? dataEngineeringModule8Topics : safeModuleId === '7' ? dataEngineeringModule7Topics : safeModuleId === '6' ? dataEngineeringModule6Topics : safeModuleId === '5' ? dataEngineeringModule5Topics : safeModuleId === '4' ? dataEngineeringModule4Topics : safeModuleId === '3' ? dataEngineeringModule3Topics : safeModuleId === '2' ? dataEngineeringModule2Topics : dataEngineeringModule1Topics;
   const [currentTopic, setCurrentTopic] = useState<Topic | null>(null);
   const [currentSubtopic, setCurrentSubtopic] = useState<Subtopic | null>(null);
 

@@ -8,6 +8,8 @@ import { dataEngineeringModule4Topics } from '../data/data-engineering/module4';
 import { dataEngineeringModule5Topics } from '../data/data-engineering/module5';
 import { dataEngineeringModule6Topics } from '../data/data-engineering/module6';
 import { dataEngineeringModule7Topics } from '../data/data-engineering/module7';
+import { dataEngineeringModule8Topics } from '../data/data-engineering/module8';
+import { dataEngineeringModule9Topics } from '../data/data-engineering/module9';
 
 const DataEngineeringModuleLayout: React.FC = () => {
   const { moduleId } = useParams<{ moduleId?: string }>();
@@ -40,6 +42,14 @@ const DataEngineeringModuleLayout: React.FC = () => {
     topics = dataEngineeringModule7Topics;
     moduleTitle = 'Module 7: MLOps & Data Science Integration';
     moduleDesc = 'Master MLOps practices, feature engineering, model monitoring, and integrate data science workflows with engineering systems.';
+  } else if (safeModuleId === '8') {
+    topics = dataEngineeringModule8Topics;
+    moduleTitle = 'Module 8: Real-time Data Processing & Event-Driven Architecture';
+    moduleDesc = 'Design and implement real-time data processing systems, event-driven architectures, and streaming analytics solutions.';
+  } else if (safeModuleId === '9') {
+    topics = dataEngineeringModule9Topics;
+    moduleTitle = 'Module 9: Data Engineering Best Practices & Advanced Patterns';
+    moduleDesc = 'Master industry best practices, advanced architectural patterns, automation strategies, and career development in data engineering.';
   }
 
   return (
