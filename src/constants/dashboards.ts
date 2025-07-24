@@ -22,6 +22,13 @@ export const DASHBOARD_CONFIGS: Record<string, Omit<Dashboard, 'questions'>> = {
     icon: '📊',
     route: '/dashboard/data-engineering'
   },
+  dataEngineeringLearning: {
+    id: 'data-engineering-learning',
+    title: 'Data Engineering Mastery Course',
+    description: 'Master data engineering from foundations to advanced concepts with hands-on modules',
+    icon: '🔧',
+    route: '/data-engineering'
+  },
   algorithms: {
     id: 'algorithms',
     title: 'Algorithm Explanations',

@@ -17,6 +17,9 @@ import BehavioralInterviewDashboard from '../pages/BehavioralInterviewDashboard'
 import BehavioralInterviewLayout from '../components/BehavioralInterviewLayout';
 import PythonTopicLayout from '../components/PythonTopicLayout';
 import PythonModuleLayout from '../components/PythonModuleLayout';
+import DataEngineeringDashboard from '../pages/DataEngineeringDashboard';
+import DataEngineeringModuleLayout from '../components/DataEngineeringModuleLayout';
+import DataEngineeringTopicLayout from '../components/DataEngineeringTopicLayout';
 import { dsaQuestions, dataEngineeringQuestions } from '../data/questions';
 
 const AppRoutes: React.FC = () => {
@@ -160,7 +163,41 @@ const AppRoutes: React.FC = () => {
         } 
       />
       
-      {/* Data Engineering Routes */}
+      {/* Data Engineering Learning Path Routes */}
+      <Route 
+        path="/data-engineering" 
+        element={
+          <ProtectedRoute>
+            <DataEngineeringDashboard />
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/data-engineering/module/:moduleId" 
+        element={
+          <ProtectedRoute>
+            <DataEngineeringModuleLayout />
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/data-engineering/module/:moduleId/topic/:topicId" 
+        element={
+          <ProtectedRoute>
+            <DataEngineeringTopicLayout />
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/data-engineering/module/:moduleId/topic/:topicId/:subtopicId" 
+        element={
+          <ProtectedRoute>
+            <DataEngineeringTopicLayout />
+          </ProtectedRoute>
+        } 
+      />
+      
+      {/* Data Engineering Assessment Routes */}
       <Route 
         path="/dashboard/data-engineering" 
         element={

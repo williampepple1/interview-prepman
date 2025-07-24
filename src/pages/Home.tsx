@@ -30,6 +30,10 @@ const Home: React.FC = () => {
       questions: dataEngineeringQuestions
     },
     {
+      ...DASHBOARD_CONFIGS.dataEngineeringLearning,
+      questions: [] // Data Engineering learning path uses topics instead of questions
+    },
+    {
       ...DASHBOARD_CONFIGS.algorithms,
       questions: [] // Algorithm explanations don't use the same question structure
     },
