@@ -80,10 +80,10 @@ const DataEngineeringDashboard: React.FC = () => {
               <Zap className="h-6 w-6 text-blue-600 dark:text-blue-400" />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 transition-colors duration-200">
-              Module 4: ETL/ELT Pipeline Development
+              Module 4: Big Data Technologies & Distributed Computing
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4 transition-colors duration-200">
-              Build robust ETL/ELT pipelines using Apache Airflow, dbt, and modern data tools. Learn data transformation and orchestration.
+              Master Hadoop, Spark, and distributed computing concepts. Learn about streaming technologies and cloud big data services.
             </p>
             <span className="inline-block px-2 py-1 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 transition-colors duration-200">
               Intermediate
@@ -97,10 +97,10 @@ const DataEngineeringDashboard: React.FC = () => {
               <Cpu className="h-6 w-6 text-blue-600 dark:text-blue-400" />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 transition-colors duration-200">
-              Module 5: Big Data Processing with Apache Spark
+              Module 5: Data Pipeline Development & Orchestration
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4 transition-colors duration-200">
-              Master Apache Spark for big data processing. Learn RDDs, DataFrames, Spark SQL, and distributed computing concepts.
+              Design and implement ETL pipelines, orchestrate workflows with Airflow, and ensure data quality and reliability.
             </p>
             <span className="inline-block px-2 py-1 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 transition-colors duration-200">
               Intermediate - Advanced
@@ -114,10 +114,10 @@ const DataEngineeringDashboard: React.FC = () => {
               <Cloud className="h-6 w-6 text-blue-600 dark:text-blue-400" />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 transition-colors duration-200">
-              Module 6: Cloud Data Engineering (AWS, GCP, Azure)
+              Module 6: Data Governance, Security & Compliance
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4 transition-colors duration-200">
-              Deploy data solutions on cloud platforms. Learn AWS Glue, GCP Dataflow, Azure Data Factory, and cloud-native data services.
+              Establish data governance frameworks, implement security measures, and ensure regulatory compliance for data management.
             </p>
             <span className="inline-block px-2 py-1 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 transition-colors duration-200">
               Intermediate
@@ -131,10 +131,10 @@ const DataEngineeringDashboard: React.FC = () => {
               <TrendingUp className="h-6 w-6 text-blue-600 dark:text-blue-400" />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 transition-colors duration-200">
-              Module 7: Streaming Data Processing
+              Module 7: MLOps & Data Science Integration
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4 transition-colors duration-200">
-              Build real-time data processing systems with Apache Kafka, Flink, and streaming frameworks. Learn event-driven architectures.
+              Master MLOps practices, feature engineering, model monitoring, and integrate data science workflows with engineering systems.
             </p>
             <span className="inline-block px-2 py-1 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 transition-colors duration-200">
               Advanced
@@ -148,10 +148,10 @@ const DataEngineeringDashboard: React.FC = () => {
               <Shield className="h-6 w-6 text-blue-600 dark:text-blue-400" />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 transition-colors duration-200">
-              Module 8: Data Quality & Governance
+              Module 8: Real-time Data Processing & Event-Driven Architecture
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4 transition-colors duration-200">
-              Implement data quality frameworks, monitoring, and governance. Learn data lineage, metadata management, and compliance.
+              Design and implement real-time data processing systems, event-driven architectures, and streaming analytics solutions.
             </p>
             <span className="inline-block px-2 py-1 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 transition-colors duration-200">
               Intermediate
@@ -165,10 +165,10 @@ const DataEngineeringDashboard: React.FC = () => {
               <GitBranch className="h-6 w-6 text-blue-600 dark:text-blue-400" />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 transition-colors duration-200">
-              Module 9: Data Engineering DevOps & CI/CD
+              Module 9: Data Engineering Best Practices & Advanced Patterns
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4 transition-colors duration-200">
-              Implement DevOps practices for data engineering. Learn version control, testing, deployment, and infrastructure as code.
+              Master industry best practices, advanced architectural patterns, automation strategies, and career development in data engineering.
             </p>
             <span className="inline-block px-2 py-1 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 transition-colors duration-200">
               Intermediate - Advanced
