@@ -20,6 +20,9 @@ import PythonModuleLayout from '../components/PythonModuleLayout';
 import DataEngineeringDashboard from '../pages/DataEngineeringDashboard';
 import DataEngineeringModuleLayout from '../components/DataEngineeringModuleLayout';
 import DataEngineeringTopicLayout from '../components/DataEngineeringTopicLayout';
+import DevOpsDashboard from '../pages/DevOpsDashboard';
+import DevOpsModuleLayout from '../components/DevOpsModuleLayout';
+import DevOpsTopicLayout from '../components/DevOpsTopicLayout';
 import { dsaQuestions } from '../data/questions';
 
 const AppRoutes: React.FC = () => {
@@ -193,6 +196,40 @@ const AppRoutes: React.FC = () => {
         element={
           <ProtectedRoute>
             <DataEngineeringTopicLayout />
+          </ProtectedRoute>
+        } 
+      />
+
+      {/* DevOps Learning Path Routes */}
+      <Route 
+        path="/devops" 
+        element={
+          <ProtectedRoute>
+            <DevOpsDashboard />
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/devops/module/:moduleId" 
+        element={
+          <ProtectedRoute>
+            <DevOpsModuleLayout />
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/devops/module/:moduleId/topic/:topicId" 
+        element={
+          <ProtectedRoute>
+            <DevOpsTopicLayout />
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/devops/module/:moduleId/topic/:topicId/:subtopicId" 
+        element={
+          <ProtectedRoute>
+            <DevOpsTopicLayout />
           </ProtectedRoute>
         } 
       />

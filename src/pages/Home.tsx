@@ -44,6 +44,10 @@ const Home: React.FC = () => {
     {
       ...DASHBOARD_CONFIGS.python,
       questions: [] // Python uses topics instead of questions
+    },
+    {
+      ...DASHBOARD_CONFIGS.devops,
+      questions: [] // DevOps uses topics instead of questions
     }
   ];
 

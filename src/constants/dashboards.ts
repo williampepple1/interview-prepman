@@ -49,5 +49,12 @@ export const DASHBOARD_CONFIGS: Record<string, Omit<Dashboard, 'questions'>> = {
     description: 'Learn Python from beginner to advanced with hands-on modules and examples',
     icon: '🐍',
     route: '/python'
+  },
+  devops: {
+    id: 'devops',
+    title: 'DevOps Mastery Course',
+    description: 'Master DevOps practices, tools, and methodologies for modern software delivery',
+    icon: '🚀',
+    route: '/devops'
   }
 }; 
