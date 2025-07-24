@@ -2,7 +2,7 @@ export { dataEngineeringModule1Topics } from './module1';
 export { dataEngineeringModule2Topics } from './module2';
 export { dataEngineeringModule3Topics } from './module3';
 export { dataEngineeringModule4Topics } from './module4';
-// export { dataEngineeringModule5Topics } from './module5';
+export { dataEngineeringModule5Topics } from './module5';
 // export { dataEngineeringModule6Topics } from './module6';
 // export { dataEngineeringModule7Topics } from './module7';
 // export { dataEngineeringModule8Topics } from './module8';

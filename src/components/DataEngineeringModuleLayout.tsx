@@ -5,6 +5,7 @@ import { dataEngineeringModule1Topics } from '../data/data-engineering/module1';
 import { dataEngineeringModule2Topics } from '../data/data-engineering/module2';
 import { dataEngineeringModule3Topics } from '../data/data-engineering/module3';
 import { dataEngineeringModule4Topics } from '../data/data-engineering/module4';
+import { dataEngineeringModule5Topics } from '../data/data-engineering/module5';
 
 const DataEngineeringModuleLayout: React.FC = () => {
   const { moduleId } = useParams<{ moduleId?: string }>();
@@ -25,6 +26,10 @@ const DataEngineeringModuleLayout: React.FC = () => {
     topics = dataEngineeringModule4Topics;
     moduleTitle = 'Module 4: Big Data Technologies & Distributed Computing';
     moduleDesc = 'Master Hadoop, Spark, and distributed computing concepts. Learn about streaming technologies and cloud big data services.';
+  } else if (safeModuleId === '5') {
+    topics = dataEngineeringModule5Topics;
+    moduleTitle = 'Module 5: Data Pipeline Development & Orchestration';
+    moduleDesc = 'Design and implement ETL pipelines, orchestrate workflows with Airflow, and ensure data quality and reliability.';
   }
 
   return (
