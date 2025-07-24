@@ -4,6 +4,7 @@ import { BookOpen } from 'lucide-react';
 import { dataEngineeringModule1Topics } from '../data/data-engineering/module1';
 import { dataEngineeringModule2Topics } from '../data/data-engineering/module2';
 import { dataEngineeringModule3Topics } from '../data/data-engineering/module3';
+import { dataEngineeringModule4Topics } from '../data/data-engineering/module4';
 
 const DataEngineeringModuleLayout: React.FC = () => {
   const { moduleId } = useParams<{ moduleId?: string }>();
@@ -20,6 +21,10 @@ const DataEngineeringModuleLayout: React.FC = () => {
     topics = dataEngineeringModule3Topics;
     moduleTitle = 'Module 3: Data Warehousing & Data Lakes';
     moduleDesc = 'Design and implement data warehouses and data lakes. Learn about data modeling, schema design, and storage optimization.';
+  } else if (safeModuleId === '4') {
+    topics = dataEngineeringModule4Topics;
+    moduleTitle = 'Module 4: Big Data Technologies & Distributed Computing';
+    moduleDesc = 'Master Hadoop, Spark, and distributed computing concepts. Learn about streaming technologies and cloud big data services.';
   }
 
   return (
