@@ -20,7 +20,7 @@ import PythonModuleLayout from '../components/PythonModuleLayout';
 import DataEngineeringDashboard from '../pages/DataEngineeringDashboard';
 import DataEngineeringModuleLayout from '../components/DataEngineeringModuleLayout';
 import DataEngineeringTopicLayout from '../components/DataEngineeringTopicLayout';
-import { dsaQuestions, dataEngineeringQuestions } from '../data/questions';
+import { dsaQuestions } from '../data/questions';
 
 const AppRoutes: React.FC = () => {
   return (
@@ -196,30 +196,7 @@ const AppRoutes: React.FC = () => {
           </ProtectedRoute>
         } 
       />
-      
-      {/* Data Engineering Assessment Routes */}
-      <Route 
-        path="/dashboard/data-engineering" 
-        element={
-          <ProtectedRoute>
-            <Dashboard 
-              questions={dataEngineeringQuestions}
-              title="Data Engineering"
-              description="Questions on data pipelines, ETL, and big data"
-            />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
-        path="/dashboard/data-engineering/:questionId" 
-        element={
-          <ProtectedRoute>
-            <QuestionDetail 
-              questions={dataEngineeringQuestions}
-            />
-          </ProtectedRoute>
-        } 
-      />
+
       
       {/* Algorithm Explanations Route */}
       <Route 

@@ -7,6 +7,7 @@ import { dataEngineeringModule3Topics } from '../data/data-engineering/module3';
 import { dataEngineeringModule4Topics } from '../data/data-engineering/module4';
 import { dataEngineeringModule5Topics } from '../data/data-engineering/module5';
 import { dataEngineeringModule6Topics } from '../data/data-engineering/module6';
+import { dataEngineeringModule7Topics } from '../data/data-engineering/module7';
 
 const DataEngineeringModuleLayout: React.FC = () => {
   const { moduleId } = useParams<{ moduleId?: string }>();
@@ -35,6 +36,10 @@ const DataEngineeringModuleLayout: React.FC = () => {
     topics = dataEngineeringModule6Topics;
     moduleTitle = 'Module 6: Data Governance, Security & Compliance';
     moduleDesc = 'Establish data governance frameworks, implement security measures, and ensure regulatory compliance for data management.';
+  } else if (safeModuleId === '7') {
+    topics = dataEngineeringModule7Topics;
+    moduleTitle = 'Module 7: MLOps & Data Science Integration';
+    moduleDesc = 'Master MLOps practices, feature engineering, model monitoring, and integrate data science workflows with engineering systems.';
   }
 
   return (

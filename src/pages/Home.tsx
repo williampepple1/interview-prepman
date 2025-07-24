@@ -2,7 +2,7 @@ import React from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import DashboardCard from '../components/DashboardCard';
 import { DASHBOARD_CONFIGS } from '../constants/dashboards';
-import { dsaQuestions, dataEngineeringQuestions } from '../data/questions';
+import { dsaQuestions } from '../data/questions';
 
 const Home: React.FC = () => {
   const { user, signInWithGoogle } = useAuth();
@@ -24,10 +24,6 @@ const Home: React.FC = () => {
     {
       ...DASHBOARD_CONFIGS.react,
       questions: [] // React now uses topics instead of questions
-    },
-    {
-      ...DASHBOARD_CONFIGS.dataEngineering,
-      questions: dataEngineeringQuestions
     },
     {
       ...DASHBOARD_CONFIGS.dataEngineeringLearning,
