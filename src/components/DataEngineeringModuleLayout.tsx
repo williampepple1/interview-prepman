@@ -6,6 +6,7 @@ import { dataEngineeringModule2Topics } from '../data/data-engineering/module2';
 import { dataEngineeringModule3Topics } from '../data/data-engineering/module3';
 import { dataEngineeringModule4Topics } from '../data/data-engineering/module4';
 import { dataEngineeringModule5Topics } from '../data/data-engineering/module5';
+import { dataEngineeringModule6Topics } from '../data/data-engineering/module6';
 
 const DataEngineeringModuleLayout: React.FC = () => {
   const { moduleId } = useParams<{ moduleId?: string }>();
@@ -30,6 +31,10 @@ const DataEngineeringModuleLayout: React.FC = () => {
     topics = dataEngineeringModule5Topics;
     moduleTitle = 'Module 5: Data Pipeline Development & Orchestration';
     moduleDesc = 'Design and implement ETL pipelines, orchestrate workflows with Airflow, and ensure data quality and reliability.';
+  } else if (safeModuleId === '6') {
+    topics = dataEngineeringModule6Topics;
+    moduleTitle = 'Module 6: Data Governance, Security & Compliance';
+    moduleDesc = 'Establish data governance frameworks, implement security measures, and ensure regulatory compliance for data management.';
   }
 
   return (
