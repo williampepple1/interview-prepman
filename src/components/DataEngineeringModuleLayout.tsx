@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { BookOpen } from 'lucide-react';
 import { dataEngineeringModule1Topics } from '../data/data-engineering/module1';
 import { dataEngineeringModule2Topics } from '../data/data-engineering/module2';
+import { dataEngineeringModule3Topics } from '../data/data-engineering/module3';
 
 const DataEngineeringModuleLayout: React.FC = () => {
   const { moduleId } = useParams<{ moduleId?: string }>();
@@ -15,6 +16,10 @@ const DataEngineeringModuleLayout: React.FC = () => {
     topics = dataEngineeringModule2Topics;
     moduleTitle = 'Module 2: Programming Fundamentals for Data Engineering';
     moduleDesc = 'Master Python, SQL, and shell scripting for data engineering. Learn data manipulation, automation, and best practices.';
+  } else if (safeModuleId === '3') {
+    topics = dataEngineeringModule3Topics;
+    moduleTitle = 'Module 3: Data Warehousing & Data Lakes';
+    moduleDesc = 'Design and implement data warehouses and data lakes. Learn about data modeling, schema design, and storage optimization.';
   }
 
   return (

@@ -3,13 +3,14 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Clock } from 'lucide-react';
 import { dataEngineeringModule1Topics } from '../data/data-engineering/module1';
 import { dataEngineeringModule2Topics } from '../data/data-engineering/module2';
+import { dataEngineeringModule3Topics } from '../data/data-engineering/module3';
 import { Topic, Subtopic } from '../types';
 import MarkdownRenderer from './MarkdownRenderer';
 
 const DataEngineeringTopicLayout: React.FC = () => {
   const { moduleId, topicId, subtopicId } = useParams<{ moduleId?: string; topicId: string; subtopicId?: string }>();
   const safeModuleId = moduleId || '1';
-  const topics = safeModuleId === '2' ? dataEngineeringModule2Topics : dataEngineeringModule1Topics;
+  const topics = safeModuleId === '3' ? dataEngineeringModule3Topics : safeModuleId === '2' ? dataEngineeringModule2Topics : dataEngineeringModule1Topics;
   const [currentTopic, setCurrentTopic] = useState<Topic | null>(null);
   const [currentSubtopic, setCurrentSubtopic] = useState<Subtopic | null>(null);
 
