@@ -10,6 +10,8 @@ import { dataEngineeringModule6Topics } from '../data/data-engineering/module6';
 import { dataEngineeringModule7Topics } from '../data/data-engineering/module7';
 import { dataEngineeringModule8Topics } from '../data/data-engineering/module8';
 import { dataEngineeringModule9Topics } from '../data/data-engineering/module9';
+import { dataEngineeringModule10Topics } from '../data/data-engineering/module10';
+import { dataEngineeringModule11Topics } from '../data/data-engineering/module11';
 
 const DataEngineeringModuleLayout: React.FC = () => {
   const { moduleId } = useParams<{ moduleId?: string }>();
@@ -50,6 +52,14 @@ const DataEngineeringModuleLayout: React.FC = () => {
     topics = dataEngineeringModule9Topics;
     moduleTitle = 'Module 9: Data Engineering Best Practices & Advanced Patterns';
     moduleDesc = 'Master industry best practices, advanced architectural patterns, automation strategies, and career development in data engineering.';
+  } else if (safeModuleId === '10') {
+    topics = dataEngineeringModule10Topics;
+    moduleTitle = 'Module 10: Advanced Data Engineering & Emerging Technologies';
+    moduleDesc = 'Explore advanced architectural patterns, automation strategies, performance optimization, and emerging technologies in data engineering.';
+  } else if (safeModuleId === '11') {
+    topics = dataEngineeringModule11Topics;
+    moduleTitle = 'Module 11: Performance Optimization & Monitoring';
+    moduleDesc = 'Master performance optimization techniques, comprehensive monitoring, data quality validation, and incident management for data systems.';
   }
 
   return (

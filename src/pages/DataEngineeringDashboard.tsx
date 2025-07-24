@@ -182,10 +182,10 @@ const DataEngineeringDashboard: React.FC = () => {
               <Layers className="h-6 w-6 text-blue-600 dark:text-blue-400" />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 transition-colors duration-200">
-              Module 10: Data Engineering Architecture Patterns
+              Module 10: Advanced Data Engineering & Emerging Technologies
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4 transition-colors duration-200">
-              Design scalable data architectures. Learn about data mesh, lakehouse, modern data stack, and architectural best practices.
+              Explore advanced architectural patterns, automation strategies, performance optimization, and emerging technologies in data engineering.
             </p>
             <span className="inline-block px-2 py-1 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 transition-colors duration-200">
               Advanced
@@ -202,7 +202,7 @@ const DataEngineeringDashboard: React.FC = () => {
               Module 11: Performance Optimization & Monitoring
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4 transition-colors duration-200">
-              Optimize data pipeline performance and implement comprehensive monitoring. Learn profiling, tuning, and observability.
+              Master performance optimization techniques, comprehensive monitoring, data quality validation, and incident management for data systems.
             </p>
             <span className="inline-block px-2 py-1 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 transition-colors duration-200">
               Advanced

@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <h1 className="text-xl font-bold text-gray-900 dark:text-white transition-colors duration-200">
-              Interview Prep Platform
+              Prepman
             </h1>
           </div>
           
