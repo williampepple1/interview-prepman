@@ -2749,13 +2749,13 @@ export const pythonAssessmentQuestions: AssessmentQuestion[] = [
     id: 'python-197',
     question: 'What does the @staticmethod decorator do in Python?',
     options: [
-      'Defines a method that doesn’t receive an implicit self argument',
+      'Defines a method that doesn\'t receive an implicit self argument',
       'Creates a class method that can access class attributes',
       'Automatically makes a method private',
       'Defines a method as read-only'
     ],
-    correctAnswer: 'Defines a method that doesn’t receive an implicit self argument',
-    explanation: '@staticmethod is used to define a method that behaves like a normal function but belongs to a class’s namespace.',
+    correctAnswer: 'Defines a method that doesn\'t receive an implicit self argument',
+    explanation: '@staticmethod is used to define a method that behaves like a normal function but belongs to a class\'s namespace.',
     category: 'Python Classes',
     difficulty: 'Medium'
   },
@@ -2797,7 +2797,7 @@ export const pythonAssessmentQuestions: AssessmentQuestion[] = [
       'Error'
     ],
     correctAnswer: '-6',
-    explanation: 'The ~ operator performs a bitwise NOT. For 5, ~5 equals -(5+1) = -6 due to two’s complement representation.',
+    explanation: 'The ~ operator performs a bitwise NOT. For 5, ~5 equals -(5+1) = -6 due to two\'s complement representation.',
     category: 'Python Operators',
     difficulty: 'Hard'
   },
@@ -2881,7 +2881,7 @@ export const pythonAssessmentQuestions: AssessmentQuestion[] = [
       'Automatically calls the method at import time'
     ],
     correctAnswer: 'Defines a method that does not receive the instance or class as its first argument',
-    explanation: 'Static methods are bound to a class but don’t receive self or cls; they behave like normal functions inside the class namespace.',
+    explanation: 'Static methods are bound to a class but don\'t receive self or cls; they behave like normal functions inside the class namespace.',
     category: 'Python Classes',
     difficulty: 'Medium'
   },
@@ -2951,7 +2951,7 @@ export const pythonAssessmentQuestions: AssessmentQuestion[] = [
       'Error'
     ],
     correctAnswer: "<class 'type'>",
-    explanation: 'type is itself an instance of type; classes are created by type in Python’s metaclass system.',
+    explanation: 'type is itself an instance of type; classes are created by type in Python\'s metaclass system.',
     category: 'Python Types',
     difficulty: 'Hard'
   },
@@ -3385,7 +3385,7 @@ export const pythonAssessmentQuestions: AssessmentQuestion[] = [
       'System dependent'
     ],
     correctAnswer: 'System dependent',
-    explanation: 'By default, open() uses the platform’s default encoding, which is often UTF-8 but not guaranteed.',
+    explanation: 'By default, open() uses the platform\'s default encoding, which is often UTF-8 but not guaranteed.',
     category: 'Python I/O',
     difficulty: 'Medium'
   },
@@ -3657,7 +3657,7 @@ export const pythonAssessmentQuestions: AssessmentQuestion[] = [
   },
   {
     id: 'python-262',
-    question: 'Which statement about Python’s GIL (Global Interpreter Lock) is true?',
+    question: 'Which statement about Python\'s GIL (Global Interpreter Lock) is true?',
     options: [
       'It prevents multi-threading entirely in Python.',
       'It allows only one thread to execute Python bytecode at a time.',
@@ -3819,7 +3819,7 @@ export const pythonAssessmentQuestions: AssessmentQuestion[] = [
       'The size of its string representation'
     ],
     correctAnswer: 'The size of 1000 in bytes, including overhead',
-    explanation: 'sys.getsizeof() returns the memory size of an object in bytes, including Python’s internal overhead.',
+    explanation: 'sys.getsizeof() returns the memory size of an object in bytes, including Python\'s internal overhead.',
     category: 'Python Memory',
     difficulty: 'Medium'
   },
@@ -3875,7 +3875,7 @@ export const pythonAssessmentQuestions: AssessmentQuestion[] = [
       '<class \'set\'>'
     ],
     correctAnswer: '<class \'tuple\'>',
-    explanation: 'A trailing comma is required to create a single-element tuple. Without it, it’s just an int.',
+    explanation: 'A trailing comma is required to create a single-element tuple. Without it, it\'s just an int.',
     category: 'Python Tuples',
     difficulty: 'Easy'
   },
@@ -4199,6 +4199,2806 @@ export const pythonAssessmentQuestions: AssessmentQuestion[] = [
     correctAnswer: '[("a", "1"), ("b", "2")]',
     explanation: 'zip pairs elements until the shortest iterable is exhausted, ignoring the extra "3".',
     category: 'Python Itertools',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-301',
+    question: 'Which of the following is used to handle exceptions in Python?',
+    options: [
+      'try-except',
+      'catch-throw',
+      'do-catch',
+      'error-catch'
+    ],
+    correctAnswer: 'try-except',
+    explanation: 'Python uses try-except blocks to handle exceptions.',
+    category: 'Python Exceptions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-302',
+    question: 'What is the output of: print(type([]))?',
+    options: [
+      "<class 'list'>",
+      "<class 'tuple'>",
+      "<class 'dict'>",
+      "<class 'set'>"
+    ],
+    correctAnswer: "<class 'list'>",
+    explanation: '[] creates a list in Python.',
+    category: 'Python Data Structures',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-303',
+    question: 'Which keyword is used to define a class in Python?',
+    options: [
+      'class',
+      'def',
+      'struct',
+      'object'
+    ],
+    correctAnswer: 'class',
+    explanation: 'The class keyword is used to define a class in Python.',
+    category: 'Python OOP',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-304',
+    question: 'What is the output of: print(2 ** 3 ** 2)?',
+    options: [
+      '512',
+      '64',
+      '36',
+      '256'
+    ],
+    correctAnswer: '512',
+    explanation: 'Exponentiation is right-associative: 3 ** 2 = 9, then 2 ** 9 = 512.',
+    category: 'Python Operators',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-305',
+    question: 'Which of the following is NOT a valid Python data type?',
+    options: [
+      'array',
+      'list',
+      'tuple',
+      'set'
+    ],
+    correctAnswer: 'array',
+    explanation: 'Python does not have a built-in array type; it uses lists instead.',
+    category: 'Python Data Types',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-306',
+    question: 'What is the output of: print(bool("False"))?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'Any non-empty string is truthy in Python, even "False".',
+    category: 'Python Booleans',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-307',
+    question: 'Which method is used to add an item to the end of a list?',
+    options: [
+      'append()',
+      'add()',
+      'insert()',
+      'push()'
+    ],
+    correctAnswer: 'append()',
+    explanation: 'The append() method adds an item to the end of a list.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-308',
+    question: 'What is the output of: print({1, 2, 3} == {3, 2, 1})?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'Sets are unordered collections, so their equality depends on elements, not order.',
+    category: 'Python Sets',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-309',
+    question: 'Which of the following is used to import a module in Python?',
+    options: [
+      'import',
+      'include',
+      'require',
+      'using'
+    ],
+    correctAnswer: 'import',
+    explanation: 'The import keyword is used to import modules in Python.',
+    category: 'Python Modules',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-310',
+    question: 'What is the output of: print("Hello"[1])?',
+    options: [
+      'e',
+      'H',
+      'l',
+      'o'
+    ],
+    correctAnswer: 'e',
+    explanation: 'String indexing starts at 0, so [1] is the second character.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-311',
+    question: 'Which function returns the length of a list?',
+    options: [
+      'len()',
+      'length()',
+      'count()',
+      'size()'
+    ],
+    correctAnswer: 'len()',
+    explanation: 'len() returns the length of a list or other collection.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-312',
+    question: 'What is the output of: print(list(range(2, 10, 2)))?',
+    options: [
+      '[2, 4, 6, 8]',
+      '[2, 3, 4, 5, 6, 7, 8, 9]',
+      '[2, 4, 6, 8, 10]',
+      '[2, 6, 10]'
+    ],
+    correctAnswer: '[2, 4, 6, 8]',
+    explanation: 'range(2, 10, 2) produces even numbers from 2 up to 8.',
+    category: 'Python Ranges',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-313',
+    question: 'Which of the following is a mutable data type?',
+    options: [
+      'list',
+      'tuple',
+      'str',
+      'int'
+    ],
+    correctAnswer: 'list',
+    explanation: 'Lists are mutable, while tuples, strings, and integers are immutable.',
+    category: 'Python Data Types',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-314',
+    question: 'What is the output of: print("abc".upper())?',
+    options: [
+      'ABC',
+      'abc',
+      'Abc',
+      'Error'
+    ],
+    correctAnswer: 'ABC',
+    explanation: 'The upper() method returns the string in uppercase.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-315',
+    question: 'Which of the following is used to define a function in Python?',
+    options: [
+      'def',
+      'function',
+      'fun',
+      'define'
+    ],
+    correctAnswer: 'def',
+    explanation: 'The def keyword is used to define functions in Python.',
+    category: 'Python Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-316',
+    question: 'What is the output of: print(10 // 3)?',
+    options: [
+      '3',
+      '3.33',
+      '3.0',
+      '4'
+    ],
+    correctAnswer: '3',
+    explanation: '// is integer division, so 10 // 3 is 3.',
+    category: 'Python Operators',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-317',
+    question: 'Which of the following is a valid variable name in Python?',
+    options: [
+      'my_var',
+      '2var',
+      'my-var',
+      'var!'
+    ],
+    correctAnswer: 'my_var',
+    explanation: 'Variable names cannot start with a digit or contain special characters except underscore.',
+    category: 'Python Syntax',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-318',
+    question: 'What is the output of: print({"a": 1}.get("b", 2))?',
+    options: [
+      '2',
+      '1',
+      'None',
+      'Error'
+    ],
+    correctAnswer: '2',
+    explanation: 'dict.get(key, default) returns the default if the key is not found.',
+    category: 'Python Dictionaries',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-319',
+    question: 'Which of the following is used to create an anonymous function?',
+    options: [
+      'lambda',
+      'def',
+      'func',
+      'anon'
+    ],
+    correctAnswer: 'lambda',
+    explanation: 'lambda is used to create anonymous functions in Python.',
+    category: 'Python Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-320',
+    question: 'What is the output of: print(" ".isspace())?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'isspace() returns True if the string contains only whitespace.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-321',
+    question: 'Which of the following is used to read a file in Python?',
+    options: [
+      'open()',
+      'readfile()',
+      'file()',
+      'getfile()'
+    ],
+    correctAnswer: 'open()',
+    explanation: 'open() is used to open files for reading or writing.',
+    category: 'Python File I/O',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-322',
+    question: 'What is the output of: print(list(reversed([1, 2, 3])))?',
+    options: [
+      '[3, 2, 1]',
+      '[1, 2, 3]',
+      '[1, 3, 2]',
+      '[2, 1, 3]'
+    ],
+    correctAnswer: '[3, 2, 1]',
+    explanation: 'reversed() returns an iterator that yields the elements in reverse order.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-323',
+    question: 'Which of the following is used to install external packages in Python?',
+    options: [
+      'pip',
+      'npm',
+      'apt',
+      'brew'
+    ],
+    correctAnswer: 'pip',
+    explanation: 'pip is the package installer for Python.',
+    category: 'Python Packages',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-324',
+    question: 'What is the output of: print("abc".replace("b", "d"))?',
+    options: [
+      'adc',
+      'abc',
+      'abd',
+      'Error'
+    ],
+    correctAnswer: 'adc',
+    explanation: 'replace() replaces all occurrences of the substring.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-325',
+    question: 'Which of the following is used to check if a key exists in a dictionary?',
+    options: [
+      'in',
+      'has',
+      'exists',
+      'contains'
+    ],
+    correctAnswer: 'in',
+    explanation: 'The in operator checks for key existence in a dictionary.',
+    category: 'Python Dictionaries',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-326',
+    question: 'What is the output of: print([i*i for i in range(3)])?',
+    options: [
+      '[0, 1, 4]',
+      '[1, 4, 9]',
+      '[0, 1, 2]',
+      '[1, 2, 3]'
+    ],
+    correctAnswer: '[0, 1, 4]',
+    explanation: 'List comprehension squares each number in range(3): 0, 1, 2.',
+    category: 'Python Comprehensions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-327',
+    question: 'Which of the following is used to create a tuple?',
+    options: [
+      '(1, 2, 3)',
+      '[1, 2, 3]',
+      '{1, 2, 3}',
+      '<1, 2, 3>'
+    ],
+    correctAnswer: '(1, 2, 3)',
+    explanation: 'Tuples are created using parentheses ().',
+    category: 'Python Data Structures',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-328',
+    question: 'What is the output of: print("abc"[::-1])?',
+    options: [
+      'cba',
+      'abc',
+      'bac',
+      'Error'
+    ],
+    correctAnswer: 'cba',
+    explanation: 'Slicing with [::-1] reverses the string.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-329',
+    question: 'Which of the following is used to remove an item from a set?',
+    options: [
+      'remove()',
+      'delete()',
+      'pop()',
+      'discard()'
+    ],
+    correctAnswer: 'remove()',
+    explanation: 'remove() removes a specific item from a set; discard() can also be used.',
+    category: 'Python Sets',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-330',
+    question: 'What is the output of: print(5 > 3 and 2 < 1)?',
+    options: [
+      'False',
+      'True',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'False',
+    explanation: '5 > 3 is True, 2 < 1 is False, so True and False is False.',
+    category: 'Python Operators',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-331',
+    question: 'Which of the following is used to get the ASCII value of a character?',
+    options: [
+      'ord()',
+      'chr()',
+      'ascii()',
+      'code()'
+    ],
+    correctAnswer: 'ord()',
+    explanation: 'ord() returns the Unicode code point of a character.',
+    category: 'Python Built-ins',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-332',
+    question: 'What is the output of: print("Hello".lower())?',
+    options: [
+      'hello',
+      'HELLO',
+      'Hello',
+      'Error'
+    ],
+    correctAnswer: 'hello',
+    explanation: 'lower() returns the string in lowercase.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-333',
+    question: 'Which of the following is used to iterate over a sequence of numbers?',
+    options: [
+      'for',
+      'while',
+      'do-while',
+      'loop'
+    ],
+    correctAnswer: 'for',
+    explanation: 'for loops are commonly used to iterate over sequences in Python.',
+    category: 'Python Loops',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-334',
+    question: 'What is the output of: print(3 * "ab")?',
+    options: [
+      'ababab',
+      'ab',
+      'Error',
+      '3ab'
+    ],
+    correctAnswer: 'ababab',
+    explanation: 'Multiplying a string by an integer repeats the string.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-335',
+    question: 'Which of the following is used to check if a value is None?',
+    options: [
+      'is',
+      '==',
+      'equals',
+      '===' 
+    ],
+    correctAnswer: 'is',
+    explanation: 'The is operator checks for object identity, commonly used for None.',
+    category: 'Python Operators',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-336',
+    question: 'What is the output of: print(type((1,)))?',
+    options: [
+      "<class 'tuple'>",
+      "<class 'int'>",
+      "<class 'list'>",
+      "<class 'set'>"
+    ],
+    correctAnswer: "<class 'tuple'>",
+    explanation: 'A single-element tuple must have a trailing comma: (1,).',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-337',
+    question: 'Which of the following is used to get the unique elements from a list?',
+    options: [
+      'set()',
+      'list()',
+      'dict()',
+      'tuple()'
+    ],
+    correctAnswer: 'set()',
+    explanation: 'set() removes duplicates from a list.',
+    category: 'Python Sets',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-338',
+    question: 'What is the output of: print("abc".find("b"))?',
+    options: [
+      '1',
+      '0',
+      '-1',
+      '2'
+    ],
+    correctAnswer: '1',
+    explanation: 'find() returns the index of the first occurrence of the substring.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-339',
+    question: 'Which of the following is used to remove whitespace from the beginning and end of a string?',
+    options: [
+      'strip()',
+      'trim()',
+      'remove()',
+      'cut()'
+    ],
+    correctAnswer: 'strip()',
+    explanation: 'strip() removes leading and trailing whitespace.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-340',
+    question: 'What is the output of: print([1, 2, 3] + [4, 5])?',
+    options: [
+      '[1, 2, 3, 4, 5]',
+      '[5, 4, 3, 2, 1]',
+      '[1, 2, 3, [4, 5]]',
+      '[4, 5, 1, 2, 3]'
+    ],
+    correctAnswer: '[1, 2, 3, 4, 5]',
+    explanation: 'The + operator concatenates lists.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-341',
+    question: 'Which of the following is used to get the maximum value from a list?',
+    options: [
+      'max()',
+      'maximum()',
+      'top()',
+      'highest()'
+    ],
+    correctAnswer: 'max()',
+    explanation: 'max() returns the largest item in an iterable.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-342',
+    question: 'What is the output of: print("abc".count("a"))?',
+    options: [
+      '1',
+      '0',
+      '2',
+      'Error'
+    ],
+    correctAnswer: '1',
+    explanation: 'count() returns the number of occurrences of the substring.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-343',
+    question: 'Which of the following is used to check if a string starts with a specific substring?',
+    options: [
+      'startswith()',
+      'startwith()',
+      'beginswith()',
+      'isstart()'
+    ],
+    correctAnswer: 'startswith()',
+    explanation: 'startswith() checks if a string starts with the specified substring.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-344',
+    question: 'What is the output of: print([1, 2, 3].pop())?',
+    options: [
+      '3',
+      '[1, 2]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '3',
+    explanation: 'pop() removes and returns the last item of the list.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-345',
+    question: 'Which of the following is used to get the type of an object?',
+    options: [
+      'type()',
+      'typeof()',
+      'gettype()',
+      'objecttype()'
+    ],
+    correctAnswer: 'type()',
+    explanation: 'type() returns the type of an object.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-346',
+    question: 'What is the output of: print("abc".isalpha())?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'isalpha() returns True if all characters in the string are alphabetic.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-347',
+    question: 'Which of the following is used to convert a string to an integer?',
+    options: [
+      'int()',
+      'str()',
+      'float()',
+      'toInt()'
+    ],
+    correctAnswer: 'int()',
+    explanation: 'int() converts a string or number to an integer.',
+    category: 'Python Built-ins',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-348',
+    question: 'What is the output of: print("abc123".isalnum())?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'isalnum() returns True if all characters are alphanumeric.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-349',
+    question: 'Which of the following is used to get the sum of all items in a list?',
+    options: [
+      'sum()',
+      'add()',
+      'total()',
+      'plus()'
+    ],
+    correctAnswer: 'sum()',
+    explanation: 'sum() returns the sum of all items in an iterable.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-350',
+    question: 'What is the output of: print("Hello, World!".split(", "))?',
+    options: [
+      "['Hello', 'World!']",
+      "['Hello, World!']",
+      "['Hello', ' World!']",
+      'Error'
+    ],
+    correctAnswer: "['Hello', 'World!']",
+    explanation: 'split(", ") splits the string at the comma and space.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-351',
+    question: 'What is the output of: print("hello".title())?',
+    options: [
+      'Hello',
+      'HELLO',
+      'hello',
+      'Error'
+    ],
+    correctAnswer: 'Hello',
+    explanation: 'title() capitalizes the first letter of each word in the string.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-352',
+    question: 'Which of the following is used to check if a string ends with a specific substring?',
+    options: [
+      'endswith()',
+      'endwith()',
+      'finishwith()',
+      'end()'
+    ],
+    correctAnswer: 'endswith()',
+    explanation: 'endswith() checks if a string ends with the specified substring.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-353',
+    question: 'What is the output of: print([1, 2, 3].extend([4, 5]))?',
+    options: [
+      '[1, 2, 3, 4, 5]',
+      'None',
+      '[4, 5]',
+      'Error'
+    ],
+    correctAnswer: 'None',
+    explanation: 'extend() modifies the list in place and returns None.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-354',
+    question: 'Which of the following is used to get the minimum value from a list?',
+    options: [
+      'min()',
+      'minimum()',
+      'lowest()',
+      'smallest()'
+    ],
+    correctAnswer: 'min()',
+    explanation: 'min() returns the smallest item in an iterable.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-355',
+    question: 'What is the output of: print("abc".center(7, "*"))?',
+    options: [
+      '**abc**',
+      'abc****',
+      '****abc',
+      'Error'
+    ],
+    correctAnswer: '**abc**',
+    explanation: 'center() centers the string and fills with the specified character.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-356',
+    question: 'Which of the following is used to remove an item from a list by index?',
+    options: [
+      'pop()',
+      'remove()',
+      'delete()',
+      'del'
+    ],
+    correctAnswer: 'pop()',
+    explanation: 'pop() removes and returns an item at the specified index.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-357',
+    question: 'What is the output of: print("hello".replace("l", "x", 1))?',
+    options: [
+      'hexlo',
+      'hexxo',
+      'hello',
+      'Error'
+    ],
+    correctAnswer: 'hexlo',
+    explanation: 'replace() with count parameter replaces only the first occurrence.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-358',
+    question: 'Which of the following is used to check if a string contains only digits?',
+    options: [
+      'isdigit()',
+      'isnumeric()',
+      'isnumber()',
+      'isdigits()'
+    ],
+    correctAnswer: 'isdigit()',
+    explanation: 'isdigit() returns True if all characters in the string are digits.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-359',
+    question: 'What is the output of: print([1, 2, 3].insert(1, 5))?',
+    options: [
+      '[1, 5, 2, 3]',
+      'None',
+      '[1, 2, 3]',
+      'Error'
+    ],
+    correctAnswer: 'None',
+    explanation: 'insert() modifies the list in place and returns None.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-360',
+    question: 'Which of the following is used to get the absolute value of a number?',
+    options: [
+      'abs()',
+      'absolute()',
+      'positive()',
+      'magnitude()'
+    ],
+    correctAnswer: 'abs()',
+    explanation: 'abs() returns the absolute value of a number.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-361',
+    question: 'What is the output of: print("hello".ljust(10, "*"))?',
+    options: [
+      'hello*****',
+      '*****hello',
+      'hello',
+      'Error'
+    ],
+    correctAnswer: 'hello*****',
+    explanation: 'ljust() left-aligns the string and fills with the specified character.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-362',
+    question: 'Which of the following is used to check if a string contains only whitespace?',
+    options: [
+      'isspace()',
+      'iswhitespace()',
+      'isblank()',
+      'isempty()'
+    ],
+    correctAnswer: 'isspace()',
+    explanation: 'isspace() returns True if all characters in the string are whitespace.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-363',
+    question: 'What is the output of: print([1, 2, 3].index(2))?',
+    options: [
+      '1',
+      '2',
+      '0',
+      'Error'
+    ],
+    correctAnswer: '1',
+    explanation: 'index() returns the index of the first occurrence of the value.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-364',
+    question: 'Which of the following is used to round a number to a specified number of decimal places?',
+    options: [
+      'round()',
+      'rounding()',
+      'decimal()',
+      'precision()'
+    ],
+    correctAnswer: 'round()',
+    explanation: 'round() rounds a number to the specified number of decimal places.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-365',
+    question: 'What is the output of: print("hello".rjust(10, "*"))?',
+    options: [
+      '*****hello',
+      'hello*****',
+      'hello',
+      'Error'
+    ],
+    correctAnswer: '*****hello',
+    explanation: 'rjust() right-aligns the string and fills with the specified character.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-366',
+    question: 'Which of the following is used to check if a string starts with a specific substring?',
+    options: [
+      'startswith()',
+      'startwith()',
+      'beginwith()',
+      'start()'
+    ],
+    correctAnswer: 'startswith()',
+    explanation: 'startswith() checks if a string starts with the specified substring.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-367',
+    question: 'What is the output of: print([1, 2, 3].count(2))?',
+    options: [
+      '1',
+      '2',
+      '0',
+      'Error'
+    ],
+    correctAnswer: '1',
+    explanation: 'count() returns the number of occurrences of the value in the list.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-368',
+    question: 'Which of the following is used to get the power of a number?',
+    options: [
+      'pow()',
+      'power()',
+      'exponent()',
+      'raise()'
+    ],
+    correctAnswer: 'pow()',
+    explanation: 'pow() returns the value of x raised to the power of y.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-369',
+    question: 'What is the output of: print("hello".zfill(10))?',
+    options: [
+      '00000hello',
+      'hello00000',
+      'hello',
+      'Error'
+    ],
+    correctAnswer: '00000hello',
+    explanation: 'zfill() pads the string with zeros on the left.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-370',
+    question: 'Which of the following is used to check if a string contains only lowercase letters?',
+    options: [
+      'islower()',
+      'islowercase()',
+      'isdowncase()',
+      'issmall()'
+    ],
+    correctAnswer: 'islower()',
+    explanation: 'islower() returns True if all characters in the string are lowercase.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-371',
+    question: 'What is the output of: print([1, 2, 3].reverse())?',
+    options: [
+      '[3, 2, 1]',
+      'None',
+      '[1, 2, 3]',
+      'Error'
+    ],
+    correctAnswer: 'None',
+    explanation: 'reverse() modifies the list in place and returns None.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-372',
+    question: 'Which of the following is used to get the quotient and remainder of division?',
+    options: [
+      'divmod()',
+      'quotient()',
+      'remainder()',
+      'divide()'
+    ],
+    correctAnswer: 'divmod()',
+    explanation: 'divmod() returns a tuple containing the quotient and remainder.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-373',
+    question: 'What is the output of: print("hello".swapcase())?',
+    options: [
+      'HELLO',
+      'hello',
+      'hELLO',
+      'Error'
+    ],
+    correctAnswer: 'HELLO',
+    explanation: 'swapcase() swaps the case of all characters in the string.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-374',
+    question: 'Which of the following is used to check if a string contains only uppercase letters?',
+    options: [
+      'isupper()',
+      'isuppercase()',
+      'isupcase()',
+      'isbig()'
+    ],
+    correctAnswer: 'isupper()',
+    explanation: 'isupper() returns True if all characters in the string are uppercase.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-375',
+    question: 'What is the output of: print([1, 2, 3].sort())?',
+    options: [
+      '[1, 2, 3]',
+      'None',
+      '[3, 2, 1]',
+      'Error'
+    ],
+    correctAnswer: 'None',
+    explanation: 'sort() modifies the list in place and returns None.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-376',
+    question: 'Which of the following is used to get the hexadecimal representation of a number?',
+    options: [
+      'hex()',
+      'hexadecimal()',
+      'tohex()',
+      'base16()'
+    ],
+    correctAnswer: 'hex()',
+    explanation: 'hex() converts an integer to a hexadecimal string.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-377',
+    question: 'What is the output of: print("hello".capitalize())?',
+    options: [
+      'Hello',
+      'HELLO',
+      'hello',
+      'Error'
+    ],
+    correctAnswer: 'Hello',
+    explanation: 'capitalize() returns a copy with the first character uppercase.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-378',
+    question: 'Which of the following is used to check if a string is a valid identifier?',
+    options: [
+      'isidentifier()',
+      'isident()',
+      'isvalid()',
+      'isname()'
+    ],
+    correctAnswer: 'isidentifier()',
+    explanation: 'isidentifier() returns True if the string is a valid identifier.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-379',
+    question: 'What is the output of: print([1, 2, 3].copy())?',
+    options: [
+      '[1, 2, 3]',
+      'None',
+      '[3, 2, 1]',
+      'Error'
+    ],
+    correctAnswer: '[1, 2, 3]',
+    explanation: 'copy() returns a shallow copy of the list.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-380',
+    question: 'Which of the following is used to get the octal representation of a number?',
+    options: [
+      'oct()',
+      'octal()',
+      'tooct()',
+      'base8()'
+    ],
+    correctAnswer: 'oct()',
+    explanation: 'oct() converts an integer to an octal string.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-381',
+    question: 'What is the output of: print("hello".casefold())?',
+    options: [
+      'hello',
+      'HELLO',
+      'Hello',
+      'Error'
+    ],
+    correctAnswer: 'hello',
+    explanation: 'casefold() returns a casefolded copy of the string.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-382',
+    question: 'Which of the following is used to check if a string is printable?',
+    options: [
+      'isprintable()',
+      'isprint()',
+      'isdisplayable()',
+      'isshowable()'
+    ],
+    correctAnswer: 'isprintable()',
+    explanation: 'isprintable() returns True if all characters are printable.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-383',
+    question: 'What is the output of: print([1, 2, 3].clear())?',
+    options: [
+      '[]',
+      'None',
+      '[1, 2, 3]',
+      'Error'
+    ],
+    correctAnswer: 'None',
+    explanation: 'clear() removes all items from the list and returns None.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-384',
+    question: 'Which of the following is used to get the binary representation of a number?',
+    options: [
+      'bin()',
+      'binary()',
+      'tobin()',
+      'base2()'
+    ],
+    correctAnswer: 'bin()',
+    explanation: 'bin() converts an integer to a binary string.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-385',
+    question: 'What is the output of: print("hello".encode())?',
+    options: [
+      "b'hello'",
+      "'hello'",
+      'hello',
+      'Error'
+    ],
+    correctAnswer: "b'hello'",
+    explanation: 'encode() returns an encoded version of the string as bytes.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-386',
+    question: 'Which of the following is used to check if a string is a title case?',
+    options: [
+      'istitle()',
+      'istitlecase()',
+      'iscapitalized()',
+      'isheading()'
+    ],
+    correctAnswer: 'istitle()',
+    explanation: 'istitle() returns True if the string is titlecased.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-387',
+    question: 'What is the output of: print([1, 2, 3].remove(2))?',
+    options: [
+      '[1, 3]',
+      'None',
+      '[1, 2, 3]',
+      'Error'
+    ],
+    correctAnswer: 'None',
+    explanation: 'remove() removes the first occurrence of the value and returns None.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-388',
+    question: 'Which of the following is used to get the ASCII value of a character?',
+    options: [
+      'ord()',
+      'ascii()',
+      'char()',
+      'code()'
+    ],
+    correctAnswer: 'ord()',
+    explanation: 'ord() returns the Unicode code point of a character.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-389',
+    question: 'What is the output of: print("hello".expandtabs())?',
+    options: [
+      'hello',
+      'h    ello',
+      'h\tello',
+      'Error'
+    ],
+    correctAnswer: 'hello',
+    explanation: 'expandtabs() expands tab characters to spaces.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-390',
+    question: 'Which of the following is used to check if a string is a decimal?',
+    options: [
+      'isdecimal()',
+      'isdec()',
+      'isnumber()',
+      'isdigit()'
+    ],
+    correctAnswer: 'isdecimal()',
+    explanation: 'isdecimal() returns True if all characters are decimal characters.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-391',
+    question: 'What is the output of: print([1, 2, 3].pop(1))?',
+    options: [
+      '2',
+      '[1, 3]',
+      'None',
+      'Error'
+    ],
+    correctAnswer: '2',
+    explanation: 'pop(1) removes and returns the item at index 1.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-392',
+    question: 'Which of the following is used to get the character from an ASCII value?',
+    options: [
+      'chr()',
+      'char()',
+      'ascii()',
+      'code()'
+    ],
+    correctAnswer: 'chr()',
+    explanation: 'chr() returns the string representing a character whose Unicode code point is the integer.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-393',
+    question: 'What is the output of: print("hello".lstrip())?',
+    options: [
+      'hello',
+      'ello',
+      'h',
+      'Error'
+    ],
+    correctAnswer: 'hello',
+    explanation: 'lstrip() removes leading whitespace from the string.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-394',
+    question: 'Which of the following is used to check if a string is numeric?',
+    options: [
+      'isnumeric()',
+      'isnum()',
+      'isnumber()',
+      'isdigit()'
+    ],
+    correctAnswer: 'isnumeric()',
+    explanation: 'isnumeric() returns True if all characters are numeric characters.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-395',
+    question: 'What is the output of: print([1, 2, 3].insert(0, 0))?',
+    options: [
+      '[0, 1, 2, 3]',
+      'None',
+      '[1, 2, 3]',
+      'Error'
+    ],
+    correctAnswer: 'None',
+    explanation: 'insert(0, 0) inserts 0 at index 0 and returns None.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-396',
+    question: 'Which of the following is used to get the length of an object?',
+    options: [
+      'len()',
+      'length()',
+      'size()',
+      'count()'
+    ],
+    correctAnswer: 'len()',
+    explanation: 'len() returns the length of an object.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-397',
+    question: 'What is the output of: print("hello".rstrip())?',
+    options: [
+      'hello',
+      'hell',
+      'o',
+      'Error'
+    ],
+    correctAnswer: 'hello',
+    explanation: 'rstrip() removes trailing whitespace from the string.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-398',
+    question: 'Which of the following is used to check if a string is a valid title?',
+    options: [
+      'istitle()',
+      'istitlecase()',
+      'iscapitalized()',
+      'isheading()'
+    ],
+    correctAnswer: 'istitle()',
+    explanation: 'istitle() returns True if the string is titlecased.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-399',
+    question: 'What is the output of: print([1, 2, 3].extend([4, 5]))?',
+    options: [
+      '[1, 2, 3, 4, 5]',
+      'None',
+      '[4, 5]',
+      'Error'
+    ],
+    correctAnswer: 'None',
+    explanation: 'extend() modifies the list in place and returns None.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-400',
+    question: 'Which of the following is used to get the maximum value from an iterable?',
+    options: [
+      'max()',
+      'maximum()',
+      'highest()',
+      'top()'
+    ],
+    correctAnswer: 'max()',
+    explanation: 'max() returns the largest item in an iterable.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-401',
+    question: 'What is the output of: print("hello".partition("l"))?',
+    options: [
+      "('he', 'l', 'lo')",
+      "('h', 'l', 'ello')",
+      "('he', 'll', 'o')",
+      'Error'
+    ],
+    correctAnswer: "('he', 'l', 'lo')",
+    explanation: 'partition() splits the string at the first occurrence of the separator.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-402',
+    question: 'Which of the following is used to check if all elements in an iterable are True?',
+    options: [
+      'all()',
+      'every()',
+      'checkall()',
+      'verify()'
+    ],
+    correctAnswer: 'all()',
+    explanation: 'all() returns True if all elements in the iterable are True.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-403',
+    question: 'What is the output of: print([1, 2, 3].copy())?',
+    options: [
+      '[1, 2, 3]',
+      'None',
+      '[3, 2, 1]',
+      'Error'
+    ],
+    correctAnswer: '[1, 2, 3]',
+    explanation: 'copy() returns a shallow copy of the list.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-404',
+    question: 'Which of the following is used to get the sorted version of an iterable?',
+    options: [
+      'sorted()',
+      'sort()',
+      'order()',
+      'arrange()'
+    ],
+    correctAnswer: 'sorted()',
+    explanation: 'sorted() returns a new sorted list from the elements of any iterable.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-405',
+    question: 'What is the output of: print("hello".rpartition("l"))?',
+    options: [
+      "('he', 'l', 'lo')",
+      "('hel', 'l', 'o')",
+      "('he', 'll', 'o')",
+      'Error'
+    ],
+    correctAnswer: "('hel', 'l', 'o')",
+    explanation: 'rpartition() splits the string at the last occurrence of the separator.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-406',
+    question: 'Which of the following is used to check if any element in an iterable is True?',
+    options: [
+      'any()',
+      'some()',
+      'checkany()',
+      'verify()'
+    ],
+    correctAnswer: 'any()',
+    explanation: 'any() returns True if any element in the iterable is True.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-407',
+    question: 'What is the output of: print([1, 2, 3] * 2)?',
+    options: [
+      '[1, 2, 3, 1, 2, 3]',
+      '[2, 4, 6]',
+      '[1, 2, 3]',
+      'Error'
+    ],
+    correctAnswer: '[1, 2, 3, 1, 2, 3]',
+    explanation: 'Multiplying a list by an integer repeats the list elements.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-408',
+    question: 'Which of the following is used to get the reversed version of an iterable?',
+    options: [
+      'reversed()',
+      'reverse()',
+      'flip()',
+      'invert()'
+    ],
+    correctAnswer: 'reversed()',
+    explanation: 'reversed() returns a reverse iterator over the values of the given sequence.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-409',
+    question: 'What is the output of: print("hello".splitlines())?',
+    options: [
+      "['hello']",
+      "['h', 'e', 'l', 'l', 'o']",
+      "['hello']",
+      'Error'
+    ],
+    correctAnswer: "['hello']",
+    explanation: 'splitlines() splits the string at line boundaries.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-410',
+    question: 'Which of the following is used to get the length of an object?',
+    options: [
+      'len()',
+      'length()',
+      'size()',
+      'count()'
+    ],
+    correctAnswer: 'len()',
+    explanation: 'len() returns the length of an object.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-411',
+    question: 'What is the output of: print([1, 2, 3] + [4, 5])?',
+    options: [
+      '[1, 2, 3, 4, 5]',
+      '[5, 4, 3, 2, 1]',
+      '[1, 2, 3, [4, 5]]',
+      'Error'
+    ],
+    correctAnswer: '[1, 2, 3, 4, 5]',
+    explanation: 'The + operator concatenates lists.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-412',
+    question: 'Which of the following is used to get the sum of all items in an iterable?',
+    options: [
+      'sum()',
+      'add()',
+      'total()',
+      'plus()'
+    ],
+    correctAnswer: 'sum()',
+    explanation: 'sum() returns the sum of all items in an iterable.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-413',
+    question: 'What is the output of: print("hello".maketrans("l", "x"))?',
+    options: [
+      '{108: 120}',
+      "'hexlo'",
+      "'hello'",
+      'Error'
+    ],
+    correctAnswer: '{108: 120}',
+    explanation: 'maketrans() returns a translation table usable for str.translate().',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-414',
+    question: 'Which of the following is used to get the maximum value from an iterable?',
+    options: [
+      'max()',
+      'maximum()',
+      'highest()',
+      'top()'
+    ],
+    correctAnswer: 'max()',
+    explanation: 'max() returns the largest item in an iterable.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-415',
+    question: 'What is the output of: print([1, 2, 3].index(1))?',
+    options: [
+      '0',
+      '1',
+      '2',
+      'Error'
+    ],
+    correctAnswer: '0',
+    explanation: 'index() returns the index of the first occurrence of the value.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-416',
+    question: 'Which of the following is used to get the minimum value from an iterable?',
+    options: [
+      'min()',
+      'minimum()',
+      'lowest()',
+      'smallest()'
+    ],
+    correctAnswer: 'min()',
+    explanation: 'min() returns the smallest item in an iterable.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-417',
+    question: 'What is the output of: print("hello".translate({108: 120}))?',
+    options: [
+      "'hexlo'",
+      "'hello'",
+      "'hxllo'",
+      'Error'
+    ],
+    correctAnswer: "'hexlo'",
+    explanation: 'translate() applies the translation table to the string.',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-418',
+    question: 'Which of the following is used to get the type of an object?',
+    options: [
+      'type()',
+      'typeof()',
+      'gettype()',
+      'objecttype()'
+    ],
+    correctAnswer: 'type()',
+    explanation: 'type() returns the type of an object.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-419',
+    question: 'What is the output of: print([1, 2, 3].count(1))?',
+    options: [
+      '1',
+      '2',
+      '0',
+      'Error'
+    ],
+    correctAnswer: '1',
+    explanation: 'count() returns the number of occurrences of the value in the list.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-420',
+    question: 'Which of the following is used to get the absolute value of a number?',
+    options: [
+      'abs()',
+      'absolute()',
+      'positive()',
+      'magnitude()'
+    ],
+    correctAnswer: 'abs()',
+    explanation: 'abs() returns the absolute value of a number.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-421',
+    question: 'What is the output of: print("hello".format())?',
+    options: [
+      "'hello'",
+      "'Hello'",
+      "'HELLO'",
+      'Error'
+    ],
+    correctAnswer: "'hello'",
+    explanation: 'format() with no arguments returns the string unchanged.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-422',
+    question: 'Which of the following is used to get the power of a number?',
+    options: [
+      'pow()',
+      'power()',
+      'exponent()',
+      'raise()'
+    ],
+    correctAnswer: 'pow()',
+    explanation: 'pow() returns the value of x raised to the power of y.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-423',
+    question: 'What is the output of: print([1, 2, 3].pop())?',
+    options: [
+      '3',
+      '[1, 2]',
+      'None',
+      'Error'
+    ],
+    correctAnswer: '3',
+    explanation: 'pop() removes and returns the last item of the list.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-424',
+    question: 'Which of the following is used to round a number to a specified number of decimal places?',
+    options: [
+      'round()',
+      'rounding()',
+      'decimal()',
+      'precision()'
+    ],
+    correctAnswer: 'round()',
+    explanation: 'round() rounds a number to the specified number of decimal places.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-425',
+    question: 'What is the output of: print("hello".format_map({}))?',
+    options: [
+      "'hello'",
+      "'Hello'",
+      "'HELLO'",
+      'Error'
+    ],
+    correctAnswer: "'hello'",
+    explanation: 'format_map() with an empty dictionary returns the string unchanged.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-426',
+    question: 'Which of the following is used to get the quotient and remainder of division?',
+    options: [
+      'divmod()',
+      'quotient()',
+      'remainder()',
+      'divide()'
+    ],
+    correctAnswer: 'divmod()',
+    explanation: 'divmod() returns a tuple containing the quotient and remainder.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-427',
+    question: 'What is the output of: print([1, 2, 3].remove(2))?',
+    options: [
+      '[1, 3]',
+      'None',
+      '[1, 2, 3]',
+      'Error'
+    ],
+    correctAnswer: 'None',
+    explanation: 'remove() removes the first occurrence of the value and returns None.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-428',
+    question: 'Which of the following is used to get the hexadecimal representation of a number?',
+    options: [
+      'hex()',
+      'hexadecimal()',
+      'tohex()',
+      'base16()'
+    ],
+    correctAnswer: 'hex()',
+    explanation: 'hex() converts an integer to a hexadecimal string.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-429',
+    question: 'What is the output of: print("hello".__contains__("l"))?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: '__contains__() checks if the string contains the substring.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-430',
+    question: 'Which of the following is used to get the octal representation of a number?',
+    options: [
+      'oct()',
+      'octal()',
+      'tooct()',
+      'base8()'
+    ],
+    correctAnswer: 'oct()',
+    explanation: 'oct() converts an integer to an octal string.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-431',
+    question: 'What is the output of: print([1, 2, 3].insert(1, 5))?',
+    options: [
+      '[1, 5, 2, 3]',
+      'None',
+      '[1, 2, 3]',
+      'Error'
+    ],
+    correctAnswer: 'None',
+    explanation: 'insert() modifies the list in place and returns None.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-432',
+    question: 'Which of the following is used to get the binary representation of a number?',
+    options: [
+      'bin()',
+      'binary()',
+      'tobin()',
+      'base2()'
+    ],
+    correctAnswer: 'bin()',
+    explanation: 'bin() converts an integer to a binary string.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-433',
+    question: 'What is the output of: print("hello".__len__())?',
+    options: [
+      '5',
+      '4',
+      '6',
+      'Error'
+    ],
+    correctAnswer: '5',
+    explanation: '__len__() returns the length of the string.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-434',
+    question: 'Which of the following is used to get the ASCII value of a character?',
+    options: [
+      'ord()',
+      'ascii()',
+      'char()',
+      'code()'
+    ],
+    correctAnswer: 'ord()',
+    explanation: 'ord() returns the Unicode code point of a character.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-435',
+    question: 'What is the output of: print([1, 2, 3].extend([4, 5]))?',
+    options: [
+      '[1, 2, 3, 4, 5]',
+      'None',
+      '[4, 5]',
+      'Error'
+    ],
+    correctAnswer: 'None',
+    explanation: 'extend() modifies the list in place and returns None.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-436',
+    question: 'Which of the following is used to get the character from an ASCII value?',
+    options: [
+      'chr()',
+      'char()',
+      'ascii()',
+      'code()'
+    ],
+    correctAnswer: 'chr()',
+    explanation: 'chr() returns the string representing a character whose Unicode code point is the integer.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-437',
+    question: 'What is the output of: print("hello".__getitem__(1))?',
+    options: [
+      "'e'",
+      "'h'",
+      "'l'",
+      'Error'
+    ],
+    correctAnswer: "'e'",
+    explanation: '__getitem__() returns the character at the specified index.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-438',
+    question: 'Which of the following is used to get the length of an object?',
+    options: [
+      'len()',
+      'length()',
+      'size()',
+      'count()'
+    ],
+    correctAnswer: 'len()',
+    explanation: 'len() returns the length of an object.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-439',
+    question: 'What is the output of: print([1, 2, 3].reverse())?',
+    options: [
+      '[3, 2, 1]',
+      'None',
+      '[1, 2, 3]',
+      'Error'
+    ],
+    correctAnswer: 'None',
+    explanation: 'reverse() modifies the list in place and returns None.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-440',
+    question: 'Which of the following is used to get the sorted version of an iterable?',
+    options: [
+      'sorted()',
+      'sort()',
+      'order()',
+      'arrange()'
+    ],
+    correctAnswer: 'sorted()',
+    explanation: 'sorted() returns a new sorted list from the elements of any iterable.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-441',
+    question: 'What is the output of: print("hello".__str__())?',
+    options: [
+      "'hello'",
+      "'Hello'",
+      "'HELLO'",
+      'Error'
+    ],
+    correctAnswer: "'hello'",
+    explanation: '__str__() returns the string representation of the object.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-442',
+    question: 'Which of the following is used to get the maximum value from an iterable?',
+    options: [
+      'max()',
+      'maximum()',
+      'highest()',
+      'top()'
+    ],
+    correctAnswer: 'max()',
+    explanation: 'max() returns the largest item in an iterable.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-443',
+    question: 'What is the output of: print([1, 2, 3].sort())?',
+    options: [
+      '[1, 2, 3]',
+      'None',
+      '[3, 2, 1]',
+      'Error'
+    ],
+    correctAnswer: 'None',
+    explanation: 'sort() modifies the list in place and returns None.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-444',
+    question: 'Which of the following is used to get the minimum value from an iterable?',
+    options: [
+      'min()',
+      'minimum()',
+      'lowest()',
+      'smallest()'
+    ],
+    correctAnswer: 'min()',
+    explanation: 'min() returns the smallest item in an iterable.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-445',
+    question: 'What is the output of: print("hello".__repr__())?',
+    options: [
+      "'hello'",
+      "'Hello'",
+      "'HELLO'",
+      'Error'
+    ],
+    correctAnswer: "'hello'",
+    explanation: '__repr__() returns the canonical string representation of the object.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-446',
+    question: 'Which of the following is used to get the sum of all items in an iterable?',
+    options: [
+      'sum()',
+      'add()',
+      'total()',
+      'plus()'
+    ],
+    correctAnswer: 'sum()',
+    explanation: 'sum() returns the sum of all items in an iterable.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-447',
+    question: 'What is the output of: print([1, 2, 3].clear())?',
+    options: [
+      '[]',
+      'None',
+      '[1, 2, 3]',
+      'Error'
+    ],
+    correctAnswer: 'None',
+    explanation: 'clear() removes all items from the list and returns None.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-448',
+    question: 'Which of the following is used to get the type of an object?',
+    options: [
+      'type()',
+      'typeof()',
+      'gettype()',
+      'objecttype()'
+    ],
+    correctAnswer: 'type()',
+    explanation: 'type() returns the type of an object.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-449',
+    question: 'What is the output of: print("hello".__hash__())?',
+    options: [
+      'A number',
+      "'hello'",
+      'None',
+      'Error'
+    ],
+    correctAnswer: 'A number',
+    explanation: '__hash__() returns the hash value of the string.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-450',
+    question: 'Which of the following is used to check if all elements in an iterable are True?',
+    options: [
+      'all()',
+      'every()',
+      'checkall()',
+      'verify()'
+    ],
+    correctAnswer: 'all()',
+    explanation: 'all() returns True if all elements in the iterable are True.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-451',
+    question: 'What is the output of: print("hello".__eq__("hello"))?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: '__eq__() checks if two strings are equal.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-452',
+    question: 'Which of the following is used to check if any element in an iterable is True?',
+    options: [
+      'any()',
+      'some()',
+      'checkany()',
+      'verify()'
+    ],
+    correctAnswer: 'any()',
+    explanation: 'any() returns True if any element in the iterable is True.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-453',
+    question: 'What is the output of: print([1, 2, 3].__contains__(2))?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: '__contains__() checks if the list contains the specified value.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-454',
+    question: 'Which of the following is used to get the reversed version of an iterable?',
+    options: [
+      'reversed()',
+      'reverse()',
+      'flip()',
+      'invert()'
+    ],
+    correctAnswer: 'reversed()',
+    explanation: 'reversed() returns a reverse iterator over the values of the given sequence.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-455',
+    question: 'What is the output of: print("hello".__ne__("world"))?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: '__ne__() checks if two strings are not equal.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-456',
+    question: 'Which of the following is used to get the sorted version of an iterable?',
+    options: [
+      'sorted()',
+      'sort()',
+      'order()',
+      'arrange()'
+    ],
+    correctAnswer: 'sorted()',
+    explanation: 'sorted() returns a new sorted list from the elements of any iterable.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-457',
+    question: 'What is the output of: print([1, 2, 3].__len__())?',
+    options: [
+      '3',
+      '2',
+      '4',
+      'Error'
+    ],
+    correctAnswer: '3',
+    explanation: '__len__() returns the length of the list.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-458',
+    question: 'Which of the following is used to get the length of an object?',
+    options: [
+      'len()',
+      'length()',
+      'size()',
+      'count()'
+    ],
+    correctAnswer: 'len()',
+    explanation: 'len() returns the length of an object.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-459',
+    question: 'What is the output of: print("hello".__lt__("world"))?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: '__lt__() checks if the first string is less than the second string.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-460',
+    question: 'Which of the following is used to get the sum of all items in an iterable?',
+    options: [
+      'sum()',
+      'add()',
+      'total()',
+      'plus()'
+    ],
+    correctAnswer: 'sum()',
+    explanation: 'sum() returns the sum of all items in an iterable.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-461',
+    question: 'What is the output of: print([1, 2, 3].__getitem__(1))?',
+    options: [
+      '2',
+      '1',
+      '3',
+      'Error'
+    ],
+    correctAnswer: '2',
+    explanation: '__getitem__() returns the item at the specified index.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-462',
+    question: 'Which of the following is used to get the maximum value from an iterable?',
+    options: [
+      'max()',
+      'maximum()',
+      'highest()',
+      'top()'
+    ],
+    correctAnswer: 'max()',
+    explanation: 'max() returns the largest item in an iterable.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-463',
+    question: 'What is the output of: print("hello".__gt__("world"))?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'False',
+    explanation: '__gt__() checks if the first string is greater than the second string.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-464',
+    question: 'Which of the following is used to get the minimum value from an iterable?',
+    options: [
+      'min()',
+      'minimum()',
+      'lowest()',
+      'smallest()'
+    ],
+    correctAnswer: 'min()',
+    explanation: 'min() returns the smallest item in an iterable.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-465',
+    question: 'What is the output of: print([1, 2, 3].__str__())?',
+    options: [
+      '[1, 2, 3]',
+      "'[1, 2, 3]'",
+      '[1, 2, 3]',
+      'Error'
+    ],
+    correctAnswer: '[1, 2, 3]',
+    explanation: '__str__() returns the string representation of the list.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-466',
+    question: 'Which of the following is used to get the absolute value of a number?',
+    options: [
+      'abs()',
+      'absolute()',
+      'positive()',
+      'magnitude()'
+    ],
+    correctAnswer: 'abs()',
+    explanation: 'abs() returns the absolute value of a number.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-467',
+    question: 'What is the output of: print("hello".__le__("world"))?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: '__le__() checks if the first string is less than or equal to the second string.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-468',
+    question: 'Which of the following is used to get the power of a number?',
+    options: [
+      'pow()',
+      'power()',
+      'exponent()',
+      'raise()'
+    ],
+    correctAnswer: 'pow()',
+    explanation: 'pow() returns the value of x raised to the power of y.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-469',
+    question: 'What is the output of: print([1, 2, 3].__repr__())?',
+    options: [
+      '[1, 2, 3]',
+      "'[1, 2, 3]'",
+      '[1, 2, 3]',
+      'Error'
+    ],
+    correctAnswer: '[1, 2, 3]',
+    explanation: '__repr__() returns the canonical string representation of the list.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-470',
+    question: 'Which of the following is used to round a number to a specified number of decimal places?',
+    options: [
+      'round()',
+      'rounding()',
+      'decimal()',
+      'precision()'
+    ],
+    correctAnswer: 'round()',
+    explanation: 'round() rounds a number to the specified number of decimal places.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-471',
+    question: 'What is the output of: print("hello".__ge__("world"))?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'False',
+    explanation: '__ge__() checks if the first string is greater than or equal to the second string.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-472',
+    question: 'Which of the following is used to get the quotient and remainder of division?',
+    options: [
+      'divmod()',
+      'quotient()',
+      'remainder()',
+      'divide()'
+    ],
+    correctAnswer: 'divmod()',
+    explanation: 'divmod() returns a tuple containing the quotient and remainder.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-473',
+    question: 'What is the output of: print([1, 2, 3].__hash__())?',
+    options: [
+      'Error',
+      'A number',
+      'None',
+      '[1, 2, 3]'
+    ],
+    correctAnswer: 'Error',
+    explanation: 'Lists are not hashable, so __hash__() raises a TypeError.',
+    category: 'Python Lists',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-474',
+    question: 'Which of the following is used to get the hexadecimal representation of a number?',
+    options: [
+      'hex()',
+      'hexadecimal()',
+      'tohex()',
+      'base16()'
+    ],
+    correctAnswer: 'hex()',
+    explanation: 'hex() converts an integer to a hexadecimal string.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-475',
+    question: 'What is the output of: print("hello".__add__("world"))?',
+    options: [
+      "'helloworld'",
+      "'hello world'",
+      "'hello+world'",
+      'Error'
+    ],
+    correctAnswer: "'helloworld'",
+    explanation: '__add__() concatenates two strings.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-476',
+    question: 'Which of the following is used to get the octal representation of a number?',
+    options: [
+      'oct()',
+      'octal()',
+      'tooct()',
+      'base8()'
+    ],
+    correctAnswer: 'oct()',
+    explanation: 'oct() converts an integer to an octal string.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-477',
+    question: 'What is the output of: print([1, 2, 3].__add__([4, 5]))?',
+    options: [
+      '[1, 2, 3, 4, 5]',
+      '[5, 4, 3, 2, 1]',
+      '[1, 2, 3, [4, 5]]',
+      'Error'
+    ],
+    correctAnswer: '[1, 2, 3, 4, 5]',
+    explanation: '__add__() concatenates two lists.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-478',
+    question: 'Which of the following is used to get the binary representation of a number?',
+    options: [
+      'bin()',
+      'binary()',
+      'tobin()',
+      'base2()'
+    ],
+    correctAnswer: 'bin()',
+    explanation: 'bin() converts an integer to a binary string.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-479',
+    question: 'What is the output of: print("hello".__mul__(3))?',
+    options: [
+      "'hellohellohello'",
+      "'hello3'",
+      "'hello*3'",
+      'Error'
+    ],
+    correctAnswer: "'hellohellohello'",
+    explanation: '__mul__() repeats the string by the specified number.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-480',
+    question: 'Which of the following is used to get the ASCII value of a character?',
+    options: [
+      'ord()',
+      'ascii()',
+      'char()',
+      'code()'
+    ],
+    correctAnswer: 'ord()',
+    explanation: 'ord() returns the Unicode code point of a character.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-481',
+    question: 'What is the output of: print([1, 2, 3].__mul__(2))?',
+    options: [
+      '[1, 2, 3, 1, 2, 3]',
+      '[2, 4, 6]',
+      '[1, 2, 3, 2]',
+      'Error'
+    ],
+    correctAnswer: '[1, 2, 3, 1, 2, 3]',
+    explanation: '__mul__() repeats the list by the specified number.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-482',
+    question: 'Which of the following is used to get the character from an ASCII value?',
+    options: [
+      'chr()',
+      'char()',
+      'ascii()',
+      'code()'
+    ],
+    correctAnswer: 'chr()',
+    explanation: 'chr() returns the string representing a character whose Unicode code point is the integer.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-483',
+    question: 'What is the output of: print("hello".__rmul__(2))?',
+    options: [
+      "'hellohello'",
+      "'2hello'",
+      "'hello2'",
+      'Error'
+    ],
+    correctAnswer: "'hellohello'",
+    explanation: '__rmul__() is called when the string is on the right side of multiplication.',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-484',
+    question: 'Which of the following is used to get the type of an object?',
+    options: [
+      'type()',
+      'typeof()',
+      'gettype()',
+      'objecttype()'
+    ],
+    correctAnswer: 'type()',
+    explanation: 'type() returns the type of an object.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-485',
+    question: 'What is the output of: print([1, 2, 3].__rmul__(2))?',
+    options: [
+      '[1, 2, 3, 1, 2, 3]',
+      '[2, 4, 6]',
+      '[2, 1, 2, 3]',
+      'Error'
+    ],
+    correctAnswer: '[1, 2, 3, 1, 2, 3]',
+    explanation: '__rmul__() is called when the list is on the right side of multiplication.',
+    category: 'Python Lists',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-486',
+    question: 'Which of the following is used to check if all elements in an iterable are True?',
+    options: [
+      'all()',
+      'every()',
+      'checkall()',
+      'verify()'
+    ],
+    correctAnswer: 'all()',
+    explanation: 'all() returns True if all elements in the iterable are True.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-487',
+    question: 'What is the output of: print("hello".__radd__("world"))?',
+    options: [
+      "'worldhello'",
+      "'helloworld'",
+      "'world+hello'",
+      'Error'
+    ],
+    correctAnswer: "'worldhello'",
+    explanation: '__radd__() is called when the string is on the right side of addition.',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-488',
+    question: 'Which of the following is used to check if any element in an iterable is True?',
+    options: [
+      'any()',
+      'some()',
+      'checkany()',
+      'verify()'
+    ],
+    correctAnswer: 'any()',
+    explanation: 'any() returns True if any element in the iterable is True.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-489',
+    question: 'What is the output of: print([1, 2, 3].__radd__([4, 5]))?',
+    options: [
+      '[4, 5, 1, 2, 3]',
+      '[1, 2, 3, 4, 5]',
+      '[4, 5, [1, 2, 3]]',
+      'Error'
+    ],
+    correctAnswer: '[4, 5, 1, 2, 3]',
+    explanation: '__radd__() is called when the list is on the right side of addition.',
+    category: 'Python Lists',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-490',
+    question: 'Which of the following is used to get the length of an object?',
+    options: [
+      'len()',
+      'length()',
+      'size()',
+      'count()'
+    ],
+    correctAnswer: 'len()',
+    explanation: 'len() returns the length of an object.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-491',
+    question: 'What is the output of: print("hello".__iadd__("world"))?',
+    options: [
+      "'helloworld'",
+      "'hello'",
+      "'world'",
+      'Error'
+    ],
+    correctAnswer: "'helloworld'",
+    explanation: '__iadd__() performs in-place addition (string concatenation).',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-492',
+    question: 'Which of the following is used to get the sum of all items in an iterable?',
+    options: [
+      'sum()',
+      'add()',
+      'total()',
+      'plus()'
+    ],
+    correctAnswer: 'sum()',
+    explanation: 'sum() returns the sum of all items in an iterable.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-493',
+    question: 'What is the output of: print([1, 2, 3].__iadd__([4, 5]))?',
+    options: [
+      '[1, 2, 3, 4, 5]',
+      '[4, 5, 1, 2, 3]',
+      '[1, 2, 3]',
+      'Error'
+    ],
+    correctAnswer: '[1, 2, 3, 4, 5]',
+    explanation: '__iadd__() performs in-place addition (list concatenation).',
+    category: 'Python Lists',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-494',
+    question: 'Which of the following is used to get the maximum value from an iterable?',
+    options: [
+      'max()',
+      'maximum()',
+      'highest()',
+      'top()'
+    ],
+    correctAnswer: 'max()',
+    explanation: 'max() returns the largest item in an iterable.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-495',
+    question: 'What is the output of: print("hello".__imul__(2))?',
+    options: [
+      "'hellohello'",
+      "'hello'",
+      "'hello2'",
+      'Error'
+    ],
+    correctAnswer: "'hellohello'",
+    explanation: '__imul__() performs in-place multiplication (string repetition).',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-496',
+    question: 'Which of the following is used to get the minimum value from an iterable?',
+    options: [
+      'min()',
+      'minimum()',
+      'lowest()',
+      'smallest()'
+    ],
+    correctAnswer: 'min()',
+    explanation: 'min() returns the smallest item in an iterable.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-497',
+    question: 'What is the output of: print([1, 2, 3].__imul__(2))?',
+    options: [
+      '[1, 2, 3, 1, 2, 3]',
+      '[1, 2, 3]',
+      '[2, 4, 6]',
+      'Error'
+    ],
+    correctAnswer: '[1, 2, 3, 1, 2, 3]',
+    explanation: '__imul__() performs in-place multiplication (list repetition).',
+    category: 'Python Lists',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-498',
+    question: 'Which of the following is used to get the sorted version of an iterable?',
+    options: [
+      'sorted()',
+      'sort()',
+      'order()',
+      'arrange()'
+    ],
+    correctAnswer: 'sorted()',
+    explanation: 'sorted() returns a new sorted list from the elements of any iterable.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-499',
+    question: 'What is the output of: print("hello".__bool__())?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: '__bool__() returns True for non-empty strings.',
+    category: 'Python Strings',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-500',
+    question: 'Which of the following is used to get the reversed version of an iterable?',
+    options: [
+      'reversed()',
+      'reverse()',
+      'flip()',
+      'invert()'
+    ],
+    correctAnswer: 'reversed()',
+    explanation: 'reversed() returns a reverse iterator over the values of the given sequence.',
+    category: 'Python Built-in Functions',
     difficulty: 'Easy'
   }
 
