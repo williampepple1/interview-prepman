@@ -7700,6 +7700,706 @@ export const pythonAssessmentQuestions: AssessmentQuestion[] = [
     explanation: 'getattr() returns the value of the named attribute of object, and we call it with ().',
     category: 'Python Built-in Functions',
     difficulty: 'Medium'
+  },
+  {
+    id: 'python-551',
+    question: 'What is the output of: print(setattr("hello", "new_attr", "value"))?',
+    options: [
+      'None',
+      "'value'",
+      'Error',
+      'True'
+    ],
+    correctAnswer: 'None',
+    explanation: 'setattr() sets the value of the named attribute of object and returns None.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-552',
+    question: 'What is the output of: print(delattr("hello", "upper"))?',
+    options: [
+      'Error',
+      'None',
+      'True',
+      'False'
+    ],
+    correctAnswer: 'Error',
+    explanation: 'delattr() cannot delete built-in string methods. It would raise an AttributeError.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-553',
+    question: 'What is the output of: print(next(iter([1, 2, 3])))?',
+    options: [
+      '1',
+      '[1, 2, 3]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '1',
+    explanation: 'iter() creates an iterator, and next() returns the first element of the iterator.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-554',
+    question: 'What is the output of: print(iter([1, 2, 3]))?',
+    options: [
+      '<list_iterator object at ...>',
+      '[1, 2, 3]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '<list_iterator object at ...>',
+    explanation: 'iter() returns an iterator object, not the list itself.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-555',
+    question: 'What is the output of: print(reversed([1, 2, 3]))?',
+    options: [
+      '<list_reverseiterator object at ...>',
+      '[3, 2, 1]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '<list_reverseiterator object at ...>',
+    explanation: 'reversed() returns a reverse iterator object, not a list.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-556',
+    question: 'What is the output of: print(list(reversed([1, 2, 3])))?',
+    options: [
+      '[3, 2, 1]',
+      '[1, 2, 3]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '[3, 2, 1]',
+    explanation: 'list(reversed([1, 2, 3])) converts the reverse iterator to a list.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-557',
+    question: 'What is the output of: print(sorted([3, 1, 4, 1, 5], reverse=True))?',
+    options: [
+      '[5, 4, 3, 1, 1]',
+      '[1, 1, 3, 4, 5]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '[5, 4, 3, 1, 1]',
+    explanation: 'sorted() with reverse=True sorts in descending order.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-558',
+    question: 'What is the output of: print(sorted(["banana", "apple", "cherry"], key=len))?',
+    options: [
+      "['apple', 'banana', 'cherry']",
+      "['cherry', 'banana', 'apple']",
+      'Error',
+      'None'
+    ],
+    correctAnswer: "['apple', 'banana', 'cherry']",
+    explanation: 'sorted() with key=len sorts by string length in ascending order.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-559',
+    question: 'What is the output of: print(chr(65))?',
+    options: [
+      "'A'",
+      "'65'",
+      'Error',
+      'None'
+    ],
+    correctAnswer: "'A'",
+    explanation: 'chr() returns the string representing a character whose Unicode code point is the integer.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-560',
+    question: 'What is the output of: print(ord("A"))?',
+    options: [
+      '65',
+      "'A'",
+      'Error',
+      'None'
+    ],
+    correctAnswer: '65',
+    explanation: 'ord() returns the Unicode code point of a given character.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-561',
+    question: 'What is the output of: print(ascii("café"))?',
+    options: [
+      "'caf\\xe9'",
+      "'café'",
+      'Error',
+      'None'
+    ],
+    correctAnswer: "'caf\\xe9'",
+    explanation: 'ascii() escapes non-ASCII characters using \\x, \\u, or \\U escapes.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-562',
+    question: 'What is the output of: print(repr("café"))?',
+    options: [
+      "'café'",
+      "'caf\\xe9'",
+      'Error',
+      'None'
+    ],
+    correctAnswer: "'café'",
+    explanation: 'repr() returns a string containing a printable representation, preserving Unicode characters.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-563',
+    question: 'What is the output of: print(format(123, "05"))?',
+    options: [
+      "'00123'",
+      "'123'",
+      'Error',
+      'None'
+    ],
+    correctAnswer: "'00123'",
+    explanation: 'format() with "05" pads the number to 5 digits with leading zeros.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-564',
+    question: 'What is the output of: print(format(3.14159, "0.2f"))?',
+    options: [
+      "'3.14'",
+      '3.14',
+      'Error',
+      'None'
+    ],
+    correctAnswer: "'3.14'",
+    explanation: 'format() with "0.2f" formats as a float with 2 decimal places.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-565',
+    question: 'What is the output of: print(format(1234567, ","))?',
+    options: [
+      "'1,234,567'",
+      "'1234567'",
+      'Error',
+      'None'
+    ],
+    correctAnswer: "'1,234,567'",
+    explanation: 'format() with "," adds thousand separators.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-566',
+    question: 'What is the output of: print(format(0.123, ".1%"))?',
+    options: [
+      "'12.3%'",
+      "'0.1%'",
+      'Error',
+      'None'
+    ],
+    correctAnswer: "'12.3%'",
+    explanation: 'format() with ".1%" formats as a percentage with 1 decimal place.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-567',
+    question: 'What is the output of: print(format(123, "x"))?',
+    options: [
+      "'7b'",
+      "'123'",
+      'Error',
+      'None'
+    ],
+    correctAnswer: "'7b'",
+    explanation: 'format() with "x" converts to lowercase hexadecimal.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-568',
+    question: 'What is the output of: print(format(123, "X"))?',
+    options: [
+      "'7B'",
+      "'7b'",
+      'Error',
+      'None'
+    ],
+    correctAnswer: "'7B'",
+    explanation: 'format() with "X" converts to uppercase hexadecimal.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-569',
+    question: 'What is the output of: print(format(123, "b"))?',
+    options: [
+      "'1111011'",
+      "'123'",
+      'Error',
+      'None'
+    ],
+    correctAnswer: "'1111011'",
+    explanation: 'format() with "b" converts to binary representation.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-570',
+    question: 'What is the output of: print(format(123, "o"))?',
+    options: [
+      "'173'",
+      "'123'",
+      'Error',
+      'None'
+    ],
+    correctAnswer: "'173'",
+    explanation: 'format() with "o" converts to octal representation.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-571',
+    question: 'What is the output of: print(len(range(5)))?',
+    options: [
+      '5',
+      '4',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '5',
+    explanation: 'range(5) creates a range object with 5 elements (0, 1, 2, 3, 4).',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-572',
+    question: 'What is the output of: print(list(range(2, 8, 2)))?',
+    options: [
+      '[2, 4, 6]',
+      '[2, 4, 6, 8]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '[2, 4, 6]',
+    explanation: 'range(2, 8, 2) creates a range from 2 to 8 (exclusive) with step 2.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-573',
+    question: 'What is the output of: print(range(3) == range(0, 3, 1))?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'range(3) is equivalent to range(0, 3, 1), so they are equal.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-574',
+    question: 'What is the output of: print(2 in range(5))?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: '2 is in the range(5) which contains 0, 1, 2, 3, 4.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-575',
+    question: 'What is the output of: print(range(5)[2])?',
+    options: [
+      '2',
+      'Error',
+      'None',
+      '3'
+    ],
+    correctAnswer: '2',
+    explanation: 'range objects support indexing. range(5)[2] returns the element at index 2.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-576',
+    question: 'What is the output of: print(range(5)[-1])?',
+    options: [
+      '4',
+      'Error',
+      'None',
+      '5'
+    ],
+    correctAnswer: '4',
+    explanation: 'range(5)[-1] returns the last element of the range, which is 4.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-577',
+    question: 'What is the output of: print(range(5)[1:3])?',
+    options: [
+      'range(1, 3)',
+      '[1, 2]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'range(1, 3)',
+    explanation: 'Slicing a range object returns another range object.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-578',
+    question: 'What is the output of: print(list(range(5)[1:3]))?',
+    options: [
+      '[1, 2]',
+      'range(1, 3)',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '[1, 2]',
+    explanation: 'Converting the sliced range to a list gives the actual elements.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-579',
+    question: 'What is the output of: print(range(0))?',
+    options: [
+      'range(0, 0)',
+      '[]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'range(0, 0)',
+    explanation: 'range(0) creates an empty range object.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-580',
+    question: 'What is the output of: print(len(range(0)))?',
+    options: [
+      '0',
+      '1',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '0',
+    explanation: 'range(0) has length 0 as it contains no elements.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-581',
+    question: 'What is the output of: print(range(1, 10, -1))?',
+    options: [
+      'range(1, 10, -1)',
+      '[]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'range(1, 10, -1)',
+    explanation: 'range(1, 10, -1) creates a range object, but it will be empty when iterated.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-582',
+    question: 'What is the output of: print(list(range(1, 10, -1)))?',
+    options: [
+      '[]',
+      '[1, 2, 3, 4, 5, 6, 7, 8, 9]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '[]',
+    explanation: 'range(1, 10, -1) with negative step creates an empty range when start < stop.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-583',
+    question: 'What is the output of: print(list(range(10, 1, -1)))?',
+    options: [
+      '[10, 9, 8, 7, 6, 5, 4, 3, 2]',
+      '[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '[10, 9, 8, 7, 6, 5, 4, 3, 2]',
+    explanation: 'range(10, 1, -1) creates a range from 10 down to 2 (exclusive of 1).',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-584',
+    question: 'What is the output of: print(range(5).start)?',
+    options: [
+      '0',
+      '5',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '0',
+    explanation: 'range(5).start returns the start value of the range, which is 0.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-585',
+    question: 'What is the output of: print(range(5).stop)?',
+    options: [
+      '5',
+      '4',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '5',
+    explanation: 'range(5).stop returns the stop value of the range, which is 5.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-586',
+    question: 'What is the output of: print(range(5).step)?',
+    options: [
+      '1',
+      '5',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '1',
+    explanation: 'range(5).step returns the step value of the range, which is 1 (default).',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-587',
+    question: 'What is the output of: print(range(2, 10, 3).step)?',
+    options: [
+      '3',
+      '2',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '3',
+    explanation: 'range(2, 10, 3).step returns the step value, which is 3.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-588',
+    question: 'What is the output of: print(range(5).index(3))?',
+    options: [
+      '3',
+      '2',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '3',
+    explanation: 'range(5).index(3) returns the index of 3 in the range, which is 3.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-589',
+    question: 'What is the output of: print(range(5).count(3))?',
+    options: [
+      '1',
+      '0',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '1',
+    explanation: 'range(5).count(3) returns the number of occurrences of 3 in the range, which is 1.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-590',
+    question: 'What is the output of: print(range(5).count(10))?',
+    options: [
+      '0',
+      '1',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '0',
+    explanation: 'range(5).count(10) returns 0 because 10 is not in range(5).',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-591',
+    question: 'What is the output of: print(range(5).index(10))?',
+    options: [
+      'Error',
+      '0',
+      'None',
+      '-1'
+    ],
+    correctAnswer: 'Error',
+    explanation: 'range(5).index(10) raises a ValueError because 10 is not in range(5).',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-592',
+    question: 'What is the output of: print(range(5) + range(3))?',
+    options: [
+      'Error',
+      'range(0, 8)',
+      '[0, 1, 2, 3, 4, 0, 1, 2]',
+      'None'
+    ],
+    correctAnswer: 'Error',
+    explanation: 'range objects cannot be concatenated with the + operator.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-593',
+    question: 'What is the output of: print(range(5) * 2)?',
+    options: [
+      'Error',
+      'range(0, 10)',
+      '[0, 1, 2, 3, 4, 0, 1, 2, 3, 4]',
+      'None'
+    ],
+    correctAnswer: 'Error',
+    explanation: 'range objects cannot be multiplied with the * operator.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-594',
+    question: 'What is the output of: print(min(range(5)))?',
+    options: [
+      '0',
+      '4',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '0',
+    explanation: 'min(range(5)) returns the minimum value in the range, which is 0.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-595',
+    question: 'What is the output of: print(max(range(5)))?',
+    options: [
+      '4',
+      '5',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '4',
+    explanation: 'max(range(5)) returns the maximum value in the range, which is 4.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-596',
+    question: 'What is the output of: print(sum(range(5)))?',
+    options: [
+      '10',
+      '15',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '10',
+    explanation: 'sum(range(5)) returns the sum of all values in the range: 0 + 1 + 2 + 3 + 4 = 10.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-597',
+    question: 'What is the output of: print(all(range(5)))?',
+    options: [
+      'False',
+      'True',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'False',
+    explanation: 'all(range(5)) returns False because 0 is falsy, and all() requires all elements to be truthy.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-598',
+    question: 'What is the output of: print(any(range(5)))?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'any(range(5)) returns True because 1, 2, 3, 4 are truthy, and any() requires at least one truthy element.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-599',
+    question: 'What is the output of: print(sorted(range(5), reverse=True))?',
+    options: [
+      '[4, 3, 2, 1, 0]',
+      '[0, 1, 2, 3, 4]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '[4, 3, 2, 1, 0]',
+    explanation: 'sorted(range(5), reverse=True) sorts the range in descending order.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-600',
+    question: 'What is the output of: print(list(reversed(range(5))))?',
+    options: [
+      '[4, 3, 2, 1, 0]',
+      '[0, 1, 2, 3, 4]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '[4, 3, 2, 1, 0]',
+    explanation: 'reversed(range(5)) creates a reverse iterator, and list() converts it to a list.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
   }
 
 ]; 
