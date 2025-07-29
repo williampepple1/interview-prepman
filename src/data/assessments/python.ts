@@ -12600,6 +12600,706 @@ export const pythonAssessmentQuestions: AssessmentQuestion[] = [
     explanation: 'Sets are optimized for mathematical set operations (union, intersection, difference, etc.) with efficient implementations.',
     category: 'Python Data Structures',
     difficulty: 'Medium'
+  },
+  {
+    id: 'python-901',
+    question: 'What is the purpose of the @typing.Generic decorator?',
+    options: [
+      'To create generic base classes for type-safe generic programming',
+      'To make classes immutable',
+      'To improve class performance',
+      'To create abstract base classes'
+    ],
+    correctAnswer: 'To create generic base classes for type-safe generic programming',
+    explanation: '@typing.Generic creates generic base classes that support type parameters, enabling type-safe generic programming.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-902',
+    question: 'What is the difference between a regular function and a method with @property?',
+    options: [
+      'Property methods can be accessed like attributes',
+      'Property methods are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'Property methods cannot return values'
+    ],
+    correctAnswer: 'Property methods can be accessed like attributes',
+    explanation: 'Property methods can be accessed like attributes without parentheses, providing a clean interface for computed values.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-903',
+    question: 'What is the purpose of the @dataclass(field) function?',
+    options: [
+      'To customize individual field behavior in data classes',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To customize individual field behavior in data classes',
+    explanation: 'field() function allows customization of individual fields in data classes, such as default values, metadata, and comparison behavior.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-904',
+    question: 'What is the difference between a regular list and a numpy array for boolean indexing?',
+    options: [
+      'numpy arrays support boolean indexing for filtering',
+      'Regular lists support boolean indexing',
+      'Boolean indexing is the same for both',
+      'Neither supports boolean indexing'
+    ],
+    correctAnswer: 'numpy arrays support boolean indexing for filtering',
+    explanation: 'numpy arrays support boolean indexing for filtering elements, while regular lists require list comprehensions or filter().',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-905',
+    question: 'What is the purpose of the @typing.TypedDict decorator?',
+    options: [
+      'To create dictionary types with specific key-value type annotations',
+      'To make dictionaries immutable',
+      'To improve dictionary performance',
+      'To create abstract base classes'
+    ],
+    correctAnswer: 'To create dictionary types with specific key-value type annotations',
+    explanation: '@typing.TypedDict creates dictionary types with specific key-value type annotations for type-safe dictionary usage.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-906',
+    question: 'What is the difference between a regular function and a method with @cached_property?',
+    options: [
+      'Cached property methods cache their result after first access',
+      'Cached property methods are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'Cached property methods cannot return values'
+    ],
+    correctAnswer: 'Cached property methods cache their result after first access',
+    explanation: 'Cached property methods cache their result after the first access, avoiding redundant computation on subsequent accesses.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-907',
+    question: 'What is the purpose of the @dataclass(repr=True, eq=True, frozen=True) decorator?',
+    options: [
+      'To create immutable data classes with string representation and equality',
+      'To make data classes thread-safe',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To create immutable data classes with string representation and equality',
+    explanation: '@dataclass(repr=True, eq=True, frozen=True) creates immutable data classes with automatic __repr__ and __eq__ methods.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-908',
+    question: 'What is the difference between a regular dictionary and a numpy array for structured data storage?',
+    options: [
+      'Dictionaries are better for heterogeneous data, numpy arrays for homogeneous data',
+      'numpy arrays are better for all data types',
+      'Both are equally good for all data types',
+      'Dictionaries cannot store structured data'
+    ],
+    correctAnswer: 'Dictionaries are better for heterogeneous data, numpy arrays for homogeneous data',
+    explanation: 'Dictionaries are better for heterogeneous data with different types, while numpy arrays are optimized for homogeneous data.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-909',
+    question: 'What is the purpose of the @typing.Union decorator in modern Python?',
+    options: [
+      'To specify that a value can be one of several types',
+      'To make classes immutable',
+      'To improve class performance',
+      'To create abstract base classes'
+    ],
+    correctAnswer: 'To specify that a value can be one of several types',
+    explanation: '@typing.Union specifies that a value can be one of several types, allowing for flexible type annotations.',
+    category: 'Python Type Hints',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-910',
+    question: 'What is the difference between a regular function and a method with @staticmethod?',
+    options: [
+      'Static methods don\'t receive any special first parameter',
+      'Static methods are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'Static methods cannot return values'
+    ],
+    correctAnswer: 'Static methods don\'t receive any special first parameter',
+    explanation: 'Static methods don\'t receive any special first parameter (neither self nor cls), making them similar to regular functions.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-911',
+    question: 'What is the purpose of the @dataclass(init=True, repr=True, eq=True, order=True, unsafe_hash=True) decorator?',
+    options: [
+      'To create data classes with all features including hash support',
+      'To make data classes thread-safe',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To create data classes with all features including hash support',
+    explanation: '@dataclass(init=True, repr=True, eq=True, order=True, unsafe_hash=True) creates data classes with all standard methods including hash support.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-912',
+    question: 'What is the difference between a regular list and a numpy array for memory efficiency?',
+    options: [
+      'numpy arrays are more memory efficient due to fixed data types',
+      'Regular lists are more memory efficient',
+      'Memory efficiency is the same for both',
+      'numpy arrays cannot be memory efficient'
+    ],
+    correctAnswer: 'numpy arrays are more memory efficient due to fixed data types',
+    explanation: 'numpy arrays are more memory efficient because they use fixed data types and store data in contiguous memory.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-913',
+    question: 'What is the purpose of the @typing.Final decorator for variables?',
+    options: [
+      'To mark variables that should not be reassigned',
+      'To make variables immutable',
+      'To improve variable performance',
+      'To create constants'
+    ],
+    correctAnswer: 'To mark variables that should not be reassigned',
+    explanation: '@typing.Final marks variables that should not be reassigned, enforced by static type checkers.',
+    category: 'Python Type Hints',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-914',
+    question: 'What is the difference between a regular function and a method with @classmethod?',
+    options: [
+      'Class methods receive the class as the first parameter',
+      'Class methods are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'Class methods cannot return values'
+    ],
+    correctAnswer: 'Class methods receive the class as the first parameter',
+    explanation: 'Class methods receive the class (cls) as the first parameter, allowing them to work with the class itself.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-915',
+    question: 'What is the purpose of the @dataclass(frozen=True, eq=True, order=True, unsafe_hash=True) decorator?',
+    options: [
+      'To create immutable data classes with full comparison and hash support',
+      'To make data classes thread-safe',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To create immutable data classes with full comparison and hash support',
+    explanation: '@dataclass(frozen=True, eq=True, order=True, unsafe_hash=True) creates immutable data classes with equality, ordering, and hash support.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-916',
+    question: 'What is the difference between a regular set and a numpy array for unique element operations?',
+    options: [
+      'Sets are optimized for unique element operations',
+      'numpy arrays are faster for all operations',
+      'Unique element operations are the same for both',
+      'numpy arrays cannot handle unique elements'
+    ],
+    correctAnswer: 'Sets are optimized for unique element operations',
+    explanation: 'Sets are optimized for unique element operations with O(1) average time complexity for membership testing.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-917',
+    question: 'What is the purpose of the @typing.Literal decorator for function parameters?',
+    options: [
+      'To restrict function parameters to specific literal values',
+      'To make functions immutable',
+      'To improve function performance',
+      'To create abstract functions'
+    ],
+    correctAnswer: 'To restrict function parameters to specific literal values',
+    explanation: '@typing.Literal restricts function parameters to specific literal values, providing precise type checking.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-918',
+    question: 'What is the difference between a regular function and a method with @property.setter?',
+    options: [
+      'Property setters allow controlled assignment to properties',
+      'Property setters are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'Property setters cannot modify values'
+    ],
+    correctAnswer: 'Property setters allow controlled assignment to properties',
+    explanation: 'Property setters allow controlled assignment to properties, enabling validation and custom behavior when setting values.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-919',
+    question: 'What is the purpose of the @dataclass(slots=True, frozen=True) decorator?',
+    options: [
+      'To create immutable data classes with memory optimization',
+      'To make data classes thread-safe',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To create immutable data classes with memory optimization',
+    explanation: '@dataclass(slots=True, frozen=True) creates immutable data classes with memory optimization using __slots__.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-920',
+    question: 'What is the difference between a regular list and a numpy array for mathematical computations?',
+    options: [
+      'numpy arrays are optimized for mathematical computations',
+      'Regular lists are faster for mathematical computations',
+      'Mathematical computations are the same for both',
+      'Regular lists cannot perform mathematical computations'
+    ],
+    correctAnswer: 'numpy arrays are optimized for mathematical computations',
+    explanation: 'numpy arrays are optimized for mathematical computations with vectorized operations and optimized C implementations.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-921',
+    question: 'What is the purpose of the @typing.Protocol decorator for structural subtyping?',
+    options: [
+      'To define interfaces based on structure rather than inheritance',
+      'To make classes immutable',
+      'To improve class performance',
+      'To create abstract base classes'
+    ],
+    correctAnswer: 'To define interfaces based on structure rather than inheritance',
+    explanation: '@typing.Protocol defines interfaces based on structure rather than inheritance, enabling structural subtyping.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-922',
+    question: 'What is the difference between a regular function and a method with @property.deleter?',
+    options: [
+      'Property deleters allow controlled deletion of properties',
+      'Property deleters are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'Property deleters cannot delete values'
+    ],
+    correctAnswer: 'Property deleters allow controlled deletion of properties',
+    explanation: 'Property deleters allow controlled deletion of properties, enabling custom cleanup behavior when deleting values.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-923',
+    question: 'What is the purpose of the @dataclass(kw_only=True, frozen=True) decorator?',
+    options: [
+      'To create immutable data classes with keyword-only parameters',
+      'To make data classes thread-safe',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To create immutable data classes with keyword-only parameters',
+    explanation: '@dataclass(kw_only=True, frozen=True) creates immutable data classes where all fields are keyword-only parameters.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-924',
+    question: 'What is the difference between a regular dictionary and a numpy array for data access patterns?',
+    options: [
+      'Dictionaries are optimized for key-based access, numpy arrays for index-based access',
+      'numpy arrays are faster for all access patterns',
+      'Data access patterns are the same for both',
+      'Dictionaries cannot support different access patterns'
+    ],
+    correctAnswer: 'Dictionaries are optimized for key-based access, numpy arrays for index-based access',
+    explanation: 'Dictionaries are optimized for key-based access with O(1) average time complexity, while numpy arrays are optimized for index-based access.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-925',
+    question: 'What is the purpose of the @typing.NewType decorator for type safety?',
+    options: [
+      'To create distinct types that are type-checked separately',
+      'To make types immutable',
+      'To improve type performance',
+      'To create abstract types'
+    ],
+    correctAnswer: 'To create distinct types that are type-checked separately',
+    explanation: '@typing.NewType creates distinct types that are type-checked separately but have the same runtime behavior as their base type.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-926',
+    question: 'What is the difference between a regular function and a method with @abstractmethod?',
+    options: [
+      'Abstract methods must be implemented by subclasses',
+      'Abstract methods are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'Abstract methods cannot return values'
+    ],
+    correctAnswer: 'Abstract methods must be implemented by subclasses',
+    explanation: 'Abstract methods must be implemented by subclasses, enforcing a contract in the class hierarchy.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-927',
+    question: 'What is the purpose of the @dataclass(post_init=True, frozen=True) decorator?',
+    options: [
+      'To create immutable data classes with post-initialization hooks',
+      'To make data classes thread-safe',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To create immutable data classes with post-initialization hooks',
+    explanation: '@dataclass(post_init=True, frozen=True) creates immutable data classes with post-initialization hooks for additional setup.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-928',
+    question: 'What is the difference between a regular set and a numpy array for membership testing?',
+    options: [
+      'Sets are optimized for membership testing with O(1) average time',
+      'numpy arrays are faster for all operations',
+      'Membership testing is the same for both',
+      'numpy arrays cannot perform membership testing'
+    ],
+    correctAnswer: 'Sets are optimized for membership testing with O(1) average time',
+    explanation: 'Sets are optimized for membership testing with O(1) average time complexity using hash tables.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-929',
+    question: 'What is the purpose of the @typing.Annotated decorator for metadata?',
+    options: [
+      'To add metadata to type annotations',
+      'To make types immutable',
+      'To improve type performance',
+      'To create abstract types'
+    ],
+    correctAnswer: 'To add metadata to type annotations',
+    explanation: '@typing.Annotated adds metadata to type annotations, allowing additional information to be attached to types.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-930',
+    question: 'What is the difference between a regular function and a method with @singledispatch?',
+    options: [
+      'Single dispatch methods can have different implementations based on argument types',
+      'Single dispatch methods are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'Single dispatch methods cannot return values'
+    ],
+    correctAnswer: 'Single dispatch methods can have different implementations based on argument types',
+    explanation: 'Single dispatch methods can have different implementations based on the type of the first argument, enabling function overloading.',
+    category: 'Python Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-931',
+    question: 'What is the purpose of the @dataclass(match_args=True, frozen=True) decorator?',
+    options: [
+      'To create immutable data classes with pattern matching support',
+      'To make data classes thread-safe',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To create immutable data classes with pattern matching support',
+    explanation: '@dataclass(match_args=True, frozen=True) creates immutable data classes with pattern matching support for Python 3.10+ match statements.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-932',
+    question: 'What is the difference between a regular list and a numpy array for broadcasting operations?',
+    options: [
+      'numpy arrays support broadcasting for element-wise operations',
+      'Regular lists support broadcasting',
+      'Broadcasting is the same for both',
+      'numpy arrays cannot perform broadcasting'
+    ],
+    correctAnswer: 'numpy arrays support broadcasting for element-wise operations',
+    explanation: 'numpy arrays support broadcasting, allowing element-wise operations between arrays of different shapes.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-933',
+    question: 'What is the purpose of the @typing.TypeVar decorator for generics?',
+    options: [
+      'To create generic type variables for type-safe generic programming',
+      'To make types immutable',
+      'To improve type performance',
+      'To create abstract types'
+    ],
+    correctAnswer: 'To create generic type variables for type-safe generic programming',
+    explanation: '@typing.TypeVar creates generic type variables, enabling type-safe generic programming and function overloading.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-934',
+    question: 'What is the difference between a regular function and a method with @lru_cache?',
+    options: [
+      'LRU cache methods cache their results to avoid redundant computations',
+      'LRU cache methods are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'LRU cache methods cannot return values'
+    ],
+    correctAnswer: 'LRU cache methods cache their results to avoid redundant computations',
+    explanation: 'LRU cache methods cache their results using least-recently-used eviction, avoiding redundant computations.',
+    category: 'Python Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-935',
+    question: 'What is the purpose of the @dataclass(weakref_slot=True, frozen=True) decorator?',
+    options: [
+      'To create immutable data classes with weak reference support',
+      'To make data classes thread-safe',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To create immutable data classes with weak reference support',
+    explanation: '@dataclass(weakref_slot=True, frozen=True) creates immutable data classes with weak reference support.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-936',
+    question: 'What is the difference between a regular dictionary and a numpy array for data organization?',
+    options: [
+      'Dictionaries organize data by keys, numpy arrays by indices',
+      'numpy arrays are better for all data organization',
+      'Data organization is the same for both',
+      'Dictionaries cannot organize data'
+    ],
+    correctAnswer: 'Dictionaries organize data by keys, numpy arrays by indices',
+    explanation: 'Dictionaries organize data by keys for associative access, while numpy arrays organize data by indices for positional access.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-937',
+    question: 'What is the purpose of the @typing.Callable decorator for function types?',
+    options: [
+      'To specify that a value is a callable function with specific signature',
+      'To make functions immutable',
+      'To improve function performance',
+      'To create abstract functions'
+    ],
+    correctAnswer: 'To specify that a value is a callable function with specific signature',
+    explanation: '@typing.Callable specifies that a value is a callable function with a specific signature for type checking.',
+    category: 'Python Type Hints',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-938',
+    question: 'What is the difference between a regular function and a method with @contextmanager?',
+    options: [
+      'Context manager methods can be used with the with statement',
+      'Context manager methods are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'Context manager methods cannot return values'
+    ],
+    correctAnswer: 'Context manager methods can be used with the with statement',
+    explanation: 'Context manager methods can be used with the with statement, providing automatic resource management.',
+    category: 'Python Context Managers',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-939',
+    question: 'What is the purpose of the @dataclass(repr_ns=None, frozen=True) decorator?',
+    options: [
+      'To create immutable data classes with custom namespace in __repr__',
+      'To make data classes thread-safe',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To create immutable data classes with custom namespace in __repr__',
+    explanation: '@dataclass(repr_ns=None, frozen=True) creates immutable data classes with custom namespace in the __repr__ method.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-940',
+    question: 'What is the difference between a regular set and a numpy array for mathematical operations?',
+    options: [
+      'Sets are optimized for set operations, numpy arrays for numerical operations',
+      'numpy arrays are faster for all operations',
+      'Mathematical operations are the same for both',
+      'numpy arrays cannot perform mathematical operations'
+    ],
+    correctAnswer: 'Sets are optimized for set operations, numpy arrays for numerical operations',
+    explanation: 'Sets are optimized for mathematical set operations (union, intersection, etc.), while numpy arrays are optimized for numerical operations.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-941',
+    question: 'What is the purpose of the @typing.Iterable decorator for iteration types?',
+    options: [
+      'To specify that a value is an iterable object',
+      'To make types immutable',
+      'To improve type performance',
+      'To create abstract types'
+    ],
+    correctAnswer: 'To specify that a value is an iterable object',
+    explanation: '@typing.Iterable specifies that a value is an iterable object, allowing for iteration type annotations.',
+    category: 'Python Type Hints',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-942',
+    question: 'What is the difference between a regular function and a method with @total_ordering?',
+    options: [
+      'Total ordering methods automatically generate comparison methods',
+      'Total ordering methods are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'Total ordering methods cannot return values'
+    ],
+    correctAnswer: 'Total ordering methods automatically generate comparison methods',
+    explanation: 'Total ordering methods automatically generate missing comparison methods from __eq__ and one other method.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-943',
+    question: 'What is the purpose of the @dataclass(init=True, repr=True, eq=True, order=True, frozen=True, unsafe_hash=True) decorator?',
+    options: [
+      'To create data classes with all possible features enabled',
+      'To make data classes thread-safe',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To create data classes with all possible features enabled',
+    explanation: '@dataclass(init=True, repr=True, eq=True, order=True, frozen=True, unsafe_hash=True) creates data classes with all possible features enabled.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-944',
+    question: 'What is the difference between a regular list and a numpy array for memory layout optimization?',
+    options: [
+      'numpy arrays use contiguous memory layout for better cache performance',
+      'Regular lists use contiguous memory layout',
+      'Memory layout is the same for both',
+      'numpy arrays cannot optimize memory layout'
+    ],
+    correctAnswer: 'numpy arrays use contiguous memory layout for better cache performance',
+    explanation: 'numpy arrays use contiguous memory layout for better cache performance, while lists store references to objects scattered in memory.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-945',
+    question: 'What is the purpose of the @typing.Dict decorator for dictionary types?',
+    options: [
+      'To specify that a value is a dictionary with specific key and value types',
+      'To make dictionaries immutable',
+      'To improve dictionary performance',
+      'To create abstract base classes'
+    ],
+    correctAnswer: 'To specify that a value is a dictionary with specific key and value types',
+    explanation: '@typing.Dict specifies that a value is a dictionary with specific key and value types for type checking.',
+    category: 'Python Type Hints',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-946',
+    question: 'What is the difference between a regular function and a method with @wraps?',
+    options: [
+      'Wraps methods preserve the metadata of the original function',
+      'Wraps methods are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'Wraps methods cannot return values'
+    ],
+    correctAnswer: 'Wraps methods preserve the metadata of the original function',
+    explanation: 'Wraps methods preserve the metadata (name, docstring, etc.) of the original function when creating decorators.',
+    category: 'Python Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-947',
+    question: 'What is the purpose of the @dataclass(slots=True, frozen=True, eq=True) decorator?',
+    options: [
+      'To create immutable data classes with memory optimization and equality',
+      'To make data classes thread-safe',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To create immutable data classes with memory optimization and equality',
+    explanation: '@dataclass(slots=True, frozen=True, eq=True) creates immutable data classes with memory optimization and equality comparison.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-948',
+    question: 'What is the difference between a regular tuple and a numpy array for immutable data storage?',
+    options: [
+      'Tuples are always immutable, numpy arrays can be mutable or immutable',
+      'numpy arrays are always immutable',
+      'Both are always immutable',
+      'Tuples can be mutable'
+    ],
+    correctAnswer: 'Tuples are always immutable, numpy arrays can be mutable or immutable',
+    explanation: 'Tuples are always immutable sequences, while numpy arrays can be mutable or immutable depending on how they are created.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-949',
+    question: 'What is the purpose of the @typing.Optional decorator for nullable types?',
+    options: [
+      'To specify that a value can be None or a specific type',
+      'To make types immutable',
+      'To improve type performance',
+      'To create abstract types'
+    ],
+    correctAnswer: 'To specify that a value can be None or a specific type',
+    explanation: '@typing.Optional specifies that a value can be None or a specific type, equivalent to Union[T, None].',
+    category: 'Python Type Hints',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-950',
+    question: 'What is the difference between a regular function and a method with @abstractmethod?',
+    options: [
+      'Abstract methods must be implemented by subclasses',
+      'Abstract methods are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'Abstract methods cannot return values'
+    ],
+    correctAnswer: 'Abstract methods must be implemented by subclasses',
+    explanation: 'Abstract methods must be implemented by subclasses, enforcing a contract in the class hierarchy.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
   }
 
 ]; 
