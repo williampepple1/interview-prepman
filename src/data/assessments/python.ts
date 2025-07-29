@@ -10500,6 +10500,706 @@ export const pythonAssessmentQuestions: AssessmentQuestion[] = [
     explanation: 'set() removes duplicates from the iterable.',
     category: 'Python Sets',
     difficulty: 'Easy'
+  },
+  {
+    id: 'python-751',
+    question: 'Which data structure would be most efficient for checking if an element exists in a collection of 1 million items?',
+    options: [
+      'Set',
+      'List',
+      'Tuple',
+      'Dictionary'
+    ],
+    correctAnswer: 'Set',
+    explanation: 'Sets use hash tables for O(1) average time complexity for membership testing, while lists require O(n) linear search.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-752',
+    question: 'What is the time complexity of inserting an element at the beginning of a list with n elements?',
+    options: [
+      'O(n)',
+      'O(1)',
+      'O(log n)',
+      'O(n²)'
+    ],
+    correctAnswer: 'O(n)',
+    explanation: 'Inserting at the beginning requires shifting all existing elements, making it O(n) operation.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-753',
+    question: 'Which method should you use to remove an element from a list when you know its value but not its index?',
+    options: [
+      'remove()',
+      'pop()',
+      'del',
+      'clear()'
+    ],
+    correctAnswer: 'remove()',
+    explanation: 'remove() finds and removes the first occurrence of a value, while pop() requires an index.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-754',
+    question: 'What is the difference between a shallow copy and a deep copy of a nested list?',
+    options: [
+      'Shallow copy creates new references for nested objects, deep copy creates new objects for all levels',
+      'Shallow copy creates new objects for all levels, deep copy creates new references for nested objects',
+      'There is no difference between shallow and deep copy',
+      'Shallow copy only works for simple lists, deep copy works for all lists'
+    ],
+    correctAnswer: 'Shallow copy creates new references for nested objects, deep copy creates new objects for all levels',
+    explanation: 'Shallow copy creates a new list but references the same nested objects, while deep copy recursively creates new objects for all nested levels.',
+    category: 'Python Data Structures',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-755',
+    question: 'When would you prefer using a tuple over a list?',
+    options: [
+      'When you need an immutable sequence',
+      'When you need to frequently modify the collection',
+      'When you need better performance for iteration',
+      'When you need to store heterogeneous data types'
+    ],
+    correctAnswer: 'When you need an immutable sequence',
+    explanation: 'Tuples are immutable, making them suitable for data that shouldn\'t change, like coordinates, database records, or function return values.',
+    category: 'Python Tuples',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-756',
+    question: 'What is the main advantage of using a dictionary over a list for storing key-value pairs?',
+    options: [
+      'O(1) average time complexity for lookups',
+      'Better memory efficiency',
+      'Automatic sorting of keys',
+      'Built-in indexing'
+    ],
+    correctAnswer: 'O(1) average time complexity for lookups',
+    explanation: 'Dictionaries use hash tables, providing O(1) average time complexity for key-based lookups, compared to O(n) for lists.',
+    category: 'Python Dictionaries',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-757',
+    question: 'Which data structure would be most appropriate for implementing a queue?',
+    options: [
+      'collections.deque',
+      'list',
+      'tuple',
+      'set'
+    ],
+    correctAnswer: 'collections.deque',
+    explanation: 'collections.deque provides O(1) operations for both ends, making it ideal for queue implementations.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-758',
+    question: 'What is the purpose of the __hash__ method in Python?',
+    options: [
+      'To generate a unique integer for an object',
+      'To convert an object to a string',
+      'To compare two objects for equality',
+      'To serialize an object'
+    ],
+    correctAnswer: 'To generate a unique integer for an object',
+    explanation: 'The __hash__ method returns a hash value (integer) that is used for dictionary keys, set membership, and object comparison.',
+    category: 'Python Objects',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-759',
+    question: 'Why are lists not allowed as dictionary keys?',
+    options: [
+      'Lists are mutable and not hashable',
+      'Lists are too large to be keys',
+      'Lists don\'t support comparison',
+      'Lists are not basic data types'
+    ],
+    correctAnswer: 'Lists are mutable and not hashable',
+    explanation: 'Dictionary keys must be hashable (immutable), and since lists are mutable, they cannot be hashed and therefore cannot be used as keys.',
+    category: 'Python Dictionaries',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-760',
+    question: 'What is the difference between a set and a frozenset?',
+    options: [
+      'Sets are mutable, frozensets are immutable',
+      'Sets can only contain numbers, frozensets can contain any type',
+      'Sets are faster for lookups',
+      'Frozensets are deprecated in modern Python'
+    ],
+    correctAnswer: 'Sets are mutable, frozensets are immutable',
+    explanation: 'Sets can be modified after creation, while frozensets are immutable and can be used as dictionary keys or set elements.',
+    category: 'Python Sets',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-761',
+    question: 'When would you use a defaultdict instead of a regular dictionary?',
+    options: [
+      'When you want automatic default values for missing keys',
+      'When you need better performance',
+      'When you want keys to be automatically sorted',
+      'When you need to store only unique values'
+    ],
+    correctAnswer: 'When you want automatic default values for missing keys',
+    explanation: 'defaultdict automatically creates default values for missing keys, eliminating the need to check if a key exists before using it.',
+    category: 'Python Dictionaries',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-762',
+    question: 'What is the purpose of the __slots__ attribute in Python classes?',
+    options: [
+      'To restrict the attributes that can be assigned to instances',
+      'To improve memory usage and attribute access speed',
+      'To make the class immutable',
+      'To define class methods'
+    ],
+    correctAnswer: 'To improve memory usage and attribute access speed',
+    explanation: '__slots__ reduces memory usage by storing attributes in a fixed-size array instead of a dictionary, and can improve attribute access speed.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-763',
+    question: 'What is the difference between a generator and a list comprehension?',
+    options: [
+      'Generators are lazy and memory-efficient, list comprehensions create the entire list at once',
+      'Generators are faster for small datasets',
+      'List comprehensions can only be used once',
+      'Generators cannot be iterated over'
+    ],
+    correctAnswer: 'Generators are lazy and memory-efficient, list comprehensions create the entire list at once',
+    explanation: 'Generators yield values one at a time and are memory-efficient for large datasets, while list comprehensions create the entire list in memory.',
+    category: 'Python Generators',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-764',
+    question: 'When would you use a namedtuple instead of a regular tuple?',
+    options: [
+      'When you want to access elements by name instead of index',
+      'When you need better performance',
+      'When you want the tuple to be mutable',
+      'When you need to store only numbers'
+    ],
+    correctAnswer: 'When you want to access elements by name instead of index',
+    explanation: 'namedtuple provides named fields, making code more readable and self-documenting compared to accessing tuple elements by index.',
+    category: 'Python Tuples',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-765',
+    question: 'What is the purpose of the __enter__ and __exit__ methods in Python?',
+    options: [
+      'To implement context managers for use with the with statement',
+      'To define class constructors and destructors',
+      'To implement iterator protocols',
+      'To define property getters and setters'
+    ],
+    correctAnswer: 'To implement context managers for use with the with statement',
+    explanation: 'These methods define the context manager protocol, allowing objects to be used with the with statement for resource management.',
+    category: 'Python Context Managers',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-766',
+    question: 'What is the difference between a method and a function in Python?',
+    options: [
+      'Methods are defined within a class and automatically receive self as the first parameter',
+      'Methods are faster than functions',
+      'Functions can only be called from within a class',
+      'Methods cannot return values'
+    ],
+    correctAnswer: 'Methods are defined within a class and automatically receive self as the first parameter',
+    explanation: 'Methods are functions that belong to a class and automatically receive the instance (self) as the first parameter.',
+    category: 'Python Classes',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-767',
+    question: 'What is the purpose of the __call__ method?',
+    options: [
+      'To make instances callable like functions',
+      'To define class constructors',
+      'To implement comparison operations',
+      'To define string representation'
+    ],
+    correctAnswer: 'To make instances callable like functions',
+    explanation: 'The __call__ method allows instances of a class to be called like functions, enabling function-like behavior for objects.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-768',
+    question: 'What is the difference between a class method and a static method?',
+    options: [
+      'Class methods receive the class as the first parameter, static methods don\'t receive any special first parameter',
+      'Class methods are faster than static methods',
+      'Static methods can only be called from within the class',
+      'Class methods cannot access class attributes'
+    ],
+    correctAnswer: 'Class methods receive the class as the first parameter, static methods don\'t receive any special first parameter',
+    explanation: 'Class methods receive the class (cls) as the first parameter, while static methods receive no special first parameter.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-769',
+    question: 'What is the purpose of the @property decorator?',
+    options: [
+      'To define getter methods that can be accessed like attributes',
+      'To make methods private',
+      'To define class methods',
+      'To create abstract methods'
+    ],
+    correctAnswer: 'To define getter methods that can be accessed like attributes',
+    explanation: 'The @property decorator allows methods to be accessed like attributes, providing a clean interface for computed values.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-770',
+    question: 'What is the difference between __str__ and __repr__ methods?',
+    options: [
+      '__str__ is for user-friendly output, __repr__ is for developer-friendly output',
+      '__str__ is faster than __repr__',
+      '__repr__ can only be used for debugging',
+      '__str__ is deprecated in Python 3'
+    ],
+    correctAnswer: '__str__ is for user-friendly output, __repr__ is for developer-friendly output',
+    explanation: '__str__ provides a readable string representation for users, while __repr__ provides a detailed representation for developers and debugging.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-771',
+    question: 'What is the purpose of the __new__ method?',
+    options: [
+      'To control the creation of new instances',
+      'To initialize instance attributes',
+      'To define class methods',
+      'To implement comparison operations'
+    ],
+    correctAnswer: 'To control the creation of new instances',
+    explanation: '__new__ is called before __init__ and controls the actual creation of the instance, allowing for custom instance creation logic.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-772',
+    question: 'What is the difference between a shallow copy and a deep copy?',
+    options: [
+      'Shallow copy creates a new object but references the same nested objects, deep copy creates new objects for all levels',
+      'Shallow copy is faster but uses more memory',
+      'Deep copy only works for simple objects',
+      'Shallow copy creates immutable objects'
+    ],
+    correctAnswer: 'Shallow copy creates a new object but references the same nested objects, deep copy creates new objects for all levels',
+    explanation: 'Shallow copy creates a new object but shares references to nested objects, while deep copy recursively creates new objects for all nested levels.',
+    category: 'Python Objects',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-773',
+    question: 'What is the purpose of the __del__ method?',
+    options: [
+      'To define cleanup actions when an object is garbage collected',
+      'To delete instance attributes',
+      'To define class destructors',
+      'To implement comparison operations'
+    ],
+    correctAnswer: 'To define cleanup actions when an object is garbage collected',
+    explanation: '__del__ is called when an object is about to be garbage collected, allowing for cleanup actions like closing files or network connections.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-774',
+    question: 'What is the difference between a module and a package in Python?',
+    options: [
+      'A module is a single Python file, a package is a directory containing modules',
+      'A package is faster than a module',
+      'Modules can only contain functions, packages can contain classes',
+      'Packages are deprecated in modern Python'
+    ],
+    correctAnswer: 'A module is a single Python file, a package is a directory containing modules',
+    explanation: 'A module is a single .py file, while a package is a directory containing an __init__.py file and other modules.',
+    category: 'Python Modules',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-775',
+    question: 'What is the purpose of the __init__.py file in a package?',
+    options: [
+      'To mark a directory as a Python package',
+      'To define package initialization code',
+      'To specify package dependencies',
+      'All of the above'
+    ],
+    correctAnswer: 'All of the above',
+    explanation: 'The __init__.py file marks a directory as a Python package, can contain initialization code, and can specify package metadata.',
+    category: 'Python Modules',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-776',
+    question: 'What is the difference between import and from ... import?',
+    options: [
+      'import imports the entire module, from ... import imports specific items',
+      'from ... import is faster than import',
+      'import can only be used for packages',
+      'from ... import is deprecated in Python 3'
+    ],
+    correctAnswer: 'import imports the entire module, from ... import imports specific items',
+    explanation: 'import imports the entire module, while from ... import imports specific functions, classes, or variables from a module.',
+    category: 'Python Modules',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-777',
+    question: 'What is the purpose of the __all__ variable in a module?',
+    options: [
+      'To specify which names should be exported when using from module import *',
+      'To define module constants',
+      'To specify module dependencies',
+      'To define module version'
+    ],
+    correctAnswer: 'To specify which names should be exported when using from module import *',
+    explanation: '__all__ is a list of strings that specifies which names should be exported when using from module import *.',
+    category: 'Python Modules',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-778',
+    question: 'What is the difference between a function and a lambda expression?',
+    options: [
+      'Lambda expressions are limited to a single expression, functions can contain multiple statements',
+      'Lambda expressions are faster than functions',
+      'Functions can only be used once',
+      'Lambda expressions cannot return values'
+    ],
+    correctAnswer: 'Lambda expressions are limited to a single expression, functions can contain multiple statements',
+    explanation: 'Lambda expressions are limited to a single expression and are typically used for simple operations, while functions can contain multiple statements.',
+    category: 'Python Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-779',
+    question: 'What is the purpose of the *args parameter in a function?',
+    options: [
+      'To accept a variable number of positional arguments',
+      'To accept keyword arguments',
+      'To specify default arguments',
+      'To define function return type'
+    ],
+    correctAnswer: 'To accept a variable number of positional arguments',
+    explanation: '*args allows a function to accept a variable number of positional arguments, which are collected into a tuple.',
+    category: 'Python Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-780',
+    question: 'What is the purpose of the **kwargs parameter in a function?',
+    options: [
+      'To accept a variable number of keyword arguments',
+      'To accept positional arguments',
+      'To specify default arguments',
+      'To define function return type'
+    ],
+    correctAnswer: 'To accept a variable number of keyword arguments',
+    explanation: '**kwargs allows a function to accept a variable number of keyword arguments, which are collected into a dictionary.',
+    category: 'Python Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-781',
+    question: 'What is the difference between a local variable and a global variable?',
+    options: [
+      'Local variables are defined within a function, global variables are defined at module level',
+      'Global variables are faster than local variables',
+      'Local variables can only be used once',
+      'Global variables cannot be modified'
+    ],
+    correctAnswer: 'Local variables are defined within a function, global variables are defined at module level',
+    explanation: 'Local variables are defined within a function and are only accessible within that function, while global variables are defined at module level.',
+    category: 'Python Variables',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-782',
+    question: 'What is the purpose of the nonlocal keyword?',
+    options: [
+      'To modify a variable from an outer (but not global) scope',
+      'To declare a global variable',
+      'To create a new local variable',
+      'To define a constant'
+    ],
+    correctAnswer: 'To modify a variable from an outer (but not global) scope',
+    explanation: 'The nonlocal keyword allows you to modify a variable from an outer (enclosing) scope, but not from the global scope.',
+    category: 'Python Variables',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-783',
+    question: 'What is the difference between a list comprehension and a generator expression?',
+    options: [
+      'List comprehensions create a list in memory, generator expressions create an iterator',
+      'Generator expressions are faster than list comprehensions',
+      'List comprehensions can only be used once',
+      'Generator expressions cannot be iterated over'
+    ],
+    correctAnswer: 'List comprehensions create a list in memory, generator expressions create an iterator',
+    explanation: 'List comprehensions create the entire list in memory, while generator expressions create an iterator that yields values on demand.',
+    category: 'Python Comprehensions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-784',
+    question: 'What is the purpose of the yield keyword?',
+    options: [
+      'To create a generator function',
+      'To return a value from a function',
+      'To raise an exception',
+      'To define a class method'
+    ],
+    correctAnswer: 'To create a generator function',
+    explanation: 'The yield keyword is used to create generator functions that can yield values one at a time instead of returning all values at once.',
+    category: 'Python Generators',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-785',
+    question: 'What is the difference between a try-except block and a try-finally block?',
+    options: [
+      'try-except handles exceptions, try-finally ensures cleanup code runs',
+      'try-finally is faster than try-except',
+      'try-except can only handle one exception type',
+      'try-finally cannot be used with except'
+    ],
+    correctAnswer: 'try-except handles exceptions, try-finally ensures cleanup code runs',
+    explanation: 'try-except catches and handles exceptions, while try-finally ensures that cleanup code runs regardless of whether an exception occurs.',
+    category: 'Python Exceptions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-786',
+    question: 'What is the purpose of the with statement?',
+    options: [
+      'To ensure proper resource management',
+      'To create context managers',
+      'To handle exceptions automatically',
+      'All of the above'
+    ],
+    correctAnswer: 'All of the above',
+    explanation: 'The with statement ensures proper resource management, can create context managers, and handles exceptions automatically.',
+    category: 'Python Context Managers',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-787',
+    question: 'What is the difference between a shallow copy and a deep copy of a dictionary?',
+    options: [
+      'Shallow copy creates new references for nested objects, deep copy creates new objects for all levels',
+      'Deep copy is faster than shallow copy',
+      'Shallow copy only works for simple dictionaries',
+      'Deep copy cannot handle nested dictionaries'
+    ],
+    correctAnswer: 'Shallow copy creates new references for nested objects, deep copy creates new objects for all levels',
+    explanation: 'Shallow copy creates a new dictionary but references the same nested objects, while deep copy recursively creates new objects for all nested levels.',
+    category: 'Python Dictionaries',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-788',
+    question: 'What is the purpose of the __iter__ method?',
+    options: [
+      'To make an object iterable',
+      'To define class constructors',
+      'To implement comparison operations',
+      'To define string representation'
+    ],
+    correctAnswer: 'To make an object iterable',
+    explanation: 'The __iter__ method returns an iterator object, making the class iterable and allowing it to be used in for loops.',
+    category: 'Python Iterators',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-789',
+    question: 'What is the purpose of the __next__ method?',
+    options: [
+      'To return the next value in an iterator',
+      'To define class constructors',
+      'To implement comparison operations',
+      'To define string representation'
+    ],
+    correctAnswer: 'To return the next value in an iterator',
+    explanation: 'The __next__ method returns the next value in an iterator and raises StopIteration when there are no more values.',
+    category: 'Python Iterators',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-790',
+    question: 'What is the difference between a class variable and an instance variable?',
+    options: [
+      'Class variables are shared by all instances, instance variables are unique to each instance',
+      'Instance variables are faster than class variables',
+      'Class variables can only be accessed from within the class',
+      'Instance variables cannot be modified'
+    ],
+    correctAnswer: 'Class variables are shared by all instances, instance variables are unique to each instance',
+    explanation: 'Class variables are shared by all instances of a class, while instance variables are unique to each individual instance.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-791',
+    question: 'What is the purpose of the @classmethod decorator?',
+    options: [
+      'To define methods that receive the class as the first parameter',
+      'To make methods private',
+      'To define static methods',
+      'To create abstract methods'
+    ],
+    correctAnswer: 'To define methods that receive the class as the first parameter',
+    explanation: 'The @classmethod decorator defines methods that receive the class (cls) as the first parameter instead of the instance (self).',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-792',
+    question: 'What is the purpose of the @staticmethod decorator?',
+    options: [
+      'To define methods that don\'t receive any special first parameter',
+      'To make methods private',
+      'To define class methods',
+      'To create abstract methods'
+    ],
+    correctAnswer: 'To define methods that don\'t receive any special first parameter',
+    explanation: 'The @staticmethod decorator defines methods that don\'t receive any special first parameter (neither self nor cls).',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-793',
+    question: 'What is the difference between a public and a private attribute in Python?',
+    options: [
+      'Private attributes use name mangling with double underscores, public attributes don\'t',
+      'Private attributes cannot be accessed from outside the class',
+      'Public attributes are faster than private attributes',
+      'Private attributes are deprecated in Python 3'
+    ],
+    correctAnswer: 'Private attributes use name mangling with double underscores, public attributes don\'t',
+    explanation: 'Private attributes use name mangling (__attribute becomes _ClassName__attribute), but they can still be accessed from outside the class.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-794',
+    question: 'What is the purpose of the __getattr__ method?',
+    options: [
+      'To handle attribute access when the attribute doesn\'t exist',
+      'To define attribute getters',
+      'To implement comparison operations',
+      'To define string representation'
+    ],
+    correctAnswer: 'To handle attribute access when the attribute doesn\'t exist',
+    explanation: '__getattr__ is called when an attribute is not found through normal lookup, allowing for custom attribute access behavior.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-795',
+    question: 'What is the purpose of the __setattr__ method?',
+    options: [
+      'To control how attributes are set',
+      'To define attribute setters',
+      'To implement comparison operations',
+      'To define string representation'
+    ],
+    correctAnswer: 'To control how attributes are set',
+    explanation: '__setattr__ is called whenever an attribute is set, allowing for custom behavior when attributes are assigned.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-796',
+    question: 'What is the difference between a descriptor and a property?',
+    options: [
+      'Descriptors are more general and can be reused, properties are specific to a class',
+      'Properties are faster than descriptors',
+      'Descriptors can only be used for getters',
+      'Properties are deprecated in Python 3'
+    ],
+    correctAnswer: 'Descriptors are more general and can be reused, properties are specific to a class',
+    explanation: 'Descriptors are more general and can be reused across multiple classes, while properties are specific to the class they\'re defined in.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-797',
+    question: 'What is the purpose of the __metaclass__ attribute?',
+    options: [
+      'To specify the metaclass for a class',
+      'To define class methods',
+      'To implement comparison operations',
+      'To define string representation'
+    ],
+    correctAnswer: 'To specify the metaclass for a class',
+    explanation: '__metaclass__ specifies the metaclass that will be used to create the class, allowing for custom class creation behavior.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-798',
+    question: 'What is the difference between a weak reference and a strong reference?',
+    options: [
+      'Weak references don\'t prevent garbage collection, strong references do',
+      'Strong references are faster than weak references',
+      'Weak references can only be used for immutable objects',
+      'Strong references are deprecated in Python 3'
+    ],
+    correctAnswer: 'Weak references don\'t prevent garbage collection, strong references do',
+    explanation: 'Weak references don\'t prevent the referenced object from being garbage collected, while strong references keep the object alive.',
+    category: 'Python Memory Management',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-799',
+    question: 'What is the purpose of the __slots__ attribute in a class?',
+    options: [
+      'To restrict the attributes that can be assigned to instances',
+      'To improve memory usage and attribute access speed',
+      'To make the class immutable',
+      'To define class methods'
+    ],
+    correctAnswer: 'To improve memory usage and attribute access speed',
+    explanation: '__slots__ reduces memory usage by storing attributes in a fixed-size array instead of a dictionary, and can improve attribute access speed.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-800',
+    question: 'What is the difference between a coroutine and a generator?',
+    options: [
+      'Coroutines can receive values via send(), generators can only yield values',
+      'Generators are faster than coroutines',
+      'Coroutines can only be used for async programming',
+      'Generators are deprecated in Python 3'
+    ],
+    correctAnswer: 'Coroutines can receive values via send(), generators can only yield values',
+    explanation: 'Coroutines can both yield values and receive values via the send() method, while generators can only yield values.',
+    category: 'Python Generators',
+    difficulty: 'Hard'
   }
 
 ]; 
