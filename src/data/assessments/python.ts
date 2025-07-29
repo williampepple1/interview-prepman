@@ -7000,6 +7000,706 @@ export const pythonAssessmentQuestions: AssessmentQuestion[] = [
     explanation: 'reversed() returns a reverse iterator over the values of the given sequence.',
     category: 'Python Built-in Functions',
     difficulty: 'Easy'
+  },
+  {
+    id: 'python-501',
+    question: 'What is the output of: print(any([False, 0, "", None]))?',
+    options: [
+      'False',
+      'True',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'False',
+    explanation: 'any() returns True if any element in the iterable is truthy. All elements in [False, 0, "", None] are falsy.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-502',
+    question: 'What is the output of: print(all([True, 1, "hello", []]))?',
+    options: [
+      'False',
+      'True',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'False',
+    explanation: 'all() returns True only if all elements are truthy. The empty list [] is falsy.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-503',
+    question: 'What is the output of: print(sum([1, 2, 3, 4, 5]))?',
+    options: [
+      '15',
+      '10',
+      '20',
+      'Error'
+    ],
+    correctAnswer: '15',
+    explanation: 'sum() adds all numbers in the iterable: 1 + 2 + 3 + 4 + 5 = 15.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-504',
+    question: 'What is the output of: print(list(zip([1, 2], [3, 4, 5])))?',
+    options: [
+      '[(1, 3), (2, 4)]',
+      '[(1, 3), (2, 4), (None, 5)]',
+      '[(1, 3), (2, 4), (0, 5)]',
+      'Error'
+    ],
+    correctAnswer: '[(1, 3), (2, 4)]',
+    explanation: 'zip() stops when the shortest iterable is exhausted. It pairs elements from both lists until the shorter one ends.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-505',
+    question: 'What is the output of: print(list(enumerate(["a", "b", "c"])))?',
+    options: [
+      '[(0, "a"), (1, "b"), (2, "c")]',
+      '[(1, "a"), (2, "b"), (3, "c")]',
+      '["a", "b", "c"]',
+      'Error'
+    ],
+    correctAnswer: '[(0, "a"), (1, "b"), (2, "c")]',
+    explanation: 'enumerate() returns pairs of (index, value) starting from 0 by default.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-506',
+    question: 'What is the output of: print(filter(lambda x: x > 0, [-1, 0, 1, 2]))?',
+    options: [
+      '<filter object at ...>',
+      '[1, 2]',
+      '[-1, 0]',
+      'Error'
+    ],
+    correctAnswer: '<filter object at ...>',
+    explanation: 'filter() returns a filter object, not a list. To get the list, you need to convert it: list(filter(...)).',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-507',
+    question: 'What is the output of: print(list(map(lambda x: x**2, [1, 2, 3])))?',
+    options: [
+      '[1, 4, 9]',
+      '[2, 4, 6]',
+      '[1, 2, 3]',
+      'Error'
+    ],
+    correctAnswer: '[1, 4, 9]',
+    explanation: 'map() applies the lambda function (x**2) to each element: 1²=1, 2²=4, 3²=9.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-508',
+    question: 'What is the output of: print(reduce(lambda x, y: x + y, [1, 2, 3, 4]))?',
+    options: [
+      '10',
+      'Error',
+      '[1, 2, 3, 4]',
+      '24'
+    ],
+    correctAnswer: 'Error',
+    explanation: 'reduce() is not a built-in function in Python 3. It needs to be imported from functools.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-509',
+    question: 'What is the output of: print(divmod(10, 3))?',
+    options: [
+      '(3, 1)',
+      '(3.33, 1)',
+      '(3, 0)',
+      'Error'
+    ],
+    correctAnswer: '(3, 1)',
+    explanation: 'divmod() returns a tuple of (quotient, remainder): 10 ÷ 3 = 3 remainder 1.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-510',
+    question: 'What is the output of: print(pow(2, 3, 5))?',
+    options: [
+      '3',
+      '8',
+      '6',
+      'Error'
+    ],
+    correctAnswer: '3',
+    explanation: 'pow(2, 3, 5) calculates (2³) % 5 = 8 % 5 = 3.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-511',
+    question: 'What is the output of: print(round(3.14159, 2))?',
+    options: [
+      '3.14',
+      '3.15',
+      '3.1',
+      'Error'
+    ],
+    correctAnswer: '3.14',
+    explanation: 'round() rounds to the specified number of decimal places. 3.14159 rounded to 2 decimal places is 3.14.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-512',
+    question: 'What is the output of: print(abs(-5.5))?',
+    options: [
+      '5.5',
+      '-5.5',
+      '5',
+      'Error'
+    ],
+    correctAnswer: '5.5',
+    explanation: 'abs() returns the absolute value (magnitude) of a number, removing the negative sign.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-513',
+    question: 'What is the output of: print(complex(3, 4))?',
+    options: [
+      '(3+4j)',
+      '3+4i',
+      '(3, 4)',
+      'Error'
+    ],
+    correctAnswer: '(3+4j)',
+    explanation: 'complex() creates a complex number. In Python, the imaginary unit is represented by j, not i.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-514',
+    question: 'What is the output of: print(hex(255))?',
+    options: [
+      "'0xff'",
+      "'0xFF'",
+      "'ff'",
+      'Error'
+    ],
+    correctAnswer: "'0xff'",
+    explanation: 'hex() converts an integer to a hexadecimal string prefixed with "0x".',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-515',
+    question: 'What is the output of: print(oct(64))?',
+    options: [
+      "'0o100'",
+      "'0O100'",
+      "'100'",
+      'Error'
+    ],
+    correctAnswer: "'0o100'",
+    explanation: 'oct() converts an integer to an octal string prefixed with "0o".',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-516',
+    question: 'What is the output of: print(bin(10))?',
+    options: [
+      "'0b1010'",
+      "'0B1010'",
+      "'1010'",
+      'Error'
+    ],
+    correctAnswer: "'0b1010'",
+    explanation: 'bin() converts an integer to a binary string prefixed with "0b".',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-517',
+    question: 'What is the output of: print(int("1010", 2))?',
+    options: [
+      '10',
+      '2',
+      '1010',
+      'Error'
+    ],
+    correctAnswer: '10',
+    explanation: 'int("1010", 2) converts the binary string "1010" to decimal: 1×2³ + 0×2² + 1×2¹ + 0×2⁰ = 8 + 0 + 2 + 0 = 10.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-518',
+    question: 'What is the output of: print(float("3.14"))?',
+    options: [
+      '3.14',
+      '3',
+      '3.0',
+      'Error'
+    ],
+    correctAnswer: '3.14',
+    explanation: 'float() converts a string representation of a number to a float.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-519',
+    question: 'What is the output of: print(str(123))?',
+    options: [
+      "'123'",
+      '123',
+      'Error',
+      'None'
+    ],
+    correctAnswer: "'123'",
+    explanation: 'str() converts any object to its string representation.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-520',
+    question: 'What is the output of: print(list("hello"))?',
+    options: [
+      "['h', 'e', 'l', 'l', 'o']",
+      "'hello'",
+      'Error',
+      'None'
+    ],
+    correctAnswer: "['h', 'e', 'l', 'l', 'o']",
+    explanation: 'list() converts an iterable (like a string) into a list of its elements.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-521',
+    question: 'What is the output of: print(tuple([1, 2, 3]))?',
+    options: [
+      '(1, 2, 3)',
+      '[1, 2, 3]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '(1, 2, 3)',
+    explanation: 'tuple() converts an iterable into a tuple.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-522',
+    question: 'What is the output of: print(set([1, 2, 2, 3, 3, 3]))?',
+    options: [
+      '{1, 2, 3}',
+      '[1, 2, 2, 3, 3, 3]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '{1, 2, 3}',
+    explanation: 'set() creates a set from an iterable, removing duplicates.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-523',
+    question: 'What is the output of: print(dict([("a", 1), ("b", 2)]))?',
+    options: [
+      "{'a': 1, 'b': 2}",
+      "[('a', 1), ('b', 2)]",
+      'Error',
+      'None'
+    ],
+    correctAnswer: "{'a': 1, 'b': 2}",
+    explanation: 'dict() creates a dictionary from an iterable of key-value pairs.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-524',
+    question: 'What is the output of: print(frozenset([1, 2, 3]))?',
+    options: [
+      'frozenset({1, 2, 3})',
+      '{1, 2, 3}',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'frozenset({1, 2, 3})',
+    explanation: 'frozenset() creates an immutable set from an iterable.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-525',
+    question: 'What is the output of: print(bytes([65, 66, 67]))?',
+    options: [
+      "b'ABC'",
+      "'ABC'",
+      '[65, 66, 67]',
+      'Error'
+    ],
+    correctAnswer: "b'ABC'",
+    explanation: 'bytes() creates a bytes object from an iterable of integers (ASCII values).',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-526',
+    question: 'What is the output of: print(bytearray([65, 66, 67]))?',
+    options: [
+      "bytearray(b'ABC')",
+      "b'ABC'",
+      '[65, 66, 67]',
+      'Error'
+    ],
+    correctAnswer: "bytearray(b'ABC')",
+    explanation: 'bytearray() creates a mutable bytes object from an iterable of integers.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-527',
+    question: 'What is the output of: print(memoryview(bytes([65, 66, 67])))?',
+    options: [
+      '<memory at ...>',
+      "b'ABC'",
+      '[65, 66, 67]',
+      'Error'
+    ],
+    correctAnswer: '<memory at ...>',
+    explanation: 'memoryview() creates a memory view object that references the memory of another object.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-528',
+    question: 'What is the output of: print(slice(1, 5, 2))?',
+    options: [
+      'slice(1, 5, 2)',
+      '[1, 3, 5]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'slice(1, 5, 2)',
+    explanation: 'slice() creates a slice object representing the set of indices specified by range(start, stop, step).',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-529',
+    question: 'What is the output of: print(super())?',
+    options: [
+      'Error',
+      '<super: <class ...>, <...>>',
+      'None',
+      'Error'
+    ],
+    correctAnswer: 'Error',
+    explanation: 'super() must be called within a method of a class, not at module level.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-530',
+    question: 'What is the output of: print(property())?',
+    options: [
+      '<property object at ...>',
+      'None',
+      'Error',
+      '0'
+    ],
+    correctAnswer: '<property object at ...>',
+    explanation: 'property() creates a property object, which is a descriptor.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-531',
+    question: 'What is the output of: print(classmethod(lambda: None))?',
+    options: [
+      '<classmethod object at ...>',
+      'None',
+      'Error',
+      '<function ...>'
+    ],
+    correctAnswer: '<classmethod object at ...>',
+    explanation: 'classmethod() transforms a method into a class method.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-532',
+    question: 'What is the output of: print(staticmethod(lambda: None))?',
+    options: [
+      '<staticmethod object at ...>',
+      'None',
+      'Error',
+      '<function ...>'
+    ],
+    correctAnswer: '<staticmethod object at ...>',
+    explanation: 'staticmethod() transforms a method into a static method.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-533',
+    question: 'What is the output of: print(eval("2 + 2"))?',
+    options: [
+      '4',
+      "'2 + 2'",
+      'Error',
+      'None'
+    ],
+    correctAnswer: '4',
+    explanation: 'eval() evaluates a string as a Python expression.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-534',
+    question: 'What is the output of: print(exec("x = 5"))?',
+    options: [
+      'None',
+      '5',
+      'Error',
+      'x'
+    ],
+    correctAnswer: 'None',
+    explanation: 'exec() executes a string as Python code and returns None.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-535',
+    question: 'What is the output of: print(compile("2 + 2", "<string>", "eval"))?',
+    options: [
+      '<code object ...>',
+      '4',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '<code object ...>',
+    explanation: 'compile() compiles source into a code object that can be executed by exec() or eval().',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-536',
+    question: 'What is the output of: print(repr("hello"))?',
+    options: [
+      "'hello'",
+      'hello',
+      'Error',
+      'None'
+    ],
+    correctAnswer: "'hello'",
+    explanation: 'repr() returns a string containing a printable representation of an object.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-537',
+    question: 'What is the output of: print(ascii("hello"))?',
+    options: [
+      "'hello'",
+      'hello',
+      'Error',
+      'None'
+    ],
+    correctAnswer: "'hello'",
+    explanation: 'ascii() returns a string containing a printable representation of an object, using only ASCII characters.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-538',
+    question: 'What is the output of: print(format(3.14159, ".2f"))?',
+    options: [
+      "'3.14'",
+      '3.14',
+      'Error',
+      'None'
+    ],
+    correctAnswer: "'3.14'",
+    explanation: 'format() formats a value according to a format specification.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-539',
+    question: 'What is the output of: print(vars())?',
+    options: [
+      '{...}',
+      '[]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '{...}',
+    explanation: 'vars() returns the __dict__ attribute of an object, or the local namespace if no argument is given.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-540',
+    question: 'What is the output of: print(dir())?',
+    options: [
+      '[...]',
+      '[]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '[...]',
+    explanation: 'dir() returns a list of valid attributes and methods of the object, or names in the current local scope.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-541',
+    question: 'What is the output of: print(globals())?',
+    options: [
+      '{...}',
+      '[]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '{...}',
+    explanation: 'globals() returns a dictionary representing the current global symbol table.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-542',
+    question: 'What is the output of: print(locals())?',
+    options: [
+      '{...}',
+      '[]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '{...}',
+    explanation: 'locals() returns a dictionary representing the current local symbol table.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-543',
+    question: 'What is the output of: print(hash("hello"))?',
+    options: [
+      'An integer',
+      "'hello'",
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'An integer',
+    explanation: 'hash() returns the hash value of an object (if it has one).',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-544',
+    question: 'What is the output of: print(id("hello"))?',
+    options: [
+      'An integer',
+      "'hello'",
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'An integer',
+    explanation: 'id() returns the "identity" of an object, which is guaranteed to be unique and constant for the object.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-545',
+    question: 'What is the output of: print(type(type))?',
+    options: [
+      '<class \'type\'>',
+      '<class \'object\'>',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '<class \'type\'>',
+    explanation: 'type is the metaclass of all classes, so type(type) returns the type class itself.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-546',
+    question: 'What is the output of: print(isinstance(5, int))?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'isinstance() returns True if the object argument is an instance of the classinfo argument.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-547',
+    question: 'What is the output of: print(issubclass(int, object))?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'issubclass() returns True if class is a subclass of classinfo.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-548',
+    question: 'What is the output of: print(callable(print))?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'callable() returns True if the object argument appears callable.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-549',
+    question: 'What is the output of: print(hasattr("hello", "upper"))?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'hasattr() returns True if the object has an attribute with the given name.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-550',
+    question: 'What is the output of: print(getattr("hello", "upper")())?',
+    options: [
+      "'HELLO'",
+      "'hello'",
+      'Error',
+      'None'
+    ],
+    correctAnswer: "'HELLO'",
+    explanation: 'getattr() returns the value of the named attribute of object, and we call it with ().',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
   }
 
 ]; 
