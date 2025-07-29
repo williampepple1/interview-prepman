@@ -8400,6 +8400,706 @@ export const pythonAssessmentQuestions: AssessmentQuestion[] = [
     explanation: 'reversed(range(5)) creates a reverse iterator, and list() converts it to a list.',
     category: 'Python Built-in Functions',
     difficulty: 'Easy'
+  },
+  {
+    id: 'python-601',
+    question: 'What is the output of: print(open("nonexistent.txt"))?',
+    options: [
+      'Error',
+      '<_io.TextIOWrapper object>',
+      'None',
+      'FileNotFoundError'
+    ],
+    correctAnswer: 'Error',
+    explanation: 'open() raises a FileNotFoundError when trying to open a non-existent file.',
+    category: 'Python File Operations',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-602',
+    question: 'What is the output of: print(input("Enter: "))?',
+    options: [
+      'Waits for user input',
+      'Error',
+      'None',
+      'Enter: '
+    ],
+    correctAnswer: 'Waits for user input',
+    explanation: 'input() waits for user input and returns the entered string.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-603',
+    question: 'What is the output of: print(print("hello"))?',
+    options: [
+      'hello\nNone',
+      'hello',
+      'None',
+      'Error'
+    ],
+    correctAnswer: 'hello\nNone',
+    explanation: 'print("hello") prints "hello" and returns None, which is then printed.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-604',
+    question: 'What is the output of: print(help(print))?',
+    options: [
+      'Prints help documentation',
+      'Error',
+      'None',
+      'Help on built-in function print'
+    ],
+    correctAnswer: 'Prints help documentation',
+    explanation: 'help() displays the help documentation for the given object.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-605',
+    question: 'What is the output of: print(quit())?',
+    options: [
+      'Exits the program',
+      'Error',
+      'None',
+      'Quit'
+    ],
+    correctAnswer: 'Exits the program',
+    explanation: 'quit() exits the Python interpreter.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-606',
+    question: 'What is the output of: print(exit())?',
+    options: [
+      'Exits the program',
+      'Error',
+      'None',
+      'Exit'
+    ],
+    correctAnswer: 'Exits the program',
+    explanation: 'exit() exits the Python interpreter.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-607',
+    question: 'What is the output of: print(license())?',
+    options: [
+      'Prints license information',
+      'Error',
+      'None',
+      'License'
+    ],
+    correctAnswer: 'Prints license information',
+    explanation: 'license() displays the Python license information.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-608',
+    question: 'What is the output of: print(copyright())?',
+    options: [
+      'Prints copyright information',
+      'Error',
+      'None',
+      'Copyright'
+    ],
+    correctAnswer: 'Prints copyright information',
+    explanation: 'copyright() displays the Python copyright information.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-609',
+    question: 'What is the output of: print(credits())?',
+    options: [
+      'Prints credits information',
+      'Error',
+      'None',
+      'Credits'
+    ],
+    correctAnswer: 'Prints credits information',
+    explanation: 'credits() displays the Python credits information.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-610',
+    question: 'What is the output of: print(breakpoint())?',
+    options: [
+      'Enters debugger',
+      'Error',
+      'None',
+      'Breakpoint'
+    ],
+    correctAnswer: 'Enters debugger',
+    explanation: 'breakpoint() enters the Python debugger.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-611',
+    question: 'What is the output of: print(memoryview(b"hello"))?',
+    options: [
+      '<memory at ...>',
+      "b'hello'",
+      'Error',
+      'None'
+    ],
+    correctAnswer: '<memory at ...>',
+    explanation: 'memoryview() creates a memory view object that references the memory of another object.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-612',
+    question: 'What is the output of: print(memoryview(b"hello")[0])?',
+    options: [
+      '104',
+      "'h'",
+      'Error',
+      'None'
+    ],
+    correctAnswer: '104',
+    explanation: 'memoryview indexing returns the byte value at that position.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-613',
+    question: 'What is the output of: print(memoryview(b"hello").nbytes)?',
+    options: [
+      '5',
+      '6',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '5',
+    explanation: 'nbytes returns the number of bytes in the memory view.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-614',
+    question: 'What is the output of: print(memoryview(b"hello").readonly)?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'readonly indicates whether the memory view is read-only.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-615',
+    question: 'What is the output of: print(memoryview(b"hello").format)?',
+    options: [
+      "'B'",
+      "'b'",
+      'Error',
+      'None'
+    ],
+    correctAnswer: "'B'",
+    explanation: 'format returns the format of the memory view elements.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-616',
+    question: 'What is the output of: print(memoryview(b"hello").itemsize)?',
+    options: [
+      '1',
+      '5',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '1',
+    explanation: 'itemsize returns the size in bytes of each element.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-617',
+    question: 'What is the output of: print(memoryview(b"hello").ndim)?',
+    options: [
+      '1',
+      '0',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '1',
+    explanation: 'ndim returns the number of dimensions of the memory view.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-618',
+    question: 'What is the output of: print(memoryview(b"hello").shape)?',
+    options: [
+      '(5,)',
+      '(1, 5)',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '(5,)',
+    explanation: 'shape returns the shape of the memory view as a tuple.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-619',
+    question: 'What is the output of: print(memoryview(b"hello").strides)?',
+    options: [
+      '(1,)',
+      '(5,)',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '(1,)',
+    explanation: 'strides returns the strides of the memory view as a tuple.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-620',
+    question: 'What is the output of: print(memoryview(b"hello").contiguous)?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'contiguous indicates whether the memory view is contiguous.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-621',
+    question: 'What is the output of: print(memoryview(b"hello").c_contiguous)?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'c_contiguous indicates whether the memory view is C-contiguous.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-622',
+    question: 'What is the output of: print(memoryview(b"hello").f_contiguous)?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'f_contiguous indicates whether the memory view is Fortran-contiguous.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-623',
+    question: 'What is the output of: print(memoryview(b"hello").suboffset)?',
+    options: [
+      '0',
+      '1',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '0',
+    explanation: 'suboffset returns the offset in bytes to the first element.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-624',
+    question: 'What is the output of: print(memoryview(b"hello").obj)?',
+    options: [
+      "b'hello'",
+      '<memory at ...>',
+      'Error',
+      'None'
+    ],
+    correctAnswer: "b'hello'",
+    explanation: 'obj returns the underlying object of the memory view.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-625',
+    question: 'What is the output of: print(memoryview(b"hello").release())?',
+    options: [
+      'None',
+      'True',
+      'Error',
+      'False'
+    ],
+    correctAnswer: 'None',
+    explanation: 'release() releases the underlying buffer and returns None.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-626',
+    question: 'What is the output of: print(memoryview(b"hello").cast("B"))?',
+    options: [
+      '<memory at ...>',
+      "b'hello'",
+      'Error',
+      'None'
+    ],
+    correctAnswer: '<memory at ...>',
+    explanation: 'cast() returns a new memory view with the specified format.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-627',
+    question: 'What is the output of: print(memoryview(b"hello").tobytes())?',
+    options: [
+      "b'hello'",
+      "'hello'",
+      'Error',
+      'None'
+    ],
+    correctAnswer: "b'hello'",
+    explanation: 'tobytes() returns the data in the memory view as a bytes object.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-628',
+    question: 'What is the output of: print(memoryview(b"hello").tolist())?',
+    options: [
+      '[104, 101, 108, 108, 111]',
+      "['h', 'e', 'l', 'l', 'o']",
+      'Error',
+      'None'
+    ],
+    correctAnswer: '[104, 101, 108, 108, 111]',
+    explanation: 'tolist() returns the data in the memory view as a list of integers.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-629',
+    question: 'What is the output of: print(memoryview(b"hello").hex())?',
+    options: [
+      "'68656c6c6f'",
+      "'hello'",
+      'Error',
+      'None'
+    ],
+    correctAnswer: "'68656c6c6f'",
+    explanation: 'hex() returns the data in the memory view as a hexadecimal string.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-630',
+    question: 'What is the output of: print(memoryview(b"hello").toreadonly())?',
+    options: [
+      '<memory at ...>',
+      "b'hello'",
+      'Error',
+      'None'
+    ],
+    correctAnswer: '<memory at ...>',
+    explanation: 'toreadonly() returns a read-only memory view.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-631',
+    question: 'What is the output of: print(memoryview(b"hello").toreadonly().readonly)?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'toreadonly() creates a read-only memory view.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-632',
+    question: 'What is the output of: print(__import__("math"))?',
+    options: [
+      '<module \'math\' ...>',
+      'Error',
+      'None',
+      'math'
+    ],
+    correctAnswer: '<module \'math\' ...>',
+    explanation: '__import__() dynamically imports a module and returns the module object.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-633',
+    question: 'What is the output of: print(__import__("math").pi)?',
+    options: [
+      '3.141592653589793',
+      'Error',
+      'None',
+      'math.pi'
+    ],
+    correctAnswer: '3.141592653589793',
+    explanation: '__import__("math").pi accesses the pi constant from the math module.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-634',
+    question: 'What is the output of: print(__import__("os").name)?',
+    options: [
+      "'nt' or 'posix'",
+      'Error',
+      'None',
+      'os'
+    ],
+    correctAnswer: "'nt' or 'posix'",
+    explanation: '__import__("os").name returns the name of the operating system.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-635',
+    question: 'What is the output of: print(__import__("sys").version)?',
+    options: [
+      'Python version string',
+      'Error',
+      'None',
+      'sys'
+    ],
+    correctAnswer: 'Python version string',
+    explanation: '__import__("sys").version returns the Python version string.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-636',
+    question: 'What is the output of: print(__import__("datetime").datetime.now())?',
+    options: [
+      'Current datetime object',
+      'Error',
+      'None',
+      'datetime'
+    ],
+    correctAnswer: 'Current datetime object',
+    explanation: '__import__("datetime").datetime.now() returns the current datetime.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-637',
+    question: 'What is the output of: print(__import__("random").random())?',
+    options: [
+      'Random float between 0 and 1',
+      'Error',
+      'None',
+      'random'
+    ],
+    correctAnswer: 'Random float between 0 and 1',
+    explanation: '__import__("random").random() returns a random float between 0 and 1.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-638',
+    question: 'What is the output of: print(__import__("json").dumps({"a": 1}))?',
+    options: [
+      "'{\"a\": 1}'",
+      'Error',
+      'None',
+      'json'
+    ],
+    correctAnswer: "'{\"a\": 1}'",
+    explanation: '__import__("json").dumps() serializes a Python object to JSON string.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-639',
+    question: 'What is the output of: print(__import__("re").match("a", "abc"))?',
+    options: [
+      '<re.Match object>',
+      'Error',
+      'None',
+      're'
+    ],
+    correctAnswer: '<re.Match object>',
+    explanation: '__import__("re").match() returns a match object if the pattern matches.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-640',
+    question: 'What is the output of: print(__import__("collections").Counter([1, 2, 2, 3]))?',
+    options: [
+      'Counter({2: 2, 1: 1, 3: 1})',
+      'Error',
+      'None',
+      'collections'
+    ],
+    correctAnswer: 'Counter({2: 2, 1: 1, 3: 1})',
+    explanation: '__import__("collections").Counter() counts occurrences of elements.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-641',
+    question: 'What is the output of: print(__import__("itertools").count(1))?',
+    options: [
+      '<itertools.count object>',
+      'Error',
+      'None',
+      'itertools'
+    ],
+    correctAnswer: '<itertools.count object>',
+    explanation: '__import__("itertools").count() returns an infinite counter iterator.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-642',
+    question: 'What is the output of: print(__import__("functools").reduce(lambda x, y: x + y, [1, 2, 3]))?',
+    options: [
+      '6',
+      'Error',
+      'None',
+      'functools'
+    ],
+    correctAnswer: '6',
+    explanation: '__import__("functools").reduce() applies a function cumulatively to items.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-643',
+    question: 'What is the output of: print(__import__("operator").add(3, 4))?',
+    options: [
+      '7',
+      'Error',
+      'None',
+      'operator'
+    ],
+    correctAnswer: '7',
+    explanation: '__import__("operator").add() performs addition operation.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-644',
+    question: 'What is the output of: print(__import__("time").time())?',
+    options: [
+      'Current timestamp',
+      'Error',
+      'None',
+      'time'
+    ],
+    correctAnswer: 'Current timestamp',
+    explanation: '__import__("time").time() returns the current time as a timestamp.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-645',
+    question: 'What is the output of: print(__import__("calendar").month_name[1])?',
+    options: [
+      "'January'",
+      'Error',
+      'None',
+      'calendar'
+    ],
+    correctAnswer: "'January'",
+    explanation: '__import__("calendar").month_name[1] returns the name of January.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-646',
+    question: 'What is the output of: print(__import__("urllib").request)?',
+    options: [
+      '<module \'urllib.request\' ...>',
+      'Error',
+      'None',
+      'urllib'
+    ],
+    correctAnswer: '<module \'urllib.request\' ...>',
+    explanation: '__import__("urllib").request returns the request module from urllib.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-647',
+    question: 'What is the output of: print(__import__("pathlib").Path("test.txt"))?',
+    options: [
+      'WindowsPath(\'test.txt\') or PosixPath(\'test.txt\')',
+      'Error',
+      'None',
+      'pathlib'
+    ],
+    correctAnswer: 'WindowsPath(\'test.txt\') or PosixPath(\'test.txt\')',
+    explanation: '__import__("pathlib").Path() creates a Path object.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-648',
+    question: 'What is the output of: print(__import__("typing").List[int])?',
+    options: [
+      'typing.List[int]',
+      'Error',
+      'None',
+      'typing'
+    ],
+    correctAnswer: 'typing.List[int]',
+    explanation: '__import__("typing").List[int] creates a type hint for a list of integers.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-649',
+    question: 'What is the output of: print(__import__("dataclasses").dataclass)?',
+    options: [
+      '<function dataclass>',
+      'Error',
+      'None',
+      'dataclasses'
+    ],
+    correctAnswer: '<function dataclass>',
+    explanation: '__import__("dataclasses").dataclass returns the dataclass decorator function.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-650',
+    question: 'What is the output of: print(__import__("enum").Enum)?',
+    options: [
+      '<class \'enum.Enum\'>',
+      'Error',
+      'None',
+      'enum'
+    ],
+    correctAnswer: '<class \'enum.Enum\'>',
+    explanation: '__import__("enum").Enum returns the Enum class for creating enumerations.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
   }
 
 ]; 
