@@ -9100,6 +9100,706 @@ export const pythonAssessmentQuestions: AssessmentQuestion[] = [
     explanation: '__import__("enum").Enum returns the Enum class for creating enumerations.',
     category: 'Python Built-in Functions',
     difficulty: 'Medium'
+  },
+  {
+    id: 'python-651',
+    question: 'What is the output of: print(compile("x = 5", "<string>", "exec"))?',
+    options: [
+      '<code object ...>',
+      '5',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '<code object ...>',
+    explanation: 'compile() with "exec" mode returns a code object that can be executed.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-652',
+    question: 'What is the output of: print(compile("2 + 2", "<string>", "eval"))?',
+    options: [
+      '<code object ...>',
+      '4',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '<code object ...>',
+    explanation: 'compile() with "eval" mode returns a code object that can be evaluated.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-653',
+    question: 'What is the output of: print(compile("print(\'hello\')", "<string>", "single"))?',
+    options: [
+      '<code object ...>',
+      'hello',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '<code object ...>',
+    explanation: 'compile() with "single" mode returns a code object for single statements.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-654',
+    question: 'What is the output of: print(eval(compile("2 + 2", "<string>", "eval")))?',
+    options: [
+      '4',
+      '<code object ...>',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '4',
+    explanation: 'eval() executes the compiled code object and returns the result.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-655',
+    question: 'What is the output of: print(exec(compile("x = 5", "<string>", "exec")))?',
+    options: [
+      'None',
+      '5',
+      'Error',
+      '<code object ...>'
+    ],
+    correctAnswer: 'None',
+    explanation: 'exec() executes the compiled code object and returns None.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-656',
+    question: 'What is the output of: print(globals()["__name__"])?',
+    options: [
+      "'__main__'",
+      'Error',
+      'None',
+      'globals'
+    ],
+    correctAnswer: "'__main__'",
+    explanation: 'globals()["__name__"] returns the name of the current module.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-657',
+    question: 'What is the output of: print(locals() == globals())?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'At module level, locals() and globals() refer to the same dictionary.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-658',
+    question: 'What is the output of: print(dir([]))?',
+    options: [
+      'List of list methods',
+      '[]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'List of list methods',
+    explanation: 'dir([]) returns a list of valid attributes and methods for list objects.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-659',
+    question: 'What is the output of: print(dir("hello"))?',
+    options: [
+      'List of string methods',
+      "'hello'",
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'List of string methods',
+    explanation: 'dir("hello") returns a list of valid attributes and methods for string objects.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-660',
+    question: 'What is the output of: print(dir({}))?',
+    options: [
+      'List of dict methods',
+      '{}',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'List of dict methods',
+    explanation: 'dir({}) returns a list of valid attributes and methods for dict objects.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-661',
+    question: 'What is the output of: print(vars([]))?',
+    options: [
+      'Error',
+      '{}',
+      'None',
+      '[]'
+    ],
+    correctAnswer: 'Error',
+    explanation: 'vars() requires an object with a __dict__ attribute. Lists don\'t have one.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-662',
+    question: 'What is the output of: print(vars(str))?',
+    options: [
+      'Dictionary of string attributes',
+      'Error',
+      'None',
+      '{}'
+    ],
+    correctAnswer: 'Dictionary of string attributes',
+    explanation: 'vars(str) returns the __dict__ attribute of the str class.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-663',
+    question: 'What is the output of: print(getattr(str, "upper"))?',
+    options: [
+      '<method \'upper\' of \'str\' objects>',
+      'Error',
+      'None',
+      'upper'
+    ],
+    correctAnswer: '<method \'upper\' of \'str\' objects>',
+    explanation: 'getattr(str, "upper") returns the upper method of the str class.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-664',
+    question: 'What is the output of: print(getattr(str, "nonexistent", "default"))?',
+    options: [
+      "'default'",
+      'Error',
+      'None',
+      'AttributeError'
+    ],
+    correctAnswer: "'default'",
+    explanation: 'getattr() with a default value returns the default when attribute doesn\'t exist.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-665',
+    question: 'What is the output of: print(hasattr(str, "upper"))?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'hasattr(str, "upper") returns True because str has an upper method.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-666',
+    question: 'What is the output of: print(hasattr(str, "nonexistent"))?',
+    options: [
+      'False',
+      'True',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'False',
+    explanation: 'hasattr(str, "nonexistent") returns False because str doesn\'t have this attribute.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-667',
+    question: 'What is the output of: print(callable(str))?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'callable(str) returns True because str is a callable class.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-668',
+    question: 'What is the output of: print(callable("hello"))?',
+    options: [
+      'False',
+      'True',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'False',
+    explanation: 'callable("hello") returns False because strings are not callable.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-669',
+    question: 'What is the output of: print(callable(len))?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'callable(len) returns True because len is a callable function.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-670',
+    question: 'What is the output of: print(isinstance(5, (int, float)))?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'isinstance(5, (int, float)) returns True because 5 is an instance of int.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-671',
+    question: 'What is the output of: print(isinstance(5.0, (int, float)))?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'isinstance(5.0, (int, float)) returns True because 5.0 is an instance of float.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-672',
+    question: 'What is the output of: print(isinstance("hello", (int, float)))?',
+    options: [
+      'False',
+      'True',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'False',
+    explanation: 'isinstance("hello", (int, float)) returns False because "hello" is not an instance of int or float.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-673',
+    question: 'What is the output of: print(issubclass(int, object))?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'issubclass(int, object) returns True because int is a subclass of object.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-674',
+    question: 'What is the output of: print(issubclass(str, int))?',
+    options: [
+      'False',
+      'True',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'False',
+    explanation: 'issubclass(str, int) returns False because str is not a subclass of int.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-675',
+    question: 'What is the output of: print(issubclass(list, (tuple, dict)))?',
+    options: [
+      'False',
+      'True',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'False',
+    explanation: 'issubclass(list, (tuple, dict)) returns False because list is not a subclass of tuple or dict.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-676',
+    question: 'What is the output of: print(type(5) is int)?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'type(5) is int returns True because type(5) returns the int class.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-677',
+    question: 'What is the output of: print(type(5) == int)?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'type(5) == int returns True because type(5) returns the int class.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-678',
+    question: 'What is the output of: print(type(5) is type(10))?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'type(5) is type(10) returns True because both return the same int class.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-679',
+    question: 'What is the output of: print(type(5) is type("hello"))?',
+    options: [
+      'False',
+      'True',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'False',
+    explanation: 'type(5) is type("hello") returns False because they return different classes (int vs str).',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-680',
+    question: 'What is the output of: print(super())?',
+    options: [
+      'Error',
+      '<super: <class ...>, <...>>',
+      'None',
+      'super'
+    ],
+    correctAnswer: 'Error',
+    explanation: 'super() must be called within a method of a class, not at module level.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-681',
+    question: 'What is the output of: print(property())?',
+    options: [
+      '<property object at ...>',
+      'None',
+      'Error',
+      'property'
+    ],
+    correctAnswer: '<property object at ...>',
+    explanation: 'property() creates a property object, which is a descriptor.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-682',
+    question: 'What is the output of: print(classmethod(lambda: None))?',
+    options: [
+      '<classmethod object at ...>',
+      'None',
+      'Error',
+      'classmethod'
+    ],
+    correctAnswer: '<classmethod object at ...>',
+    explanation: 'classmethod() transforms a method into a class method.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-683',
+    question: 'What is the output of: print(staticmethod(lambda: None))?',
+    options: [
+      '<staticmethod object at ...>',
+      'None',
+      'Error',
+      'staticmethod'
+    ],
+    correctAnswer: '<staticmethod object at ...>',
+    explanation: 'staticmethod() transforms a method into a static method.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-684',
+    question: 'What is the output of: print(slice(1, 5, 2))?',
+    options: [
+      'slice(1, 5, 2)',
+      '[1, 3, 5]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'slice(1, 5, 2)',
+    explanation: 'slice() creates a slice object representing the set of indices specified by range(start, stop, step).',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-685',
+    question: 'What is the output of: print(slice(1, 5))?',
+    options: [
+      'slice(1, 5, None)',
+      '[1, 2, 3, 4]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'slice(1, 5, None)',
+    explanation: 'slice(1, 5) creates a slice object with default step of None.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-686',
+    question: 'What is the output of: print(slice(5))?',
+    options: [
+      'slice(None, 5, None)',
+      '[0, 1, 2, 3, 4]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'slice(None, 5, None)',
+    explanation: 'slice(5) creates a slice object with start=None, stop=5, step=None.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-687',
+    question: 'What is the output of: print([1, 2, 3, 4, 5][slice(1, 4)])?',
+    options: [
+      '[2, 3, 4]',
+      '[1, 2, 3]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '[2, 3, 4]',
+    explanation: 'slice(1, 4) applied to a list returns elements from index 1 to 3 (exclusive of 4).',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-688',
+    question: 'What is the output of: print([1, 2, 3, 4, 5][slice(1, 4, 2)])?',
+    options: [
+      '[2, 4]',
+      '[1, 3]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '[2, 4]',
+    explanation: 'slice(1, 4, 2) applied to a list returns elements at indices 1 and 3.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-689',
+    question: 'What is the output of: print(slice(1, 5, 2).start)?',
+    options: [
+      '1',
+      '5',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '1',
+    explanation: 'slice(1, 5, 2).start returns the start value of the slice object.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-690',
+    question: 'What is the output of: print(slice(1, 5, 2).stop)?',
+    options: [
+      '5',
+      '1',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '5',
+    explanation: 'slice(1, 5, 2).stop returns the stop value of the slice object.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-691',
+    question: 'What is the output of: print(slice(1, 5, 2).step)?',
+    options: [
+      '2',
+      '1',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '2',
+    explanation: 'slice(1, 5, 2).step returns the step value of the slice object.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-692',
+    question: 'What is the output of: print(slice(1, 5).step)?',
+    options: [
+      'None',
+      '1',
+      'Error',
+      '0'
+    ],
+    correctAnswer: 'None',
+    explanation: 'slice(1, 5).step returns None because no step was specified.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-693',
+    question: 'What is the output of: print(slice(5).start)?',
+    options: [
+      'None',
+      '0',
+      'Error',
+      '5'
+    ],
+    correctAnswer: 'None',
+    explanation: 'slice(5).start returns None because no start was specified.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-694',
+    question: 'What is the output of: print(slice(5).stop)?',
+    options: [
+      '5',
+      'None',
+      'Error',
+      '0'
+    ],
+    correctAnswer: '5',
+    explanation: 'slice(5).stop returns 5 because that was the specified stop value.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-695',
+    question: 'What is the output of: print(slice(5).step)?',
+    options: [
+      'None',
+      '1',
+      'Error',
+      '0'
+    ],
+    correctAnswer: 'None',
+    explanation: 'slice(5).step returns None because no step was specified.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-696',
+    question: 'What is the output of: print(slice(1, 5, 2).indices(10))?',
+    options: [
+      '(1, 5, 2)',
+      '(1, 4, 2)',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '(1, 5, 2)',
+    explanation: 'slice(1, 5, 2).indices(10) returns the start, stop, and step values.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-697',
+    question: 'What is the output of: print(slice(-3, None).indices(10))?',
+    options: [
+      '(7, 10, 1)',
+      '(-3, 10, 1)',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '(7, 10, 1)',
+    explanation: 'slice(-3, None).indices(10) normalizes negative indices relative to length 10.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-698',
+    question: 'What is the output of: print(slice(None, -1).indices(10))?',
+    options: [
+      '(0, 9, 1)',
+      '(0, -1, 1)',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '(0, 9, 1)',
+    explanation: 'slice(None, -1).indices(10) normalizes None to 0 and -1 to 9.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-699',
+    question: 'What is the output of: print(slice(1, 10, -1).indices(5))?',
+    options: [
+      '(1, 0, -1)',
+      '(1, 10, -1)',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '(1, 0, -1)',
+    explanation: 'slice(1, 10, -1).indices(5) normalizes stop to 0 when it exceeds the length.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-700',
+    question: 'What is the output of: print(slice(1, 5, 2) == slice(1, 5, 2))?',
+    options: [
+      'True',
+      'False',
+      'Error',
+      'None'
+    ],
+    correctAnswer: 'True',
+    explanation: 'slice objects with the same start, stop, and step values are equal.',
+    category: 'Python Built-in Functions',
+    difficulty: 'Medium'
   }
 
 ]; 
