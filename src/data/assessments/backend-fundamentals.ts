@@ -2800,5 +2800,1405 @@ export const backendFundamentalsQuestions: AssessmentQuestion[] = [
     explanation: 'Database connection string configuration with connection pooling optimization optimizes connection pooling settings for database connection strings, improving performance and resource utilization.',
     category: 'Databases',
     difficulty: 'Hard'
+  },
+  {
+    id: 'backend-201',
+    question: 'What is the purpose of API circuit breaker pattern implementation?',
+    options: [
+      'To make APIs slower',
+      'To prevent cascading failures by stopping requests to failing services',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To prevent cascading failures by stopping requests to failing services',
+    explanation: 'API circuit breaker pattern implementation prevents cascading failures by stopping requests to failing services, allowing them to recover and preventing system overload.',
+    category: 'Backend Architecture',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-202',
+    question: 'What is the purpose of database connection string failover configuration?',
+    options: [
+      'To make databases slower',
+      'To automatically switch to backup databases when primary fails',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To automatically switch to backup databases when primary fails',
+    explanation: 'Database connection string failover configuration automatically switches to backup databases when primary fails, ensuring high availability and data access continuity.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-203',
+    question: 'What is the purpose of API response caching with cache coherency protocols?',
+    options: [
+      'To make APIs slower',
+      'To maintain data consistency across distributed cache systems',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To maintain data consistency across distributed cache systems',
+    explanation: 'API response caching with cache coherency protocols maintains data consistency across distributed cache systems, ensuring all cache nodes have consistent data.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-204',
+    question: 'What is the purpose of database query result caching with cache synchronization strategies?',
+    options: [
+      'To make databases slower',
+      'To synchronize cached data across multiple cache instances',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To synchronize cached data across multiple cache instances',
+    explanation: 'Database query result caching with cache synchronization strategies synchronizes cached data across multiple cache instances, ensuring consistency in distributed environments.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-205',
+    question: 'What is the purpose of API authentication token refresh with refresh token rotation and revocation?',
+    options: [
+      'To make APIs slower',
+      'To enhance security by rotating and revoking refresh tokens',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To enhance security by rotating and revoking refresh tokens',
+    explanation: 'API authentication token refresh with refresh token rotation and revocation enhances security by rotating and revoking refresh tokens, preventing token reuse and compromise.',
+    category: 'Security',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-206',
+    question: 'What is the purpose of database connection string load balancing configuration?',
+    options: [
+      'To make databases slower',
+      'To distribute database connections across multiple database servers',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To distribute database connections across multiple database servers',
+    explanation: 'Database connection string load balancing configuration distributes database connections across multiple database servers, improving performance and availability.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-207',
+    question: 'What is the purpose of API response streaming with adaptive bitrate streaming?',
+    options: [
+      'To make APIs slower',
+      'To adjust streaming quality based on network conditions and client capabilities',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To adjust streaming quality based on network conditions and client capabilities',
+    explanation: 'API response streaming with adaptive bitrate streaming adjusts streaming quality based on network conditions and client capabilities, optimizing user experience.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-208',
+    question: 'What is the purpose of database query result streaming with result set partitioning?',
+    options: [
+      'To make databases slower',
+      'To partition large result sets for efficient streaming and processing',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To partition large result sets for efficient streaming and processing',
+    explanation: 'Database query result streaming with result set partitioning partitions large result sets for efficient streaming and processing, improving performance for large datasets.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-209',
+    question: 'What is the purpose of API request batching with batch prioritization?',
+    options: [
+      'To make APIs slower',
+      'To prioritize processing of important batches over others',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To prioritize processing of important batches over others',
+    explanation: 'API request batching with batch prioritization prioritizes processing of important batches over others, ensuring critical operations are handled first.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-210',
+    question: 'What is the purpose of database connection string configuration with read replica routing?',
+    options: [
+      'To make databases slower',
+      'To route read operations to replica databases for load distribution',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To route read operations to replica databases for load distribution',
+    explanation: 'Database connection string configuration with read replica routing routes read operations to replica databases for load distribution, improving read performance.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-211',
+    question: 'What is the purpose of API response caching with cache warming based on predictive analytics?',
+    options: [
+      'To make APIs slower',
+      'To pre-populate cache using predictive models of future requests',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To pre-populate cache using predictive models of future requests',
+    explanation: 'API response caching with cache warming based on predictive analytics pre-populates cache using predictive models of future requests, optimizing cache effectiveness.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-212',
+    question: 'What is the purpose of database query result caching with cache warming based on query patterns?',
+    options: [
+      'To make databases slower',
+      'To pre-populate cache based on identified query patterns and trends',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To pre-populate cache based on identified query patterns and trends',
+    explanation: 'Database query result caching with cache warming based on query patterns pre-populates cache based on identified query patterns and trends, improving performance.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-213',
+    question: 'What is the purpose of API authentication token refresh with refresh token chaining?',
+    options: [
+      'To make APIs slower',
+      'To chain refresh tokens for enhanced security and session management',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To chain refresh tokens for enhanced security and session management',
+    explanation: 'API authentication token refresh with refresh token chaining chains refresh tokens for enhanced security and session management, preventing token reuse attacks.',
+    category: 'Security',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-214',
+    question: 'What is the purpose of database connection string configuration with connection multiplexing?',
+    options: [
+      'To make databases slower',
+      'To share database connections across multiple application instances',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To share database connections across multiple application instances',
+    explanation: 'Database connection string configuration with connection multiplexing shares database connections across multiple application instances, improving resource utilization.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-215',
+    question: 'What is the purpose of API response format negotiation with format versioning?',
+    options: [
+      'To make APIs slower',
+      'To negotiate response formats with version support for backward compatibility',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To negotiate response formats with version support for backward compatibility',
+    explanation: 'API response format negotiation with format versioning negotiates response formats with version support for backward compatibility, ensuring client compatibility.',
+    category: 'APIs',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-216',
+    question: 'What is the purpose of database query result set pagination with cursor-based pagination and cursor encryption?',
+    options: [
+      'To make databases slower',
+      'To implement secure cursor-based pagination with encrypted cursors',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To implement secure cursor-based pagination with encrypted cursors',
+    explanation: 'Database query result set pagination with cursor-based pagination and cursor encryption implements secure cursor-based pagination with encrypted cursors, protecting pagination state.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-217',
+    question: 'What is the purpose of API request/response correlation with correlation ID encryption?',
+    options: [
+      'To make APIs slower',
+      'To encrypt correlation IDs for enhanced security and privacy',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To encrypt correlation IDs for enhanced security and privacy',
+    explanation: 'API request/response correlation with correlation ID encryption encrypts correlation IDs for enhanced security and privacy, protecting request tracking information.',
+    category: 'Backend Operations',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-218',
+    question: 'What is the purpose of database connection string rotation with rotation scheduling and automation?',
+    options: [
+      'To make databases slower',
+      'To automatically schedule and execute database credential rotations',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To automatically schedule and execute database credential rotations',
+    explanation: 'Database connection string rotation with rotation scheduling and automation automatically schedules and executes database credential rotations, maintaining security without manual intervention.',
+    category: 'Security',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-219',
+    question: 'What is the purpose of API response streaming with streaming quality adaptation?',
+    options: [
+      'To make APIs slower',
+      'To adapt streaming quality based on real-time performance metrics',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To adapt streaming quality based on real-time performance metrics',
+    explanation: 'API response streaming with streaming quality adaptation adapts streaming quality based on real-time performance metrics, optimizing user experience dynamically.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-220',
+    question: 'What is the purpose of database query result streaming with streaming compression and encryption?',
+    options: [
+      'To make databases slower',
+      'To compress and encrypt streamed query results for security and efficiency',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To compress and encrypt streamed query results for security and efficiency',
+    explanation: 'Database query result streaming with streaming compression and encryption compresses and encrypts streamed query results for security and efficiency, protecting data in transit.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-221',
+    question: 'What is the purpose of API request batching with batch retry and recovery mechanisms?',
+    options: [
+      'To make APIs slower',
+      'To implement retry and recovery mechanisms for failed batch operations',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To implement retry and recovery mechanisms for failed batch operations',
+    explanation: 'API request batching with batch retry and recovery mechanisms implements retry and recovery mechanisms for failed batch operations, ensuring reliability and data consistency.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-222',
+    question: 'What is the purpose of database connection string health checking with health status caching?',
+    options: [
+      'To make databases slower',
+      'To cache health check results to reduce overhead and improve performance',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To cache health check results to reduce overhead and improve performance',
+    explanation: 'Database connection string health checking with health status caching caches health check results to reduce overhead and improve performance, avoiding repeated health checks.',
+    category: 'Databases',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-223',
+    question: 'What is the purpose of API response caching with cache warming based on machine learning predictions?',
+    options: [
+      'To make APIs slower',
+      'To pre-populate cache using machine learning models to predict future requests',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To pre-populate cache using machine learning models to predict future requests',
+    explanation: 'API response caching with cache warming based on machine learning predictions pre-populates cache using machine learning models to predict future requests, optimizing cache effectiveness.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-224',
+    question: 'What is the purpose of database query result caching with cache warming based on access frequency analysis?',
+    options: [
+      'To make databases slower',
+      'To pre-populate cache based on analysis of data access frequency patterns',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To pre-populate cache based on analysis of data access frequency patterns',
+    explanation: 'Database query result caching with cache warming based on access frequency analysis pre-populates cache based on analysis of data access frequency patterns, improving cache hit rates.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-225',
+    question: 'What is the purpose of API authentication token refresh with refresh token expiration and renewal policies?',
+    options: [
+      'To make APIs slower',
+      'To implement policies for refresh token expiration and automatic renewal',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To implement policies for refresh token expiration and automatic renewal',
+    explanation: 'API authentication token refresh with refresh token expiration and renewal policies implements policies for refresh token expiration and automatic renewal, balancing security and user experience.',
+    category: 'Security',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-226',
+    question: 'What is the purpose of database connection string configuration with connection pooling and load balancing integration?',
+    options: [
+      'To make databases slower',
+      'To integrate connection pooling with load balancing for optimal resource utilization',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To integrate connection pooling with load balancing for optimal resource utilization',
+    explanation: 'Database connection string configuration with connection pooling and load balancing integration integrates connection pooling with load balancing for optimal resource utilization.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-227',
+    question: 'What is the purpose of API response format negotiation with format validation and sanitization?',
+    options: [
+      'To make APIs slower',
+      'To validate and sanitize response formats for security and data integrity',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To validate and sanitize response formats for security and data integrity',
+    explanation: 'API response format negotiation with format validation and sanitization validates and sanitizes response formats for security and data integrity, preventing data corruption and security issues.',
+    category: 'APIs',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-228',
+    question: 'What is the purpose of database query result set pagination with pagination state encryption and compression?',
+    options: [
+      'To make databases slower',
+      'To encrypt and compress pagination state for security and efficiency',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To encrypt and compress pagination state for security and efficiency',
+    explanation: 'Database query result set pagination with pagination state encryption and compression encrypts and compresses pagination state for security and efficiency, protecting pagination information.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-229',
+    question: 'What is the purpose of API request/response correlation with correlation ID rotation and encryption?',
+    options: [
+      'To make APIs slower',
+      'To rotate and encrypt correlation IDs for enhanced security',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To rotate and encrypt correlation IDs for enhanced security',
+    explanation: 'API request/response correlation with correlation ID rotation and encryption rotates and encrypts correlation IDs for enhanced security, preventing correlation ID tracking and attacks.',
+    category: 'Backend Operations',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-230',
+    question: 'What is the purpose of database connection string rotation with rotation auditing and compliance tracking?',
+    options: [
+      'To make databases slower',
+      'To audit and track credential rotations for compliance and security monitoring',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To audit and track credential rotations for compliance and security monitoring',
+    explanation: 'Database connection string rotation with rotation auditing and compliance tracking audits and tracks credential rotations for compliance and security monitoring, ensuring accountability.',
+    category: 'Security',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-231',
+    question: 'What is the purpose of API response streaming with streaming analytics and monitoring?',
+    options: [
+      'To make APIs slower',
+      'To monitor and analyze streaming performance and usage patterns',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To monitor and analyze streaming performance and usage patterns',
+    explanation: 'API response streaming with streaming analytics and monitoring monitors and analyzes streaming performance and usage patterns, enabling optimization and troubleshooting.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-232',
+    question: 'What is the purpose of database query result streaming with streaming performance optimization and caching?',
+    options: [
+      'To make databases slower',
+      'To optimize streaming performance and implement streaming result caching',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To optimize streaming performance and implement streaming result caching',
+    explanation: 'Database query result streaming with streaming performance optimization and caching optimizes streaming performance and implements streaming result caching, improving efficiency.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-233',
+    question: 'What is the purpose of API request batching with batch performance monitoring and optimization?',
+    options: [
+      'To make APIs slower',
+      'To monitor and optimize batch processing performance',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To monitor and optimize batch processing performance',
+    explanation: 'API request batching with batch performance monitoring and optimization monitors and optimizes batch processing performance, ensuring efficient batch operations.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-234',
+    question: 'What is the purpose of database connection string configuration with connection performance profiling and optimization?',
+    options: [
+      'To make databases slower',
+      'To profile and optimize database connection performance',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To profile and optimize database connection performance',
+    explanation: 'Database connection string configuration with connection performance profiling and optimization profiles and optimizes database connection performance, ensuring optimal database connectivity.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-235',
+    question: 'What is the purpose of API response caching with cache performance analytics and optimization?',
+    options: [
+      'To make APIs slower',
+      'To analyze and optimize cache performance and effectiveness',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To analyze and optimize cache performance and effectiveness',
+    explanation: 'API response caching with cache performance analytics and optimization analyzes and optimizes cache performance and effectiveness, ensuring optimal caching strategies.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-236',
+    question: 'What is the purpose of database query result caching with cache performance monitoring and tuning?',
+    options: [
+      'To make databases slower',
+      'To monitor and tune cache performance for optimal database caching',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To monitor and tune cache performance for optimal database caching',
+    explanation: 'Database query result caching with cache performance monitoring and tuning monitors and tunes cache performance for optimal database caching, ensuring efficient query result caching.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-237',
+    question: 'What is the purpose of API authentication token refresh with refresh token performance monitoring and optimization?',
+    options: [
+      'To make APIs slower',
+      'To monitor and optimize refresh token performance and reliability',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To monitor and optimize refresh token performance and reliability',
+    explanation: 'API authentication token refresh with refresh token performance monitoring and optimization monitors and optimizes refresh token performance and reliability, ensuring smooth authentication.',
+    category: 'Security',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-238',
+    question: 'What is the purpose of database connection string validation with validation performance optimization?',
+    options: [
+      'To make databases slower',
+      'To optimize validation performance while maintaining security',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To optimize validation performance while maintaining security',
+    explanation: 'Database connection string validation with validation performance optimization optimizes validation performance while maintaining security, ensuring efficient connection validation.',
+    category: 'Databases',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-239',
+    question: 'What is the purpose of API response format negotiation with negotiation performance optimization?',
+    options: [
+      'To make APIs slower',
+      'To optimize format negotiation performance for faster response delivery',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To optimize format negotiation performance for faster response delivery',
+    explanation: 'API response format negotiation with negotiation performance optimization optimizes format negotiation performance for faster response delivery, improving API responsiveness.',
+    category: 'APIs',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-240',
+    question: 'What is the purpose of database query result set pagination with pagination performance optimization and caching?',
+    options: [
+      'To make databases slower',
+      'To optimize pagination performance and implement pagination result caching',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To optimize pagination performance and implement pagination result caching',
+    explanation: 'Database query result set pagination with pagination performance optimization and caching optimizes pagination performance and implements pagination result caching, improving pagination efficiency.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-241',
+    question: 'What is the purpose of API request/response correlation with correlation performance monitoring and optimization?',
+    options: [
+      'To make APIs slower',
+      'To monitor and optimize correlation performance for efficient request tracking',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To monitor and optimize correlation performance for efficient request tracking',
+    explanation: 'API request/response correlation with correlation performance monitoring and optimization monitors and optimizes correlation performance for efficient request tracking, ensuring effective debugging.',
+    category: 'Backend Operations',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-242',
+    question: 'What is the purpose of database connection string rotation with rotation performance optimization and automation?',
+    options: [
+      'To make databases slower',
+      'To optimize rotation performance and automate credential rotation processes',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To optimize rotation performance and automate credential rotation processes',
+    explanation: 'Database connection string rotation with rotation performance optimization and automation optimizes rotation performance and automates credential rotation processes, ensuring efficient security management.',
+    category: 'Security',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-243',
+    question: 'What is the purpose of API response streaming with streaming performance analytics and optimization?',
+    options: [
+      'To make APIs slower',
+      'To analyze and optimize streaming performance for better user experience',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To analyze and optimize streaming performance for better user experience',
+    explanation: 'API response streaming with streaming performance analytics and optimization analyzes and optimizes streaming performance for better user experience, ensuring smooth streaming delivery.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-244',
+    question: 'What is the purpose of database query result streaming with streaming performance monitoring and tuning?',
+    options: [
+      'To make databases slower',
+      'To monitor and tune streaming performance for optimal database result streaming',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To monitor and tune streaming performance for optimal database result streaming',
+    explanation: 'Database query result streaming with streaming performance monitoring and tuning monitors and tunes streaming performance for optimal database result streaming, ensuring efficient data delivery.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-245',
+    question: 'What is the purpose of API request batching with batch performance analytics and optimization?',
+    options: [
+      'To make APIs slower',
+      'To analyze and optimize batch processing performance for efficiency',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To analyze and optimize batch processing performance for efficiency',
+    explanation: 'API request batching with batch performance analytics and optimization analyzes and optimizes batch processing performance for efficiency, ensuring optimal batch operations.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-246',
+    question: 'What is the purpose of database connection string health checking with health check performance optimization?',
+    options: [
+      'To make databases slower',
+      'To optimize health check performance while maintaining reliability',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To optimize health check performance while maintaining reliability',
+    explanation: 'Database connection string health checking with health check performance optimization optimizes health check performance while maintaining reliability, ensuring efficient health monitoring.',
+    category: 'Databases',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-247',
+    question: 'What is the purpose of API response caching with cache performance profiling and optimization?',
+    options: [
+      'To make APIs slower',
+      'To profile and optimize cache performance for maximum effectiveness',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To profile and optimize cache performance for maximum effectiveness',
+    explanation: 'API response caching with cache performance profiling and optimization profiles and optimizes cache performance for maximum effectiveness, ensuring optimal caching strategies.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-248',
+    question: 'What is the purpose of database query result caching with cache performance analytics and tuning?',
+    options: [
+      'To make databases slower',
+      'To analyze and tune cache performance for optimal database query caching',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To analyze and tune cache performance for optimal database query caching',
+    explanation: 'Database query result caching with cache performance analytics and tuning analyzes and tunes cache performance for optimal database query caching, ensuring efficient query result caching.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-249',
+    question: 'What is the purpose of API authentication token refresh with refresh token performance profiling and optimization?',
+    options: [
+      'To make APIs slower',
+      'To profile and optimize refresh token performance for reliability',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To profile and optimize refresh token performance for reliability',
+    explanation: 'API authentication token refresh with refresh token performance profiling and optimization profiles and optimizes refresh token performance for reliability, ensuring smooth authentication processes.',
+    category: 'Security',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-250',
+    question: 'What is the purpose of database connection string configuration with comprehensive performance optimization and monitoring?',
+    options: [
+      'To make databases slower',
+      'To comprehensively optimize and monitor database connection performance',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To comprehensively optimize and monitor database connection performance',
+    explanation: 'Database connection string configuration with comprehensive performance optimization and monitoring comprehensively optimizes and monitors database connection performance, ensuring optimal database connectivity and resource utilization.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-251',
+    question: 'What is the purpose of API rate limiting with dynamic rate adjustment based on system load?',
+    options: [
+      'To make APIs slower',
+      'To automatically adjust rate limits based on current system performance and capacity',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To automatically adjust rate limits based on current system performance and capacity',
+    explanation: 'API rate limiting with dynamic rate adjustment automatically adjusts rate limits based on current system performance and capacity, ensuring optimal resource utilization and preventing system overload.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-252',
+    question: 'What is the purpose of database connection string configuration with connection pooling and failover integration?',
+    options: [
+      'To make databases slower',
+      'To integrate connection pooling with failover mechanisms for high availability',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To integrate connection pooling with failover mechanisms for high availability',
+    explanation: 'Database connection string configuration with connection pooling and failover integration integrates connection pooling with failover mechanisms for high availability, ensuring continuous database connectivity.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-253',
+    question: 'What is the purpose of API response caching with cache warming based on real-time usage analytics?',
+    options: [
+      'To make APIs slower',
+      'To pre-populate cache based on real-time analysis of current usage patterns',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To pre-populate cache based on real-time analysis of current usage patterns',
+    explanation: 'API response caching with cache warming based on real-time usage analytics pre-populates cache based on real-time analysis of current usage patterns, optimizing cache effectiveness dynamically.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-254',
+    question: 'What is the purpose of database query result caching with cache warming based on real-time query analysis?',
+    options: [
+      'To make databases slower',
+      'To pre-populate cache based on real-time analysis of current query patterns',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To pre-populate cache based on real-time analysis of current query patterns',
+    explanation: 'Database query result caching with cache warming based on real-time query analysis pre-populates cache based on real-time analysis of current query patterns, improving cache hit rates dynamically.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-255',
+    question: 'What is the purpose of API authentication token refresh with refresh token rotation and automatic renewal scheduling?',
+    options: [
+      'To make APIs slower',
+      'To automatically schedule and execute refresh token rotations and renewals',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To automatically schedule and execute refresh token rotations and renewals',
+    explanation: 'API authentication token refresh with refresh token rotation and automatic renewal scheduling automatically schedules and executes refresh token rotations and renewals, maintaining security without user intervention.',
+    category: 'Security',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-256',
+    question: 'What is the purpose of database connection string configuration with connection pooling and read replica load balancing?',
+    options: [
+      'To make databases slower',
+      'To integrate connection pooling with read replica load balancing for optimal read performance',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To integrate connection pooling with read replica load balancing for optimal read performance',
+    explanation: 'Database connection string configuration with connection pooling and read replica load balancing integrates connection pooling with read replica load balancing for optimal read performance, distributing read load efficiently.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-257',
+    question: 'What is the purpose of API response format negotiation with format versioning and backward compatibility management?',
+    options: [
+      'To make APIs slower',
+      'To manage response format versions while maintaining backward compatibility',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To manage response format versions while maintaining backward compatibility',
+    explanation: 'API response format negotiation with format versioning and backward compatibility management manages response format versions while maintaining backward compatibility, ensuring client compatibility across versions.',
+    category: 'APIs',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-258',
+    question: 'What is the purpose of database query result set pagination with cursor-based pagination and cursor state encryption?',
+    options: [
+      'To make databases slower',
+      'To implement secure cursor-based pagination with encrypted cursor state',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To implement secure cursor-based pagination with encrypted cursor state',
+    explanation: 'Database query result set pagination with cursor-based pagination and cursor state encryption implements secure cursor-based pagination with encrypted cursor state, protecting pagination information.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-259',
+    question: 'What is the purpose of API request/response correlation with correlation ID encryption and rotation scheduling?',
+    options: [
+      'To make APIs slower',
+      'To encrypt correlation IDs and schedule regular rotation for enhanced security',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To encrypt correlation IDs and schedule regular rotation for enhanced security',
+    explanation: 'API request/response correlation with correlation ID encryption and rotation scheduling encrypts correlation IDs and schedules regular rotation for enhanced security, preventing correlation ID tracking.',
+    category: 'Backend Operations',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-260',
+    question: 'What is the purpose of database connection string rotation with rotation scheduling and compliance reporting?',
+    options: [
+      'To make databases slower',
+      'To schedule credential rotations and generate compliance reports automatically',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To schedule credential rotations and generate compliance reports automatically',
+    explanation: 'Database connection string rotation with rotation scheduling and compliance reporting schedules credential rotations and generates compliance reports automatically, ensuring regulatory compliance.',
+    category: 'Security',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-261',
+    question: 'What is the purpose of API response streaming with streaming quality adaptation and performance monitoring?',
+    options: [
+      'To make APIs slower',
+      'To adapt streaming quality and monitor performance in real-time',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To adapt streaming quality and monitor performance in real-time',
+    explanation: 'API response streaming with streaming quality adaptation and performance monitoring adapts streaming quality and monitors performance in real-time, optimizing user experience dynamically.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-262',
+    question: 'What is the purpose of database query result streaming with streaming compression and performance optimization?',
+    options: [
+      'To make databases slower',
+      'To compress streamed results and optimize streaming performance',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To compress streamed results and optimize streaming performance',
+    explanation: 'Database query result streaming with streaming compression and performance optimization compresses streamed results and optimizes streaming performance, improving efficiency and bandwidth utilization.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-263',
+    question: 'What is the purpose of API request batching with batch prioritization and performance monitoring?',
+    options: [
+      'To make APIs slower',
+      'To prioritize batch processing and monitor batch performance',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To prioritize batch processing and monitor batch performance',
+    explanation: 'API request batching with batch prioritization and performance monitoring prioritizes batch processing and monitors batch performance, ensuring efficient batch operations.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-264',
+    question: 'What is the purpose of database connection string health checking with health status caching and performance optimization?',
+    options: [
+      'To make databases slower',
+      'To cache health check results and optimize health check performance',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To cache health check results and optimize health check performance',
+    explanation: 'Database connection string health checking with health status caching and performance optimization caches health check results and optimizes health check performance, reducing overhead and improving efficiency.',
+    category: 'Databases',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-265',
+    question: 'What is the purpose of API response caching with cache warming based on predictive analytics and machine learning?',
+    options: [
+      'To make APIs slower',
+      'To pre-populate cache using predictive analytics and machine learning models',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To pre-populate cache using predictive analytics and machine learning models',
+    explanation: 'API response caching with cache warming based on predictive analytics and machine learning pre-populates cache using predictive analytics and machine learning models, optimizing cache effectiveness with advanced prediction.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-266',
+    question: 'What is the purpose of database query result caching with cache warming based on query pattern analysis and machine learning?',
+    options: [
+      'To make databases slower',
+      'To pre-populate cache based on query pattern analysis and machine learning predictions',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To pre-populate cache based on query pattern analysis and machine learning predictions',
+    explanation: 'Database query result caching with cache warming based on query pattern analysis and machine learning pre-populates cache based on query pattern analysis and machine learning predictions, improving cache hit rates with advanced analytics.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-267',
+    question: 'What is the purpose of API authentication token refresh with refresh token rotation and security monitoring?',
+    options: [
+      'To make APIs slower',
+      'To rotate refresh tokens and monitor security events',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To rotate refresh tokens and monitor security events',
+    explanation: 'API authentication token refresh with refresh token rotation and security monitoring rotates refresh tokens and monitors security events, ensuring secure authentication and detecting potential threats.',
+    category: 'Security',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-268',
+    question: 'What is the purpose of database connection string configuration with connection pooling and performance analytics?',
+    options: [
+      'To make databases slower',
+      'To integrate connection pooling with performance analytics for optimization',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To integrate connection pooling with performance analytics for optimization',
+    explanation: 'Database connection string configuration with connection pooling and performance analytics integrates connection pooling with performance analytics for optimization, ensuring optimal connection pool configuration.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-269',
+    question: 'What is the purpose of API response format negotiation with format validation and security scanning?',
+    options: [
+      'To make APIs slower',
+      'To validate response formats and scan for security vulnerabilities',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To validate response formats and scan for security vulnerabilities',
+    explanation: 'API response format negotiation with format validation and security scanning validates response formats and scans for security vulnerabilities, ensuring data integrity and security.',
+    category: 'APIs',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-270',
+    question: 'What is the purpose of database query result set pagination with pagination state encryption and compression optimization?',
+    options: [
+      'To make databases slower',
+      'To encrypt and compress pagination state for security and efficiency',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To encrypt and compress pagination state for security and efficiency',
+    explanation: 'Database query result set pagination with pagination state encryption and compression optimization encrypts and compresses pagination state for security and efficiency, protecting pagination information and optimizing storage.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-271',
+    question: 'What is the purpose of API request/response correlation with correlation ID encryption and security monitoring?',
+    options: [
+      'To make APIs slower',
+      'To encrypt correlation IDs and monitor for security threats',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To encrypt correlation IDs and monitor for security threats',
+    explanation: 'API request/response correlation with correlation ID encryption and security monitoring encrypts correlation IDs and monitors for security threats, protecting request tracking and detecting potential attacks.',
+    category: 'Backend Operations',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-272',
+    question: 'What is the purpose of database connection string rotation with rotation scheduling and security auditing?',
+    options: [
+      'To make databases slower',
+      'To schedule credential rotations and audit security events',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To schedule credential rotations and audit security events',
+    explanation: 'Database connection string rotation with rotation scheduling and security auditing schedules credential rotations and audits security events, ensuring security compliance and accountability.',
+    category: 'Security',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-273',
+    question: 'What is the purpose of API response streaming with streaming analytics and performance optimization?',
+    options: [
+      'To make APIs slower',
+      'To analyze streaming performance and optimize streaming delivery',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To analyze streaming performance and optimize streaming delivery',
+    explanation: 'API response streaming with streaming analytics and performance optimization analyzes streaming performance and optimizes streaming delivery, ensuring optimal streaming experience.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-274',
+    question: 'What is the purpose of database query result streaming with streaming performance monitoring and optimization?',
+    options: [
+      'To make databases slower',
+      'To monitor streaming performance and optimize database result streaming',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To monitor streaming performance and optimize database result streaming',
+    explanation: 'Database query result streaming with streaming performance monitoring and optimization monitors streaming performance and optimizes database result streaming, ensuring efficient data delivery.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-275',
+    question: 'What is the purpose of API request batching with batch performance analytics and optimization?',
+    options: [
+      'To make APIs slower',
+      'To analyze batch performance and optimize batch processing',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To analyze batch performance and optimize batch processing',
+    explanation: 'API request batching with batch performance analytics and optimization analyzes batch performance and optimizes batch processing, ensuring efficient batch operations.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-276',
+    question: 'What is the purpose of database connection string configuration with connection performance profiling and optimization?',
+    options: [
+      'To make databases slower',
+      'To profile connection performance and optimize database connectivity',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To profile connection performance and optimize database connectivity',
+    explanation: 'Database connection string configuration with connection performance profiling and optimization profiles connection performance and optimizes database connectivity, ensuring optimal database performance.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-277',
+    question: 'What is the purpose of API response caching with cache performance analytics and optimization?',
+    options: [
+      'To make APIs slower',
+      'To analyze cache performance and optimize caching strategies',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To analyze cache performance and optimize caching strategies',
+    explanation: 'API response caching with cache performance analytics and optimization analyzes cache performance and optimizes caching strategies, ensuring optimal cache effectiveness.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-278',
+    question: 'What is the purpose of database query result caching with cache performance monitoring and optimization?',
+    options: [
+      'To make databases slower',
+      'To monitor cache performance and optimize database query caching',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To monitor cache performance and optimize database query caching',
+    explanation: 'Database query result caching with cache performance monitoring and optimization monitors cache performance and optimizes database query caching, ensuring efficient query result caching.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-279',
+    question: 'What is the purpose of API authentication token refresh with refresh token performance monitoring and optimization?',
+    options: [
+      'To make APIs slower',
+      'To monitor refresh token performance and optimize authentication processes',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To monitor refresh token performance and optimize authentication processes',
+    explanation: 'API authentication token refresh with refresh token performance monitoring and optimization monitors refresh token performance and optimizes authentication processes, ensuring smooth authentication.',
+    category: 'Security',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-280',
+    question: 'What is the purpose of database connection string validation with validation performance optimization and security scanning?',
+    options: [
+      'To make databases slower',
+      'To optimize validation performance and scan for security vulnerabilities',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To optimize validation performance and scan for security vulnerabilities',
+    explanation: 'Database connection string validation with validation performance optimization and security scanning optimizes validation performance and scans for security vulnerabilities, ensuring efficient and secure validation.',
+    category: 'Databases',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-281',
+    question: 'What is the purpose of API response format negotiation with negotiation performance optimization and security validation?',
+    options: [
+      'To make APIs slower',
+      'To optimize format negotiation performance and validate security',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To optimize format negotiation performance and validate security',
+    explanation: 'API response format negotiation with negotiation performance optimization and security validation optimizes format negotiation performance and validates security, ensuring efficient and secure format negotiation.',
+    category: 'APIs',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-282',
+    question: 'What is the purpose of database query result set pagination with pagination performance optimization and security encryption?',
+    options: [
+      'To make databases slower',
+      'To optimize pagination performance and encrypt pagination data for security',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To optimize pagination performance and encrypt pagination data for security',
+    explanation: 'Database query result set pagination with pagination performance optimization and security encryption optimizes pagination performance and encrypts pagination data for security, ensuring efficient and secure pagination.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-283',
+    question: 'What is the purpose of API request/response correlation with correlation performance monitoring and security encryption?',
+    options: [
+      'To make APIs slower',
+      'To monitor correlation performance and encrypt correlation data for security',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To monitor correlation performance and encrypt correlation data for security',
+    explanation: 'API request/response correlation with correlation performance monitoring and security encryption monitors correlation performance and encrypts correlation data for security, ensuring efficient and secure request tracking.',
+    category: 'Backend Operations',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-284',
+    question: 'What is the purpose of database connection string rotation with rotation performance optimization and security auditing?',
+    options: [
+      'To make databases slower',
+      'To optimize rotation performance and audit security events',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To optimize rotation performance and audit security events',
+    explanation: 'Database connection string rotation with rotation performance optimization and security auditing optimizes rotation performance and audits security events, ensuring efficient and secure credential rotation.',
+    category: 'Security',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-285',
+    question: 'What is the purpose of API response streaming with streaming performance analytics and security monitoring?',
+    options: [
+      'To make APIs slower',
+      'To analyze streaming performance and monitor for security threats',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To analyze streaming performance and monitor for security threats',
+    explanation: 'API response streaming with streaming performance analytics and security monitoring analyzes streaming performance and monitors for security threats, ensuring optimal and secure streaming delivery.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-286',
+    question: 'What is the purpose of database query result streaming with streaming performance monitoring and security encryption?',
+    options: [
+      'To make databases slower',
+      'To monitor streaming performance and encrypt streamed data for security',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To monitor streaming performance and encrypt streamed data for security',
+    explanation: 'Database query result streaming with streaming performance monitoring and security encryption monitors streaming performance and encrypts streamed data for security, ensuring efficient and secure data streaming.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-287',
+    question: 'What is the purpose of API request batching with batch performance analytics and security validation?',
+    options: [
+      'To make APIs slower',
+      'To analyze batch performance and validate batch security',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To analyze batch performance and validate batch security',
+    explanation: 'API request batching with batch performance analytics and security validation analyzes batch performance and validates batch security, ensuring efficient and secure batch processing.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-288',
+    question: 'What is the purpose of database connection string health checking with health check performance optimization and security monitoring?',
+    options: [
+      'To make databases slower',
+      'To optimize health check performance and monitor for security threats',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To optimize health check performance and monitor for security threats',
+    explanation: 'Database connection string health checking with health check performance optimization and security monitoring optimizes health check performance and monitors for security threats, ensuring efficient and secure health monitoring.',
+    category: 'Databases',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-289',
+    question: 'What is the purpose of API response caching with cache performance profiling and security scanning?',
+    options: [
+      'To make APIs slower',
+      'To profile cache performance and scan for security vulnerabilities',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To profile cache performance and scan for security vulnerabilities',
+    explanation: 'API response caching with cache performance profiling and security scanning profiles cache performance and scans for security vulnerabilities, ensuring optimal and secure caching strategies.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-290',
+    question: 'What is the purpose of database query result caching with cache performance analytics and security encryption?',
+    options: [
+      'To make databases slower',
+      'To analyze cache performance and encrypt cached data for security',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To analyze cache performance and encrypt cached data for security',
+    explanation: 'Database query result caching with cache performance analytics and security encryption analyzes cache performance and encrypts cached data for security, ensuring efficient and secure query result caching.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-291',
+    question: 'What is the purpose of API authentication token refresh with refresh token performance profiling and security monitoring?',
+    options: [
+      'To make APIs slower',
+      'To profile refresh token performance and monitor for security threats',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To profile refresh token performance and monitor for security threats',
+    explanation: 'API authentication token refresh with refresh token performance profiling and security monitoring profiles refresh token performance and monitors for security threats, ensuring efficient and secure authentication processes.',
+    category: 'Security',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-292',
+    question: 'What is the purpose of database connection string configuration with comprehensive performance optimization and security auditing?',
+    options: [
+      'To make databases slower',
+      'To comprehensively optimize performance and audit security events',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To comprehensively optimize performance and audit security events',
+    explanation: 'Database connection string configuration with comprehensive performance optimization and security auditing comprehensively optimizes performance and audits security events, ensuring optimal and secure database connectivity.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-293',
+    question: 'What is the purpose of API rate limiting with dynamic rate adjustment and security monitoring?',
+    options: [
+      'To make APIs slower',
+      'To dynamically adjust rate limits and monitor for security threats',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To dynamically adjust rate limits and monitor for security threats',
+    explanation: 'API rate limiting with dynamic rate adjustment and security monitoring dynamically adjusts rate limits and monitors for security threats, ensuring optimal resource utilization and security.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-294',
+    question: 'What is the purpose of database connection string configuration with connection pooling and security encryption?',
+    options: [
+      'To make databases slower',
+      'To integrate connection pooling with security encryption for optimal performance and security',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To integrate connection pooling with security encryption for optimal performance and security',
+    explanation: 'Database connection string configuration with connection pooling and security encryption integrates connection pooling with security encryption for optimal performance and security, ensuring efficient and secure database connectivity.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-295',
+    question: 'What is the purpose of API response caching with cache warming and security validation?',
+    options: [
+      'To make APIs slower',
+      'To pre-populate cache and validate cache security',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To pre-populate cache and validate cache security',
+    explanation: 'API response caching with cache warming and security validation pre-populates cache and validates cache security, ensuring optimal cache effectiveness and security.',
+    category: 'Performance',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-296',
+    question: 'What is the purpose of database query result caching with cache warming and security encryption?',
+    options: [
+      'To make databases slower',
+      'To pre-populate cache and encrypt cached data for security',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To pre-populate cache and encrypt cached data for security',
+    explanation: 'Database query result caching with cache warming and security encryption pre-populates cache and encrypts cached data for security, ensuring optimal cache effectiveness and security.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-297',
+    question: 'What is the purpose of API authentication token refresh with refresh token rotation and security auditing?',
+    options: [
+      'To make APIs slower',
+      'To rotate refresh tokens and audit security events',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To rotate refresh tokens and audit security events',
+    explanation: 'API authentication token refresh with refresh token rotation and security auditing rotates refresh tokens and audits security events, ensuring secure authentication and accountability.',
+    category: 'Security',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-298',
+    question: 'What is the purpose of database connection string configuration with connection pooling and security monitoring?',
+    options: [
+      'To make databases slower',
+      'To integrate connection pooling with security monitoring for optimal performance and security',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To integrate connection pooling with security monitoring for optimal performance and security',
+    explanation: 'Database connection string configuration with connection pooling and security monitoring integrates connection pooling with security monitoring for optimal performance and security, ensuring efficient and secure database connectivity.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-299',
+    question: 'What is the purpose of API response format negotiation with format validation and security scanning?',
+    options: [
+      'To make APIs slower',
+      'To validate response formats and scan for security vulnerabilities',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To validate response formats and scan for security vulnerabilities',
+    explanation: 'API response format negotiation with format validation and security scanning validates response formats and scans for security vulnerabilities, ensuring data integrity and security.',
+    category: 'APIs',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-300',
+    question: 'What is the purpose of comprehensive backend system optimization with integrated performance monitoring and security management?',
+    options: [
+      'To make backend systems slower',
+      'To comprehensively optimize backend systems with integrated performance monitoring and security management',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To comprehensively optimize backend systems with integrated performance monitoring and security management',
+    explanation: 'Comprehensive backend system optimization with integrated performance monitoring and security management comprehensively optimizes backend systems with integrated performance monitoring and security management, ensuring optimal performance, security, and operational excellence across all backend components.',
+    category: 'Backend Architecture',
+    difficulty: 'Hard'
   }
 ]; 
