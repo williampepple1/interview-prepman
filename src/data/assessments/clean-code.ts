@@ -1750,6 +1750,356 @@ export const cleanCodeAssessmentQuestions: AssessmentQuestion[] = [
     explanation: 'Pair programming helps catch mistakes early and facilitates knowledge sharing.',
     category: 'Code Quality',
     difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-126',
+    question: 'What is the purpose of continuous integration (CI)?',
+    options: [
+      'To automatically build and test code changes as they are committed',
+      'To integrate all code at once',
+      'To merge code branches',
+      'To deploy code automatically'
+    ],
+    correctAnswer: 'To automatically build and test code changes as they are committed',
+    explanation: 'CI helps catch integration issues early and ensures code quality.',
+    category: 'Code Quality',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-127',
+    question: 'What is the purpose of continuous deployment (CD)?',
+    options: [
+      'To automatically deploy code changes to production after passing tests',
+      'To deploy code manually',
+      'To test code in production',
+      'To rollback deployments'
+    ],
+    correctAnswer: 'To automatically deploy code changes to production after passing tests',
+    explanation: 'CD automates the deployment process, reducing human error and deployment time.',
+    category: 'Code Quality',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-128',
+    question: 'What is the purpose of blue-green deployment?',
+    options: [
+      'To deploy new versions with zero downtime by switching between identical environments',
+      'To use blue and green colors in the UI',
+      'To deploy to two different servers',
+      'To test code in production'
+    ],
+    correctAnswer: 'To deploy new versions with zero downtime by switching between identical environments',
+    explanation: 'Blue-green deployment minimizes downtime and allows quick rollbacks.',
+    category: 'Code Quality',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'clean-code-129',
+    question: 'What is the purpose of canary deployment?',
+    options: [
+      'To gradually roll out changes to a small subset of users before full deployment',
+      'To deploy to a single server',
+      'To test code with real users',
+      'To monitor deployment health'
+    ],
+    correctAnswer: 'To gradually roll out changes to a small subset of users before full deployment',
+    explanation: 'Canary deployments help detect issues early and minimize risk.',
+    category: 'Code Quality',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'clean-code-130',
+    question: 'What is the purpose of semantic versioning?',
+    options: [
+      'To communicate the nature of changes in version numbers (MAJOR.MINOR.PATCH)',
+      'To make version numbers meaningful',
+      'To track code changes',
+      'To organize releases'
+    ],
+    correctAnswer: 'To communicate the nature of changes in version numbers (MAJOR.MINOR.PATCH)',
+    explanation: 'Semantic versioning helps users understand the impact of updates.',
+    category: 'Code Quality',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'clean-code-131',
+    question: 'What is the purpose of changelogs?',
+    options: [
+      'To document all notable changes between versions of software',
+      'To track all code changes',
+      'To list bug fixes only',
+      'To document new features only'
+    ],
+    correctAnswer: 'To document all notable changes between versions of software',
+    explanation: 'Changelogs help users understand what has changed in each release.',
+    category: 'Documentation',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'clean-code-132',
+    question: 'What is the purpose of API versioning?',
+    options: [
+      'To maintain backward compatibility while evolving APIs',
+      'To create multiple APIs',
+      'To track API changes',
+      'To organize API documentation'
+    ],
+    correctAnswer: 'To maintain backward compatibility while evolving APIs',
+    explanation: 'API versioning allows clients to continue using old versions while new features are added.',
+    category: 'Code Quality',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-133',
+    question: 'What is the purpose of backward compatibility?',
+    options: [
+      'To ensure new versions work with existing clients and data',
+      'To support old browsers',
+      'To maintain old code',
+      'To prevent breaking changes'
+    ],
+    correctAnswer: 'To ensure new versions work with existing clients and data',
+    explanation: 'Backward compatibility reduces the impact of updates on existing users.',
+    category: 'Code Quality',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-134',
+    question: 'What is the purpose of forward compatibility?',
+    options: [
+      'To ensure current versions can work with future versions',
+      'To support future browsers',
+      'To prepare for future changes',
+      'To maintain future code'
+    ],
+    correctAnswer: 'To ensure current versions can work with future versions',
+    explanation: 'Forward compatibility helps with gradual migrations and updates.',
+    category: 'Code Quality',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'clean-code-135',
+    question: 'What is the purpose of graceful degradation?',
+    options: [
+      'To ensure software continues to function with reduced features when components fail',
+      'To reduce software quality',
+      'To handle errors gracefully',
+      'To maintain performance'
+    ],
+    correctAnswer: 'To ensure software continues to function with reduced features when components fail',
+    explanation: 'Graceful degradation provides a better user experience when problems occur.',
+    category: 'Error Handling',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-136',
+    question: 'What is the purpose of progressive enhancement?',
+    options: [
+      'To start with basic functionality and add advanced features for capable browsers',
+      'To progressively improve code quality',
+      'To add features gradually',
+      'To enhance performance over time'
+    ],
+    correctAnswer: 'To start with basic functionality and add advanced features for capable browsers',
+    explanation: 'Progressive enhancement ensures accessibility while providing enhanced experiences.',
+    category: 'Code Quality',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-137',
+    question: 'What is the purpose of defensive copying?',
+    options: [
+      'To create copies of mutable objects to prevent unintended modifications',
+      'To copy all objects',
+      'To prevent object sharing',
+      'To improve performance'
+    ],
+    correctAnswer: 'To create copies of mutable objects to prevent unintended modifications',
+    explanation: 'Defensive copying helps maintain encapsulation and prevent bugs.',
+    category: 'Clean Code Basics',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'clean-code-138',
+    question: 'What is the purpose of fail-fast programming?',
+    options: [
+      'To detect and report errors as early as possible',
+      'To make programs fail quickly',
+      'To handle errors immediately',
+      'To prevent program crashes'
+    ],
+    correctAnswer: 'To detect and report errors as early as possible',
+    explanation: 'Fail-fast programming helps identify problems quickly and makes debugging easier.',
+    category: 'Error Handling',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-139',
+    question: 'What is the purpose of the Tell-Don\'t-Ask principle?',
+    options: [
+      'To tell objects what to do rather than asking about their state',
+      'To avoid asking questions',
+      'To use imperative programming',
+      'To follow object-oriented principles'
+    ],
+    correctAnswer: 'To tell objects what to do rather than asking about their state',
+    explanation: 'Tell-Don\'t-Ask promotes better encapsulation and reduces coupling.',
+    category: 'SOLID Principles',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'clean-code-140',
+    question: 'What is the purpose of the Law of Demeter (LoD)?',
+    options: [
+      'To limit the knowledge an object has about other objects',
+      'To reduce object coupling',
+      'To follow encapsulation principles',
+      'To improve object design'
+    ],
+    correctAnswer: 'To limit the knowledge an object has about other objects',
+    explanation: 'LoD helps reduce coupling and improve maintainability.',
+    category: 'SOLID Principles',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'clean-code-141',
+    question: 'What is the purpose of the Hollywood Principle?',
+    options: [
+      'To let the framework call your code rather than calling the framework',
+      'To follow Hollywood coding standards',
+      'To use callback patterns',
+      'To implement dependency injection'
+    ],
+    correctAnswer: 'To let the framework call your code rather than calling the framework',
+    explanation: 'The Hollywood Principle is "Don\'t call us, we\'ll call you" - a form of inversion of control.',
+    category: 'SOLID Principles',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'clean-code-142',
+    question: 'What is the purpose of the Principle of Least Privilege?',
+    options: [
+      'To give code only the permissions it needs to function',
+      'To restrict all permissions',
+      'To follow security best practices',
+      'To minimize access rights'
+    ],
+    correctAnswer: 'To give code only the permissions it needs to function',
+    explanation: 'This principle improves security by limiting potential damage from bugs or attacks.',
+    category: 'Code Quality',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-143',
+    question: 'What is the purpose of the Principle of Least Surprise?',
+    options: [
+      'To make code behave in ways that users expect',
+      'To avoid surprising users',
+      'To follow user expectations',
+      'To make code predictable'
+    ],
+    correctAnswer: 'To make code behave in ways that users expect',
+    explanation: 'This principle ensures that code behaves in intuitive and expected ways.',
+    category: 'Clean Code Basics',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-144',
+    question: 'What is the purpose of the Principle of Least Effort?',
+    options: [
+      'To make common tasks easy and uncommon tasks possible',
+      'To minimize work required',
+      'To optimize for common use cases',
+      'To reduce complexity'
+    ],
+    correctAnswer: 'To make common tasks easy and uncommon tasks possible',
+    explanation: 'This principle guides API design to prioritize common use cases.',
+    category: 'Clean Code Basics',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-145',
+    question: 'What is the purpose of the Principle of Least Knowledge?',
+    options: [
+      'To minimize dependencies between objects',
+      'To reduce object coupling',
+      'To follow encapsulation',
+      'To limit object interactions'
+    ],
+    correctAnswer: 'To minimize dependencies between objects',
+    explanation: 'This principle is another name for the Law of Demeter.',
+    category: 'SOLID Principles',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'clean-code-146',
+    question: 'What is the purpose of the Principle of Least Astonishment?',
+    options: [
+      'To make code behave in the most obvious way',
+      'To avoid surprising behavior',
+      'To follow user expectations',
+      'To make code intuitive'
+    ],
+    correctAnswer: 'To make code behave in the most obvious way',
+    explanation: 'This principle ensures that code behaves as users would naturally expect.',
+    category: 'Clean Code Basics',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-147',
+    question: 'What is the purpose of the Principle of Least Action?',
+    options: [
+      'To minimize the number of steps required to accomplish a task',
+      'To reduce code complexity',
+      'To optimize performance',
+      'To simplify workflows'
+    ],
+    correctAnswer: 'To minimize the number of steps required to accomplish a task',
+    explanation: 'This principle guides UX and API design to reduce friction.',
+    category: 'Clean Code Basics',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-148',
+    question: 'What is the purpose of the Principle of Least Resistance?',
+    options: [
+      'To make the easiest way to do something the correct way',
+      'To avoid difficult solutions',
+      'To follow the path of least resistance',
+      'To simplify decision making'
+    ],
+    correctAnswer: 'To make the easiest way to do something the correct way',
+    explanation: 'This principle guides design to make the right thing easy to do.',
+    category: 'Clean Code Basics',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-149',
+    question: 'What is the purpose of the Principle of Least Commitment?',
+    options: [
+      'To avoid making decisions until necessary',
+      'To delay implementation',
+      'To avoid over-engineering',
+      'To follow YAGNI principle'
+    ],
+    correctAnswer: 'To avoid making decisions until necessary',
+    explanation: 'This principle helps avoid premature optimization and over-engineering.',
+    category: 'Clean Code Basics',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'clean-code-150',
+    question: 'What is the purpose of the Principle of Least Cost?',
+    options: [
+      'To minimize the total cost of ownership of software',
+      'To reduce development costs',
+      'To optimize for cost efficiency',
+      'To minimize resource usage'
+    ],
+    correctAnswer: 'To minimize the total cost of ownership of software',
+    explanation: 'This principle considers development, maintenance, and operational costs.',
+    category: 'Code Quality',
+    difficulty: 'Hard'
   }
 ];
   
