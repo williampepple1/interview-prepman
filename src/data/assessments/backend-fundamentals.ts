@@ -700,5 +700,705 @@ export const backendFundamentalsQuestions: AssessmentQuestion[] = [
     explanation: 'Database maintenance ensures database health and optimal performance through regular tasks like index rebuilding and statistics updates.',
     category: 'Databases',
     difficulty: 'Medium'
+  },
+  {
+    id: 'backend-51',
+    question: 'What is the purpose of a reverse proxy in backend architecture?',
+    options: [
+      'To make requests slower',
+      'To act as an intermediary between clients and servers, providing load balancing and caching',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To act as an intermediary between clients and servers, providing load balancing and caching',
+    explanation: 'A reverse proxy acts as an intermediary between clients and servers, providing load balancing, caching, SSL termination, and security features.',
+    category: 'Backend Architecture',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-52',
+    question: 'What is the purpose of message queues in backend systems?',
+    options: [
+      'To make systems slower',
+      'To decouple components and handle asynchronous processing',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To decouple components and handle asynchronous processing',
+    explanation: 'Message queues decouple components and handle asynchronous processing, allowing systems to handle high loads and provide reliability.',
+    category: 'Backend Architecture',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-53',
+    question: 'What is the purpose of circuit breakers in distributed systems?',
+    options: [
+      'To make systems slower',
+      'To prevent cascading failures by stopping requests to failing services',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To prevent cascading failures by stopping requests to failing services',
+    explanation: 'Circuit breakers prevent cascading failures by stopping requests to failing services, allowing them to recover and preventing system overload.',
+    category: 'Backend Architecture',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-54',
+    question: 'What is the purpose of health checks in backend services?',
+    options: [
+      'To make services slower',
+      'To monitor service availability and detect failures',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To monitor service availability and detect failures',
+    explanation: 'Health checks monitor service availability and detect failures, allowing load balancers and monitoring systems to route traffic appropriately.',
+    category: 'Backend Operations',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-55',
+    question: 'What is the purpose of API gateways?',
+    options: [
+      'To make APIs slower',
+      'To provide a single entry point for multiple APIs with routing, authentication, and monitoring',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To provide a single entry point for multiple APIs with routing, authentication, and monitoring',
+    explanation: 'API gateways provide a single entry point for multiple APIs, handling routing, authentication, rate limiting, and monitoring.',
+    category: 'Backend Architecture',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-56',
+    question: 'What is the purpose of distributed tracing in microservices?',
+    options: [
+      'To make services slower',
+      'To track requests across multiple services for debugging and monitoring',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To track requests across multiple services for debugging and monitoring',
+    explanation: 'Distributed tracing tracks requests across multiple services, helping developers debug issues and monitor performance in microservice architectures.',
+    category: 'Backend Operations',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-57',
+    question: 'What is the purpose of service discovery in microservices?',
+    options: [
+      'To make services slower',
+      'To automatically locate and connect to available services',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To automatically locate and connect to available services',
+    explanation: 'Service discovery automatically locates and connects to available services, allowing dynamic scaling and load balancing in microservice architectures.',
+    category: 'Backend Architecture',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-58',
+    question: 'What is the purpose of configuration management in backend systems?',
+    options: [
+      'To make systems slower',
+      'To manage application settings across different environments',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To manage application settings across different environments',
+    explanation: 'Configuration management manages application settings across different environments, ensuring consistency and enabling environment-specific configurations.',
+    category: 'Backend Configuration',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-59',
+    question: 'What is the purpose of blue-green deployments?',
+    options: [
+      'To make deployments slower',
+      'To enable zero-downtime deployments by switching between identical environments',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To enable zero-downtime deployments by switching between identical environments',
+    explanation: 'Blue-green deployments enable zero-downtime deployments by switching between identical environments, allowing quick rollbacks if issues arise.',
+    category: 'Backend Operations',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-60',
+    question: 'What is the purpose of canary deployments?',
+    options: [
+      'To make deployments slower',
+      'To gradually roll out changes to a small subset of users before full deployment',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To gradually roll out changes to a small subset of users before full deployment',
+    explanation: 'Canary deployments gradually roll out changes to a small subset of users before full deployment, allowing early detection of issues.',
+    category: 'Backend Operations',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-61',
+    question: 'What is the purpose of containerization in backend development?',
+    options: [
+      'To make applications slower',
+      'To package applications with their dependencies for consistent deployment',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To package applications with their dependencies for consistent deployment',
+    explanation: 'Containerization packages applications with their dependencies, ensuring consistent deployment across different environments and platforms.',
+    category: 'Backend Architecture',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-62',
+    question: 'What is the purpose of orchestration in containerized systems?',
+    options: [
+      'To make systems slower',
+      'To manage and coordinate multiple containers across multiple hosts',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To manage and coordinate multiple containers across multiple hosts',
+    explanation: 'Orchestration manages and coordinates multiple containers across multiple hosts, handling deployment, scaling, and service discovery.',
+    category: 'Backend Architecture',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-63',
+    question: 'What is the purpose of secrets management in backend systems?',
+    options: [
+      'To make systems slower',
+      'To securely store and manage sensitive information like passwords and API keys',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To securely store and manage sensitive information like passwords and API keys',
+    explanation: 'Secrets management securely stores and manages sensitive information like passwords, API keys, and certificates, preventing exposure in code.',
+    category: 'Security',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-64',
+    question: 'What is the purpose of observability in backend systems?',
+    options: [
+      'To make systems slower',
+      'To provide visibility into system behavior through logging, metrics, and tracing',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To provide visibility into system behavior through logging, metrics, and tracing',
+    explanation: 'Observability provides visibility into system behavior through logging, metrics, and tracing, enabling effective monitoring and debugging.',
+    category: 'Backend Operations',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-65',
+    question: 'What is the purpose of API mocking in development?',
+    options: [
+      'To make development slower',
+      'To simulate API responses for testing and development without real dependencies',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To simulate API responses for testing and development without real dependencies',
+    explanation: 'API mocking simulates API responses for testing and development, allowing developers to work without real dependencies and test various scenarios.',
+    category: 'APIs',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-66',
+    question: 'What is the purpose of database connection string security?',
+    options: [
+      'To make databases slower',
+      'To protect database credentials and connection information',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To protect database credentials and connection information',
+    explanation: 'Database connection string security protects database credentials and connection information, preventing unauthorized access to databases.',
+    category: 'Security',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-67',
+    question: 'What is the purpose of API response compression?',
+    options: [
+      'To make APIs slower',
+      'To reduce bandwidth usage and improve response times',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To reduce bandwidth usage and improve response times',
+    explanation: 'API response compression reduces bandwidth usage and improves response times by compressing data before sending it to clients.',
+    category: 'Performance',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-68',
+    question: 'What is the purpose of database connection encryption?',
+    options: [
+      'To make databases slower',
+      'To protect data in transit between applications and databases',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To protect data in transit between applications and databases',
+    explanation: 'Database connection encryption protects data in transit between applications and databases, preventing interception and unauthorized access.',
+    category: 'Security',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-69',
+    question: 'What is the purpose of API request validation?',
+    options: [
+      'To make APIs slower',
+      'To ensure incoming requests contain valid data and prevent security vulnerabilities',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To ensure incoming requests contain valid data and prevent security vulnerabilities',
+    explanation: 'API request validation ensures incoming requests contain valid data and prevents security vulnerabilities like injection attacks.',
+    category: 'Security',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'backend-70',
+    question: 'What is the purpose of database query parameterization?',
+    options: [
+      'To make databases slower',
+      'To prevent SQL injection attacks by separating data from SQL commands',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To prevent SQL injection attacks by separating data from SQL commands',
+    explanation: 'Database query parameterization prevents SQL injection attacks by separating data from SQL commands, ensuring data is treated as parameters.',
+    category: 'Security',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-71',
+    question: 'What is the purpose of API response caching headers?',
+    options: [
+      'To make APIs slower',
+      'To control how responses are cached by clients and intermediaries',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To control how responses are cached by clients and intermediaries',
+    explanation: 'API response caching headers control how responses are cached by clients and intermediaries, improving performance and reducing server load.',
+    category: 'Performance',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-72',
+    question: 'What is the purpose of database connection pooling configuration?',
+    options: [
+      'To make databases slower',
+      'To optimize connection pool settings for application performance',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To optimize connection pool settings for application performance',
+    explanation: 'Database connection pooling configuration optimizes connection pool settings for application performance, balancing resource usage and responsiveness.',
+    category: 'Databases',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-73',
+    question: 'What is the purpose of API rate limiting algorithms?',
+    options: [
+      'To make APIs slower',
+      'To implement different strategies for limiting request rates',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To implement different strategies for limiting request rates',
+    explanation: 'API rate limiting algorithms implement different strategies for limiting request rates, such as token bucket, leaky bucket, or sliding window approaches.',
+    category: 'Security',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-74',
+    question: 'What is the purpose of database transaction isolation levels?',
+    options: [
+      'To make databases slower',
+      'To control how transactions interact with each other and maintain data consistency',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To control how transactions interact with each other and maintain data consistency',
+    explanation: 'Database transaction isolation levels control how transactions interact with each other and maintain data consistency, preventing concurrency issues.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-75',
+    question: 'What is the purpose of API authentication methods?',
+    options: [
+      'To make APIs slower',
+      'To provide different ways to verify user identity and authorize access',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To provide different ways to verify user identity and authorize access',
+    explanation: 'API authentication methods provide different ways to verify user identity and authorize access, such as API keys, OAuth, JWT, or session-based authentication.',
+    category: 'Security',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-76',
+    question: 'What is the purpose of database backup strategies?',
+    options: [
+      'To make databases slower',
+      'To ensure data can be recovered in case of failure or corruption',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To ensure data can be recovered in case of failure or corruption',
+    explanation: 'Database backup strategies ensure data can be recovered in case of failure or corruption, protecting against data loss and enabling disaster recovery.',
+    category: 'Databases',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-77',
+    question: 'What is the purpose of API monitoring and alerting?',
+    options: [
+      'To make APIs slower',
+      'To track API performance and notify when issues occur',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To track API performance and notify when issues occur',
+    explanation: 'API monitoring and alerting tracks API performance and notifies when issues occur, enabling proactive problem resolution and SLA compliance.',
+    category: 'Backend Operations',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-78',
+    question: 'What is the purpose of database performance tuning?',
+    options: [
+      'To make databases slower',
+      'To optimize database performance through configuration and query optimization',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To optimize database performance through configuration and query optimization',
+    explanation: 'Database performance tuning optimizes database performance through configuration, query optimization, indexing, and resource allocation.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-79',
+    question: 'What is the purpose of API security testing?',
+    options: [
+      'To make APIs slower',
+      'To identify security vulnerabilities and ensure API security',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To identify security vulnerabilities and ensure API security',
+    explanation: 'API security testing identifies security vulnerabilities and ensures API security through penetration testing, vulnerability scanning, and security audits.',
+    category: 'Security',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-80',
+    question: 'What is the purpose of database scaling strategies?',
+    options: [
+      'To make databases slower',
+      'To handle increased load through vertical or horizontal scaling',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To handle increased load through vertical or horizontal scaling',
+    explanation: 'Database scaling strategies handle increased load through vertical scaling (more resources) or horizontal scaling (more servers).',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-81',
+    question: 'What is the purpose of API documentation standards?',
+    options: [
+      'To make APIs slower',
+      'To ensure consistent and comprehensive API documentation',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To ensure consistent and comprehensive API documentation',
+    explanation: 'API documentation standards ensure consistent and comprehensive API documentation, making APIs easier to understand and use.',
+    category: 'APIs',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'backend-82',
+    question: 'What is the purpose of database migration strategies?',
+    options: [
+      'To make databases slower',
+      'To safely update database schemas without data loss',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To safely update database schemas without data loss',
+    explanation: 'Database migration strategies safely update database schemas without data loss, ensuring smooth application updates and rollbacks.',
+    category: 'Databases',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-83',
+    question: 'What is the purpose of API versioning approaches?',
+    options: [
+      'To make APIs slower',
+      'To manage API changes while maintaining backward compatibility',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To manage API changes while maintaining backward compatibility',
+    explanation: 'API versioning approaches manage API changes while maintaining backward compatibility, allowing gradual API evolution.',
+    category: 'APIs',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-84',
+    question: 'What is the purpose of database replication strategies?',
+    options: [
+      'To make databases slower',
+      'To ensure data availability and improve read performance',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To ensure data availability and improve read performance',
+    explanation: 'Database replication strategies ensure data availability and improve read performance by maintaining copies of data across multiple servers.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-85',
+    question: 'What is the purpose of API testing strategies?',
+    options: [
+      'To make APIs slower',
+      'To ensure API reliability and functionality through comprehensive testing',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To ensure API reliability and functionality through comprehensive testing',
+    explanation: 'API testing strategies ensure API reliability and functionality through unit testing, integration testing, and end-to-end testing.',
+    category: 'APIs',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-86',
+    question: 'What is the purpose of database security best practices?',
+    options: [
+      'To make databases slower',
+      'To protect database systems from unauthorized access and attacks',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To protect database systems from unauthorized access and attacks',
+    explanation: 'Database security best practices protect database systems from unauthorized access and attacks through proper authentication, authorization, and encryption.',
+    category: 'Security',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-87',
+    question: 'What is the purpose of API performance optimization?',
+    options: [
+      'To make APIs slower',
+      'To improve API response times and throughput',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To improve API response times and throughput',
+    explanation: 'API performance optimization improves API response times and throughput through caching, database optimization, and efficient algorithms.',
+    category: 'Performance',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-88',
+    question: 'What is the purpose of database monitoring and alerting?',
+    options: [
+      'To make databases slower',
+      'To track database performance and notify when issues occur',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To track database performance and notify when issues occur',
+    explanation: 'Database monitoring and alerting tracks database performance and notifies when issues occur, enabling proactive maintenance and problem resolution.',
+    category: 'Backend Operations',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-89',
+    question: 'What is the purpose of API error handling strategies?',
+    options: [
+      'To make APIs slower',
+      'To provide meaningful error responses and handle failures gracefully',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To provide meaningful error responses and handle failures gracefully',
+    explanation: 'API error handling strategies provide meaningful error responses and handle failures gracefully, improving user experience and debugging.',
+    category: 'APIs',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-90',
+    question: 'What is the purpose of database backup and recovery procedures?',
+    options: [
+      'To make databases slower',
+      'To ensure data can be restored in case of failure or disaster',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To ensure data can be restored in case of failure or disaster',
+    explanation: 'Database backup and recovery procedures ensure data can be restored in case of failure or disaster, protecting against data loss.',
+    category: 'Databases',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-91',
+    question: 'What is the purpose of API load testing?',
+    options: [
+      'To make APIs slower',
+      'To verify API performance under expected and peak loads',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To verify API performance under expected and peak loads',
+    explanation: 'API load testing verifies API performance under expected and peak loads, ensuring the API can handle production traffic.',
+    category: 'APIs',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-92',
+    question: 'What is the purpose of database connection security?',
+    options: [
+      'To make databases slower',
+      'To protect database connections from unauthorized access and attacks',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To protect database connections from unauthorized access and attacks',
+    explanation: 'Database connection security protects database connections from unauthorized access and attacks through encryption, authentication, and network security.',
+    category: 'Security',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-93',
+    question: 'What is the purpose of API caching strategies?',
+    options: [
+      'To make APIs slower',
+      'To improve performance by storing frequently accessed data',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To improve performance by storing frequently accessed data',
+    explanation: 'API caching strategies improve performance by storing frequently accessed data, reducing database load and improving response times.',
+    category: 'Performance',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-94',
+    question: 'What is the purpose of database query optimization techniques?',
+    options: [
+      'To make databases slower',
+      'To improve query performance through indexing, query rewriting, and execution plan optimization',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To improve query performance through indexing, query rewriting, and execution plan optimization',
+    explanation: 'Database query optimization techniques improve query performance through indexing, query rewriting, and execution plan optimization.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-95',
+    question: 'What is the purpose of API security headers implementation?',
+    options: [
+      'To make APIs slower',
+      'To protect against common web vulnerabilities through HTTP headers',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To protect against common web vulnerabilities through HTTP headers',
+    explanation: 'API security headers implementation protects against common web vulnerabilities through HTTP headers like Content-Security-Policy, X-Frame-Options, etc.',
+    category: 'Security',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-96',
+    question: 'What is the purpose of database high availability strategies?',
+    options: [
+      'To make databases slower',
+      'To ensure database availability through redundancy and failover mechanisms',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To ensure database availability through redundancy and failover mechanisms',
+    explanation: 'Database high availability strategies ensure database availability through redundancy and failover mechanisms, minimizing downtime.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-97',
+    question: 'What is the purpose of API rate limiting implementation?',
+    options: [
+      'To make APIs slower',
+      'To prevent abuse and ensure fair usage through request rate control',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To prevent abuse and ensure fair usage through request rate control',
+    explanation: 'API rate limiting implementation prevents abuse and ensures fair usage through request rate control, protecting server resources.',
+    category: 'Security',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-98',
+    question: 'What is the purpose of database disaster recovery planning?',
+    options: [
+      'To make databases slower',
+      'To ensure business continuity in case of major failures or disasters',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To ensure business continuity in case of major failures or disasters',
+    explanation: 'Database disaster recovery planning ensures business continuity in case of major failures or disasters through backup, replication, and recovery procedures.',
+    category: 'Databases',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'backend-99',
+    question: 'What is the purpose of API authentication and authorization implementation?',
+    options: [
+      'To make APIs slower',
+      'To secure API access through proper user verification and permission management',
+      'To increase costs',
+      'To reduce performance'
+    ],
+    correctAnswer: 'To secure API access through proper user verification and permission management',
+    explanation: 'API authentication and authorization implementation secures API access through proper user verification and permission management.',
+    category: 'Security',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'backend-100',
+    question: 'What is the purpose of database performance monitoring and optimization?',
+    options: [
+      'To make databases slower',
+      'To continuously monitor and improve database performance and efficiency',
+      'To increase costs',
+      'To reduce security'
+    ],
+    correctAnswer: 'To continuously monitor and improve database performance and efficiency',
+    explanation: 'Database performance monitoring and optimization continuously monitors and improves database performance and efficiency through ongoing analysis and tuning.',
+    category: 'Databases',
+    difficulty: 'Hard'
   }
 ]; 
