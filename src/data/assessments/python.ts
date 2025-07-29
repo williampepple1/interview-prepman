@@ -9800,6 +9800,706 @@ export const pythonAssessmentQuestions: AssessmentQuestion[] = [
     explanation: 'slice objects with the same start, stop, and step values are equal.',
     category: 'Python Built-in Functions',
     difficulty: 'Medium'
+  },
+  {
+    id: 'python-701',
+    question: 'What is the output of: print([1, 2, 3] + [4, 5, 6])?',
+    options: [
+      '[1, 2, 3, 4, 5, 6]',
+      '[5, 7, 9]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '[1, 2, 3, 4, 5, 6]',
+    explanation: 'The + operator concatenates lists, not adds their elements.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-702',
+    question: 'What is the output of: print([1, 2, 3] * 3)?',
+    options: [
+      '[1, 2, 3, 1, 2, 3, 1, 2, 3]',
+      '[3, 6, 9]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '[1, 2, 3, 1, 2, 3, 1, 2, 3]',
+    explanation: 'The * operator repeats the list, not multiplies its elements.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-703',
+    question: 'What is the output of: print([1, 2, 3][1:3])?',
+    options: [
+      '[2, 3]',
+      '[1, 2]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '[2, 3]',
+    explanation: 'Slicing [1:3] returns elements from index 1 to 2 (exclusive of 3).',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-704',
+    question: 'What is the output of: print([1, 2, 3][-2:])?',
+    options: [
+      '[2, 3]',
+      '[1, 2]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '[2, 3]',
+    explanation: 'Negative slicing [-2:] returns the last 2 elements.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-705',
+    question: 'What is the output of: print([1, 2, 3][::-1])?',
+    options: [
+      '[3, 2, 1]',
+      '[1, 2, 3]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '[3, 2, 1]',
+    explanation: 'Step -1 reverses the list.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-706',
+    question: 'What is the output of: print([1, 2, 3].append(4))?',
+    options: [
+      'None',
+      '[1, 2, 3, 4]',
+      'Error',
+      '4'
+    ],
+    correctAnswer: 'None',
+    explanation: 'append() modifies the list in-place and returns None.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-707',
+    question: 'What is the output of: print([1, 2, 3].extend([4, 5]))?',
+    options: [
+      'None',
+      '[1, 2, 3, 4, 5]',
+      'Error',
+      '[4, 5]'
+    ],
+    correctAnswer: 'None',
+    explanation: 'extend() modifies the list in-place and returns None.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-708',
+    question: 'What is the output of: print([1, 2, 3].insert(1, 5))?',
+    options: [
+      'None',
+      '[1, 5, 2, 3]',
+      'Error',
+      '5'
+    ],
+    correctAnswer: 'None',
+    explanation: 'insert() modifies the list in-place and returns None.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-709',
+    question: 'What is the output of: print([1, 2, 3].remove(2))?',
+    options: [
+      'None',
+      '[1, 3]',
+      'Error',
+      '2'
+    ],
+    correctAnswer: 'None',
+    explanation: 'remove() modifies the list in-place and returns None.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-710',
+    question: 'What is the output of: print([1, 2, 3].pop())?',
+    options: [
+      '3',
+      '[1, 2]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '3',
+    explanation: 'pop() removes and returns the last element.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-711',
+    question: 'What is the output of: print([1, 2, 3].pop(0))?',
+    options: [
+      '1',
+      '[2, 3]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '1',
+    explanation: 'pop(0) removes and returns the element at index 0.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-712',
+    question: 'What is the output of: print([1, 2, 3].clear())?',
+    options: [
+      'None',
+      '[]',
+      'Error',
+      '[1, 2, 3]'
+    ],
+    correctAnswer: 'None',
+    explanation: 'clear() removes all elements and returns None.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-713',
+    question: 'What is the output of: print([1, 2, 3].index(2))?',
+    options: [
+      '1',
+      '2',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '1',
+    explanation: 'index() returns the first occurrence of the element.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-714',
+    question: 'What is the output of: print([1, 2, 3].count(2))?',
+    options: [
+      '1',
+      '2',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '1',
+    explanation: 'count() returns the number of occurrences of the element.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-715',
+    question: 'What is the output of: print([3, 1, 2].sort())?',
+    options: [
+      'None',
+      '[1, 2, 3]',
+      'Error',
+      '[3, 1, 2]'
+    ],
+    correctAnswer: 'None',
+    explanation: 'sort() modifies the list in-place and returns None.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-716',
+    question: 'What is the output of: print([3, 1, 2].reverse())?',
+    options: [
+      'None',
+      '[2, 1, 3]',
+      'Error',
+      '[3, 1, 2]'
+    ],
+    correctAnswer: 'None',
+    explanation: 'reverse() modifies the list in-place and returns None.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-717',
+    question: 'What is the output of: print([1, 2, 3].copy())?',
+    options: [
+      '[1, 2, 3]',
+      'None',
+      'Error',
+      '[1, 2, 3]'
+    ],
+    correctAnswer: '[1, 2, 3]',
+    explanation: 'copy() returns a shallow copy of the list.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-718',
+    question: 'What is the output of: print({"a": 1, "b": 2}["a"])?',
+    options: [
+      '1',
+      '2',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '1',
+    explanation: 'Dictionary key access returns the corresponding value.',
+    category: 'Python Dictionaries',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-719',
+    question: 'What is the output of: print({"a": 1, "b": 2}.get("a"))?',
+    options: [
+      '1',
+      '2',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '1',
+    explanation: 'get() returns the value for the key if it exists.',
+    category: 'Python Dictionaries',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-720',
+    question: 'What is the output of: print({"a": 1, "b": 2}.get("c", "default"))?',
+    options: [
+      "'default'",
+      'None',
+      'Error',
+      'KeyError'
+    ],
+    correctAnswer: "'default'",
+    explanation: 'get() returns the default value when the key doesn\'t exist.',
+    category: 'Python Dictionaries',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-721',
+    question: 'What is the output of: print({"a": 1, "b": 2}.setdefault("c", 3))?',
+    options: [
+      '3',
+      'None',
+      'Error',
+      'KeyError'
+    ],
+    correctAnswer: '3',
+    explanation: 'setdefault() returns the value and adds the key-value pair if it doesn\'t exist.',
+    category: 'Python Dictionaries',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-722',
+    question: 'What is the output of: print({"a": 1, "b": 2}.update({"c": 3}))?',
+    options: [
+      'None',
+      "{'a': 1, 'b': 2, 'c': 3}",
+      'Error',
+      '3'
+    ],
+    correctAnswer: 'None',
+    explanation: 'update() modifies the dictionary in-place and returns None.',
+    category: 'Python Dictionaries',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-723',
+    question: 'What is the output of: print({"a": 1, "b": 2}.pop("a"))?',
+    options: [
+      '1',
+      'None',
+      'Error',
+      'KeyError'
+    ],
+    correctAnswer: '1',
+    explanation: 'pop() removes and returns the value for the specified key.',
+    category: 'Python Dictionaries',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-724',
+    question: 'What is the output of: print({"a": 1, "b": 2}.popitem())?',
+    options: [
+      'A key-value tuple',
+      'None',
+      'Error',
+      'KeyError'
+    ],
+    correctAnswer: 'A key-value tuple',
+    explanation: 'popitem() removes and returns an arbitrary key-value pair as a tuple.',
+    category: 'Python Dictionaries',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-725',
+    question: 'What is the output of: print({"a": 1, "b": 2}.clear())?',
+    options: [
+      'None',
+      '{}',
+      'Error',
+      'KeyError'
+    ],
+    correctAnswer: 'None',
+    explanation: 'clear() removes all items and returns None.',
+    category: 'Python Dictionaries',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-726',
+    question: 'What is the output of: print({"a": 1, "b": 2}.keys())?',
+    options: [
+      "dict_keys(['a', 'b'])",
+      "['a', 'b']",
+      'Error',
+      'None'
+    ],
+    correctAnswer: "dict_keys(['a', 'b'])",
+    explanation: 'keys() returns a view object of dictionary keys.',
+    category: 'Python Dictionaries',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-727',
+    question: 'What is the output of: print({"a": 1, "b": 2}.values())?',
+    options: [
+      "dict_values([1, 2])",
+      "[1, 2]",
+      'Error',
+      'None'
+    ],
+    correctAnswer: "dict_values([1, 2])",
+    explanation: 'values() returns a view object of dictionary values.',
+    category: 'Python Dictionaries',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-728',
+    question: 'What is the output of: print({"a": 1, "b": 2}.items())?',
+    options: [
+      "dict_items([('a', 1), ('b', 2)])",
+      "[('a', 1), ('b', 2)]",
+      'Error',
+      'None'
+    ],
+    correctAnswer: "dict_items([('a', 1), ('b', 2)])",
+    explanation: 'items() returns a view object of dictionary key-value pairs.',
+    category: 'Python Dictionaries',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-729',
+    question: 'What is the output of: print({1, 2, 3} | {3, 4, 5})?',
+    options: [
+      '{1, 2, 3, 4, 5}',
+      '{3}',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '{1, 2, 3, 4, 5}',
+    explanation: 'The | operator performs set union.',
+    category: 'Python Sets',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-730',
+    question: 'What is the output of: print({1, 2, 3} & {3, 4, 5})?',
+    options: [
+      '{3}',
+      '{1, 2, 3, 4, 5}',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '{3}',
+    explanation: 'The & operator performs set intersection.',
+    category: 'Python Sets',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-731',
+    question: 'What is the output of: print({1, 2, 3} - {3, 4, 5})?',
+    options: [
+      '{1, 2}',
+      '{4, 5}',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '{1, 2}',
+    explanation: 'The - operator performs set difference.',
+    category: 'Python Sets',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-732',
+    question: 'What is the output of: print({1, 2, 3} ^ {3, 4, 5})?',
+    options: [
+      '{1, 2, 4, 5}',
+      '{3}',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '{1, 2, 4, 5}',
+    explanation: 'The ^ operator performs set symmetric difference.',
+    category: 'Python Sets',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-733',
+    question: 'What is the output of: print({1, 2, 3}.add(4))?',
+    options: [
+      'None',
+      '{1, 2, 3, 4}',
+      'Error',
+      '4'
+    ],
+    correctAnswer: 'None',
+    explanation: 'add() modifies the set in-place and returns None.',
+    category: 'Python Sets',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-734',
+    question: 'What is the output of: print({1, 2, 3}.remove(2))?',
+    options: [
+      'None',
+      '{1, 3}',
+      'Error',
+      '2'
+    ],
+    correctAnswer: 'None',
+    explanation: 'remove() modifies the set in-place and returns None.',
+    category: 'Python Sets',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-735',
+    question: 'What is the output of: print({1, 2, 3}.discard(4))?',
+    options: [
+      'None',
+      '{1, 2, 3}',
+      'Error',
+      'KeyError'
+    ],
+    correctAnswer: 'None',
+    explanation: 'discard() removes an element if present and returns None (no error if not found).',
+    category: 'Python Sets',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-736',
+    question: 'What is the output of: print({1, 2, 3}.pop())?',
+    options: [
+      'An arbitrary element',
+      'None',
+      'Error',
+      'KeyError'
+    ],
+    correctAnswer: 'An arbitrary element',
+    explanation: 'pop() removes and returns an arbitrary element from the set.',
+    category: 'Python Sets',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-737',
+    question: 'What is the output of: print({1, 2, 3}.clear())?',
+    options: [
+      'None',
+      'set()',
+      'Error',
+      'KeyError'
+    ],
+    correctAnswer: 'None',
+    explanation: 'clear() removes all elements and returns None.',
+    category: 'Python Sets',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-738',
+    question: 'What is the output of: print({1, 2, 3}.copy())?',
+    options: [
+      '{1, 2, 3}',
+      'None',
+      'Error',
+      'KeyError'
+    ],
+    correctAnswer: '{1, 2, 3}',
+    explanation: 'copy() returns a shallow copy of the set.',
+    category: 'Python Sets',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-739',
+    question: 'What is the output of: print((1, 2, 3) + (4, 5, 6))?',
+    options: [
+      '(1, 2, 3, 4, 5, 6)',
+      '(5, 7, 9)',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '(1, 2, 3, 4, 5, 6)',
+    explanation: 'The + operator concatenates tuples.',
+    category: 'Python Tuples',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-740',
+    question: 'What is the output of: print((1, 2, 3) * 2)?',
+    options: [
+      '(1, 2, 3, 1, 2, 3)',
+      '(2, 4, 6)',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '(1, 2, 3, 1, 2, 3)',
+    explanation: 'The * operator repeats the tuple.',
+    category: 'Python Tuples',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-741',
+    question: 'What is the output of: print((1, 2, 3).count(2))?',
+    options: [
+      '1',
+      '2',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '1',
+    explanation: 'count() returns the number of occurrences of the element.',
+    category: 'Python Tuples',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-742',
+    question: 'What is the output of: print((1, 2, 3).index(2))?',
+    options: [
+      '1',
+      '2',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '1',
+    explanation: 'index() returns the first occurrence of the element.',
+    category: 'Python Tuples',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-743',
+    question: 'What is the output of: print([1, 2, 3][1] = 5)?',
+    options: [
+      'None',
+      '[1, 5, 3]',
+      'Error',
+      '5'
+    ],
+    correctAnswer: 'None',
+    explanation: 'Assignment modifies the list and returns None.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-744',
+    question: 'What is the output of: print((1, 2, 3)[1] = 5)?',
+    options: [
+      'Error',
+      'None',
+      '(1, 5, 3)',
+      '5'
+    ],
+    correctAnswer: 'Error',
+    explanation: 'Tuples are immutable and cannot be modified.',
+    category: 'Python Tuples',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-745',
+    question: 'What is the output of: print({"a": 1}["b"])?',
+    options: [
+      'Error',
+      'None',
+      'KeyError',
+      '1'
+    ],
+    correctAnswer: 'Error',
+    explanation: 'Accessing a non-existent key raises a KeyError.',
+    category: 'Python Dictionaries',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-746',
+    question: 'What is the output of: print({1, 2, 3}.remove(4))?',
+    options: [
+      'Error',
+      'None',
+      'KeyError',
+      '4'
+    ],
+    correctAnswer: 'Error',
+    explanation: 'remove() raises a KeyError if the element is not found.',
+    category: 'Python Sets',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-747',
+    question: 'What is the output of: print([1, 2, 3].index(4))?',
+    options: [
+      'Error',
+      'None',
+      'ValueError',
+      '4'
+    ],
+    correctAnswer: 'Error',
+    explanation: 'index() raises a ValueError if the element is not found.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-748',
+    question: 'What is the output of: print([1, 2, 3].pop(10))?',
+    options: [
+      'Error',
+      'None',
+      'IndexError',
+      '10'
+    ],
+    correctAnswer: 'Error',
+    explanation: 'pop() raises an IndexError if the index is out of range.',
+    category: 'Python Lists',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-749',
+    question: 'What is the output of: print({"a": 1}.pop("b"))?',
+    options: [
+      'Error',
+      'None',
+      'KeyError',
+      '1'
+    ],
+    correctAnswer: 'Error',
+    explanation: 'pop() raises a KeyError if the key is not found.',
+    category: 'Python Dictionaries',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-750',
+    question: 'What is the output of: print(set([1, 2, 2, 3, 3, 3]))?',
+    options: [
+      '{1, 2, 3}',
+      '[1, 2, 2, 3, 3, 3]',
+      'Error',
+      'None'
+    ],
+    correctAnswer: '{1, 2, 3}',
+    explanation: 'set() removes duplicates from the iterable.',
+    category: 'Python Sets',
+    difficulty: 'Easy'
   }
 
 ]; 
