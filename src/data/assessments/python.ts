@@ -11200,6 +11200,1406 @@ export const pythonAssessmentQuestions: AssessmentQuestion[] = [
     explanation: 'Coroutines can both yield values and receive values via the send() method, while generators can only yield values.',
     category: 'Python Generators',
     difficulty: 'Hard'
+  },
+  {
+    id: 'python-801',
+    question: 'What is the purpose of the asyncio library in Python?',
+    options: [
+      'To write asynchronous code using async/await syntax',
+      'To create multi-threaded applications',
+      'To handle file I/O operations',
+      'To manage database connections'
+    ],
+    correctAnswer: 'To write asynchronous code using async/await syntax',
+    explanation: 'asyncio provides the infrastructure for writing single-threaded concurrent code using coroutines, multiplexing I/O access over sockets and other resources.',
+    category: 'Python Asyncio',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-802',
+    question: 'What is the difference between threading and multiprocessing in Python?',
+    options: [
+      'Threading shares memory space, multiprocessing uses separate memory spaces',
+      'Multiprocessing is always faster than threading',
+      'Threading can only be used for I/O-bound tasks',
+      'Multiprocessing is deprecated in Python 3'
+    ],
+    correctAnswer: 'Threading shares memory space, multiprocessing uses separate memory spaces',
+    explanation: 'Threading shares the same memory space and is limited by the GIL, while multiprocessing uses separate memory spaces and can utilize multiple CPU cores.',
+    category: 'Python Concurrency',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-803',
+    question: 'What is the Global Interpreter Lock (GIL) in Python?',
+    options: [
+      'A mutex that protects access to Python objects',
+      'A mechanism for garbage collection',
+      'A tool for memory management',
+      'A feature for exception handling'
+    ],
+    correctAnswer: 'A mutex that protects access to Python objects',
+    explanation: 'The GIL is a mutex that protects access to Python objects, preventing multiple native threads from executing Python bytecodes simultaneously.',
+    category: 'Python Internals',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-804',
+    question: 'What is the purpose of the @dataclass decorator?',
+    options: [
+      'To automatically generate boilerplate code for classes',
+      'To make classes immutable',
+      'To improve performance of class instantiation',
+      'To create abstract base classes'
+    ],
+    correctAnswer: 'To automatically generate boilerplate code for classes',
+    explanation: '@dataclass automatically generates __init__, __repr__, __eq__, and other special methods, reducing boilerplate code for simple data-holding classes.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-805',
+    question: 'What is the difference between a list and a deque from collections?',
+    options: [
+      'deque provides O(1) operations for both ends, list is O(n) for beginning operations',
+      'deque can only store numbers, list can store any type',
+      'list is faster than deque for all operations',
+      'deque is deprecated in modern Python'
+    ],
+    correctAnswer: 'deque provides O(1) operations for both ends, list is O(n) for beginning operations',
+    explanation: 'deque (double-ended queue) provides O(1) operations for both ends, while list operations at the beginning are O(n) due to shifting elements.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-806',
+    question: 'What is the purpose of the @lru_cache decorator?',
+    options: [
+      'To cache function results and avoid redundant computations',
+      'To improve function performance',
+      'To make functions thread-safe',
+      'To create lazy evaluation'
+    ],
+    correctAnswer: 'To cache function results and avoid redundant computations',
+    explanation: '@lru_cache decorates a function with a memoizing callable that saves up to the maxsize most recent calls, avoiding redundant computations.',
+    category: 'Python Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-807',
+    question: 'What is the difference between a shallow copy and a deep copy of a set?',
+    options: [
+      'Shallow copy creates new references for nested objects, deep copy creates new objects for all levels',
+      'Deep copy is faster than shallow copy',
+      'Shallow copy only works for simple sets',
+      'Deep copy cannot handle nested sets'
+    ],
+    correctAnswer: 'Shallow copy creates new references for nested objects, deep copy creates new objects for all levels',
+    explanation: 'Shallow copy creates a new set but references the same nested objects, while deep copy recursively creates new objects for all nested levels.',
+    category: 'Python Sets',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-808',
+    question: 'What is the purpose of the __getitem__ method?',
+    options: [
+      'To enable indexing and slicing operations on objects',
+      'To define attribute getters',
+      'To implement comparison operations',
+      'To define string representation'
+    ],
+    correctAnswer: 'To enable indexing and slicing operations on objects',
+    explanation: '__getitem__ allows objects to support indexing and slicing operations, making them behave like sequences or mappings.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-809',
+    question: 'What is the difference between a regular function and a generator function?',
+    options: [
+      'Generator functions use yield to return values one at a time',
+      'Regular functions are faster than generator functions',
+      'Generator functions can only be used once',
+      'Regular functions cannot return values'
+    ],
+    correctAnswer: 'Generator functions use yield to return values one at a time',
+    explanation: 'Generator functions use the yield keyword to return values one at a time, creating an iterator, while regular functions return all values at once.',
+    category: 'Python Generators',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-810',
+    question: 'What is the purpose of the @abstractmethod decorator?',
+    options: [
+      'To define methods that must be implemented by subclasses',
+      'To make methods private',
+      'To improve method performance',
+      'To create static methods'
+    ],
+    correctAnswer: 'To define methods that must be implemented by subclasses',
+    explanation: '@abstractmethod marks a method as abstract, requiring subclasses to implement it, enforcing a contract in the class hierarchy.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-811',
+    question: 'What is the difference between a module and a script in Python?',
+    options: [
+      'A module is designed to be imported, a script is designed to be run directly',
+      'A script is faster than a module',
+      'Modules can only contain functions, scripts can contain classes',
+      'Scripts are deprecated in modern Python'
+    ],
+    correctAnswer: 'A module is designed to be imported, a script is designed to be run directly',
+    explanation: 'A module is designed to be imported and reused, while a script is designed to be executed directly as the main program.',
+    category: 'Python Modules',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-812',
+    question: 'What is the purpose of the __name__ variable?',
+    options: [
+      'To identify whether a module is being run directly or imported',
+      'To specify the module version',
+      'To define module constants',
+      'To specify module dependencies'
+    ],
+    correctAnswer: 'To identify whether a module is being run directly or imported',
+    explanation: '__name__ is "__main__" when a module is run directly, and the module name when imported, allowing conditional execution of code.',
+    category: 'Python Modules',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-813',
+    question: 'What is the difference between a tuple and a namedtuple?',
+    options: [
+      'namedtuple provides named fields for better readability',
+      'namedtuple is faster than regular tuple',
+      'Regular tuple can only store numbers',
+      'namedtuple is deprecated in Python 3'
+    ],
+    correctAnswer: 'namedtuple provides named fields for better readability',
+    explanation: 'namedtuple creates tuple subclasses with named fields, making code more readable and self-documenting compared to accessing tuple elements by index.',
+    category: 'Python Tuples',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-814',
+    question: 'What is the purpose of the @singledispatch decorator?',
+    options: [
+      'To create function overloads based on argument types',
+      'To make functions thread-safe',
+      'To improve function performance',
+      'To create abstract methods'
+    ],
+    correctAnswer: 'To create function overloads based on argument types',
+    explanation: '@singledispatch allows you to create function overloads, where different implementations are called based on the type of the first argument.',
+    category: 'Python Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-815',
+    question: 'What is the difference between a list comprehension and a map function?',
+    options: [
+      'List comprehensions are more readable and can include conditions',
+      'map is faster than list comprehensions',
+      'List comprehensions can only be used once',
+      'map cannot be used with lambda functions'
+    ],
+    correctAnswer: 'List comprehensions are more readable and can include conditions',
+    explanation: 'List comprehensions are generally more readable, can include conditions, and are more Pythonic, while map is more functional programming style.',
+    category: 'Python Comprehensions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-816',
+    question: 'What is the purpose of the @total_ordering decorator?',
+    options: [
+      'To automatically generate comparison methods from a subset',
+      'To make classes immutable',
+      'To improve class performance',
+      'To create abstract base classes'
+    ],
+    correctAnswer: 'To automatically generate comparison methods from a subset',
+    explanation: '@total_ordering automatically generates missing comparison methods (__lt__, __le__, __gt__, __ge__) from __eq__ and one other method.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-817',
+    question: 'What is the difference between a regular dictionary and an OrderedDict?',
+    options: [
+      'OrderedDict remembers the insertion order of keys',
+      'OrderedDict is faster than regular dict',
+      'Regular dict can only store strings as keys',
+      'OrderedDict is deprecated in Python 3'
+    ],
+    correctAnswer: 'OrderedDict remembers the insertion order of keys',
+    explanation: 'OrderedDict remembers the order in which keys were inserted, while regular dictionaries (since Python 3.7) also maintain insertion order.',
+    category: 'Python Dictionaries',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-818',
+    question: 'What is the purpose of the @cached_property decorator?',
+    options: [
+      'To cache property values after first access',
+      'To make properties read-only',
+      'To improve property performance',
+      'To create abstract properties'
+    ],
+    correctAnswer: 'To cache property values after first access',
+    explanation: '@cached_property caches the result of a property after the first access, avoiding redundant computation on subsequent accesses.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-819',
+    question: 'What is the difference between a regular function and a method?',
+    options: [
+      'Methods are bound to objects and receive self as first parameter',
+      'Methods are faster than functions',
+      'Functions can only be called from within a class',
+      'Methods cannot return values'
+    ],
+    correctAnswer: 'Methods are bound to objects and receive self as first parameter',
+    explanation: 'Methods are functions that are bound to objects and automatically receive the instance (self) as the first parameter.',
+    category: 'Python Classes',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-820',
+    question: 'What is the purpose of the @functools.wraps decorator?',
+    options: [
+      'To preserve function metadata when creating decorators',
+      'To make functions thread-safe',
+      'To improve function performance',
+      'To create abstract functions'
+    ],
+    correctAnswer: 'To preserve function metadata when creating decorators',
+    explanation: '@functools.wraps preserves the metadata (name, docstring, etc.) of the original function when creating decorators.',
+    category: 'Python Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-821',
+    question: 'What is the difference between a regular exception and a custom exception?',
+    options: [
+      'Custom exceptions can carry additional context and meaning',
+      'Regular exceptions are faster than custom exceptions',
+      'Custom exceptions can only be used once',
+      'Regular exceptions are deprecated in Python 3'
+    ],
+    correctAnswer: 'Custom exceptions can carry additional context and meaning',
+    explanation: 'Custom exceptions can carry additional context, provide more meaningful error messages, and help organize error handling in your code.',
+    category: 'Python Exceptions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-822',
+    question: 'What is the purpose of the @contextmanager decorator?',
+    options: [
+      'To create context managers using generator functions',
+      'To make functions thread-safe',
+      'To improve function performance',
+      'To create abstract methods'
+    ],
+    correctAnswer: 'To create context managers using generator functions',
+    explanation: '@contextmanager allows you to create context managers using generator functions instead of implementing __enter__ and __exit__ methods.',
+    category: 'Python Context Managers',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-823',
+    question: 'What is the difference between a regular list and a numpy array?',
+    options: [
+      'numpy arrays are optimized for numerical operations and have fixed types',
+      'numpy arrays are always faster than regular lists',
+      'Regular lists can only store numbers',
+      'numpy arrays are deprecated in modern Python'
+    ],
+    correctAnswer: 'numpy arrays are optimized for numerical operations and have fixed types',
+    explanation: 'numpy arrays are optimized for numerical operations, have fixed data types, and provide vectorized operations, while lists are more flexible.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-824',
+    question: 'What is the purpose of the @property.setter decorator?',
+    options: [
+      'To define setter methods for properties',
+      'To make properties read-only',
+      'To improve property performance',
+      'To create abstract properties'
+    ],
+    correctAnswer: 'To define setter methods for properties',
+    explanation: '@property.setter allows you to define setter methods for properties, enabling controlled assignment to property values.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-825',
+    question: 'What is the difference between a regular string and a bytes object?',
+    options: [
+      'bytes objects contain raw binary data, strings contain Unicode text',
+      'bytes objects are faster than strings',
+      'Strings can only contain ASCII characters',
+      'bytes objects are deprecated in Python 3'
+    ],
+    correctAnswer: 'bytes objects contain raw binary data, strings contain Unicode text',
+    explanation: 'bytes objects contain raw binary data (0-255), while strings contain Unicode text, requiring encoding/decoding for conversion.',
+    category: 'Python Strings',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-826',
+    question: 'What is the purpose of the @functools.lru_cache decorator?',
+    options: [
+      'To cache function results with least-recently-used eviction',
+      'To make functions thread-safe',
+      'To improve function performance',
+      'To create abstract functions'
+    ],
+    correctAnswer: 'To cache function results with least-recently-used eviction',
+    explanation: '@functools.lru_cache caches function results and evicts least-recently-used entries when the cache is full.',
+    category: 'Python Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-827',
+    question: 'What is the difference between a regular class and an abstract base class?',
+    options: [
+      'Abstract base classes cannot be instantiated and define a common interface',
+      'Abstract base classes are faster than regular classes',
+      'Regular classes can only contain abstract methods',
+      'Abstract base classes are deprecated in Python 3'
+    ],
+    correctAnswer: 'Abstract base classes cannot be instantiated and define a common interface',
+    explanation: 'Abstract base classes cannot be instantiated directly and define a common interface that subclasses must implement.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-828',
+    question: 'What is the purpose of the @dataclass(frozen=True) decorator?',
+    options: [
+      'To create immutable data classes',
+      'To improve class performance',
+      'To make classes thread-safe',
+      'To create abstract base classes'
+    ],
+    correctAnswer: 'To create immutable data classes',
+    explanation: '@dataclass(frozen=True) creates immutable data classes where attributes cannot be modified after instantiation.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-829',
+    question: 'What is the difference between a regular function and a lambda function?',
+    options: [
+      'Lambda functions are limited to a single expression',
+      'Lambda functions are faster than regular functions',
+      'Regular functions can only be used once',
+      'Lambda functions cannot return values'
+    ],
+    correctAnswer: 'Lambda functions are limited to a single expression',
+    explanation: 'Lambda functions are limited to a single expression and are typically used for simple operations, while regular functions can contain multiple statements.',
+    category: 'Python Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-830',
+    question: 'What is the purpose of the @staticmethod decorator?',
+    options: [
+      'To define methods that don\'t receive any special first parameter',
+      'To make methods private',
+      'To improve method performance',
+      'To create abstract methods'
+    ],
+    correctAnswer: 'To define methods that don\'t receive any special first parameter',
+    explanation: '@staticmethod defines methods that don\'t receive any special first parameter (neither self nor cls).',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-831',
+    question: 'What is the difference between a regular list and a linked list?',
+    options: [
+      'Linked lists use nodes with references, lists use contiguous memory',
+      'Linked lists are always faster than regular lists',
+      'Regular lists can only store numbers',
+      'Linked lists are deprecated in modern Python'
+    ],
+    correctAnswer: 'Linked lists use nodes with references, lists use contiguous memory',
+    explanation: 'Linked lists use nodes with references to the next node, while Python lists use contiguous memory allocation for better cache performance.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-832',
+    question: 'What is the purpose of the @classmethod decorator?',
+    options: [
+      'To define methods that receive the class as the first parameter',
+      'To make methods private',
+      'To improve method performance',
+      'To create abstract methods'
+    ],
+    correctAnswer: 'To define methods that receive the class as the first parameter',
+    explanation: '@classmethod defines methods that receive the class (cls) as the first parameter instead of the instance (self).',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-833',
+    question: 'What is the difference between a regular dictionary and a defaultdict?',
+    options: [
+      'defaultdict automatically creates default values for missing keys',
+      'defaultdict is faster than regular dict',
+      'Regular dict can only store strings as values',
+      'defaultdict is deprecated in Python 3'
+    ],
+    correctAnswer: 'defaultdict automatically creates default values for missing keys',
+    explanation: 'defaultdict automatically creates default values for missing keys, eliminating the need to check if a key exists before using it.',
+    category: 'Python Dictionaries',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-834',
+    question: 'What is the purpose of the @property.deleter decorator?',
+    options: [
+      'To define deleter methods for properties',
+      'To make properties read-only',
+      'To improve property performance',
+      'To create abstract properties'
+    ],
+    correctAnswer: 'To define deleter methods for properties',
+    explanation: '@property.deleter allows you to define deleter methods for properties, enabling controlled deletion of property values.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-835',
+    question: 'What is the difference between a regular set and a frozenset?',
+    options: [
+      'frozenset is immutable and can be used as dictionary keys',
+      'frozenset is faster than regular set',
+      'Regular set can only store numbers',
+      'frozenset is deprecated in Python 3'
+    ],
+    correctAnswer: 'frozenset is immutable and can be used as dictionary keys',
+    explanation: 'frozenset is immutable and can be used as dictionary keys or set elements, while regular sets are mutable.',
+    category: 'Python Sets',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-836',
+    question: 'What is the purpose of the @functools.singledispatch decorator?',
+    options: [
+      'To create function overloads based on argument types',
+      'To make functions thread-safe',
+      'To improve function performance',
+      'To create abstract functions'
+    ],
+    correctAnswer: 'To create function overloads based on argument types',
+    explanation: '@functools.singledispatch allows you to create function overloads, where different implementations are called based on the type of the first argument.',
+    category: 'Python Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-837',
+    question: 'What is the difference between a regular tuple and a namedtuple?',
+    options: [
+      'namedtuple provides named fields for better readability',
+      'namedtuple is faster than regular tuple',
+      'Regular tuple can only store numbers',
+      'namedtuple is deprecated in Python 3'
+    ],
+    correctAnswer: 'namedtuple provides named fields for better readability',
+    explanation: 'namedtuple creates tuple subclasses with named fields, making code more readable and self-documenting.',
+    category: 'Python Tuples',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-838',
+    question: 'What is the purpose of the @dataclass(order=True) decorator?',
+    options: [
+      'To automatically generate comparison methods for data classes',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To automatically generate comparison methods for data classes',
+    explanation: '@dataclass(order=True) automatically generates comparison methods (__lt__, __le__, __gt__, __ge__) for data classes.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-839',
+    question: 'What is the difference between a regular function and a coroutine?',
+    options: [
+      'Coroutines can be paused and resumed, functions run to completion',
+      'Coroutines are faster than regular functions',
+      'Regular functions can only be called once',
+      'Coroutines cannot return values'
+    ],
+    correctAnswer: 'Coroutines can be paused and resumed, functions run to completion',
+    explanation: 'Coroutines can be paused and resumed using await, allowing for cooperative multitasking, while functions run to completion.',
+    category: 'Python Coroutines',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-840',
+    question: 'What is the purpose of the @functools.total_ordering decorator?',
+    options: [
+      'To automatically generate comparison methods from a subset',
+      'To make classes immutable',
+      'To improve class performance',
+      'To create abstract base classes'
+    ],
+    correctAnswer: 'To automatically generate comparison methods from a subset',
+    explanation: '@functools.total_ordering automatically generates missing comparison methods from __eq__ and one other method.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-841',
+    question: 'What is the difference between a regular list and a deque?',
+    options: [
+      'deque provides O(1) operations for both ends, list is O(n) for beginning operations',
+      'deque is faster than list for all operations',
+      'Regular list can only store numbers',
+      'deque is deprecated in modern Python'
+    ],
+    correctAnswer: 'deque provides O(1) operations for both ends, list is O(n) for beginning operations',
+    explanation: 'deque provides O(1) operations for both ends, while list operations at the beginning are O(n) due to shifting elements.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-842',
+    question: 'What is the purpose of the @dataclass(repr=True) decorator?',
+    options: [
+      'To automatically generate __repr__ method for data classes',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To automatically generate __repr__ method for data classes',
+    explanation: '@dataclass(repr=True) automatically generates a __repr__ method that provides a string representation of the data class.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-843',
+    question: 'What is the difference between a regular dictionary and a ChainMap?',
+    options: [
+      'ChainMap provides a view over multiple dictionaries',
+      'ChainMap is faster than regular dict',
+      'Regular dict can only store strings as keys',
+      'ChainMap is deprecated in Python 3'
+    ],
+    correctAnswer: 'ChainMap provides a view over multiple dictionaries',
+    explanation: 'ChainMap provides a view over multiple dictionaries, allowing you to search through multiple mappings as if they were a single mapping.',
+    category: 'Python Dictionaries',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-844',
+    question: 'What is the purpose of the @dataclass(eq=True) decorator?',
+    options: [
+      'To automatically generate __eq__ method for data classes',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To automatically generate __eq__ method for data classes',
+    explanation: '@dataclass(eq=True) automatically generates an __eq__ method that compares data class instances for equality.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-845',
+    question: 'What is the difference between a regular set and a Counter?',
+    options: [
+      'Counter counts occurrences of elements, set only stores unique elements',
+      'Counter is faster than regular set',
+      'Regular set can only store numbers',
+      'Counter is deprecated in Python 3'
+    ],
+    correctAnswer: 'Counter counts occurrences of elements, set only stores unique elements',
+    explanation: 'Counter is a dict subclass for counting hashable objects, while set only stores unique elements without counting.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-846',
+    question: 'What is the purpose of the @dataclass(init=True) decorator?',
+    options: [
+      'To automatically generate __init__ method for data classes',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To automatically generate __init__ method for data classes',
+    explanation: '@dataclass(init=True) automatically generates an __init__ method that initializes data class instances with the specified fields.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-847',
+    question: 'What is the difference between a regular list and a numpy array?',
+    options: [
+      'numpy arrays are optimized for numerical operations and have fixed types',
+      'numpy arrays are always faster than regular lists',
+      'Regular lists can only store numbers',
+      'numpy arrays are deprecated in modern Python'
+    ],
+    correctAnswer: 'numpy arrays are optimized for numerical operations and have fixed types',
+    explanation: 'numpy arrays are optimized for numerical operations, have fixed data types, and provide vectorized operations.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-848',
+    question: 'What is the purpose of the @dataclass(hash=True) decorator?',
+    options: [
+      'To automatically generate __hash__ method for data classes',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To automatically generate __hash__ method for data classes',
+    explanation: '@dataclass(hash=True) automatically generates a __hash__ method, making data class instances hashable and usable as dictionary keys.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-849',
+    question: 'What is the difference between a regular function and a method?',
+    options: [
+      'Methods are bound to objects and receive self as first parameter',
+      'Methods are faster than functions',
+      'Functions can only be called from within a class',
+      'Methods cannot return values'
+    ],
+    correctAnswer: 'Methods are bound to objects and receive self as first parameter',
+    explanation: 'Methods are functions that are bound to objects and automatically receive the instance (self) as the first parameter.',
+    category: 'Python Classes',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-850',
+    question: 'What is the purpose of the @dataclass(unsafe_hash=True) decorator?',
+    options: [
+      'To generate hash method even for mutable data classes',
+      'To make data classes thread-safe',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To generate hash method even for mutable data classes',
+    explanation: '@dataclass(unsafe_hash=True) generates a hash method even for mutable data classes, which can be useful but should be used carefully.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-851',
+    question: 'What is the purpose of the @typing.overload decorator?',
+    options: [
+      'To provide type hints for function overloads',
+      'To make functions thread-safe',
+      'To improve function performance',
+      'To create abstract functions'
+    ],
+    correctAnswer: 'To provide type hints for function overloads',
+    explanation: '@typing.overload provides type hints for function overloads, allowing static type checkers to understand different function signatures.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-852',
+    question: 'What is the difference between a regular function and a partial function?',
+    options: [
+      'Partial functions have some arguments pre-filled',
+      'Partial functions are faster than regular functions',
+      'Regular functions can only be called once',
+      'Partial functions cannot return values'
+    ],
+    correctAnswer: 'Partial functions have some arguments pre-filled',
+    explanation: 'Partial functions from functools.partial have some arguments pre-filled, creating a new function with fewer parameters.',
+    category: 'Python Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-853',
+    question: 'What is the purpose of the @dataclass(post_init=True) decorator?',
+    options: [
+      'To automatically call __post_init__ after __init__',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To automatically call __post_init__ after __init__',
+    explanation: '@dataclass(post_init=True) automatically calls the __post_init__ method after __init__, allowing for additional initialization logic.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-854',
+    question: 'What is the difference between a regular list and a numpy array for memory usage?',
+    options: [
+      'numpy arrays use less memory due to fixed data types',
+      'Regular lists use less memory than numpy arrays',
+      'Memory usage is the same for both',
+      'numpy arrays cannot store different data types'
+    ],
+    correctAnswer: 'numpy arrays use less memory due to fixed data types',
+    explanation: 'numpy arrays use less memory because they have fixed data types and store data in contiguous memory, while lists store references to objects.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-855',
+    question: 'What is the purpose of the @typing.final decorator?',
+    options: [
+      'To mark classes or methods that should not be inherited or overridden',
+      'To make classes immutable',
+      'To improve class performance',
+      'To create abstract base classes'
+    ],
+    correctAnswer: 'To mark classes or methods that should not be inherited or overridden',
+    explanation: '@typing.final marks classes or methods as final, indicating they should not be inherited or overridden, enforced by static type checkers.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-856',
+    question: 'What is the difference between a regular dictionary and a UserDict?',
+    options: [
+      'UserDict is designed for inheritance and customization',
+      'UserDict is faster than regular dict',
+      'Regular dict can only store strings as keys',
+      'UserDict is deprecated in Python 3'
+    ],
+    correctAnswer: 'UserDict is designed for inheritance and customization',
+    explanation: 'UserDict is designed for inheritance and customization, providing a more convenient way to create dictionary-like classes.',
+    category: 'Python Dictionaries',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-857',
+    question: 'What is the purpose of the @dataclass(kw_only=True) decorator?',
+    options: [
+      'To make all fields keyword-only parameters',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To make all fields keyword-only parameters',
+    explanation: '@dataclass(kw_only=True) makes all fields keyword-only parameters, requiring explicit parameter names when creating instances.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-858',
+    question: 'What is the difference between a regular function and a method descriptor?',
+    options: [
+      'Method descriptors are bound to objects and handle the binding mechanism',
+      'Method descriptors are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'Method descriptors cannot return values'
+    ],
+    correctAnswer: 'Method descriptors are bound to objects and handle the binding mechanism',
+    explanation: 'Method descriptors are special objects that handle the binding mechanism when methods are accessed on instances.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-859',
+    question: 'What is the purpose of the @typing.Protocol decorator?',
+    options: [
+      'To define structural subtyping interfaces',
+      'To make classes immutable',
+      'To improve class performance',
+      'To create abstract base classes'
+    ],
+    correctAnswer: 'To define structural subtyping interfaces',
+    explanation: '@typing.Protocol defines structural subtyping interfaces, allowing classes to be compatible based on their structure rather than inheritance.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-860',
+    question: 'What is the difference between a regular list and a numpy array for iteration performance?',
+    options: [
+      'numpy arrays are optimized for vectorized operations',
+      'Regular lists are faster for iteration',
+      'Iteration performance is the same for both',
+      'numpy arrays cannot be iterated'
+    ],
+    correctAnswer: 'numpy arrays are optimized for vectorized operations',
+    explanation: 'numpy arrays are optimized for vectorized operations and can be much faster for numerical computations, while lists are better for general iteration.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-861',
+    question: 'What is the purpose of the @dataclass(match_args=True) decorator?',
+    options: [
+      'To generate __match_args__ for pattern matching',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To generate __match_args__ for pattern matching',
+    explanation: '@dataclass(match_args=True) generates __match_args__ attribute for pattern matching in Python 3.10+ match statements.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-862',
+    question: 'What is the difference between a regular function and a bound method?',
+    options: [
+      'Bound methods are functions bound to specific instances',
+      'Bound methods are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'Bound methods cannot return values'
+    ],
+    correctAnswer: 'Bound methods are functions bound to specific instances',
+    explanation: 'Bound methods are functions that are bound to specific instances, automatically providing the instance as the first argument.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-863',
+    question: 'What is the purpose of the @typing.runtime_checkable decorator?',
+    options: [
+      'To enable runtime checking of Protocol compatibility',
+      'To make classes immutable',
+      'To improve class performance',
+      'To create abstract base classes'
+    ],
+    correctAnswer: 'To enable runtime checking of Protocol compatibility',
+    explanation: '@typing.runtime_checkable enables runtime checking of Protocol compatibility using isinstance() and issubclass().',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-864',
+    question: 'What is the difference between a regular set and a numpy array for set operations?',
+    options: [
+      'Sets are optimized for set operations, numpy arrays for numerical operations',
+      'numpy arrays are faster for all operations',
+      'Set operations are the same for both',
+      'numpy arrays cannot perform set operations'
+    ],
+    correctAnswer: 'Sets are optimized for set operations, numpy arrays for numerical operations',
+    explanation: 'Sets are optimized for set operations (union, intersection, etc.), while numpy arrays are optimized for numerical operations.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-865',
+    question: 'What is the purpose of the @dataclass(slots=True) decorator?',
+    options: [
+      'To use __slots__ for memory optimization',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To use __slots__ for memory optimization',
+    explanation: '@dataclass(slots=True) uses __slots__ for memory optimization, storing attributes in a fixed-size array instead of a dictionary.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-866',
+    question: 'What is the difference between a regular function and a unbound method?',
+    options: [
+      'Unbound methods are not bound to any instance',
+      'Unbound methods are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'Unbound methods cannot return values'
+    ],
+    correctAnswer: 'Unbound methods are not bound to any instance',
+    explanation: 'Unbound methods are methods that are not bound to any instance and require an instance to be passed explicitly.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-867',
+    question: 'What is the purpose of the @typing.NewType decorator?',
+    options: [
+      'To create distinct types that are type-checked separately',
+      'To make classes immutable',
+      'To improve class performance',
+      'To create abstract base classes'
+    ],
+    correctAnswer: 'To create distinct types that are type-checked separately',
+    explanation: '@typing.NewType creates distinct types that are type-checked separately but have the same runtime behavior as their base type.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-868',
+    question: 'What is the difference between a regular list and a numpy array for memory layout?',
+    options: [
+      'numpy arrays use contiguous memory layout',
+      'Regular lists use contiguous memory layout',
+      'Memory layout is the same for both',
+      'numpy arrays cannot be stored in memory'
+    ],
+    correctAnswer: 'numpy arrays use contiguous memory layout',
+    explanation: 'numpy arrays use contiguous memory layout for better cache performance, while lists store references to objects scattered in memory.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-869',
+    question: 'What is the purpose of the @dataclass(weakref_slot=True) decorator?',
+    options: [
+      'To add weak reference support to data classes',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To add weak reference support to data classes',
+    explanation: '@dataclass(weakref_slot=True) adds weak reference support to data classes, allowing them to be used with weakref module.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-870',
+    question: 'What is the difference between a regular function and a static method?',
+    options: [
+      'Static methods don\'t receive any special first parameter',
+      'Static methods are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'Static methods cannot return values'
+    ],
+    correctAnswer: 'Static methods don\'t receive any special first parameter',
+    explanation: 'Static methods don\'t receive any special first parameter (neither self nor cls), making them similar to regular functions.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-871',
+    question: 'What is the purpose of the @typing.Literal decorator?',
+    options: [
+      'To specify exact literal values for type checking',
+      'To make classes immutable',
+      'To improve class performance',
+      'To create abstract base classes'
+    ],
+    correctAnswer: 'To specify exact literal values for type checking',
+    explanation: '@typing.Literal specifies exact literal values for type checking, allowing precise type annotations for specific values.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-872',
+    question: 'What is the difference between a regular dictionary and a numpy array for key-value storage?',
+    options: [
+      'Dictionaries are optimized for key-value lookups, numpy arrays for numerical operations',
+      'numpy arrays are faster for all operations',
+      'Key-value storage is the same for both',
+      'numpy arrays cannot store key-value pairs'
+    ],
+    correctAnswer: 'Dictionaries are optimized for key-value lookups, numpy arrays for numerical operations',
+    explanation: 'Dictionaries are optimized for key-value lookups with O(1) average time complexity, while numpy arrays are optimized for numerical operations.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-873',
+    question: 'What is the purpose of the @dataclass(repr_ns=None) decorator?',
+    options: [
+      'To customize the namespace used in __repr__',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To customize the namespace used in __repr__',
+    explanation: '@dataclass(repr_ns=None) customizes the namespace used in the __repr__ method, allowing for custom string representations.',
+    category: 'Python Classes',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-874',
+    question: 'What is the difference between a regular function and a class method?',
+    options: [
+      'Class methods receive the class as the first parameter',
+      'Class methods are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'Class methods cannot return values'
+    ],
+    correctAnswer: 'Class methods receive the class as the first parameter',
+    explanation: 'Class methods receive the class (cls) as the first parameter, allowing them to work with the class itself rather than instances.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-875',
+    question: 'What is the purpose of the @typing.Annotated decorator?',
+    options: [
+      'To add metadata to type annotations',
+      'To make classes immutable',
+      'To improve class performance',
+      'To create abstract base classes'
+    ],
+    correctAnswer: 'To add metadata to type annotations',
+    explanation: '@typing.Annotated adds metadata to type annotations, allowing additional information to be attached to types.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-876',
+    question: 'What is the difference between a regular list and a numpy array for broadcasting?',
+    options: [
+      'numpy arrays support broadcasting for element-wise operations',
+      'Regular lists support broadcasting',
+      'Broadcasting is the same for both',
+      'numpy arrays cannot perform broadcasting'
+    ],
+    correctAnswer: 'numpy arrays support broadcasting for element-wise operations',
+    explanation: 'numpy arrays support broadcasting, allowing element-wise operations between arrays of different shapes, while lists do not.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-877',
+    question: 'What is the purpose of the @dataclass(init=True, repr=True, eq=True) decorator?',
+    options: [
+      'To explicitly enable all default dataclass features',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To explicitly enable all default dataclass features',
+    explanation: '@dataclass(init=True, repr=True, eq=True) explicitly enables all default dataclass features, making the configuration clear.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-878',
+    question: 'What is the difference between a regular function and a method?',
+    options: [
+      'Methods are bound to objects and receive self as first parameter',
+      'Methods are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'Methods cannot return values'
+    ],
+    correctAnswer: 'Methods are bound to objects and receive self as first parameter',
+    explanation: 'Methods are functions that are bound to objects and automatically receive the instance (self) as the first parameter.',
+    category: 'Python Classes',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-879',
+    question: 'What is the purpose of the @typing.TypeVar decorator?',
+    options: [
+      'To create generic type variables',
+      'To make classes immutable',
+      'To improve class performance',
+      'To create abstract base classes'
+    ],
+    correctAnswer: 'To create generic type variables',
+    explanation: '@typing.TypeVar creates generic type variables, allowing for type-safe generic programming and function overloading.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-880',
+    question: 'What is the difference between a regular set and a numpy array for unique element storage?',
+    options: [
+      'Sets are optimized for unique element storage and membership testing',
+      'numpy arrays are faster for all operations',
+      'Unique element storage is the same for both',
+      'numpy arrays cannot store unique elements'
+    ],
+    correctAnswer: 'Sets are optimized for unique element storage and membership testing',
+    explanation: 'Sets are optimized for unique element storage and membership testing with O(1) average time complexity.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-881',
+    question: 'What is the purpose of the @dataclass(frozen=True, eq=True) decorator?',
+    options: [
+      'To create immutable data classes with equality comparison',
+      'To make data classes thread-safe',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To create immutable data classes with equality comparison',
+    explanation: '@dataclass(frozen=True, eq=True) creates immutable data classes with automatic equality comparison.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-882',
+    question: 'What is the difference between a regular function and a lambda function?',
+    options: [
+      'Lambda functions are limited to a single expression',
+      'Lambda functions are faster than regular functions',
+      'Regular functions can only be used once',
+      'Lambda functions cannot return values'
+    ],
+    correctAnswer: 'Lambda functions are limited to a single expression',
+    explanation: 'Lambda functions are limited to a single expression and are typically used for simple operations.',
+    category: 'Python Functions',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-883',
+    question: 'What is the purpose of the @typing.Union decorator?',
+    options: [
+      'To specify that a value can be one of several types',
+      'To make classes immutable',
+      'To improve class performance',
+      'To create abstract base classes'
+    ],
+    correctAnswer: 'To specify that a value can be one of several types',
+    explanation: '@typing.Union specifies that a value can be one of several types, allowing for flexible type annotations.',
+    category: 'Python Type Hints',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-884',
+    question: 'What is the difference between a regular tuple and a numpy array for immutable sequences?',
+    options: [
+      'Tuples are immutable sequences, numpy arrays can be mutable or immutable',
+      'numpy arrays are always immutable',
+      'Both are always immutable',
+      'Tuples can be mutable'
+    ],
+    correctAnswer: 'Tuples are immutable sequences, numpy arrays can be mutable or immutable',
+    explanation: 'Tuples are always immutable sequences, while numpy arrays can be mutable or immutable depending on how they are created.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-885',
+    question: 'What is the purpose of the @dataclass(order=True, frozen=True) decorator?',
+    options: [
+      'To create immutable data classes with ordering support',
+      'To make data classes thread-safe',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To create immutable data classes with ordering support',
+    explanation: '@dataclass(order=True, frozen=True) creates immutable data classes with automatic ordering support.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-886',
+    question: 'What is the difference between a regular function and a generator function?',
+    options: [
+      'Generator functions use yield to return values one at a time',
+      'Generator functions are faster than regular functions',
+      'Regular functions can only be called once',
+      'Generator functions cannot return values'
+    ],
+    correctAnswer: 'Generator functions use yield to return values one at a time',
+    explanation: 'Generator functions use the yield keyword to return values one at a time, creating an iterator.',
+    category: 'Python Generators',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-887',
+    question: 'What is the purpose of the @typing.Optional decorator?',
+    options: [
+      'To specify that a value can be None or a specific type',
+      'To make classes immutable',
+      'To improve class performance',
+      'To create abstract base classes'
+    ],
+    correctAnswer: 'To specify that a value can be None or a specific type',
+    explanation: '@typing.Optional specifies that a value can be None or a specific type, equivalent to Union[T, None].',
+    category: 'Python Type Hints',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-888',
+    question: 'What is the difference between a regular list and a numpy array for slicing operations?',
+    options: [
+      'Both support slicing, but numpy arrays can have multiple dimensions',
+      'Only lists support slicing',
+      'Only numpy arrays support slicing',
+      'Neither supports slicing'
+    ],
+    correctAnswer: 'Both support slicing, but numpy arrays can have multiple dimensions',
+    explanation: 'Both support slicing, but numpy arrays can have multiple dimensions and support advanced indexing.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-889',
+    question: 'What is the purpose of the @dataclass(repr=True, eq=True, order=True) decorator?',
+    options: [
+      'To create data classes with all comparison methods',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To create data classes with all comparison methods',
+    explanation: '@dataclass(repr=True, eq=True, order=True) creates data classes with __repr__, __eq__, and ordering methods.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-890',
+    question: 'What is the difference between a regular function and a coroutine?',
+    options: [
+      'Coroutines can be paused and resumed using await',
+      'Coroutines are faster than regular functions',
+      'Regular functions can only be called once',
+      'Coroutines cannot return values'
+    ],
+    correctAnswer: 'Coroutines can be paused and resumed using await',
+    explanation: 'Coroutines can be paused and resumed using await, allowing for cooperative multitasking.',
+    category: 'Python Coroutines',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-891',
+    question: 'What is the purpose of the @typing.Callable decorator?',
+    options: [
+      'To specify that a value is a callable function',
+      'To make classes immutable',
+      'To improve class performance',
+      'To create abstract base classes'
+    ],
+    correctAnswer: 'To specify that a value is a callable function',
+    explanation: '@typing.Callable specifies that a value is a callable function, allowing for function type annotations.',
+    category: 'Python Type Hints',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-892',
+    question: 'What is the difference between a regular dictionary and a numpy array for structured data?',
+    options: [
+      'Dictionaries are better for heterogeneous data, numpy arrays for homogeneous data',
+      'numpy arrays are better for all data types',
+      'Both are equally good for all data types',
+      'Dictionaries cannot store structured data'
+    ],
+    correctAnswer: 'Dictionaries are better for heterogeneous data, numpy arrays for homogeneous data',
+    explanation: 'Dictionaries are better for heterogeneous data with different types, while numpy arrays are optimized for homogeneous data.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-893',
+    question: 'What is the purpose of the @dataclass(frozen=True, eq=True, order=True) decorator?',
+    options: [
+      'To create immutable data classes with full comparison support',
+      'To make data classes thread-safe',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To create immutable data classes with full comparison support',
+    explanation: '@dataclass(frozen=True, eq=True, order=True) creates immutable data classes with equality and ordering support.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-894',
+    question: 'What is the difference between a regular function and a method?',
+    options: [
+      'Methods are bound to objects and receive self as first parameter',
+      'Methods are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'Methods cannot return values'
+    ],
+    correctAnswer: 'Methods are bound to objects and receive self as first parameter',
+    explanation: 'Methods are functions that are bound to objects and automatically receive the instance (self) as the first parameter.',
+    category: 'Python Classes',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-895',
+    question: 'What is the purpose of the @typing.Iterable decorator?',
+    options: [
+      'To specify that a value is an iterable object',
+      'To make classes immutable',
+      'To improve class performance',
+      'To create abstract base classes'
+    ],
+    correctAnswer: 'To specify that a value is an iterable object',
+    explanation: '@typing.Iterable specifies that a value is an iterable object, allowing for iteration type annotations.',
+    category: 'Python Type Hints',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-896',
+    question: 'What is the difference between a regular list and a numpy array for mathematical operations?',
+    options: [
+      'numpy arrays are optimized for mathematical operations',
+      'Regular lists are faster for mathematical operations',
+      'Mathematical operations are the same for both',
+      'Regular lists cannot perform mathematical operations'
+    ],
+    correctAnswer: 'numpy arrays are optimized for mathematical operations',
+    explanation: 'numpy arrays are optimized for mathematical operations with vectorized operations and optimized C implementations.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-897',
+    question: 'What is the purpose of the @dataclass(init=True, repr=True, eq=True, order=True) decorator?',
+    options: [
+      'To create data classes with all standard methods',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To create data classes with all standard methods',
+    explanation: '@dataclass(init=True, repr=True, eq=True, order=True) creates data classes with all standard methods explicitly enabled.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-898',
+    question: 'What is the difference between a regular function and a static method?',
+    options: [
+      'Static methods don\'t receive any special first parameter',
+      'Static methods are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'Static methods cannot return values'
+    ],
+    correctAnswer: 'Static methods don\'t receive any special first parameter',
+    explanation: 'Static methods don\'t receive any special first parameter (neither self nor cls), making them similar to regular functions.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-899',
+    question: 'What is the purpose of the @typing.Dict decorator?',
+    options: [
+      'To specify that a value is a dictionary with specific key and value types',
+      'To make classes immutable',
+      'To improve class performance',
+      'To create abstract base classes'
+    ],
+    correctAnswer: 'To specify that a value is a dictionary with specific key and value types',
+    explanation: '@typing.Dict specifies that a value is a dictionary with specific key and value types for type checking.',
+    category: 'Python Type Hints',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-900',
+    question: 'What is the difference between a regular set and a numpy array for mathematical set operations?',
+    options: [
+      'Sets are optimized for mathematical set operations',
+      'numpy arrays are faster for all operations',
+      'Mathematical set operations are the same for both',
+      'numpy arrays cannot perform set operations'
+    ],
+    correctAnswer: 'Sets are optimized for mathematical set operations',
+    explanation: 'Sets are optimized for mathematical set operations (union, intersection, difference, etc.) with efficient implementations.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
   }
 
 ]; 
