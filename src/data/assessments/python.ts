@@ -13300,6 +13300,706 @@ export const pythonAssessmentQuestions: AssessmentQuestion[] = [
     explanation: 'Abstract methods must be implemented by subclasses, enforcing a contract in the class hierarchy.',
     category: 'Python Classes',
     difficulty: 'Medium'
+  },
+  {
+    id: 'python-951',
+    question: 'What is the purpose of the @typing.overload decorator for function overloading?',
+    options: [
+      'To provide type hints for different function signatures',
+      'To make functions thread-safe',
+      'To improve function performance',
+      'To create abstract functions'
+    ],
+    correctAnswer: 'To provide type hints for different function signatures',
+    explanation: '@typing.overload provides type hints for different function signatures, allowing static type checkers to understand function overloads.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-952',
+    question: 'What is the difference between a regular function and a method with @functools.partial?',
+    options: [
+      'Partial functions have some arguments pre-filled',
+      'Partial functions are faster than regular functions',
+      'Regular functions can only be called once',
+      'Partial functions cannot return values'
+    ],
+    correctAnswer: 'Partial functions have some arguments pre-filled',
+    explanation: 'Partial functions from functools.partial have some arguments pre-filled, creating a new function with fewer parameters.',
+    category: 'Python Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-953',
+    question: 'What is the purpose of the @dataclass(field(default_factory=list)) decorator?',
+    options: [
+      'To create a field with a mutable default value using a factory function',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To create a field with a mutable default value using a factory function',
+    explanation: 'field(default_factory=list) creates a field with a mutable default value using a factory function to avoid shared mutable state.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-954',
+    question: 'What is the difference between a regular list and a numpy array for advanced indexing?',
+    options: [
+      'numpy arrays support advanced indexing with boolean masks and integer arrays',
+      'Regular lists support advanced indexing',
+      'Advanced indexing is the same for both',
+      'Neither supports advanced indexing'
+    ],
+    correctAnswer: 'numpy arrays support advanced indexing with boolean masks and integer arrays',
+    explanation: 'numpy arrays support advanced indexing with boolean masks and integer arrays, while regular lists only support basic indexing.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-955',
+    question: 'What is the purpose of the @typing.runtime_checkable decorator for Protocols?',
+    options: [
+      'To enable runtime checking of Protocol compatibility using isinstance()',
+      'To make Protocols immutable',
+      'To improve Protocol performance',
+      'To create abstract Protocols'
+    ],
+    correctAnswer: 'To enable runtime checking of Protocol compatibility using isinstance()',
+    explanation: '@typing.runtime_checkable enables runtime checking of Protocol compatibility using isinstance() and issubclass().',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-956',
+    question: 'What is the difference between a regular function and a method with @functools.singledispatchmethod?',
+    options: [
+      'Single dispatch methods can have different implementations based on argument types',
+      'Single dispatch methods are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'Single dispatch methods cannot return values'
+    ],
+    correctAnswer: 'Single dispatch methods can have different implementations based on argument types',
+    explanation: 'Single dispatch methods can have different implementations based on the type of the first argument, enabling method overloading.',
+    category: 'Python Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-957',
+    question: 'What is the purpose of the @dataclass(field(compare=False)) decorator?',
+    options: [
+      'To exclude a field from comparison methods',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To exclude a field from comparison methods',
+    explanation: 'field(compare=False) excludes a field from comparison methods like __eq__, __lt__, etc.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-958',
+    question: 'What is the difference between a regular dictionary and a numpy array for structured data access?',
+    options: [
+      'Dictionaries provide flexible key-based access, numpy arrays provide structured array access',
+      'numpy arrays are better for all data access patterns',
+      'Data access is the same for both',
+      'Dictionaries cannot support structured data access'
+    ],
+    correctAnswer: 'Dictionaries provide flexible key-based access, numpy arrays provide structured array access',
+    explanation: 'Dictionaries provide flexible key-based access, while numpy arrays provide structured array access with field names.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-959',
+    question: 'What is the purpose of the @typing.Literal decorator for enum-like behavior?',
+    options: [
+      'To create type-safe alternatives to enums with specific literal values',
+      'To make enums immutable',
+      'To improve enum performance',
+      'To create abstract enums'
+    ],
+    correctAnswer: 'To create type-safe alternatives to enums with specific literal values',
+    explanation: '@typing.Literal can create type-safe alternatives to enums by restricting values to specific literals.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-960',
+    question: 'What is the difference between a regular function and a method with @functools.total_ordering?',
+    options: [
+      'Total ordering methods automatically generate comparison methods from a subset',
+      'Total ordering methods are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'Total ordering methods cannot return values'
+    ],
+    correctAnswer: 'Total ordering methods automatically generate comparison methods from a subset',
+    explanation: 'Total ordering methods automatically generate missing comparison methods from __eq__ and one other method.',
+    category: 'Python Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-961',
+    question: 'What is the purpose of the @dataclass(field(repr=False)) decorator?',
+    options: [
+      'To exclude a field from the string representation',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To exclude a field from the string representation',
+    explanation: 'field(repr=False) excludes a field from the string representation generated by __repr__.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-962',
+    question: 'What is the difference between a regular list and a numpy array for memory-mapped files?',
+    options: [
+      'numpy arrays can be memory-mapped to files for large datasets',
+      'Regular lists can be memory-mapped to files',
+      'Memory mapping is the same for both',
+      'Neither supports memory mapping'
+    ],
+    correctAnswer: 'numpy arrays can be memory-mapped to files for large datasets',
+    explanation: 'numpy arrays can be memory-mapped to files, allowing efficient handling of datasets larger than available RAM.',
+    category: 'Python Data Structures',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-963',
+    question: 'What is the purpose of the @typing.TypeGuard decorator for type narrowing?',
+    options: [
+      'To create functions that narrow types for better type checking',
+      'To make types immutable',
+      'To improve type performance',
+      'To create abstract types'
+    ],
+    correctAnswer: 'To create functions that narrow types for better type checking',
+    explanation: '@typing.TypeGuard creates functions that narrow types, helping static type checkers understand type relationships.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-964',
+    question: 'What is the difference between a regular function and a method with @functools.cached_property?',
+    options: [
+      'Cached property methods cache their result after first access',
+      'Cached property methods are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'Cached property methods cannot return values'
+    ],
+    correctAnswer: 'Cached property methods cache their result after first access',
+    explanation: 'Cached property methods cache their result after the first access, avoiding redundant computation on subsequent accesses.',
+    category: 'Python Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-965',
+    question: 'What is the purpose of the @dataclass(field(init=False)) decorator?',
+    options: [
+      'To create a field that is not included in __init__',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To create a field that is not included in __init__',
+    explanation: 'field(init=False) creates a field that is not included in the __init__ method, requiring manual initialization.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-966',
+    question: 'What is the difference between a regular set and a numpy array for set-like operations?',
+    options: [
+      'Sets are optimized for set-like operations with O(1) average time complexity',
+      'numpy arrays are faster for all operations',
+      'Set-like operations are the same for both',
+      'numpy arrays cannot perform set-like operations'
+    ],
+    correctAnswer: 'Sets are optimized for set-like operations with O(1) average time complexity',
+    explanation: 'Sets are optimized for set-like operations with O(1) average time complexity using hash tables.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-967',
+    question: 'What is the purpose of the @typing.ParamSpec decorator for generic functions?',
+    options: [
+      'To create generic functions that preserve parameter specifications',
+      'To make functions immutable',
+      'To improve function performance',
+      'To create abstract functions'
+    ],
+    correctAnswer: 'To create generic functions that preserve parameter specifications',
+    explanation: '@typing.ParamSpec creates generic functions that preserve parameter specifications for advanced generic programming.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-968',
+    question: 'What is the difference between a regular function and a method with @functools.wraps?',
+    options: [
+      'Wraps methods preserve the metadata of the original function',
+      'Wraps methods are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'Wraps methods cannot return values'
+    ],
+    correctAnswer: 'Wraps methods preserve the metadata of the original function',
+    explanation: 'Wraps methods preserve the metadata (name, docstring, etc.) of the original function when creating decorators.',
+    category: 'Python Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-969',
+    question: 'What is the purpose of the @dataclass(field(hash=True)) decorator?',
+    options: [
+      'To include a field in hash computation',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To include a field in hash computation',
+    explanation: 'field(hash=True) includes a field in hash computation, making it part of the object\'s hash value.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-970',
+    question: 'What is the difference between a regular tuple and a numpy array for structured data?',
+    options: [
+      'numpy arrays can have structured data types with named fields',
+      'Regular tuples can have structured data types',
+      'Structured data is the same for both',
+      'Neither supports structured data'
+    ],
+    correctAnswer: 'numpy arrays can have structured data types with named fields',
+    explanation: 'numpy arrays can have structured data types with named fields, while regular tuples are simple sequences.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-971',
+    question: 'What is the purpose of the @typing.Concatenate decorator for generic functions?',
+    options: [
+      'To concatenate type parameters in generic function signatures',
+      'To make functions immutable',
+      'To improve function performance',
+      'To create abstract functions'
+    ],
+    correctAnswer: 'To concatenate type parameters in generic function signatures',
+    explanation: '@typing.Concatenate concatenates type parameters in generic function signatures for advanced type manipulation.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-972',
+    question: 'What is the difference between a regular function and a method with @functools.lru_cache?',
+    options: [
+      'LRU cache methods cache their results to avoid redundant computations',
+      'LRU cache methods are faster than regular functions',
+      'Regular functions can only be called from within a class',
+      'LRU cache methods cannot return values'
+    ],
+    correctAnswer: 'LRU cache methods cache their results to avoid redundant computations',
+    explanation: 'LRU cache methods cache their results using least-recently-used eviction, avoiding redundant computations.',
+    category: 'Python Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-973',
+    question: 'What is the purpose of the @dataclass(field(metadata={"key": "value"})) decorator?',
+    options: [
+      'To attach metadata to a field for documentation or validation',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To attach metadata to a field for documentation or validation',
+    explanation: 'field(metadata={"key": "value"}) attaches metadata to a field for documentation, validation, or other purposes.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-974',
+    question: 'What is the difference between a regular list and a numpy array for parallel processing?',
+    options: [
+      'numpy arrays can be easily parallelized with libraries like numba or multiprocessing',
+      'Regular lists can be easily parallelized',
+      'Parallel processing is the same for both',
+      'Neither supports parallel processing'
+    ],
+    correctAnswer: 'numpy arrays can be easily parallelized with libraries like numba or multiprocessing',
+    explanation: 'numpy arrays can be easily parallelized with libraries like numba or multiprocessing due to their homogeneous data structure.',
+    category: 'Python Data Structures',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-975',
+    question: 'What is the purpose of the @typing.RevealType decorator for debugging types?',
+    options: [
+      'To reveal the inferred type of an expression for debugging',
+      'To make types immutable',
+      'To improve type performance',
+      'To create abstract types'
+    ],
+    correctAnswer: 'To reveal the inferred type of an expression for debugging',
+    explanation: '@typing.RevealType reveals the inferred type of an expression, useful for debugging type checker behavior.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-976',
+    question: 'What is the difference between a regular function and a method with @functools.singledispatch?',
+    options: [
+      'Single dispatch functions can have different implementations based on argument types',
+      'Single dispatch functions are faster than regular functions',
+      'Regular functions can only be called once',
+      'Single dispatch functions cannot return values'
+    ],
+    correctAnswer: 'Single dispatch functions can have different implementations based on argument types',
+    explanation: 'Single dispatch functions can have different implementations based on the type of the first argument, enabling function overloading.',
+    category: 'Python Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-977',
+    question: 'What is the purpose of the @dataclass(field(default=42)) decorator?',
+    options: [
+      'To set a default value for a field',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To set a default value for a field',
+    explanation: 'field(default=42) sets a default value for a field, which will be used if no value is provided during instantiation.',
+    category: 'Python Classes',
+    difficulty: 'Easy'
+  },
+  {
+    id: 'python-978',
+    question: 'What is the difference between a regular dictionary and a numpy array for data serialization?',
+    options: [
+      'numpy arrays have efficient serialization formats like .npy and .npz',
+      'Regular dictionaries have efficient serialization formats',
+      'Data serialization is the same for both',
+      'Neither supports data serialization'
+    ],
+    correctAnswer: 'numpy arrays have efficient serialization formats like .npy and .npz',
+    explanation: 'numpy arrays have efficient serialization formats like .npy and .npz, while dictionaries use JSON or pickle.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-979',
+    question: 'What is the purpose of the @typing.NoReturn decorator for functions?',
+    options: [
+      'To indicate that a function never returns normally',
+      'To make functions immutable',
+      'To improve function performance',
+      'To create abstract functions'
+    ],
+    correctAnswer: 'To indicate that a function never returns normally',
+    explanation: '@typing.NoReturn indicates that a function never returns normally, typically because it always raises an exception.',
+    category: 'Python Type Hints',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-980',
+    question: 'What is the difference between a regular function and a method with @functools.reduce?',
+    options: [
+      'Reduce functions combine elements of an iterable into a single value',
+      'Reduce functions are faster than regular functions',
+      'Regular functions can only be called once',
+      'Reduce functions cannot return values'
+    ],
+    correctAnswer: 'Reduce functions combine elements of an iterable into a single value',
+    explanation: 'Reduce functions combine elements of an iterable into a single value using a binary function.',
+    category: 'Python Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-981',
+    question: 'What is the purpose of the @dataclass(field(repr=True, compare=True)) decorator?',
+    options: [
+      'To explicitly include a field in both string representation and comparison',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To explicitly include a field in both string representation and comparison',
+    explanation: 'field(repr=True, compare=True) explicitly includes a field in both string representation and comparison methods.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-982',
+    question: 'What is the difference between a regular list and a numpy array for GPU acceleration?',
+    options: [
+      'numpy arrays can be easily transferred to GPU memory with libraries like CuPy',
+      'Regular lists can be easily transferred to GPU memory',
+      'GPU acceleration is the same for both',
+      'Neither supports GPU acceleration'
+    ],
+    correctAnswer: 'numpy arrays can be easily transferred to GPU memory with libraries like CuPy',
+    explanation: 'numpy arrays can be easily transferred to GPU memory with libraries like CuPy for accelerated computation.',
+    category: 'Python Data Structures',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-983',
+    question: 'What is the purpose of the @typing.Self decorator for method return types?',
+    options: [
+      'To indicate that a method returns an instance of its own class',
+      'To make methods immutable',
+      'To improve method performance',
+      'To create abstract methods'
+    ],
+    correctAnswer: 'To indicate that a method returns an instance of its own class',
+    explanation: '@typing.Self indicates that a method returns an instance of its own class, useful for method chaining.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-984',
+    question: 'What is the difference between a regular function and a method with @functools.partialmethod?',
+    options: [
+      'Partial method functions have some arguments pre-filled for methods',
+      'Partial method functions are faster than regular functions',
+      'Regular functions can only be called once',
+      'Partial method functions cannot return values'
+    ],
+    correctAnswer: 'Partial method functions have some arguments pre-filled for methods',
+    explanation: 'Partial method functions have some arguments pre-filled, creating a new method with fewer parameters.',
+    category: 'Python Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-985',
+    question: 'What is the purpose of the @dataclass(field(init=True, repr=True, compare=True, hash=True)) decorator?',
+    options: [
+      'To explicitly enable all field features',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To explicitly enable all field features',
+    explanation: 'field(init=True, repr=True, compare=True, hash=True) explicitly enables all field features for maximum control.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-986',
+    question: 'What is the difference between a regular set and a numpy array for mathematical set operations?',
+    options: [
+      'Sets are optimized for mathematical set operations with efficient algorithms',
+      'numpy arrays are faster for all operations',
+      'Mathematical set operations are the same for both',
+      'numpy arrays cannot perform mathematical set operations'
+    ],
+    correctAnswer: 'Sets are optimized for mathematical set operations with efficient algorithms',
+    explanation: 'Sets are optimized for mathematical set operations with efficient algorithms for union, intersection, difference, etc.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-987',
+    question: 'What is the purpose of the @typing.Required decorator for TypedDict fields?',
+    options: [
+      'To mark TypedDict fields as required',
+      'To make TypedDict immutable',
+      'To improve TypedDict performance',
+      'To create abstract TypedDict'
+    ],
+    correctAnswer: 'To mark TypedDict fields as required',
+    explanation: '@typing.Required marks TypedDict fields as required, ensuring they must be present in the dictionary.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-988',
+    question: 'What is the difference between a regular function and a method with @functools.cmp_to_key?',
+    options: [
+      'Cmp to key functions convert comparison functions to key functions',
+      'Cmp to key functions are faster than regular functions',
+      'Regular functions can only be called once',
+      'Cmp to key functions cannot return values'
+    ],
+    correctAnswer: 'Cmp to key functions convert comparison functions to key functions',
+    explanation: 'Cmp to key functions convert old-style comparison functions to key functions for use with sorted() and other functions.',
+    category: 'Python Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-989',
+    question: 'What is the purpose of the @dataclass(field(default_factory=dict)) decorator?',
+    options: [
+      'To create a field with a mutable default value using a factory function',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To create a field with a mutable default value using a factory function',
+    explanation: 'field(default_factory=dict) creates a field with a mutable default value using a factory function to avoid shared mutable state.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-990',
+    question: 'What is the difference between a regular list and a numpy array for data analysis workflows?',
+    options: [
+      'numpy arrays integrate seamlessly with pandas and other data analysis libraries',
+      'Regular lists integrate seamlessly with data analysis libraries',
+      'Data analysis workflows are the same for both',
+      'Neither integrates with data analysis libraries'
+    ],
+    correctAnswer: 'numpy arrays integrate seamlessly with pandas and other data analysis libraries',
+    explanation: 'numpy arrays integrate seamlessly with pandas and other data analysis libraries, making them ideal for data science workflows.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-991',
+    question: 'What is the purpose of the @typing.NotRequired decorator for TypedDict fields?',
+    options: [
+      'To mark TypedDict fields as optional',
+      'To make TypedDict immutable',
+      'To improve TypedDict performance',
+      'To create abstract TypedDict'
+    ],
+    correctAnswer: 'To mark TypedDict fields as optional',
+    explanation: '@typing.NotRequired marks TypedDict fields as optional, allowing them to be absent from the dictionary.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-992',
+    question: 'What is the difference between a regular function and a method with @functools.update_wrapper?',
+    options: [
+      'Update wrapper functions copy metadata from the original function',
+      'Update wrapper functions are faster than regular functions',
+      'Regular functions can only be called once',
+      'Update wrapper functions cannot return values'
+    ],
+    correctAnswer: 'Update wrapper functions copy metadata from the original function',
+    explanation: 'Update wrapper functions copy metadata from the original function to the wrapper function.',
+    category: 'Python Functions',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-993',
+    question: 'What is the purpose of the @dataclass(field(default_factory=set)) decorator?',
+    options: [
+      'To create a field with a mutable default value using a factory function',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To create a field with a mutable default value using a factory function',
+    explanation: 'field(default_factory=set) creates a field with a mutable default value using a factory function to avoid shared mutable state.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-994',
+    question: 'What is the difference between a regular dictionary and a numpy array for machine learning workflows?',
+    options: [
+      'numpy arrays are the standard format for machine learning libraries like scikit-learn and TensorFlow',
+      'Regular dictionaries are the standard format for machine learning libraries',
+      'Machine learning workflows are the same for both',
+      'Neither is used in machine learning workflows'
+    ],
+    correctAnswer: 'numpy arrays are the standard format for machine learning libraries like scikit-learn and TensorFlow',
+    explanation: 'numpy arrays are the standard format for machine learning libraries like scikit-learn and TensorFlow.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-995',
+    question: 'What is the purpose of the @typing.Unpack decorator for variadic generics?',
+    options: [
+      'To unpack type parameters in variadic generic functions',
+      'To make types immutable',
+      'To improve type performance',
+      'To create abstract types'
+    ],
+    correctAnswer: 'To unpack type parameters in variadic generic functions',
+    explanation: '@typing.Unpack unpacks type parameters in variadic generic functions for advanced type manipulation.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-996',
+    question: 'What is the difference between a regular function and a method with @functools.namedtuple?',
+    options: [
+      'Named tuple functions create tuple subclasses with named fields',
+      'Named tuple functions are faster than regular functions',
+      'Regular functions can only be called once',
+      'Named tuple functions cannot return values'
+    ],
+    correctAnswer: 'Named tuple functions create tuple subclasses with named fields',
+    explanation: 'Named tuple functions create tuple subclasses with named fields, making code more readable and self-documenting.',
+    category: 'Python Functions',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-997',
+    question: 'What is the purpose of the @dataclass(field(default_factory=lambda: [])) decorator?',
+    options: [
+      'To create a field with a mutable default value using a lambda factory function',
+      'To make data classes immutable',
+      'To improve data class performance',
+      'To create abstract data classes'
+    ],
+    correctAnswer: 'To create a field with a mutable default value using a lambda factory function',
+    explanation: 'field(default_factory=lambda: []) creates a field with a mutable default value using a lambda factory function.',
+    category: 'Python Classes',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-998',
+    question: 'What is the difference between a regular list and a numpy array for scientific computing?',
+    options: [
+      'numpy arrays are the foundation of scientific computing in Python',
+      'Regular lists are the foundation of scientific computing in Python',
+      'Scientific computing is the same for both',
+      'Neither is used in scientific computing'
+    ],
+    correctAnswer: 'numpy arrays are the foundation of scientific computing in Python',
+    explanation: 'numpy arrays are the foundation of scientific computing in Python, providing efficient numerical operations.',
+    category: 'Python Data Structures',
+    difficulty: 'Medium'
+  },
+  {
+    id: 'python-999',
+    question: 'What is the purpose of the @typing.Final decorator for preventing inheritance?',
+    options: [
+      'To prevent classes from being inherited',
+      'To make classes immutable',
+      'To improve class performance',
+      'To create abstract classes'
+    ],
+    correctAnswer: 'To prevent classes from being inherited',
+    explanation: '@typing.Final can prevent classes from being inherited, enforced by static type checkers.',
+    category: 'Python Type Hints',
+    difficulty: 'Hard'
+  },
+  {
+    id: 'python-1000',
+    question: 'What is the difference between a regular function and a method with @functools.reduce?',
+    options: [
+      'Reduce functions combine elements of an iterable into a single value',
+      'Reduce functions are faster than regular functions',
+      'Regular functions can only be called once',
+      'Reduce functions cannot return values'
+    ],
+    correctAnswer: 'Reduce functions combine elements of an iterable into a single value',
+    explanation: 'Reduce functions combine elements of an iterable into a single value using a binary function.',
+    category: 'Python Functions',
+    difficulty: 'Medium'
   }
 
 ]; 
